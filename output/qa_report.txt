@@ -1,0 +1,1068 @@
+
+====================================================================================================
+ROW COUNTS BY HOSPITAL x CODE
+====================================================================================================
+col_0                                  95921  95922  95923  95924  93660  All
+row_0                                                                        
+Massachusetts General Hospital             1      0      9     17      0   27
+Brigham and Women's Hospital               0      0      0      0      0    0
+Brigham and Women's Faulkner Hospital      4      0      8     14      0   26
+Wentworth-Douglass Hospital                0      0      0      0      0    0
+Beth Israel Deaconess Medical Center       4      4      4      4      5   21
+All                                        9      4     21     35      5   74
+
+====================================================================================================
+DISTINCT PAYERS / PLANS PER HOSPITAL (all codes)
+====================================================================================================
+                                       payers  payer_plan_pairs
+hospital                                                       
+Massachusetts General Hospital             13                17
+Brigham and Women's Hospital                0                 0
+Brigham and Women's Faulkner Hospital      12                14
+Wentworth-Douglass Hospital                 0                 0
+Beth Israel Deaconess Medical Center        3                 4
+
+====================================================================================================
+RATE TYPE SHARE (payer rows; type = first of dollar > percentage > algorithm present)
+====================================================================================================
+rate_type                              dollar  All
+hospital                                          
+Beth Israel Deaconess Medical Center       16   16
+Brigham and Women's Faulkner Hospital      26   26
+Massachusetts General Hospital             27   27
+All                                        69   69
+
+share of all payer rows:
+rate_type
+dollar    100.0%
+Name: proportion, dtype: str
+
+fields populated on payer rows (a row can carry several):
+  standard_charge_dollar         69 / 69
+  standard_charge_percentage     31 / 69
+  standard_charge_algorithm      22 / 69
+  estimated_amount                0 / 69
+  median_amount                  53 / 69
+  percentile_10th                53 / 69
+  percentile_90th                53 / 69
+  allowed_count                  53 / 69
+  implied_flag=TRUE (pct x gross)  0
+
+====================================================================================================
+CATEGORICAL NORMALISATION (raw -> normalised)
+====================================================================================================
+
+billing_class:
+raw_billing_class billing_class  rows
+                                   53
+         facility      facility    16
+        facillity      facility     5
+
+setting:
+raw_setting    setting  rows
+       both       both    45
+ outpatient outpatient    29
+
+methodology:
+                raw_methodology                     methodology  rows
+                                                                    5
+                   fee schedule                    fee schedule    16
+                          other                           other    22
+percent of total billed charges percent of total billed charges    31
+
+====================================================================================================
+PER HOSPITAL x CODE DETAIL (flag: < 10 distinct payers)
+====================================================================================================
+
+Massachusetts General Hospital | 95921: 1 rows = 1 with payer + 0 without payer | 1 payers, 1 payer/plan pairs  <-- FLAG: fewer than 10 payers
+    billing_class  {'(blank)': 1}
+    setting        {'outpatient': 1}
+    modifiers      {'(blank)': 1}
+
+Massachusetts General Hospital | 95922: NO ROWS in MRF
+
+Massachusetts General Hospital | 95923: 9 rows = 9 with payer + 0 without payer | 7 payers, 9 payer/plan pairs  <-- FLAG: fewer than 10 payers
+    billing_class  {'(blank)': 9}
+    setting        {'both': 7, 'outpatient': 2}
+    modifiers      {'(blank)': 9}
+
+Massachusetts General Hospital | 95924: 17 rows = 17 with payer + 0 without payer | 13 payers, 17 payer/plan pairs
+    billing_class  {'(blank)': 17}
+    setting        {'both': 15, 'outpatient': 2}
+    modifiers      {'(blank)': 17}
+
+Massachusetts General Hospital | 93660: NO ROWS in MRF
+
+Brigham and Women's Hospital | 95921: NO ROWS in MRF
+
+Brigham and Women's Hospital | 95922: NO ROWS in MRF
+
+Brigham and Women's Hospital | 95923: NO ROWS in MRF
+
+Brigham and Women's Hospital | 95924: NO ROWS in MRF
+
+Brigham and Women's Hospital | 93660: NO ROWS in MRF
+
+Brigham and Women's Faulkner Hospital | 95921: 4 rows = 4 with payer + 0 without payer | 3 payers, 4 payer/plan pairs  <-- FLAG: fewer than 10 payers
+    billing_class  {'(blank)': 4}
+    setting        {'both': 2, 'outpatient': 2}
+    modifiers      {'(blank)': 4}
+
+Brigham and Women's Faulkner Hospital | 95922: NO ROWS in MRF
+
+Brigham and Women's Faulkner Hospital | 95923: 8 rows = 8 with payer + 0 without payer | 7 payers, 8 payer/plan pairs  <-- FLAG: fewer than 10 payers
+    billing_class  {'(blank)': 8}
+    setting        {'both': 5, 'outpatient': 3}
+    modifiers      {'(blank)': 8}
+
+Brigham and Women's Faulkner Hospital | 95924: 14 rows = 14 with payer + 0 without payer | 12 payers, 14 payer/plan pairs
+    billing_class  {'(blank)': 14}
+    setting        {'both': 11, 'outpatient': 3}
+    modifiers      {'(blank)': 14}
+
+Brigham and Women's Faulkner Hospital | 93660: NO ROWS in MRF
+
+Wentworth-Douglass Hospital | 95921: NO ROWS in MRF
+
+Wentworth-Douglass Hospital | 95922: NO ROWS in MRF
+
+Wentworth-Douglass Hospital | 95923: NO ROWS in MRF
+
+Wentworth-Douglass Hospital | 95924: NO ROWS in MRF
+
+Wentworth-Douglass Hospital | 93660: NO ROWS in MRF
+
+Beth Israel Deaconess Medical Center | 95921: 4 rows = 3 with payer + 1 without payer | 2 payers, 3 payer/plan pairs  <-- FLAG: fewer than 10 payers
+    billing_class  {'facility': 4}
+    setting        {'outpatient': 3, 'both': 1}
+    modifiers      {'(blank)': 4}
+
+Beth Israel Deaconess Medical Center | 95922: 4 rows = 3 with payer + 1 without payer | 2 payers, 3 payer/plan pairs  <-- FLAG: fewer than 10 payers
+    billing_class  {'facility': 4}
+    setting        {'outpatient': 3, 'both': 1}
+    modifiers      {'(blank)': 4}
+
+Beth Israel Deaconess Medical Center | 95923: 4 rows = 3 with payer + 1 without payer | 2 payers, 3 payer/plan pairs  <-- FLAG: fewer than 10 payers
+    billing_class  {'facility': 4}
+    setting        {'outpatient': 3, 'both': 1}
+    modifiers      {'(blank)': 4}
+
+Beth Israel Deaconess Medical Center | 95924: 4 rows = 3 with payer + 1 without payer | 2 payers, 3 payer/plan pairs  <-- FLAG: fewer than 10 payers
+    billing_class  {'facility': 4}
+    setting        {'outpatient': 3, 'both': 1}
+    modifiers      {'(blank)': 4}
+
+Beth Israel Deaconess Medical Center | 93660: 5 rows = 4 with payer + 1 without payer | 3 payers, 4 payer/plan pairs  <-- FLAG: fewer than 10 payers
+    billing_class  {'facility': 5}
+    setting        {'outpatient': 4, 'both': 1}
+    modifiers      {'(blank)': 5}
+
+====================================================================================================
+MGH: WHY 95924 HAS 17 ROWS BUT 95923 HAS 9
+====================================================================================================
+
+95923: 9 rows, 7 payers, 9 payer/plan pairs, settings={'both': 7, 'outpatient': 2}, modifiers={'(none)': 9}
+
+95924: 17 rows, 13 payers, 17 payer/plan pairs, settings={'both': 15, 'outpatient': 2}, modifiers={'(none)': 17}
+
+payer/plan pairs only in 95924:
+    ('BLUE CROSS BLUE SHIELD [110001]', 'HB MGH MEDICARE') ['both']
+    ('COMMONWEALTH CARE ALLIANCE [1007]', 'HB MGH COMMONWEALTH CARE ALLIANCE') ['both']
+    ('HUMANA [1012]', 'HB MGH MEDICARE') ['both']
+    ('MEDICARE [2001]', 'HB MGH MEDICARE') ['both']
+    ('MGB HEALTH PLAN [150001]', 'HB MGH MEDICARE') ['both']
+    ('TRICARE [160005]', 'HB MGH TRICARE') ['both']
+    ('TUFTS HEALTH PLAN [170001]', 'HB MGH TUFTS MEDICARE REPLACEMENT') ['both']
+    ('UNITED HEALTHCARE [1016]', 'HB MGH UNITED MEDICARE REPLACEMENT') ['both']
+payer/plan pairs only in 95923:
+pairs in both: 9
+                       payer_name                                          plan_name setting_95923 setting_95924 standard_charge_dollar_95923 standard_charge_dollar_95924
+                     CIGNA [1006]                             HB AMC CIGNA HMO / PPO          both          both                       781.49                       912.66
+           CIGNA ALTERNATE [1018]                 HB AMC CIGNA NEW BUSINESS DISCOUNT          both          both                       523.94                       611.88
+INTERNATIONAL COMMERCIAL [140001] HB AMC / MEE / PCC / ONE TEAM HEALTH INTERNATIONAL          both          both                       638.95                       746.20
+         MGB HEALTH PLAN [150001]                        HB AMC MGBHP COMMERCIAL HMO          both          both                       358.80                       419.02
+         MGB HEALTH PLAN [150001]                        HB AMC MGBHP COMMERCIAL PPO          both          both                       376.49                       439.68
+         UNITED HEALTHCARE [1016]             HB AMC CH UNITED NEW BUSINESS DISCOUNT          both          both                       421.71                       492.49
+                 WELLPOINT [1015]                                   HB AMC WELLPOINT          both          both                       725.26                       846.99
+                     AETNA [1001]                                   HB AMC AETNA HMO    outpatient    outpatient                       686.13                       801.30
+         UNITED HEALTHCARE [1016]                            HB AMC UNITED PPO / POS    outpatient    outpatient                       803.31                       938.15
+
+====================================================================================================
+SAMPLE ROWS: RAW RECORD vs NORMALISED (10 per hospital)
+====================================================================================================
+
+### Massachusetts General Hospital (10 samples)
+
+--- raw_massachusetts_general_hospital.jsonl:line1
+RAW                                                                    | NORMALISED
+description: Autonomic Function Test Cardiovagal                       | code: 95921
+code|1: PX-92000069                                                    | code_type: CPT
+code|1|type: CDM                                                       | description: Autonomic Function Test Cardiovagal
+code|2: 95921                                                          | setting: outpatient
+code|2|type: CPT                                                       | gross_charge: 612.00
+code|3: 0922                                                           | discounted_cash: 459.00
+code|3|type: RC                                                        | deidentified_min: 272.03
+setting: outpatient                                                    | deidentified_max: 545.56
+standard_charge|gross: 612.00                                          | payer_name: UNITED HEALTHCARE [1016]
+standard_charge|discounted_cash: 459.00                                | plan_name: HB AMC UNITED PPO / POS
+payer_name: UNITED HEALTHCARE [1016]                                   | standard_charge_dollar: 500.13
+plan_name: HB AMC UNITED PPO / POS                                     | standard_charge_percentage: 81.72
+standard_charge|negotiated_dollar: 500.13                              | methodology: percent of total billed charges
+standard_charge|negotiated_percentage: 81.72                           | median_amount: 474.04
+median_amount: 474.04                                                  | percentile_10th: 474.04
+10th_percentile: 474.04                                                | percentile_90th: 474.04
+90th_percentile: 474.04                                                | allowed_count: 1 through 10
+count: 1 through 10                                                    | implied_dollar: 500.13
+standard_charge|min: 272.03                                            | implied_flag: FALSE
+standard_charge|max: 545.56                                            | rate_type: dollar
+standard_charge|methodology: percent of total billed charges           | 
+
+--- raw_massachusetts_general_hospital.jsonl:line2
+RAW                                                                    | NORMALISED
+description: Autonomic Function Test Sudomotor                         | code: 95923
+code|1: PX-92000071                                                    | code_type: CPT
+code|1|type: CDM                                                       | description: Autonomic Function Test Sudomotor
+code|2: 95923                                                          | setting: both
+code|2|type: CPT                                                       | gross_charge: 983.00
+code|3: 0922                                                           | discounted_cash: 737.25
+code|3|type: RC                                                        | deidentified_min: 145.42
+setting: both                                                          | deidentified_max: 781.49
+standard_charge|gross: 983.00                                          | payer_name: CIGNA [1006]
+standard_charge|discounted_cash: 737.25                                | plan_name: HB AMC CIGNA HMO / PPO
+payer_name: CIGNA [1006]                                               | standard_charge_dollar: 781.49
+plan_name: HB AMC CIGNA HMO / PPO                                      | standard_charge_percentage: 79.5
+standard_charge|negotiated_dollar: 781.49                              | methodology: percent of total billed charges
+standard_charge|negotiated_percentage: 79.5                            | median_amount: 750.01
+median_amount: 750.01                                                  | percentile_10th: 503.18
+10th_percentile: 503.18                                                | percentile_90th: 750.01
+90th_percentile: 750.01                                                | allowed_count: 17
+count: 17                                                              | implied_dollar: 781.49
+standard_charge|min: 145.42                                            | implied_flag: FALSE
+standard_charge|max: 781.49                                            | rate_type: dollar
+standard_charge|methodology: percent of total billed charges           | 
+
+--- raw_massachusetts_general_hospital.jsonl:line3
+RAW                                                                    | NORMALISED
+description: Autonomic Function Test Sudomotor                         | code: 95923
+code|1: PX-92000071                                                    | code_type: CPT
+code|1|type: CDM                                                       | description: Autonomic Function Test Sudomotor
+code|2: 95923                                                          | setting: both
+code|2|type: CPT                                                       | gross_charge: 983.00
+code|3: 0922                                                           | discounted_cash: 737.25
+code|3|type: RC                                                        | deidentified_min: 145.42
+setting: both                                                          | deidentified_max: 781.49
+standard_charge|gross: 983.00                                          | payer_name: CIGNA ALTERNATE [1018]
+standard_charge|discounted_cash: 737.25                                | plan_name: HB AMC CIGNA NEW BUSINESS DISCOUNT
+payer_name: CIGNA ALTERNATE [1018]                                     | standard_charge_dollar: 523.94
+plan_name: HB AMC CIGNA NEW BUSINESS DISCOUNT                          | standard_charge_percentage: 53.3
+standard_charge|negotiated_dollar: 523.94                              | methodology: percent of total billed charges
+standard_charge|negotiated_percentage: 53.3                            | median_amount: 503.18
+median_amount: 503.18                                                  | percentile_10th: 503.18
+10th_percentile: 503.18                                                | percentile_90th: 503.18
+90th_percentile: 503.18                                                | allowed_count: 1 through 10
+count: 1 through 10                                                    | implied_dollar: 523.94
+standard_charge|min: 145.42                                            | implied_flag: FALSE
+standard_charge|max: 781.49                                            | rate_type: dollar
+standard_charge|methodology: percent of total billed charges           | 
+
+--- raw_massachusetts_general_hospital.jsonl:line4
+RAW                                                                    | NORMALISED
+description: Autonomic Function Test Sudomotor                         | code: 95923
+code|1: PX-92000071                                                    | code_type: CPT
+code|1|type: CDM                                                       | description: Autonomic Function Test Sudomotor
+code|2: 95923                                                          | setting: both
+code|2|type: CPT                                                       | gross_charge: 983.00
+code|3: 0922                                                           | discounted_cash: 737.25
+code|3|type: RC                                                        | deidentified_min: 145.42
+setting: both                                                          | deidentified_max: 781.49
+standard_charge|gross: 983.00                                          | payer_name: INTERNATIONAL COMMERCIAL [140001]
+standard_charge|discounted_cash: 737.25                                | plan_name: HB AMC / MEE / PCC / ONE TEAM HEALTH INTERNATIONAL
+payer_name: INTERNATIONAL COMMERCIAL [140001]                          | standard_charge_dollar: 638.95
+plan_name: HB AMC / MEE / PCC / ONE TEAM HEALTH INTERNATIONAL          | standard_charge_percentage: 65
+standard_charge|negotiated_dollar: 638.95                              | methodology: percent of total billed charges
+standard_charge|negotiated_percentage: 65                              | median_amount: 619.45
+median_amount: 619.45                                                  | percentile_10th: 619.45
+10th_percentile: 619.45                                                | percentile_90th: 619.45
+90th_percentile: 619.45                                                | allowed_count: 1 through 10
+count: 1 through 10                                                    | implied_dollar: 638.95
+standard_charge|min: 145.42                                            | implied_flag: FALSE
+standard_charge|max: 781.49                                            | rate_type: dollar
+standard_charge|methodology: percent of total billed charges           | 
+
+--- raw_massachusetts_general_hospital.jsonl:line11
+RAW                                                                    | NORMALISED
+description: Test Ans Func Parasymp&Symp W/5 Mi                        | code: 95924
+code|1: PX-92000125                                                    | code_type: CPT
+code|1|type: CDM                                                       | description: Test Ans Func Parasymp&Symp W/5 Mi
+code|2: 95924                                                          | setting: both
+code|2|type: CPT                                                       | gross_charge: 1148.00
+code|3: 0922                                                           | discounted_cash: 861.00
+code|3|type: RC                                                        | deidentified_min: 351.32
+setting: both                                                          | deidentified_max: 912.66
+standard_charge|gross: 1148.00                                         | payer_name: BLUE CROSS BLUE SHIELD [110001]
+standard_charge|discounted_cash: 861.00                                | plan_name: HB MGH MEDICARE
+payer_name: BLUE CROSS BLUE SHIELD [110001]                            | standard_charge_dollar: 369.77
+plan_name: HB MGH MEDICARE                                             | standard_charge_algorithm: APC Price ($369.77). If cost exceeds the
+standard_charge|negotiated_dollar: 369.77                              |     threshold, the outlier payment is added to the expected
+standard_charge|negotiated_algorithm: APC Price ($369.77). If cost     |     reimbursement. Cost is calculated as the billed amount * the cost-
+    exceeds the threshold, the outlier payment is added to the         |     to-charge ratio (0.222). The threshold is calculated as the
+    expected reimbursement. Cost is calculated as the billed amount *  |     maximum of the outlier multiplier threshold and the fixed
+    the cost-to-charge ratio (0.222). The threshold is calculated as   |     threshold. The outlier multiplier threshold is the outlier
+    the maximum of the outlier multiplier threshold and the fixed      |     multiplier factor (1.75) * adjusted APC rate for the line, and the
+    threshold. The outlier multiplier threshold is the outlier         |     fixed threshold is the outlier fixed-dollar threshold ($7,175) +
+    multiplier factor (1.75) * adjusted APC rate for the line, and the |     adjusted APC rate for the line. If the cost is greater than the
+    fixed threshold is the outlier fixed-dollar threshold ($7,175) +   |     comparative threshold, then the outlier payment is calculated as
+    adjusted APC rate for the line. If the cost is greater than the    |     0.5 * (cost - outlier multiplier threshold) and is added to the
+    comparative threshold, then the outlier payment is calculated as   |     expected reimbursement.
+    0.5 * (cost - outlier multiplier threshold) and is added to the    | methodology: other
+    expected reimbursement.                                            | median_amount: 363.89
+median_amount: 363.89                                                  | percentile_10th: 363.89
+10th_percentile: 363.89                                                | percentile_90th: 369.81
+90th_percentile: 369.81                                                | allowed_count: 1 through 10
+count: 1 through 10                                                    | additional_notes: OPPS APC
+standard_charge|min: 351.32                                            | implied_dollar: 369.77
+standard_charge|max: 912.66                                            | implied_flag: FALSE
+standard_charge|methodology: other                                     | rate_type: dollar
+additional_generic_notes: OPPS APC                                     | 
+
+--- raw_massachusetts_general_hospital.jsonl:line12
+RAW                                                                    | NORMALISED
+description: Test Ans Func Parasymp&Symp W/5 Mi                        | code: 95924
+code|1: PX-92000125                                                    | code_type: CPT
+code|1|type: CDM                                                       | description: Test Ans Func Parasymp&Symp W/5 Mi
+code|2: 95924                                                          | setting: both
+code|2|type: CPT                                                       | gross_charge: 1148.00
+code|3: 0922                                                           | discounted_cash: 861.00
+code|3|type: RC                                                        | deidentified_min: 351.32
+setting: both                                                          | deidentified_max: 912.66
+standard_charge|gross: 1148.00                                         | payer_name: CIGNA [1006]
+standard_charge|discounted_cash: 861.00                                | plan_name: HB AMC CIGNA HMO / PPO
+payer_name: CIGNA [1006]                                               | standard_charge_dollar: 912.66
+plan_name: HB AMC CIGNA HMO / PPO                                      | standard_charge_percentage: 79.5
+standard_charge|negotiated_dollar: 912.66                              | methodology: percent of total billed charges
+standard_charge|negotiated_percentage: 79.5                            | median_amount: 875.93
+median_amount: 875.93                                                  | percentile_10th: 587.66
+10th_percentile: 587.66                                                | percentile_90th: 875.93
+90th_percentile: 875.93                                                | allowed_count: 18
+count: 18                                                              | implied_dollar: 912.66
+standard_charge|min: 351.32                                            | implied_flag: FALSE
+standard_charge|max: 912.66                                            | rate_type: dollar
+standard_charge|methodology: percent of total billed charges           | 
+
+--- raw_massachusetts_general_hospital.jsonl:line13
+RAW                                                                    | NORMALISED
+description: Test Ans Func Parasymp&Symp W/5 Mi                        | code: 95924
+code|1: PX-92000125                                                    | code_type: CPT
+code|1|type: CDM                                                       | description: Test Ans Func Parasymp&Symp W/5 Mi
+code|2: 95924                                                          | setting: both
+code|2|type: CPT                                                       | gross_charge: 1148.00
+code|3: 0922                                                           | discounted_cash: 861.00
+code|3|type: RC                                                        | deidentified_min: 351.32
+setting: both                                                          | deidentified_max: 912.66
+standard_charge|gross: 1148.00                                         | payer_name: CIGNA ALTERNATE [1018]
+standard_charge|discounted_cash: 861.00                                | plan_name: HB AMC CIGNA NEW BUSINESS DISCOUNT
+payer_name: CIGNA ALTERNATE [1018]                                     | standard_charge_dollar: 611.88
+plan_name: HB AMC CIGNA NEW BUSINESS DISCOUNT                          | standard_charge_percentage: 53.3
+standard_charge|negotiated_dollar: 611.88                              | methodology: percent of total billed charges
+standard_charge|negotiated_percentage: 53.3                            | median_amount: 587.66
+median_amount: 587.66                                                  | percentile_10th: 587.66
+10th_percentile: 587.66                                                | percentile_90th: 587.66
+90th_percentile: 587.66                                                | allowed_count: 1 through 10
+count: 1 through 10                                                    | implied_dollar: 611.88
+standard_charge|min: 351.32                                            | implied_flag: FALSE
+standard_charge|max: 912.66                                            | rate_type: dollar
+standard_charge|methodology: percent of total billed charges           | 
+
+--- raw_massachusetts_general_hospital.jsonl:line5
+RAW                                                                    | NORMALISED
+description: Autonomic Function Test Sudomotor                         | code: 95923
+code|1: PX-92000071                                                    | code_type: CPT
+code|1|type: CDM                                                       | description: Autonomic Function Test Sudomotor
+code|2: 95923                                                          | setting: both
+code|2|type: CPT                                                       | gross_charge: 983.00
+code|3: 0922                                                           | discounted_cash: 737.25
+code|3|type: RC                                                        | deidentified_min: 145.42
+setting: both                                                          | deidentified_max: 781.49
+standard_charge|gross: 983.00                                          | payer_name: MGB HEALTH PLAN [150001]
+standard_charge|discounted_cash: 737.25                                | plan_name: HB AMC MGBHP COMMERCIAL HMO
+payer_name: MGB HEALTH PLAN [150001]                                   | standard_charge_dollar: 358.80
+plan_name: HB AMC MGBHP COMMERCIAL HMO                                 | standard_charge_percentage: 36.5
+standard_charge|negotiated_dollar: 358.80                              | methodology: percent of total billed charges
+standard_charge|negotiated_percentage: 36.5                            | median_amount: 355.47
+median_amount: 355.47                                                  | percentile_10th: 302.10
+10th_percentile: 302.10                                                | percentile_90th: 355.47
+90th_percentile: 355.47                                                | allowed_count: 13
+count: 13                                                              | implied_dollar: 358.80
+standard_charge|min: 145.42                                            | implied_flag: FALSE
+standard_charge|max: 781.49                                            | rate_type: dollar
+standard_charge|methodology: percent of total billed charges           | 
+
+--- raw_massachusetts_general_hospital.jsonl:line6
+RAW                                                                    | NORMALISED
+description: Autonomic Function Test Sudomotor                         | code: 95923
+code|1: PX-92000071                                                    | code_type: CPT
+code|1|type: CDM                                                       | description: Autonomic Function Test Sudomotor
+code|2: 95923                                                          | setting: both
+code|2|type: CPT                                                       | gross_charge: 983.00
+code|3: 0922                                                           | discounted_cash: 737.25
+code|3|type: RC                                                        | deidentified_min: 145.42
+setting: both                                                          | deidentified_max: 781.49
+standard_charge|gross: 983.00                                          | payer_name: MGB HEALTH PLAN [150001]
+standard_charge|discounted_cash: 737.25                                | plan_name: HB AMC MGBHP COMMERCIAL PPO
+payer_name: MGB HEALTH PLAN [150001]                                   | standard_charge_dollar: 376.49
+plan_name: HB AMC MGBHP COMMERCIAL PPO                                 | standard_charge_percentage: 38.3
+standard_charge|negotiated_dollar: 376.49                              | methodology: percent of total billed charges
+standard_charge|negotiated_percentage: 38.3                            | median_amount: 372.62
+median_amount: 372.62                                                  | percentile_10th: 372.62
+10th_percentile: 372.62                                                | percentile_90th: 372.62
+90th_percentile: 372.62                                                | allowed_count: 36
+count: 36                                                              | implied_dollar: 376.49
+standard_charge|min: 145.42                                            | implied_flag: FALSE
+standard_charge|max: 781.49                                            | rate_type: dollar
+standard_charge|methodology: percent of total billed charges           | 
+
+--- raw_massachusetts_general_hospital.jsonl:line7
+RAW                                                                    | NORMALISED
+description: Autonomic Function Test Sudomotor                         | code: 95923
+code|1: PX-92000071                                                    | code_type: CPT
+code|1|type: CDM                                                       | description: Autonomic Function Test Sudomotor
+code|2: 95923                                                          | setting: both
+code|2|type: CPT                                                       | gross_charge: 983.00
+code|3: 0922                                                           | discounted_cash: 737.25
+code|3|type: RC                                                        | deidentified_min: 145.42
+setting: both                                                          | deidentified_max: 781.49
+standard_charge|gross: 983.00                                          | payer_name: UNITED HEALTHCARE [1016]
+standard_charge|discounted_cash: 737.25                                | plan_name: HB AMC CH UNITED NEW BUSINESS DISCOUNT
+payer_name: UNITED HEALTHCARE [1016]                                   | standard_charge_dollar: 421.71
+plan_name: HB AMC CH UNITED NEW BUSINESS DISCOUNT                      | standard_charge_percentage: 42.9
+standard_charge|negotiated_dollar: 421.71                              | methodology: percent of total billed charges
+standard_charge|negotiated_percentage: 42.9                            | median_amount: 761.83
+median_amount: 761.83                                                  | percentile_10th: 761.83
+10th_percentile: 761.83                                                | percentile_90th: 761.83
+90th_percentile: 761.83                                                | allowed_count: 1 through 10
+count: 1 through 10                                                    | implied_dollar: 421.71
+standard_charge|min: 145.42                                            | implied_flag: FALSE
+standard_charge|max: 781.49                                            | rate_type: dollar
+standard_charge|methodology: percent of total billed charges           | 
+
+### Brigham and Women's Hospital: no rows
+
+### Brigham and Women's Faulkner Hospital (10 samples)
+
+--- raw_brigham_and_womens_faulkner_hospital.jsonl:line1
+RAW                                                                    | NORMALISED
+description: Autonomic Function Test Cardiovagal                       | code: 95921
+code|1: PX-92000069                                                    | code_type: CPT
+code|1|type: CDM                                                       | description: Autonomic Function Test Cardiovagal
+code|2: 95921                                                          | setting: both
+code|2|type: CPT                                                       | gross_charge: 431.00
+code|3: 0922                                                           | discounted_cash: 323.25
+code|3|type: RC                                                        | deidentified_min: 176.52
+setting: both                                                          | deidentified_max: 528.85
+standard_charge|gross: 431.00                                          | payer_name: MEDICARE [2001]
+standard_charge|discounted_cash: 323.25                                | plan_name: HB BWF MEDICARE
+payer_name: MEDICARE [2001]                                            | standard_charge_dollar: 185.81
+plan_name: HB BWF MEDICARE                                             | standard_charge_algorithm: APC Price ($185.81). If cost exceeds the
+standard_charge|negotiated_dollar: 185.81                              |     threshold, the outlier payment is added to the expected
+standard_charge|negotiated_algorithm: APC Price ($185.81). If cost     |     reimbursement. Cost is calculated as the billed amount * the cost-
+    exceeds the threshold, the outlier payment is added to the         |     to-charge ratio (0.256). The threshold is calculated as the
+    expected reimbursement. Cost is calculated as the billed amount *  |     maximum of the outlier multiplier threshold and the fixed
+    the cost-to-charge ratio (0.256). The threshold is calculated as   |     threshold. The outlier multiplier threshold is the outlier
+    the maximum of the outlier multiplier threshold and the fixed      |     multiplier factor (1.75) * adjusted APC rate for the line, and the
+    threshold. The outlier multiplier threshold is the outlier         |     fixed threshold is the outlier fixed-dollar threshold ($7,175) +
+    multiplier factor (1.75) * adjusted APC rate for the line, and the |     adjusted APC rate for the line. If the cost is greater than the
+    fixed threshold is the outlier fixed-dollar threshold ($7,175) +   |     comparative threshold, then the outlier payment is calculated as
+    adjusted APC rate for the line. If the cost is greater than the    |     0.5 * (cost - outlier multiplier threshold) and is added to the
+    comparative threshold, then the outlier payment is calculated as   |     expected reimbursement.
+    0.5 * (cost - outlier multiplier threshold) and is added to the    | methodology: other
+    expected reimbursement.                                            | median_amount: 185.81
+median_amount: 185.81                                                  | percentile_10th: 185.81
+10th_percentile: 185.81                                                | percentile_90th: 185.81
+90th_percentile: 185.81                                                | allowed_count: 1 through 10
+count: 1 through 10                                                    | additional_notes: OPPS APC
+standard_charge|min: 176.52                                            | implied_dollar: 185.81
+standard_charge|max: 528.85                                            | implied_flag: FALSE
+standard_charge|methodology: other                                     | rate_type: dollar
+additional_generic_notes: OPPS APC                                     | 
+
+--- raw_brigham_and_womens_faulkner_hospital.jsonl:line2
+RAW                                                                    | NORMALISED
+description: Autonomic Function Test Cardiovagal                       | code: 95921
+code|1: PX-92000069                                                    | code_type: CPT
+code|1|type: CDM                                                       | description: Autonomic Function Test Cardiovagal
+code|2: 95921                                                          | setting: both
+code|2|type: CPT                                                       | gross_charge: 431.00
+code|3: 0922                                                           | discounted_cash: 323.25
+code|3|type: RC                                                        | deidentified_min: 176.52
+setting: both                                                          | deidentified_max: 528.85
+standard_charge|gross: 431.00                                          | payer_name: UNITED HEALTHCARE [1016]
+standard_charge|discounted_cash: 323.25                                | plan_name: HB BWF UNITED MEDICARE REPLACEMENT
+payer_name: UNITED HEALTHCARE [1016]                                   | standard_charge_dollar: 182.09
+plan_name: HB BWF UNITED MEDICARE REPLACEMENT                          | standard_charge_algorithm: APC Price ($185.81). If cost exceeds the
+standard_charge|negotiated_dollar: 182.09                              |     threshold, the outlier payment is added to the expected
+standard_charge|negotiated_algorithm: APC Price ($185.81). If cost     |     reimbursement. Cost is calculated as the billed amount * the cost-
+    exceeds the threshold, the outlier payment is added to the         |     to-charge ratio (0.256). The threshold is calculated as the
+    expected reimbursement. Cost is calculated as the billed amount *  |     maximum of the outlier multiplier threshold and the fixed
+    the cost-to-charge ratio (0.256). The threshold is calculated as   |     threshold. The outlier multiplier threshold is the outlier
+    the maximum of the outlier multiplier threshold and the fixed      |     multiplier factor (1.75) * adjusted APC rate for the line, and the
+    threshold. The outlier multiplier threshold is the outlier         |     fixed threshold is the outlier fixed-dollar threshold ($7,175) +
+    multiplier factor (1.75) * adjusted APC rate for the line, and the |     adjusted APC rate for the line. If the cost is greater than the
+    fixed threshold is the outlier fixed-dollar threshold ($7,175) +   |     comparative threshold, then the outlier payment is calculated as
+    adjusted APC rate for the line. If the cost is greater than the    |     0.5 * (cost - outlier multiplier threshold) and is added to the
+    comparative threshold, then the outlier payment is calculated as   |     expected reimbursement. Final payment is multiplied by 98%.
+    0.5 * (cost - outlier multiplier threshold) and is added to the    | methodology: other
+    expected reimbursement. Final payment is multiplied by 98%.        | median_amount: 182.84
+median_amount: 182.84                                                  | percentile_10th: 182.10
+10th_percentile: 182.10                                                | percentile_90th: 183.10
+90th_percentile: 183.10                                                | allowed_count: 1 through 10
+count: 1 through 10                                                    | additional_notes: OPPS APC
+standard_charge|min: 176.52                                            | implied_dollar: 182.09
+standard_charge|max: 528.85                                            | implied_flag: FALSE
+standard_charge|methodology: other                                     | rate_type: dollar
+additional_generic_notes: OPPS APC                                     | 
+
+--- raw_brigham_and_womens_faulkner_hospital.jsonl:line3
+RAW                                                                    | NORMALISED
+description: Autonomic Function Test Cardiovagal                       | code: 95921
+code|1: PX-92000069                                                    | code_type: CPT
+code|1|type: CDM                                                       | description: Autonomic Function Test Cardiovagal
+code|2: 95921                                                          | setting: outpatient
+code|2|type: CPT                                                       | gross_charge: 431.00
+code|3: 0922                                                           | discounted_cash: 323.25
+code|3|type: RC                                                        | deidentified_min: 191.58
+setting: outpatient                                                    | deidentified_max: 344.05
+standard_charge|gross: 431.00                                          | payer_name: CIGNA [1006]
+standard_charge|discounted_cash: 323.25                                | plan_name: HB CH CIGNA HMO / PPO
+payer_name: CIGNA [1006]                                               | standard_charge_dollar: 255.58
+plan_name: HB CH CIGNA HMO / PPO                                       | standard_charge_percentage: 59.3
+standard_charge|negotiated_dollar: 255.58                              | methodology: percent of total billed charges
+standard_charge|negotiated_percentage: 59.3                            | median_amount: 245.53
+median_amount: 245.53                                                  | percentile_10th: 245.53
+10th_percentile: 245.53                                                | percentile_90th: 245.53
+90th_percentile: 245.53                                                | allowed_count: 1 through 10
+count: 1 through 10                                                    | implied_dollar: 255.58
+standard_charge|min: 191.58                                            | implied_flag: FALSE
+standard_charge|max: 344.05                                            | rate_type: dollar
+standard_charge|methodology: percent of total billed charges           | 
+
+--- raw_brigham_and_womens_faulkner_hospital.jsonl:line5
+RAW                                                                    | NORMALISED
+description: Autonomic Function Test Sudomotor                         | code: 95923
+code|1: PX-92000071                                                    | code_type: CPT
+code|1|type: CDM                                                       | description: Autonomic Function Test Sudomotor
+code|2: 95923                                                          | setting: both
+code|2|type: CPT                                                       | gross_charge: 696.00
+code|3: 0922                                                           | discounted_cash: 522.00
+code|3|type: RC                                                        | deidentified_min: 145.42
+setting: both                                                          | deidentified_max: 542.25
+standard_charge|gross: 696.00                                          | payer_name: BLUE CROSS BLUE SHIELD [110001]
+standard_charge|discounted_cash: 522.00                                | plan_name: HB BWF MEDICARE
+payer_name: BLUE CROSS BLUE SHIELD [110001]                            | standard_charge_dollar: 153.08
+plan_name: HB BWF MEDICARE                                             | standard_charge_algorithm: APC Price ($153.08). The procedure is
+standard_charge|negotiated_dollar: 153.08                              |     conditionally packaged with other services, and it is only paid if
+standard_charge|negotiated_algorithm: APC Price ($153.08). The         |     it is the highest rate for the service date. If cost exceeds the
+    procedure is conditionally packaged with other services, and it is |     threshold, the outlier payment is added to the expected
+    only paid if it is the highest rate for the service date. If cost  |     reimbursement. Cost is calculated as the billed amount * the cost-
+    exceeds the threshold, the outlier payment is added to the         |     to-charge ratio (0.256). The threshold is calculated as the
+    expected reimbursement. Cost is calculated as the billed amount *  |     maximum of the outlier multiplier threshold and the fixed
+    the cost-to-charge ratio (0.256). The threshold is calculated as   |     threshold. The outlier multiplier threshold is the outlier
+    the maximum of the outlier multiplier threshold and the fixed      |     multiplier factor (1.75) * adjusted APC rate for the line, and the
+    threshold. The outlier multiplier threshold is the outlier         |     fixed threshold is the outlier fixed-dollar threshold ($7,175) +
+    multiplier factor (1.75) * adjusted APC rate for the line, and the |     adjusted APC rate for the line. If the cost is greater than the
+    fixed threshold is the outlier fixed-dollar threshold ($7,175) +   |     comparative threshold, then the outlier payment is calculated as
+    adjusted APC rate for the line. If the cost is greater than the    |     0.5 * (cost - outlier multiplier threshold) and is added to the
+    comparative threshold, then the outlier payment is calculated as   |     expected reimbursement.
+    0.5 * (cost - outlier multiplier threshold) and is added to the    | methodology: other
+    expected reimbursement.                                            | median_amount: 171.01
+median_amount: 171.01                                                  | percentile_10th: 132.59
+10th_percentile: 132.59                                                | percentile_90th: 171.01
+90th_percentile: 171.01                                                | allowed_count: 1 through 10
+count: 1 through 10                                                    | additional_notes: OPPS APC
+standard_charge|min: 145.42                                            | implied_dollar: 153.08
+standard_charge|max: 542.25                                            | implied_flag: FALSE
+standard_charge|methodology: other                                     | rate_type: dollar
+additional_generic_notes: OPPS APC                                     | 
+
+--- raw_brigham_and_womens_faulkner_hospital.jsonl:line6
+RAW                                                                    | NORMALISED
+description: Autonomic Function Test Sudomotor                         | code: 95923
+code|1: PX-92000071                                                    | code_type: CPT
+code|1|type: CDM                                                       | description: Autonomic Function Test Sudomotor
+code|2: 95923                                                          | setting: both
+code|2|type: CPT                                                       | gross_charge: 696.00
+code|3: 0922                                                           | discounted_cash: 522.00
+code|3|type: RC                                                        | deidentified_min: 145.42
+setting: both                                                          | deidentified_max: 542.25
+standard_charge|gross: 696.00                                          | payer_name: CENTERS OF EXCELLENCE [1026]
+standard_charge|discounted_cash: 522.00                                | plan_name: HB BWF MEDICARE
+payer_name: CENTERS OF EXCELLENCE [1026]                               | standard_charge_dollar: 153.08
+plan_name: HB BWF MEDICARE                                             | standard_charge_algorithm: APC Price ($153.08). The procedure is
+standard_charge|negotiated_dollar: 153.08                              |     conditionally packaged with other services, and it is only paid if
+standard_charge|negotiated_algorithm: APC Price ($153.08). The         |     it is the highest rate for the service date. If cost exceeds the
+    procedure is conditionally packaged with other services, and it is |     threshold, the outlier payment is added to the expected
+    only paid if it is the highest rate for the service date. If cost  |     reimbursement. Cost is calculated as the billed amount * the cost-
+    exceeds the threshold, the outlier payment is added to the         |     to-charge ratio (0.256). The threshold is calculated as the
+    expected reimbursement. Cost is calculated as the billed amount *  |     maximum of the outlier multiplier threshold and the fixed
+    the cost-to-charge ratio (0.256). The threshold is calculated as   |     threshold. The outlier multiplier threshold is the outlier
+    the maximum of the outlier multiplier threshold and the fixed      |     multiplier factor (1.75) * adjusted APC rate for the line, and the
+    threshold. The outlier multiplier threshold is the outlier         |     fixed threshold is the outlier fixed-dollar threshold ($7,175) +
+    multiplier factor (1.75) * adjusted APC rate for the line, and the |     adjusted APC rate for the line. If the cost is greater than the
+    fixed threshold is the outlier fixed-dollar threshold ($7,175) +   |     comparative threshold, then the outlier payment is calculated as
+    adjusted APC rate for the line. If the cost is greater than the    |     0.5 * (cost - outlier multiplier threshold) and is added to the
+    comparative threshold, then the outlier payment is calculated as   |     expected reimbursement.
+    0.5 * (cost - outlier multiplier threshold) and is added to the    | methodology: other
+    expected reimbursement.                                            | median_amount: 168.27
+median_amount: 168.27                                                  | percentile_10th: 168.27
+10th_percentile: 168.27                                                | percentile_90th: 168.27
+90th_percentile: 168.27                                                | allowed_count: 1 through 10
+count: 1 through 10                                                    | additional_notes: OPPS APC
+standard_charge|min: 145.42                                            | implied_dollar: 153.08
+standard_charge|max: 542.25                                            | implied_flag: FALSE
+standard_charge|methodology: other                                     | rate_type: dollar
+additional_generic_notes: OPPS APC                                     | 
+
+--- raw_brigham_and_womens_faulkner_hospital.jsonl:line7
+RAW                                                                    | NORMALISED
+description: Autonomic Function Test Sudomotor                         | code: 95923
+code|1: PX-92000071                                                    | code_type: CPT
+code|1|type: CDM                                                       | description: Autonomic Function Test Sudomotor
+code|2: 95923                                                          | setting: both
+code|2|type: CPT                                                       | gross_charge: 696.00
+code|3: 0922                                                           | discounted_cash: 522.00
+code|3|type: RC                                                        | deidentified_min: 145.42
+setting: both                                                          | deidentified_max: 542.25
+standard_charge|gross: 696.00                                          | payer_name: HEALTH NEW ENGLAND [1034]
+standard_charge|discounted_cash: 522.00                                | plan_name: HB CH CLARITEV (PRIMARY PPO)
+payer_name: HEALTH NEW ENGLAND [1034]                                  | standard_charge_dollar: 508.08
+plan_name: HB CH CLARITEV (PRIMARY PPO)                                | standard_charge_percentage: 73
+standard_charge|negotiated_dollar: 508.08                              | methodology: percent of total billed charges
+standard_charge|negotiated_percentage: 73                              | median_amount: 494.21
+median_amount: 494.21                                                  | percentile_10th: 479.61
+10th_percentile: 479.61                                                | percentile_90th: 494.21
+90th_percentile: 494.21                                                | allowed_count: 1 through 10
+count: 1 through 10                                                    | implied_dollar: 508.08
+standard_charge|min: 145.42                                            | implied_flag: FALSE
+standard_charge|max: 542.25                                            | rate_type: dollar
+standard_charge|methodology: percent of total billed charges           | 
+
+--- raw_brigham_and_womens_faulkner_hospital.jsonl:line13
+RAW                                                                    | NORMALISED
+description: Test Ans Func Parasymp&Symp W/5 Mi                        | code: 95924
+code|1: PX-92000125                                                    | code_type: CPT
+code|1|type: CDM                                                       | description: Test Ans Func Parasymp&Symp W/5 Mi
+code|2: 95924                                                          | setting: both
+code|2|type: CPT                                                       | gross_charge: 809.00
+code|3: 0922                                                           | discounted_cash: 606.75
+code|3|type: RC                                                        | deidentified_min: 351.32
+setting: both                                                          | deidentified_max: 630.29
+standard_charge|gross: 809.00                                          | payer_name: BLUE CROSS BLUE SHIELD [110001]
+standard_charge|discounted_cash: 606.75                                | plan_name: HB BWF MEDICARE
+payer_name: BLUE CROSS BLUE SHIELD [110001]                            | standard_charge_dollar: 369.81
+plan_name: HB BWF MEDICARE                                             | standard_charge_algorithm: APC Price ($369.81). If cost exceeds the
+standard_charge|negotiated_dollar: 369.81                              |     threshold, the outlier payment is added to the expected
+standard_charge|negotiated_algorithm: APC Price ($369.81). If cost     |     reimbursement. Cost is calculated as the billed amount * the cost-
+    exceeds the threshold, the outlier payment is added to the         |     to-charge ratio (0.256). The threshold is calculated as the
+    expected reimbursement. Cost is calculated as the billed amount *  |     maximum of the outlier multiplier threshold and the fixed
+    the cost-to-charge ratio (0.256). The threshold is calculated as   |     threshold. The outlier multiplier threshold is the outlier
+    the maximum of the outlier multiplier threshold and the fixed      |     multiplier factor (1.75) * adjusted APC rate for the line, and the
+    threshold. The outlier multiplier threshold is the outlier         |     fixed threshold is the outlier fixed-dollar threshold ($7,175) +
+    multiplier factor (1.75) * adjusted APC rate for the line, and the |     adjusted APC rate for the line. If the cost is greater than the
+    fixed threshold is the outlier fixed-dollar threshold ($7,175) +   |     comparative threshold, then the outlier payment is calculated as
+    adjusted APC rate for the line. If the cost is greater than the    |     0.5 * (cost - outlier multiplier threshold) and is added to the
+    comparative threshold, then the outlier payment is calculated as   |     expected reimbursement.
+    0.5 * (cost - outlier multiplier threshold) and is added to the    | methodology: other
+    expected reimbursement.                                            | median_amount: 363.89
+median_amount: 363.89                                                  | percentile_10th: 154.13
+10th_percentile: 154.13                                                | percentile_90th: 363.89
+90th_percentile: 363.89                                                | allowed_count: 1 through 10
+count: 1 through 10                                                    | additional_notes: OPPS APC
+standard_charge|min: 351.32                                            | implied_dollar: 369.81
+standard_charge|max: 630.29                                            | implied_flag: FALSE
+standard_charge|methodology: other                                     | rate_type: dollar
+additional_generic_notes: OPPS APC                                     | 
+
+--- raw_brigham_and_womens_faulkner_hospital.jsonl:line14
+RAW                                                                    | NORMALISED
+description: Test Ans Func Parasymp&Symp W/5 Mi                        | code: 95924
+code|1: PX-92000125                                                    | code_type: CPT
+code|1|type: CDM                                                       | description: Test Ans Func Parasymp&Symp W/5 Mi
+code|2: 95924                                                          | setting: both
+code|2|type: CPT                                                       | gross_charge: 809.00
+code|3: 0922                                                           | discounted_cash: 606.75
+code|3|type: RC                                                        | deidentified_min: 351.32
+setting: both                                                          | deidentified_max: 630.29
+standard_charge|gross: 809.00                                          | payer_name: CENTERS OF EXCELLENCE [1026]
+standard_charge|discounted_cash: 606.75                                | plan_name: HB BWF MEDICARE
+payer_name: CENTERS OF EXCELLENCE [1026]                               | standard_charge_dollar: 369.81
+plan_name: HB BWF MEDICARE                                             | standard_charge_algorithm: APC Price ($369.81). If cost exceeds the
+standard_charge|negotiated_dollar: 369.81                              |     threshold, the outlier payment is added to the expected
+standard_charge|negotiated_algorithm: APC Price ($369.81). If cost     |     reimbursement. Cost is calculated as the billed amount * the cost-
+    exceeds the threshold, the outlier payment is added to the         |     to-charge ratio (0.256). The threshold is calculated as the
+    expected reimbursement. Cost is calculated as the billed amount *  |     maximum of the outlier multiplier threshold and the fixed
+    the cost-to-charge ratio (0.256). The threshold is calculated as   |     threshold. The outlier multiplier threshold is the outlier
+    the maximum of the outlier multiplier threshold and the fixed      |     multiplier factor (1.75) * adjusted APC rate for the line, and the
+    threshold. The outlier multiplier threshold is the outlier         |     fixed threshold is the outlier fixed-dollar threshold ($7,175) +
+    multiplier factor (1.75) * adjusted APC rate for the line, and the |     adjusted APC rate for the line. If the cost is greater than the
+    fixed threshold is the outlier fixed-dollar threshold ($7,175) +   |     comparative threshold, then the outlier payment is calculated as
+    adjusted APC rate for the line. If the cost is greater than the    |     0.5 * (cost - outlier multiplier threshold) and is added to the
+    comparative threshold, then the outlier payment is calculated as   |     expected reimbursement.
+    0.5 * (cost - outlier multiplier threshold) and is added to the    | methodology: other
+    expected reimbursement.                                            | median_amount: 366.63
+median_amount: 366.63                                                  | percentile_10th: 366.63
+10th_percentile: 366.63                                                | percentile_90th: 366.63
+90th_percentile: 366.63                                                | allowed_count: 1 through 10
+count: 1 through 10                                                    | additional_notes: OPPS APC
+standard_charge|min: 351.32                                            | implied_dollar: 369.81
+standard_charge|max: 630.29                                            | implied_flag: FALSE
+standard_charge|methodology: other                                     | rate_type: dollar
+additional_generic_notes: OPPS APC                                     | 
+
+--- raw_brigham_and_womens_faulkner_hospital.jsonl:line15
+RAW                                                                    | NORMALISED
+description: Test Ans Func Parasymp&Symp W/5 Mi                        | code: 95924
+code|1: PX-92000125                                                    | code_type: CPT
+code|1|type: CDM                                                       | description: Test Ans Func Parasymp&Symp W/5 Mi
+code|2: 95924                                                          | setting: both
+code|2|type: CPT                                                       | gross_charge: 809.00
+code|3: 0922                                                           | discounted_cash: 606.75
+code|3|type: RC                                                        | deidentified_min: 351.32
+setting: both                                                          | deidentified_max: 630.29
+standard_charge|gross: 809.00                                          | payer_name: COMMONWEALTH CARE ALLIANCE [1007]
+standard_charge|discounted_cash: 606.75                                | plan_name: HB BWF TUFTS + COMM CARE ALLIANCE MCARE
+payer_name: COMMONWEALTH CARE ALLIANCE [1007]                          | standard_charge_dollar: 362.41
+plan_name: HB BWF TUFTS + COMM CARE ALLIANCE MCARE                     | standard_charge_algorithm: APC Price ($369.81). If cost exceeds the
+standard_charge|negotiated_dollar: 362.41                              |     threshold, the outlier payment is added to the expected
+standard_charge|negotiated_algorithm: APC Price ($369.81). If cost     |     reimbursement. Cost is calculated as the billed amount * the cost-
+    exceeds the threshold, the outlier payment is added to the         |     to-charge ratio (0.256). The threshold is calculated as the
+    expected reimbursement. Cost is calculated as the billed amount *  |     maximum of the outlier multiplier threshold and the fixed
+    the cost-to-charge ratio (0.256). The threshold is calculated as   |     threshold. The outlier multiplier threshold is the outlier
+    the maximum of the outlier multiplier threshold and the fixed      |     multiplier factor (1.75) * adjusted APC rate for the line, and the
+    threshold. The outlier multiplier threshold is the outlier         |     fixed threshold is the outlier fixed-dollar threshold ($7,175) +
+    multiplier factor (1.75) * adjusted APC rate for the line, and the |     adjusted APC rate for the line. If the cost is greater than the
+    fixed threshold is the outlier fixed-dollar threshold ($7,175) +   |     comparative threshold, then the outlier payment is calculated as
+    adjusted APC rate for the line. If the cost is greater than the    |     0.5 * (cost - outlier multiplier threshold) and is added to the
+    comparative threshold, then the outlier payment is calculated as   |     expected reimbursement. Final payment is multiplied by 98%.
+    0.5 * (cost - outlier multiplier threshold) and is added to the    | methodology: other
+    expected reimbursement. Final payment is multiplied by 98%.        | median_amount: 363.89
+median_amount: 363.89                                                  | percentile_10th: 363.89
+10th_percentile: 363.89                                                | percentile_90th: 363.89
+90th_percentile: 363.89                                                | allowed_count: 1 through 10
+count: 1 through 10                                                    | additional_notes: OPPS APC
+standard_charge|min: 351.32                                            | implied_dollar: 362.41
+standard_charge|max: 630.29                                            | implied_flag: FALSE
+standard_charge|methodology: other                                     | rate_type: dollar
+additional_generic_notes: OPPS APC                                     | 
+
+--- raw_brigham_and_womens_faulkner_hospital.jsonl:line4
+RAW                                                                    | NORMALISED
+description: Autonomic Function Test Cardiovagal                       | code: 95921
+code|1: PX-92000069                                                    | code_type: CPT
+code|1|type: CDM                                                       | description: Autonomic Function Test Cardiovagal
+code|2: 95921                                                          | setting: outpatient
+code|2|type: CPT                                                       | gross_charge: 431.00
+code|3: 0922                                                           | discounted_cash: 323.25
+code|3|type: RC                                                        | deidentified_min: 191.58
+setting: outpatient                                                    | deidentified_max: 344.05
+standard_charge|gross: 431.00                                          | payer_name: UNITED HEALTHCARE [1016]
+standard_charge|discounted_cash: 323.25                                | plan_name: HB CH UNITED HMO / PPO / INDEMNITY
+payer_name: UNITED HEALTHCARE [1016]                                   | standard_charge_dollar: 338.12
+plan_name: HB CH UNITED HMO / PPO / INDEMNITY                          | standard_charge_percentage: 78.45
+standard_charge|negotiated_dollar: 338.12                              | methodology: percent of total billed charges
+standard_charge|negotiated_percentage: 78.45                           | median_amount: 322.13
+median_amount: 322.13                                                  | percentile_10th: 322.13
+10th_percentile: 322.13                                                | percentile_90th: 322.13
+90th_percentile: 322.13                                                | allowed_count: 1 through 10
+count: 1 through 10                                                    | implied_dollar: 338.12
+standard_charge|min: 191.58                                            | implied_flag: FALSE
+standard_charge|max: 344.05                                            | rate_type: dollar
+standard_charge|methodology: percent of total billed charges           | 
+
+### Wentworth-Douglass Hospital: no rows
+
+### Beth Israel Deaconess Medical Center (10 samples)
+
+--- raw_beth_israel_deaconess_medical_center.jsonl:line1.standard_charges[0]
+RAW                                                                    | NORMALISED
+{                                                                      | code: 93660
+ "description": "HC CARDIOVASCULAR FUNC EVAL W TILT TABLE W MNTR",     | code_type: HCPCS
+ "code_information": [                                                 | description: HC CARDIOVASCULAR FUNC EVAL W TILT TABLE W MNTR
+  {                                                                    | setting: both
+   "code": "4800000047",                                               | billing_class: facility
+   "type": "CDM"                                                       | gross_charge: 2310
+  },                                                                   | discounted_cash: 2310
+  {                                                                    | additional_notes: Gross Charge Type: standard
+   "code": "0480",                                                     | rate_type: no payer (gross/cash only)
+   "type": "RC"                                                        | 
+  },                                                                   | 
+  {                                                                    | 
+   "code": "93660",                                                    | 
+   "type": "HCPCS"                                                     | 
+  }                                                                    | 
+ ],                                                                    | 
+ "standard_charges": [                                                 | 
+  {                                                                    | 
+   "gross_charge": 2310.0,                                             | 
+   "discounted_cash": 2310.0,                                          | 
+   "setting": "both",                                                  | 
+   "billing_class": "facillity",                                       | 
+   "additional_generic_notes": "Gross Charge Type: standard"           | 
+  }                                                                    | 
+ ]                                                                     | 
+}                                                                      | 
+
+--- raw_beth_israel_deaconess_medical_center.jsonl:line2.standard_charges[0]
+RAW                                                                    | NORMALISED
+{                                                                      | code: 95921
+ "description": "HC AUTONOMIC NERVOUS SYS FUNCTION TEST CARD",         | code_type: HCPCS
+ "code_information": [                                                 | description: HC AUTONOMIC NERVOUS SYS FUNCTION TEST CARD
+  {                                                                    | setting: both
+   "code": "9220000018",                                               | billing_class: facility
+   "type": "CDM"                                                       | gross_charge: 2207
+  },                                                                   | discounted_cash: 2207
+  {                                                                    | additional_notes: Gross Charge Type: standard
+   "code": "0922",                                                     | rate_type: no payer (gross/cash only)
+   "type": "RC"                                                        | 
+  },                                                                   | 
+  {                                                                    | 
+   "code": "95921",                                                    | 
+   "type": "HCPCS"                                                     | 
+  }                                                                    | 
+ ],                                                                    | 
+ "standard_charges": [                                                 | 
+  {                                                                    | 
+   "gross_charge": 2207.0,                                             | 
+   "discounted_cash": 2207.0,                                          | 
+   "setting": "both",                                                  | 
+   "billing_class": "facillity",                                       | 
+   "additional_generic_notes": "Gross Charge Type: standard"           | 
+  }                                                                    | 
+ ]                                                                     | 
+}                                                                      | 
+
+--- raw_beth_israel_deaconess_medical_center.jsonl:line3.standard_charges[0]
+RAW                                                                    | NORMALISED
+{                                                                      | code: 95922
+ "description": "HC AUTONOMIC NERVOUS SYS FUNCTION TEST VASOMOTOR",    | code_type: HCPCS
+ "code_information": [                                                 | description: HC AUTONOMIC NERVOUS SYS FUNCTION TEST VASOMOTOR
+  {                                                                    | setting: both
+   "code": "9220000019",                                               | billing_class: facility
+   "type": "CDM"                                                       | gross_charge: 3672
+  },                                                                   | discounted_cash: 3672
+  {                                                                    | additional_notes: Gross Charge Type: standard
+   "code": "0922",                                                     | rate_type: no payer (gross/cash only)
+   "type": "RC"                                                        | 
+  },                                                                   | 
+  {                                                                    | 
+   "code": "95922",                                                    | 
+   "type": "HCPCS"                                                     | 
+  }                                                                    | 
+ ],                                                                    | 
+ "standard_charges": [                                                 | 
+  {                                                                    | 
+   "gross_charge": 3672.0,                                             | 
+   "discounted_cash": 3672.0,                                          | 
+   "setting": "both",                                                  | 
+   "billing_class": "facillity",                                       | 
+   "additional_generic_notes": "Gross Charge Type: standard"           | 
+  }                                                                    | 
+ ]                                                                     | 
+}                                                                      | 
+
+--- raw_beth_israel_deaconess_medical_center.jsonl:line4.standard_charges[0]
+RAW                                                                    | NORMALISED
+{                                                                      | code: 95923
+ "description": "HC AUTONOMIC NERVOUS SYS FUNCTION TEST SUDOMOTOR",    | code_type: HCPCS
+ "code_information": [                                                 | description: HC AUTONOMIC NERVOUS SYS FUNCTION TEST SUDOMOTOR
+  {                                                                    | setting: both
+   "code": "9220000020",                                               | billing_class: facility
+   "type": "CDM"                                                       | gross_charge: 3088
+  },                                                                   | discounted_cash: 3088
+  {                                                                    | additional_notes: Gross Charge Type: standard
+   "code": "0922",                                                     | rate_type: no payer (gross/cash only)
+   "type": "RC"                                                        | 
+  },                                                                   | 
+  {                                                                    | 
+   "code": "95923",                                                    | 
+   "type": "HCPCS"                                                     | 
+  }                                                                    | 
+ ],                                                                    | 
+ "standard_charges": [                                                 | 
+  {                                                                    | 
+   "gross_charge": 3088.0,                                             | 
+   "discounted_cash": 3088.0,                                          | 
+   "setting": "both",                                                  | 
+   "billing_class": "facillity",                                       | 
+   "additional_generic_notes": "Gross Charge Type: standard"           | 
+  }                                                                    | 
+ ]                                                                     | 
+}                                                                      | 
+
+--- raw_beth_israel_deaconess_medical_center.jsonl:line5.standard_charges[0]
+RAW                                                                    | NORMALISED
+{                                                                      | code: 95924
+ "description": "HC AUTONOMIC NERVOUS SYS FUNCTION TEST W PASSIVE      | code_type: HCPCS
+    TILT",                                                             | description: HC AUTONOMIC NERVOUS SYS FUNCTION TEST W PASSIVE TILT
+ "code_information": [                                                 | setting: both
+  {                                                                    | billing_class: facility
+   "code": "9220000021",                                               | gross_charge: 1097
+   "type": "CDM"                                                       | discounted_cash: 1097
+  },                                                                   | additional_notes: Gross Charge Type: standard
+  {                                                                    | rate_type: no payer (gross/cash only)
+   "code": "0922",                                                     | 
+   "type": "RC"                                                        | 
+  },                                                                   | 
+  {                                                                    | 
+   "code": "95924",                                                    | 
+   "type": "HCPCS"                                                     | 
+  }                                                                    | 
+ ],                                                                    | 
+ "standard_charges": [                                                 | 
+  {                                                                    | 
+   "gross_charge": 1097.0,                                             | 
+   "discounted_cash": 1097.0,                                          | 
+   "setting": "both",                                                  | 
+   "billing_class": "facillity",                                       | 
+   "additional_generic_notes": "Gross Charge Type: standard"           | 
+  }                                                                    | 
+ ]                                                                     | 
+}                                                                      | 
+
+--- raw_beth_israel_deaconess_medical_center.jsonl:line6.standard_charges[0].payers_information[0]
+RAW                                                                    | NORMALISED
+{                                                                      | code: 93660
+ "description": "Tilt table evaluation",                               | code_type: HCPCS
+ "code_information": [                                                 | description: Tilt table evaluation
+  {                                                                    | setting: outpatient
+   "code": "93660",                                                    | billing_class: facility
+   "type": "HCPCS"                                                     | deidentified_min: 502.78
+  }                                                                    | deidentified_max: 1329.39
+ ],                                                                    | payer_name: BCBS
+ "standard_charges": [                                                 | plan_name: HMO
+  {                                                                    | standard_charge_dollar: 1091.24
+   "setting": "outpatient",                                            | methodology: fee schedule
+   "billing_class": "facility",                                        | implied_dollar: 1091.24
+   "minimum": 502.78,                                                  | implied_flag: FALSE
+   "maximum": 1329.39,                                                 | rate_type: dollar
+   "payers_information": [                                             | 
+    {                                                                  | 
+     "payer_name": "BCBS",                                             | 
+     "plan_name": "HMO",                                               | 
+     "methodology": "fee schedule",                                    | 
+     "standard_charge_dollar": 1091.24                                 | 
+    }                                                                  | 
+   ]                                                                   | 
+  }                                                                    | 
+ ]                                                                     | 
+}                                                                      | 
+
+--- raw_beth_israel_deaconess_medical_center.jsonl:line6.standard_charges[0].payers_information[1]
+RAW                                                                    | NORMALISED
+{                                                                      | code: 93660
+ "description": "Tilt table evaluation",                               | code_type: HCPCS
+ "code_information": [                                                 | description: Tilt table evaluation
+  {                                                                    | setting: outpatient
+   "code": "93660",                                                    | billing_class: facility
+   "type": "HCPCS"                                                     | deidentified_min: 502.78
+  }                                                                    | deidentified_max: 1329.39
+ ],                                                                    | payer_name: BCBS
+ "standard_charges": [                                                 | plan_name: PPO
+  {                                                                    | standard_charge_dollar: 1141.22
+   "setting": "outpatient",                                            | methodology: fee schedule
+   "billing_class": "facility",                                        | implied_dollar: 1141.22
+   "minimum": 502.78,                                                  | implied_flag: FALSE
+   "maximum": 1329.39,                                                 | rate_type: dollar
+   "payers_information": [                                             | 
+    {                                                                  | 
+     "payer_name": "BCBS",                                             | 
+     "plan_name": "PPO",                                               | 
+     "methodology": "fee schedule",                                    | 
+     "standard_charge_dollar": 1141.22                                 | 
+    }                                                                  | 
+   ]                                                                   | 
+  }                                                                    | 
+ ]                                                                     | 
+}                                                                      | 
+
+--- raw_beth_israel_deaconess_medical_center.jsonl:line6.standard_charges[0].payers_information[2]
+RAW                                                                    | NORMALISED
+{                                                                      | code: 93660
+ "description": "Tilt table evaluation",                               | code_type: HCPCS
+ "code_information": [                                                 | description: Tilt table evaluation
+  {                                                                    | setting: outpatient
+   "code": "93660",                                                    | billing_class: facility
+   "type": "HCPCS"                                                     | deidentified_min: 502.78
+  }                                                                    | deidentified_max: 1329.39
+ ],                                                                    | payer_name: Harvard Pilgrim Healthcare
+ "standard_charges": [                                                 | plan_name: Self Insured Non LCU All Commercial Plans
+  {                                                                    | standard_charge_dollar: 1329.39
+   "setting": "outpatient",                                            | methodology: fee schedule
+   "billing_class": "facility",                                        | implied_dollar: 1329.39
+   "minimum": 502.78,                                                  | implied_flag: FALSE
+   "maximum": 1329.39,                                                 | rate_type: dollar
+   "payers_information": [                                             | 
+    {                                                                  | 
+     "payer_name": "Harvard Pilgrim Healthcare",                       | 
+     "plan_name": "Self Insured Non LCU All Commercial Plans",         | 
+     "methodology": "fee schedule",                                    | 
+     "standard_charge_dollar": 1329.39                                 | 
+    }                                                                  | 
+   ]                                                                   | 
+  }                                                                    | 
+ ]                                                                     | 
+}                                                                      | 
+
+--- raw_beth_israel_deaconess_medical_center.jsonl:line7.standard_charges[0].payers_information[0]
+RAW                                                                    | NORMALISED
+{                                                                      | code: 95921
+ "description": "Autonomic nrv parasym inervj",                        | code_type: HCPCS
+ "code_information": [                                                 | description: Autonomic nrv parasym inervj
+  {                                                                    | setting: outpatient
+   "code": "95921",                                                    | billing_class: facility
+   "type": "HCPCS"                                                     | deidentified_min: 325.87
+  }                                                                    | deidentified_max: 396.97
+ ],                                                                    | payer_name: BCBS
+ "standard_charges": [                                                 | plan_name: HMO
+  {                                                                    | standard_charge_dollar: 325.87
+   "setting": "outpatient",                                            | methodology: fee schedule
+   "billing_class": "facility",                                        | implied_dollar: 325.87
+   "minimum": 325.87,                                                  | implied_flag: FALSE
+   "maximum": 396.97,                                                  | rate_type: dollar
+   "payers_information": [                                             | 
+    {                                                                  | 
+     "payer_name": "BCBS",                                             | 
+     "plan_name": "HMO",                                               | 
+     "methodology": "fee schedule",                                    | 
+     "standard_charge_dollar": 325.87                                  | 
+    }                                                                  | 
+   ]                                                                   | 
+  }                                                                    | 
+ ]                                                                     | 
+}                                                                      | 
+
+--- raw_beth_israel_deaconess_medical_center.jsonl:line7.standard_charges[0].payers_information[1]
+RAW                                                                    | NORMALISED
+{                                                                      | code: 95921
+ "description": "Autonomic nrv parasym inervj",                        | code_type: HCPCS
+ "code_information": [                                                 | description: Autonomic nrv parasym inervj
+  {                                                                    | setting: outpatient
+   "code": "95921",                                                    | billing_class: facility
+   "type": "HCPCS"                                                     | deidentified_min: 325.87
+  }                                                                    | deidentified_max: 396.97
+ ],                                                                    | payer_name: BCBS
+ "standard_charges": [                                                 | plan_name: PPO
+  {                                                                    | standard_charge_dollar: 340.79
+   "setting": "outpatient",                                            | methodology: fee schedule
+   "billing_class": "facility",                                        | implied_dollar: 340.79
+   "minimum": 325.87,                                                  | implied_flag: FALSE
+   "maximum": 396.97,                                                  | rate_type: dollar
+   "payers_information": [                                             | 
+    {                                                                  | 
+     "payer_name": "BCBS",                                             | 
+     "plan_name": "PPO",                                               | 
+     "methodology": "fee schedule",                                    | 
+     "standard_charge_dollar": 340.79                                  | 
+    }                                                                  | 
+   ]                                                                   | 
+  }                                                                    | 
+ ]                                                                     | 
+}                                                                      | 

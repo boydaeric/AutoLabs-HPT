@@ -18,6 +18,7 @@ Output: raw_<hospital>.jsonl (one match per line, original record under
 Usage:  python extract_codes.py [--manifest manifest.csv] [--out DIR]
 """
 import argparse
+import codecs
 import csv
 import gzip
 import io
@@ -44,6 +45,11 @@ MAX_RETRIES = 3
 CHUNK = 1 << 20
 
 csv.field_size_limit(sys.maxsize)
+
+# Some MRFs are UTF-8 with stray Windows-1252 bytes (e.g. 0x92 apostrophe).
+# Decode those bytes as cp1252 instead of replacing them with U+FFFD.
+codecs.register_error("cp1252_fallback", lambda e: (
+    e.object[e.start:e.start + 1].decode("cp1252", errors="replace"), e.start + 1))
 
 
 def log(msg):
@@ -217,7 +223,7 @@ def norm_col(c):
 
 
 def parse_csv(f, stats, emit):
-    text = io.TextIOWrapper(f, encoding="utf-8-sig", errors="replace", newline="")
+    text = io.TextIOWrapper(f, encoding="utf-8-sig", errors="cp1252_fallback", newline="")
     reader = csv.reader(text)
     pre = []
     columns = None
