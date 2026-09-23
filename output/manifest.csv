@@ -1,0 +1,6 @@
+hospital,mrf_url,format,compression,size_bytes,last_modified
+Massachusetts General Hospital,https://www.massgeneralbrigham.org/price-transparency/042697983_Massachusetts-General-Hospital_StandardCharges.zip,unknown,zip,3752715,"Thu, 23 Jul 2026 19:36:39 GMT"
+Brigham and Women's Hospital,https://www.massgeneralbrigham.org/price-transparency/042312909_Brigham-and-Womens-Hospital_StandardCharges.zip,unknown,zip,2876602,"Thu, 23 Jul 2026 19:36:39 GMT"
+Brigham and Women's Faulkner Hospital,https://www.massgeneralbrigham.org/price-transparency/042768256_Brigham-and-Womens-Faulkner-Hospital_StandardCharges.zip,unknown,zip,997328,"Thu, 23 Jul 2026 19:36:39 GMT"
+Wentworth-Douglass Hospital,https://www.massgeneralbrigham.org/price-transparency/020260334_Wentworth-Douglass-Hospital_StandardCharges.zip,unknown,zip,851579,"Thu, 23 Jul 2026 19:36:39 GMT"
+Beth Israel Deaconess Medical Center,https://bidmc.org/042103881_beth-israel-deaconess-medical-center_standardcharges.json,JSON,none,28109168,"Thu, 09 Jul 2026 21:53:00 GMT"

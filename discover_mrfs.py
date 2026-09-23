@@ -22,7 +22,10 @@ import zlib
 from html.parser import HTMLParser
 from urllib.parse import urljoin, urlparse
 
+import ssl
+
 import requests
+from requests.adapters import HTTPAdapter
 
 CMS_HPT_URLS = [
     "https://www.massgeneralbrigham.org/cms-hpt.txt",
@@ -43,6 +46,36 @@ TARGETS = {
     "Wentworth-Douglass Hospital": (r"\bwentworth douglass\b", r"$^"),
     "Beth Israel Deaconess Medical Center": (r"\bbeth israel deaconess medical center\b|\bbidmc\b", r"milton|needham|plymouth"),
 }
+
+# bilh.org / bidmc.org servers still use legacy TLS renegotiation, which
+# OpenSSL 3 refuses by default. Allow it for those hosts only (cert
+# verification stays on).
+LEGACY_TLS_HOSTS = ["bilh.org", "www.bilh.org", "bidmc.org", "www.bidmc.org"]
+
+
+def _legacy_ctx():
+    ctx = ssl.create_default_context()
+    ctx.options |= getattr(ssl, "OP_LEGACY_SERVER_CONNECT", 0x4)
+    return ctx
+
+
+class LegacyTLSAdapter(HTTPAdapter):
+    def init_poolmanager(self, *a, **k):
+        k["ssl_context"] = _legacy_ctx()
+        return super().init_poolmanager(*a, **k)
+
+    def proxy_manager_for(self, *a, **k):
+        k["ssl_context"] = _legacy_ctx()
+        return super().proxy_manager_for(*a, **k)
+
+
+def make_session():
+    s = requests.Session()
+    s.headers.update(UA)
+    for host in LEGACY_TLS_HOSTS:
+        s.mount(f"https://{host}", LegacyTLSAdapter())
+    return s
+
 
 UA = {"User-Agent": "Mozilla/5.0 (price-transparency research; autolabs_hpt)"}
 TIMEOUT = 60
@@ -243,8 +276,7 @@ def main():
                     help="bytes to Range-read from CSV MRFs to detect tall/wide (0 = HEAD only)")
     args = ap.parse_args()
 
-    s = requests.Session()
-    s.headers.update(UA)
+    s = make_session()
     rows, seen, log = discover(s)
     print("\n".join(log), file=sys.stderr)
     print(f"\nLocations seen ({len(seen)}); matched MRFs: {len(rows)}", file=sys.stderr)
