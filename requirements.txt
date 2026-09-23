@@ -1,0 +1,4 @@
+requests
+ijson
+pandas
+openpyxl
