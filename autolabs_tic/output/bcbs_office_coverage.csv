@@ -1,0 +1,173 @@
+file,code,in_file,office_global,office_global_prices,office_global_provider_refs,office_global_range,office_global_mode,price_shapes
+Blue-Care-Elect-Fully-Insured,93000,Y,Y,95.0,12220.0,14.54-100.94,17.11,"institutional/global/facility/other=61; professional/55/office=35; professional/55,73/office=6; professional/73/office=38; professional/global/office=98"
+Blue-Care-Elect-Fully-Insured,93224,Y,Y,82.0,5033.0,74.07-514.09,87.14,institutional/global/facility/other=61; professional/52/office=33; professional/global/office=84
+Blue-Care-Elect-Fully-Insured,93225,Y,Y,1.0,10.0,61.57-61.57,61.57,institutional/52/facility/other=61; institutional/global/facility/other=53; professional/52/office=32; professional/TC/office=89; professional/global/office=1
+Blue-Care-Elect-Fully-Insured,93226,Y,Y,1.0,10.0,108.24-108.24,108.24,institutional/52/facility/other=58; institutional/global/facility/other=53; professional/TC/office=90; professional/global/office=1
+Blue-Care-Elect-Fully-Insured,93227,Y,N,0.0,0.0,,,institutional/global/facility/other=61; professional/26/office=91; professional/52/office=32
+Blue-Care-Elect-Fully-Insured,93660,Y,N,0.0,0.0,,,institutional/global/facility/other=61; professional/26/office=79
+Blue-Care-Elect-Fully-Insured,93880,Y,Y,54.0,4301.0,246.82-1456.14,246.82,institutional/global/facility/other=61; professional/26/office=53; professional/52/facility/other=31; professional/global/office=54
+Blue-Care-Elect-Fully-Insured,93886,Y,N,0.0,0.0,,,institutional/global/facility/other=61; professional/26/office=39
+Blue-Care-Elect-Fully-Insured,95860,Y,Y,1.0,10.0,48.29-48.29,48.29,institutional/global/facility/other=61; professional/26/office=30; professional/53/office=29; professional/global/office=1
+Blue-Care-Elect-Fully-Insured,95861,Y,Y,1.0,10.0,36.64-36.64,36.64,institutional/global/facility/other=61; professional/26/office=30; professional/global/office=1
+Blue-Care-Elect-Fully-Insured,95862,N,,,,,,
+Blue-Care-Elect-Fully-Insured,95863,Y,Y,1.0,10.0,46.66-46.66,46.66,institutional/global/facility/other=61; professional/global/office=1
+Blue-Care-Elect-Fully-Insured,95864,Y,Y,1.0,10.0,88.55-88.55,88.55,institutional/global/facility/other=61; professional/global/office=1
+Blue-Care-Elect-Fully-Insured,95865,Y,Y,1.0,10.0,33.32-33.32,33.32,institutional/global/facility/other=61; professional/global/office=1
+Blue-Care-Elect-Fully-Insured,95866,Y,Y,1.0,10.0,10.78-10.78,10.78,institutional/global/facility/other=8; professional/global/office=1
+Blue-Care-Elect-Fully-Insured,95867,Y,Y,1.0,10.0,28.88-28.88,28.88,institutional/global/facility/other=61; professional/26/office=29; professional/AS/facility/other=30; professional/global/office=1
+Blue-Care-Elect-Fully-Insured,95868,Y,Y,1.0,10.0,34.91-34.91,34.91,institutional/global/facility/other=61; professional/26/office=29; professional/global/office=1
+Blue-Care-Elect-Fully-Insured,95869,Y,Y,1.0,10.0,10.62-10.62,10.62,institutional/global/facility/other=61; professional/global/office=1
+Blue-Care-Elect-Fully-Insured,95870,Y,Y,1.0,10.0,10.62-10.62,10.62,institutional/global/facility/other=61; professional/26/office=29; professional/global/office=1
+Blue-Care-Elect-Fully-Insured,95871,N,,,,,,
+Blue-Care-Elect-Fully-Insured,95872,Y,Y,1.0,10.0,30.14-30.14,30.14,institutional/global/facility/other=61; professional/26/office=30; professional/global/office=1
+Blue-Care-Elect-Fully-Insured,95873,Y,Y,29.0,426.0,84.49-498.46,84.49,institutional/global/facility/other=61; professional/26/office=42; professional/global/office=29
+Blue-Care-Elect-Fully-Insured,95874,Y,Y,33.0,617.0,91.29-538.57,91.29,"institutional/global/facility/other=61; professional/26/office=33; professional/26,TC/office=1; professional/TC/office=28; professional/global/office=33"
+Blue-Care-Elect-Fully-Insured,95875,Y,Y,1.0,10.0,48.57-48.57,48.57,institutional/global/facility/other=61; professional/global/office=1
+Blue-Care-Elect-Fully-Insured,95876,N,,,,,,
+Blue-Care-Elect-Fully-Insured,95877,N,,,,,,
+Blue-Care-Elect-Fully-Insured,95878,N,,,,,,
+Blue-Care-Elect-Fully-Insured,95879,N,,,,,,
+Blue-Care-Elect-Fully-Insured,95880,N,,,,,,
+Blue-Care-Elect-Fully-Insured,95881,N,,,,,,
+Blue-Care-Elect-Fully-Insured,95882,N,,,,,,
+Blue-Care-Elect-Fully-Insured,95883,N,,,,,,
+Blue-Care-Elect-Fully-Insured,95884,N,,,,,,
+Blue-Care-Elect-Fully-Insured,95885,Y,Y,33.0,627.0,42.81-436.51,73.99,"institutional/global/facility/other=65; professional/26/office=33; professional/26,TC/office=1; professional/52/office=29; professional/TC/office=35; professional/global/office=33"
+Blue-Care-Elect-Fully-Insured,95886,Y,Y,50.0,1638.0,45.11-671.73,113.86,"institutional/global/facility/other=65; professional/26/office=32; professional/26,TC/office=1; professional/TC/office=35; professional/global/office=50"
+Blue-Care-Elect-Fully-Insured,95907,Y,N,0.0,0.0,,,"institutional/global/facility/other=65; professional/26/office=33; professional/26,TC/office=1; professional/53/facility/other=30; professional/TC/office=29"
+Blue-Care-Elect-Fully-Insured,95908,Y,Y,33.0,617.0,132.74-783.11,132.74,"institutional/global/facility/other=65; professional/26/office=33; professional/26,TC/office=1; professional/TC/office=36; professional/global/office=33"
+Blue-Care-Elect-Fully-Insured,95910,Y,Y,47.0,1222.0,208.55-1230.36,208.55,"institutional/global/facility/other=65; professional/26/office=33; professional/26,TC/office=1; professional/TC/office=35; professional/global/office=47"
+Blue-Care-Elect-Fully-Insured,95911,Y,Y,47.0,1246.0,249.65-1472.84,249.65,"institutional/global/facility/other=65; professional/26/office=33; professional/26,TC/office=1; professional/TC/office=35; professional/global/office=47"
+Blue-Care-Elect-Fully-Insured,95921,Y,Y,45.0,2722.0,18.73-617.22,104.62,institutional/52/facility/other=58; institutional/global/facility/other=53; professional/26/office=29; professional/global/office=46
+Blue-Care-Elect-Fully-Insured,95922,Y,N,0.0,0.0,,,institutional/global/facility/other=61; professional/26/office=29
+Blue-Care-Elect-Fully-Insured,95923,Y,Y,45.0,3072.0,144.43-852.08,144.43,institutional/global/facility/other=61; professional/26/office=29; professional/global/office=46
+Blue-Care-Elect-Fully-Insured,95924,Y,N,0.0,0.0,,,institutional/global/facility/other=61; professional/26/office=30
+New-England-Managed-Care-Fully-Insured,93000,Y,Y,100.0,12218.0,14.54-100.94,17.11,"institutional/global/facility/other=62; professional/55/office=38; professional/55,73/office=4; professional/73/office=41; professional/global/office=102"
+New-England-Managed-Care-Fully-Insured,93224,Y,Y,85.0,5031.0,74.07-514.09,87.14,institutional/global/facility/other=62; professional/52/office=33; professional/global/office=86
+New-England-Managed-Care-Fully-Insured,93225,Y,Y,1.0,10.0,61.57-61.57,61.57,institutional/52/facility/other=62; institutional/global/facility/other=56; professional/52/office=32; professional/TC/office=92; professional/global/office=1
+New-England-Managed-Care-Fully-Insured,93226,Y,Y,1.0,10.0,108.24-108.24,108.24,institutional/52/facility/other=58; institutional/global/facility/other=56; professional/TC/office=94; professional/global/office=1
+New-England-Managed-Care-Fully-Insured,93227,Y,N,0.0,0.0,,,institutional/global/facility/other=62; professional/26/office=95; professional/52/office=32
+New-England-Managed-Care-Fully-Insured,93660,Y,N,0.0,0.0,,,institutional/global/facility/other=62; professional/26/office=81
+New-England-Managed-Care-Fully-Insured,93880,Y,Y,56.0,4302.0,246.82-1456.14,246.82,institutional/global/facility/other=62; professional/26/office=53; professional/52/facility/other=31; professional/global/office=56
+New-England-Managed-Care-Fully-Insured,93886,Y,N,0.0,0.0,,,institutional/global/facility/other=62; professional/26/office=39
+New-England-Managed-Care-Fully-Insured,95860,Y,Y,1.0,10.0,48.29-48.29,48.29,institutional/global/facility/other=62; professional/26/office=30; professional/53/office=29; professional/global/office=1
+New-England-Managed-Care-Fully-Insured,95861,Y,Y,1.0,10.0,36.64-36.64,36.64,institutional/global/facility/other=62; professional/26/office=30; professional/global/office=1
+New-England-Managed-Care-Fully-Insured,95862,N,,,,,,
+New-England-Managed-Care-Fully-Insured,95863,Y,Y,1.0,10.0,46.66-46.66,46.66,institutional/global/facility/other=62; professional/global/office=1
+New-England-Managed-Care-Fully-Insured,95864,Y,Y,1.0,10.0,88.55-88.55,88.55,institutional/global/facility/other=62; professional/global/office=1
+New-England-Managed-Care-Fully-Insured,95865,Y,Y,1.0,10.0,33.32-33.32,33.32,institutional/global/facility/other=62; professional/global/office=1
+New-England-Managed-Care-Fully-Insured,95866,Y,Y,1.0,10.0,10.78-10.78,10.78,institutional/global/facility/other=6; professional/global/office=1
+New-England-Managed-Care-Fully-Insured,95867,Y,Y,1.0,10.0,28.88-28.88,28.88,institutional/global/facility/other=62; professional/26/office=29; professional/AS/facility/other=30; professional/global/office=1
+New-England-Managed-Care-Fully-Insured,95868,Y,Y,1.0,10.0,34.91-34.91,34.91,institutional/global/facility/other=62; professional/26/office=29; professional/global/office=1
+New-England-Managed-Care-Fully-Insured,95869,Y,Y,1.0,10.0,10.62-10.62,10.62,institutional/global/facility/other=62; professional/global/office=1
+New-England-Managed-Care-Fully-Insured,95870,Y,Y,1.0,10.0,10.62-10.62,10.62,institutional/global/facility/other=62; professional/26/office=29; professional/global/office=1
+New-England-Managed-Care-Fully-Insured,95871,N,,,,,,
+New-England-Managed-Care-Fully-Insured,95872,Y,Y,1.0,10.0,30.14-30.14,30.14,institutional/global/facility/other=62; professional/26/office=30; professional/global/office=1
+New-England-Managed-Care-Fully-Insured,95873,Y,Y,29.0,426.0,84.49-498.46,84.49,institutional/global/facility/other=62; professional/26/office=42; professional/global/office=29
+New-England-Managed-Care-Fully-Insured,95874,Y,Y,33.0,617.0,91.29-538.57,91.29,"institutional/global/facility/other=62; professional/26/office=33; professional/26,TC/office=1; professional/TC/office=28; professional/global/office=33"
+New-England-Managed-Care-Fully-Insured,95875,Y,Y,1.0,10.0,48.57-48.57,48.57,institutional/global/facility/other=62; professional/global/office=1
+New-England-Managed-Care-Fully-Insured,95876,N,,,,,,
+New-England-Managed-Care-Fully-Insured,95877,N,,,,,,
+New-England-Managed-Care-Fully-Insured,95878,N,,,,,,
+New-England-Managed-Care-Fully-Insured,95879,N,,,,,,
+New-England-Managed-Care-Fully-Insured,95880,N,,,,,,
+New-England-Managed-Care-Fully-Insured,95881,N,,,,,,
+New-England-Managed-Care-Fully-Insured,95882,N,,,,,,
+New-England-Managed-Care-Fully-Insured,95883,N,,,,,,
+New-England-Managed-Care-Fully-Insured,95884,N,,,,,,
+New-England-Managed-Care-Fully-Insured,95885,Y,Y,33.0,627.0,42.81-436.51,73.99,"institutional/global/facility/other=65; professional/26/office=33; professional/26,TC/office=1; professional/52/office=29; professional/TC/office=35; professional/global/office=33"
+New-England-Managed-Care-Fully-Insured,95886,Y,Y,54.0,1646.0,45.11-671.73,113.86,"institutional/global/facility/other=65; professional/26/office=32; professional/26,TC/office=1; professional/TC/office=35; professional/global/office=54"
+New-England-Managed-Care-Fully-Insured,95907,Y,N,0.0,0.0,,,"institutional/global/facility/other=65; professional/26/office=33; professional/26,TC/office=1; professional/53/facility/other=30; professional/TC/office=29"
+New-England-Managed-Care-Fully-Insured,95908,Y,Y,33.0,617.0,132.74-783.11,132.74,"institutional/global/facility/other=65; professional/26/office=33; professional/26,TC/office=1; professional/TC/office=36; professional/global/office=33"
+New-England-Managed-Care-Fully-Insured,95910,Y,Y,50.0,1222.0,208.55-1230.36,208.55,"institutional/global/facility/other=65; professional/26/office=33; professional/26,TC/office=1; professional/TC/office=35; professional/global/office=50"
+New-England-Managed-Care-Fully-Insured,95911,Y,Y,50.0,1245.0,249.65-1472.84,249.65,"institutional/global/facility/other=65; professional/26/office=33; professional/26,TC/office=1; professional/TC/office=35; professional/global/office=50"
+New-England-Managed-Care-Fully-Insured,95921,Y,Y,47.0,2720.0,18.73-617.22,104.62,institutional/52/facility/other=58; institutional/global/facility/other=56; professional/26/office=29; professional/global/office=48
+New-England-Managed-Care-Fully-Insured,95922,Y,N,0.0,0.0,,,institutional/global/facility/other=62; professional/26/office=29
+New-England-Managed-Care-Fully-Insured,95923,Y,Y,47.0,3070.0,144.43-852.08,144.43,institutional/global/facility/other=62; professional/26/office=29; professional/global/office=48
+New-England-Managed-Care-Fully-Insured,95924,Y,N,0.0,0.0,,,institutional/global/facility/other=62; professional/26/office=30
+HMO-Blue-Fully-Insured,93000,Y,Y,100.0,12205.0,14.54-100.94,17.11,"institutional/global/facility/other=62; professional/55/office=38; professional/55,73/office=4; professional/73/office=41; professional/global/office=102"
+HMO-Blue-Fully-Insured,93224,Y,Y,85.0,5037.0,74.07-514.09,87.14,institutional/global/facility/other=62; professional/52/office=33; professional/global/office=86
+HMO-Blue-Fully-Insured,93225,Y,Y,1.0,10.0,61.57-61.57,61.57,institutional/52/facility/other=62; institutional/global/facility/other=56; professional/52/office=32; professional/TC/office=92; professional/global/office=1
+HMO-Blue-Fully-Insured,93226,Y,Y,1.0,10.0,108.24-108.24,108.24,institutional/52/facility/other=58; institutional/global/facility/other=56; professional/TC/office=94; professional/global/office=1
+HMO-Blue-Fully-Insured,93227,Y,N,0.0,0.0,,,institutional/global/facility/other=62; professional/26/office=95; professional/52/office=32
+HMO-Blue-Fully-Insured,93660,Y,N,0.0,0.0,,,institutional/global/facility/other=62; professional/26/office=81
+HMO-Blue-Fully-Insured,93880,Y,Y,56.0,4298.0,246.82-1456.14,246.82,institutional/global/facility/other=62; professional/26/office=53; professional/52/facility/other=31; professional/global/office=58
+HMO-Blue-Fully-Insured,93886,Y,N,0.0,0.0,,,institutional/global/facility/other=62; professional/26/office=39
+HMO-Blue-Fully-Insured,95860,Y,Y,1.0,10.0,48.29-48.29,48.29,institutional/global/facility/other=62; professional/26/office=30; professional/53/office=29; professional/global/office=1
+HMO-Blue-Fully-Insured,95861,Y,Y,1.0,10.0,36.64-36.64,36.64,institutional/global/facility/other=62; professional/26/office=30; professional/global/office=1
+HMO-Blue-Fully-Insured,95862,N,,,,,,
+HMO-Blue-Fully-Insured,95863,Y,Y,1.0,10.0,46.66-46.66,46.66,institutional/global/facility/other=62; professional/global/office=1
+HMO-Blue-Fully-Insured,95864,Y,Y,1.0,10.0,88.55-88.55,88.55,institutional/global/facility/other=62; professional/global/office=1
+HMO-Blue-Fully-Insured,95865,Y,Y,1.0,10.0,33.32-33.32,33.32,institutional/global/facility/other=62; professional/global/office=1
+HMO-Blue-Fully-Insured,95866,Y,Y,1.0,10.0,10.78-10.78,10.78,institutional/global/facility/other=6; professional/global/office=1
+HMO-Blue-Fully-Insured,95867,Y,Y,1.0,10.0,28.88-28.88,28.88,institutional/global/facility/other=62; professional/26/office=29; professional/AS/facility/other=30; professional/global/office=1
+HMO-Blue-Fully-Insured,95868,Y,Y,1.0,10.0,34.91-34.91,34.91,institutional/global/facility/other=62; professional/26/office=29; professional/global/office=1
+HMO-Blue-Fully-Insured,95869,Y,Y,1.0,10.0,10.62-10.62,10.62,institutional/global/facility/other=62; professional/global/office=1
+HMO-Blue-Fully-Insured,95870,Y,Y,1.0,10.0,10.62-10.62,10.62,institutional/global/facility/other=62; professional/26/office=29; professional/global/office=1
+HMO-Blue-Fully-Insured,95871,N,,,,,,
+HMO-Blue-Fully-Insured,95872,Y,Y,1.0,10.0,30.14-30.14,30.14,institutional/global/facility/other=62; professional/26/office=30; professional/global/office=1
+HMO-Blue-Fully-Insured,95873,Y,Y,29.0,426.0,84.49-498.46,84.49,institutional/global/facility/other=62; professional/26/office=42; professional/global/office=29
+HMO-Blue-Fully-Insured,95874,Y,Y,33.0,617.0,91.29-538.57,91.29,"institutional/global/facility/other=62; professional/26/office=33; professional/26,TC/office=1; professional/TC/office=28; professional/global/office=33"
+HMO-Blue-Fully-Insured,95875,Y,Y,1.0,10.0,48.57-48.57,48.57,institutional/global/facility/other=62; professional/global/office=1
+HMO-Blue-Fully-Insured,95876,N,,,,,,
+HMO-Blue-Fully-Insured,95877,N,,,,,,
+HMO-Blue-Fully-Insured,95878,N,,,,,,
+HMO-Blue-Fully-Insured,95879,N,,,,,,
+HMO-Blue-Fully-Insured,95880,N,,,,,,
+HMO-Blue-Fully-Insured,95881,N,,,,,,
+HMO-Blue-Fully-Insured,95882,N,,,,,,
+HMO-Blue-Fully-Insured,95883,N,,,,,,
+HMO-Blue-Fully-Insured,95884,N,,,,,,
+HMO-Blue-Fully-Insured,95885,Y,Y,33.0,627.0,42.81-436.51,73.99,"institutional/global/facility/other=65; professional/26/office=33; professional/26,TC/office=1; professional/52/office=29; professional/TC/office=36; professional/global/office=33"
+HMO-Blue-Fully-Insured,95886,Y,Y,54.0,1635.0,45.11-671.73,113.86,"institutional/global/facility/other=65; professional/26/office=32; professional/26,TC/office=1; professional/TC/office=35; professional/global/office=54"
+HMO-Blue-Fully-Insured,95907,Y,N,0.0,0.0,,,"institutional/global/facility/other=65; professional/26/office=33; professional/26,TC/office=1; professional/53/facility/other=30; professional/TC/office=29"
+HMO-Blue-Fully-Insured,95908,Y,Y,33.0,617.0,132.74-783.11,132.74,"institutional/global/facility/other=65; professional/26/office=33; professional/26,TC/office=1; professional/TC/office=36; professional/global/office=33"
+HMO-Blue-Fully-Insured,95910,Y,Y,50.0,1126.0,208.55-1230.36,208.55,"institutional/global/facility/other=65; professional/26/office=33; professional/26,TC/office=1; professional/TC/office=35; professional/global/office=51"
+HMO-Blue-Fully-Insured,95911,Y,Y,50.0,1246.0,249.65-1472.84,249.65,"institutional/global/facility/other=65; professional/26/office=33; professional/26,TC/office=1; professional/TC/office=36; professional/global/office=50"
+HMO-Blue-Fully-Insured,95921,Y,Y,47.0,2766.0,18.73-617.22,104.62,institutional/52/facility/other=58; institutional/global/facility/other=56; professional/26/office=29; professional/global/office=48
+HMO-Blue-Fully-Insured,95922,Y,N,0.0,0.0,,,institutional/global/facility/other=62; professional/26/office=29
+HMO-Blue-Fully-Insured,95923,Y,Y,47.0,3070.0,144.43-852.08,144.43,institutional/global/facility/other=62; professional/26/office=29; professional/global/office=48
+HMO-Blue-Fully-Insured,95924,Y,N,0.0,0.0,,,institutional/global/facility/other=62; professional/26/office=30
+PAR-Providers,93000,Y,Y,95.0,12231.0,14.54-100.94,17.11,"institutional/global/facility/other=60; professional/55/office=37; professional/55,73/office=3; professional/73/office=40; professional/global/office=97"
+PAR-Providers,93224,Y,Y,83.0,5048.0,74.07-514.09,87.14,institutional/global/facility/other=60; professional/52/office=33; professional/global/office=84
+PAR-Providers,93225,Y,Y,1.0,3.0,61.57-61.57,61.57,institutional/52/facility/other=60; institutional/global/facility/other=51; professional/52/office=32; professional/TC/office=89; professional/global/office=1
+PAR-Providers,93226,Y,Y,1.0,10.0,108.24-108.24,108.24,institutional/52/facility/other=57; institutional/global/facility/other=51; professional/TC/office=91; professional/global/office=1
+PAR-Providers,93227,Y,N,0.0,0.0,,,institutional/global/facility/other=60; professional/26/office=92; professional/52/office=32
+PAR-Providers,93660,Y,N,0.0,0.0,,,institutional/global/facility/other=60; professional/26/office=78
+PAR-Providers,93880,Y,Y,57.0,4318.0,289.04-1705.22,289.04,institutional/global/facility/other=60; professional/26/office=51; professional/52/facility/other=31; professional/global/office=57
+PAR-Providers,93886,Y,N,0.0,0.0,,,institutional/global/facility/other=60; professional/26/office=39
+PAR-Providers,95860,Y,Y,1.0,3.0,48.29-48.29,48.29,institutional/global/facility/other=60; professional/26/office=30; professional/53/office=29; professional/global/office=1
+PAR-Providers,95861,Y,Y,1.0,10.0,36.64-36.64,36.64,institutional/global/facility/other=60; professional/26/office=30; professional/global/office=1
+PAR-Providers,95862,N,,,,,,
+PAR-Providers,95863,Y,Y,1.0,10.0,46.66-46.66,46.66,institutional/global/facility/other=60; professional/global/office=1
+PAR-Providers,95864,Y,Y,1.0,3.0,88.55-88.55,88.55,institutional/global/facility/other=60; professional/global/office=1
+PAR-Providers,95865,Y,Y,1.0,10.0,33.32-33.32,33.32,institutional/global/facility/other=60; professional/global/office=1
+PAR-Providers,95866,Y,Y,1.0,10.0,10.78-10.78,10.78,institutional/global/facility/other=9; professional/global/office=1
+PAR-Providers,95867,Y,Y,1.0,3.0,28.88-28.88,28.88,institutional/global/facility/other=60; professional/26/office=29; professional/AS/facility/other=30; professional/global/office=1
+PAR-Providers,95868,Y,Y,1.0,10.0,34.91-34.91,34.91,institutional/global/facility/other=60; professional/26/office=29; professional/global/office=1
+PAR-Providers,95869,Y,Y,1.0,10.0,10.62-10.62,10.62,institutional/global/facility/other=60; professional/global/office=1
+PAR-Providers,95870,Y,Y,1.0,3.0,10.62-10.62,10.62,institutional/global/facility/other=60; professional/26/office=29; professional/global/office=1
+PAR-Providers,95871,N,,,,,,
+PAR-Providers,95872,Y,Y,1.0,10.0,30.14-30.14,30.14,institutional/global/facility/other=60; professional/26/office=30; professional/global/office=1
+PAR-Providers,95873,Y,Y,29.0,426.0,84.49-498.46,84.49,institutional/global/facility/other=60; professional/26/office=42; professional/global/office=29
+PAR-Providers,95874,Y,Y,33.0,619.0,91.29-538.57,91.29,"institutional/global/facility/other=60; professional/26/office=33; professional/26,TC/office=1; professional/TC/office=28; professional/global/office=33"
+PAR-Providers,95875,Y,Y,1.0,10.0,48.57-48.57,48.57,institutional/global/facility/other=60; professional/global/office=1
+PAR-Providers,95876,N,,,,,,
+PAR-Providers,95877,N,,,,,,
+PAR-Providers,95878,N,,,,,,
+PAR-Providers,95879,N,,,,,,
+PAR-Providers,95880,N,,,,,,
+PAR-Providers,95881,N,,,,,,
+PAR-Providers,95882,N,,,,,,
+PAR-Providers,95883,N,,,,,,
+PAR-Providers,95884,N,,,,,,
+PAR-Providers,95885,Y,Y,33.0,621.0,42.81-436.51,73.99,"institutional/global/facility/other=64; professional/26/office=33; professional/26,TC/office=1; professional/52/office=29; professional/TC/office=35; professional/global/office=33"
+PAR-Providers,95886,Y,Y,51.0,1643.0,45.11-671.73,113.86,"institutional/global/facility/other=64; professional/26/office=32; professional/26,TC/office=1; professional/TC/office=35; professional/global/office=51"
+PAR-Providers,95907,Y,N,0.0,0.0,,,"institutional/global/facility/other=64; professional/26/office=33; professional/26,TC/office=1; professional/53/facility/other=30; professional/TC/office=29"
+PAR-Providers,95908,Y,Y,33.0,618.0,132.74-783.11,132.74,"institutional/global/facility/other=64; professional/26/office=33; professional/26,TC/office=1; professional/TC/office=36; professional/global/office=33"
+PAR-Providers,95910,Y,Y,48.0,1226.0,208.55-1230.36,208.55,"institutional/global/facility/other=64; professional/26/office=33; professional/26,TC/office=1; professional/TC/office=35; professional/global/office=48"
+PAR-Providers,95911,Y,Y,48.0,1254.0,249.65-1472.84,249.65,"institutional/global/facility/other=64; professional/26/office=33; professional/26,TC/office=1; professional/TC/office=35; professional/global/office=48"
+PAR-Providers,95921,Y,Y,45.0,2726.0,18.73-617.22,104.62,institutional/52/facility/other=57; institutional/global/facility/other=51; professional/26/office=29; professional/global/office=45
+PAR-Providers,95922,Y,N,0.0,0.0,,,institutional/global/facility/other=60; professional/26/office=29
+PAR-Providers,95923,Y,Y,45.0,3080.0,144.43-852.08,144.43,institutional/global/facility/other=60; professional/26/office=29; professional/global/office=45
+PAR-Providers,95924,Y,N,0.0,0.0,,,institutional/global/facility/other=60; professional/26/office=30
