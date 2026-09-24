@@ -28,13 +28,14 @@ import io
 import re
 import sys
 import time
-from collections import defaultdict
+from urllib.parse import urlparse
+from collections import Counter, defaultdict
 from concurrent.futures import ThreadPoolExecutor
 
 import ijson
 import requests
-from requests.adapters import HTTPAdapter
-from urllib3.util.retry import Retry
+
+from tic_common import SESSION, head_info, verify_for
 
 if ijson.backend != "yajl2_c":
     sys.exit(f"ijson backend is {ijson.backend!r}; yajl2_c is required for speed")
@@ -48,54 +49,24 @@ DIRECTORY_PAGES = {
 }
 PEEK_BYTES = 2048
 
-
-def make_session():
-    s = requests.Session()
-    retry = Retry(total=4, backoff_factor=2, status_forcelist=[429, 500, 502, 503, 504],
-                  allowed_methods=["HEAD", "GET"])
-    s.mount("https://", HTTPAdapter(max_retries=retry, pool_maxsize=16))
-    s.headers["User-Agent"] = "autolabs-tic-inventory/1.0"
-    return s
-
-
-SESSION = make_session()
+# Per-payer in-network URL filters: keep only the payer's own host and drop
+# dental / placeholder files. Blue Cross MA TOCs also list thousands of
+# BlueCard files on bcbsma.mrf.bcbs.com (other Blue plans' rates).
+URL_FILTERS = {
+    "Blue Cross Blue Shield of Massachusetts": {
+        "keep_host": "transparency-in-coverage.bluecrossma.com",
+        "exclude": re.compile(r"(?i)dental|hostplanfileunavailable\.json"),
+    },
+}
 
 
-# --------------------------------------------------------------------- HEAD
-def head_info(url):
-    """Return dict with status, size_bytes, content_type, content_encoding,
-    last_modified, method, error. Falls back to a 1-byte Range GET."""
-    out = {"status": "", "size_bytes": "", "content_type": "", "content_encoding": "",
-           "last_modified": "", "method": "", "error": ""}
-    try:
-        r = SESSION.head(url, allow_redirects=True, timeout=60)
-        out.update(status=r.status_code, method="HEAD",
-                   content_type=r.headers.get("Content-Type", ""),
-                   content_encoding=r.headers.get("Content-Encoding", ""),
-                   last_modified=r.headers.get("Last-Modified", ""))
-        if r.ok and r.headers.get("Content-Length"):
-            out["size_bytes"] = int(r.headers["Content-Length"])
-            return out
-    except requests.RequestException as e:
-        out["error"] = f"HEAD: {type(e).__name__}: {e}"[:300]
-    try:
-        r = SESSION.get(url, headers={"Range": "bytes=0-0"}, stream=True,
-                        allow_redirects=True, timeout=60)
-        cr = r.headers.get("Content-Range", "")
-        m = re.search(r"/(\d+)$", cr)
-        out.update(status=r.status_code, method="RANGE",
-                   content_type=r.headers.get("Content-Type", "") or out["content_type"],
-                   content_encoding=r.headers.get("Content-Encoding", "") or out["content_encoding"],
-                   last_modified=r.headers.get("Last-Modified", "") or out["last_modified"])
-        if m:
-            out["size_bytes"] = int(m.group(1))
-        elif r.status_code == 200 and r.headers.get("Content-Length"):
-            out["size_bytes"] = int(r.headers["Content-Length"])
-        r.close()
-    except requests.RequestException as e:
-        out["error"] = (out["error"] + " | " if out["error"] else "") + \
-            f"RANGE: {type(e).__name__}: {e}"[:300]
-    return out
+def url_kept(payer, url, description):
+    f = URL_FILTERS.get(payer)
+    if not f:
+        return True
+    if urlparse(url).hostname != f["keep_host"]:
+        return False
+    return not (f["exclude"].search(url) or f["exclude"].search(description or ""))
 
 
 # ------------------------------------------------------------ stream parse
@@ -121,12 +92,24 @@ class SchemaError(Exception):
     pass
 
 
+class _LocalFile:
+    def __init__(self, path):
+        self.raw = open(path, "rb")
+
+    def close(self):
+        self.raw.close()
+
+
 def open_stream(url):
-    r = SESSION.get(url, stream=True, timeout=(30, 300))
-    r.raise_for_status()
-    r.raw.decode_content = True              # undo Content-Encoding: gzip
-    r.raw.auto_close = False                 # small files: EOF must not close before io reads it
-    buf = io.BufferedReader(r.raw, buffer_size=1 << 20)
+    if not url.startswith(("http://", "https://")):    # local TOC (e.g. input/)
+        r = _LocalFile(url if url.startswith("/") else f"{HERE}/{url}")
+        buf = io.BufferedReader(r.raw, buffer_size=1 << 20)
+    else:
+        r = SESSION.get(url, stream=True, timeout=(30, 300), verify=verify_for(url))
+        r.raise_for_status()
+        r.raw.decode_content = True              # undo Content-Encoding: gzip
+        r.raw.auto_close = False                 # small files: EOF must not close before io reads it
+        buf = io.BufferedReader(r.raw, buffer_size=1 << 20)
     if buf.peek(2)[:2] == b"\x1f\x8b":      # .json.gz served as octet-stream
         buf = io.BufferedReader(gzip.GzipFile(fileobj=buf), buffer_size=1 << 20)
     cap = Capture(buf)
@@ -181,7 +164,7 @@ def new_rec():
 
 
 def ingest(url, payer, role, inv, allowed):
-    meta = {}
+    meta, dropped = {}, Counter()
     t0, n_struct, n_plans, n_links = time.time(), 0, 0, 0
     try:
         for item in iter_toc(url, meta):
@@ -194,6 +177,9 @@ def ingest(url, payer, role, inv, allowed):
             for fobj in item.get("in_network_files") or []:
                 loc = (fobj or {}).get("location")
                 if not loc:
+                    continue
+                if not url_kept(payer, loc, fobj.get("description")):
+                    dropped[urlparse(loc).hostname] += 1
                     continue
                 n_links += 1
                 rec = inv[loc]
@@ -211,6 +197,7 @@ def ingest(url, payer, role, inv, allowed):
     return {"entity": meta.get("reporting_entity_name", ""),
             "entity_type": meta.get("reporting_entity_type", ""),
             "structures": n_struct, "plan_rows": n_plans, "in_network_links": n_links,
+            "links_excluded": "; ".join(f"{h}={n}" for h, n in dropped.most_common()),
             "seconds": round(time.time() - t0, 1)}
 
 
@@ -273,9 +260,11 @@ def main():
             print(f"  {i:3}/{len(jobs)} {role:8} structs={st['structures']:5} plans={st['plan_rows']:6} "
                   f"links={st['in_network_links']:6} {st['seconds']:5}s  entity={st['entity']!r} "
                   f"{url.rsplit('/', 1)[-1]}")
+            if st["links_excluded"]:
+                print(f"          excluded links: {st['links_excluded']}")
     write_csv(f"{args.out}/toc_parse_log.csv", parse_rows,
               ["payer", "role", "toc_url", "entity", "entity_type", "structures", "plan_rows",
-               "in_network_links", "seconds", "error"])
+               "in_network_links", "links_excluded", "seconds", "error"])
     write_csv(f"{args.out}/toc_heads.csv", toc_rows,
               ["payer", "role", "toc_url", "status", "size_bytes", "content_type",
                "content_encoding", "last_modified", "method", "error", "note"])

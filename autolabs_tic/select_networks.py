@@ -32,8 +32,15 @@ FLAG = {
     "TuftsHealthPublicPlans_DirectNonSubsidizedGroup": "Tufts Health Direct small-group network - only Tufts commercial network published (27,680 plans)",
     "TuftsHealthPublicPlans_DirectNonSubsidizedIndividual": "Tufts Health Direct individual (Health Connector, unsubsidized)",
     "TuftsHealthPublicPlans_DirectSubsidizedIndividual": "Tufts Health Direct individual (ConnectorCare subsidized); may carry different rates",
+    # Blue Cross MA: fully insured TOC (Health Insurance Issuer) networks.
+    "Blue-Care-Elect-Fully-Insured": "BCBSMA Blue Care Elect PPO, fully insured",
+    "New-England-Managed-Care-Fully-Insured": "BCBSMA New England Managed Care, fully insured",
+    "HMO-Blue-Fully-Insured": "BCBSMA HMO Blue, fully insured",
+    "PAR-Providers": "BCBSMA PAR Providers (indemnity/participating), fully insured TOC",
 }
 NOT_REASONS = [
+    (r"Blue-High-Performance", "BCBSMA Blue High Performance network (limited); N for now"),
+    (r"Self-Insured|Third-Party", "BCBSMA self-insured (Third Party TOC) file; N for now"),
     (r"UNITEDHEALTHCARE", "UnitedHealthcare national wrap network for out-of-area care (UHC rates, not HPHC MA contracts); ~10.5-10.8 GB"),
     (r"Dental", "Dental network, not relevant; HEAD returns 404"),
     (r"A0(35|43|61|87|88|25|75)-", "New Hampshire / Maine product (ElevateHealth, NH Local, LP)"),
@@ -54,7 +61,8 @@ NOT_REASONS = [
 def code(url):
     fn = url.rsplit("/", 1)[-1]
     fn = re.sub(r"^\d{4}-\d{2}-\d{2}_", "", fn)
-    return re.sub(r"_in-network-rates.*$", "", fn)
+    fn = re.sub(r"^Blue-Cross-and-Blue-Shield-of-Massachusetts-Inc_", "", fn)
+    return re.sub(r"[_-]in-network-rates.*$", "", fn)
 
 
 def reason_for(url):
@@ -75,6 +83,15 @@ def main():
     d = pd.read_csv(f"{args.out}/network_inventory.csv")
     d["file_code"] = d.location_url.map(code)
     d[["process", "reason"]] = d.location_url.map(reason_for).apply(pd.Series)
+    # selection.csv is hand-edited: keep any process value already there and
+    # apply the rules above only to files that are new to it.
+    sel_path = f"{HERE}/selection.csv"
+    if os.path.exists(sel_path):
+        prev = pd.read_csv(sel_path).set_index("location_url")["process"].to_dict()
+        kept = d.location_url.map(prev)
+        manual = kept.notna() & (kept != d.process)
+        d.loc[manual, "reason"] = "SET MANUALLY (rule default " + d.process[manual] + "): " + d.reason[manual]
+        d["process"] = kept.fillna(d.process)
     d = d.sort_values(["payer", "number_of_reporting_plans"], ascending=[True, False])
 
     pd.set_option("display.width", 250)
