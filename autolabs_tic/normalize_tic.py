@@ -106,7 +106,9 @@ def fmt_num(x):
     return f"{float(x):.2f}" if isinstance(x, (int, float)) else str(x)
 
 
-def build_rows(refs):
+def build_rows(refs, keep_npis=False):
+    """Build the rate rows. With keep_npis, also return each row's full
+    (untruncated) NPI list, aligned with the DataFrame rows."""
     log = pd.read_csv(os.path.join(OUT, "extract_log.csv"), dtype=str)
     updated = dict(zip(log.file_id, log.last_updated_on))
     rows = {}                                           # key -> row dict (npis as set)
@@ -166,6 +168,8 @@ def build_rows(refs):
             shown += f" (+{len(npis) - NPI_LIMIT} more)"
         out.append(dict(zip(COLUMNS, key + (len(npis), shown, "Y" if r["unresolved"] else ""))))
     df = pd.DataFrame(out, columns=COLUMNS)
+    if keep_npis:
+        return df, samples, stats, [sorted(r["npis"]) for r in rows.values()]
     return df, samples, stats
 
 
