@@ -1,3 +1,4 @@
 downloads/
 output/*.sqlite*
 certs/bluecrossma_ca_bundle.pem
+downloads_validate/
