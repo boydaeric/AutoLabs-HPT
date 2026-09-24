@@ -289,39 +289,37 @@ def bcbs_tin_names():
 
 # ------------------------------------------------------------ HPHC tiers
 def hphc_tiers(df):
-    """Assign each Harvard Pilgrim tax ID to a fee tier."""
+    """Harvard Pilgrim tier of every rate row.
+
+    A multi-specialty tax ID carries several rates per code (one per group
+    of its clinicians), so the tier belongs to the rate row, not the TIN.
+    For each (code, modifier set) the base is the rate b that puts the most
+    distinct (file, TIN, rate) rows on b x {1.000, 1.025, 1.133, 1.212,
+    1.333}; each row is then T1..T5 or off-grid."""
     h = df[(df.payer == "Harvard Pilgrim Health Care") & (df.negotiated_type == "fee schedule")
-           & df.modifiers.isin(["", "26", "TC"])].copy()
-    h["rate"] = h.negotiated_rate.astype(float)
-    bases, per = {}, []
+           & df.modifiers.isin(["", "26", "TC"])]
+    bases = {}
     for (code, mods), g in h.groupby(["code", "modifiers"]):
-        tin_rate = g.groupby(["network_file", "tin_value"]).rate.first()
-        common = tin_rate.value_counts().index[:12]
+        rates = g.drop_duplicates(["network_file", "tin_value", "negotiated_rate"]).negotiated_rate.astype(float)
+        vc = rates.value_counts()
         best = (0, None)
-        for r in common:
+        for r in vc.index[:12]:
             for t in HPHC_TIERS:
                 b = r / t
-                ratio = tin_rate / b
-                ok = sum(((ratio - t2).abs() <= TIER_TOL).sum() for t2 in HPHC_TIERS)
-                if ok > best[0] or (ok == best[0] and best[1] and b < best[1]):
+                ok = sum(int(vc[((vc.index / b) - t2).__abs__() <= TIER_TOL].sum()) for t2 in HPHC_TIERS)
+                if ok > best[0]:
                     best = (ok, b)
         b = best[1]
-        bases[(code, mods or "global")] = (round(b, 2), best[0], len(tin_rate))
-        ratio = tin_rate / b
-        for (nf, tin), q in ratio.items():
-            tier = next((k + 1 for k, t in enumerate(HPHC_TIERS) if abs(q - t) <= TIER_TOL), None)
-            per.append((tin, tier))
-    tiers = {}
-    per = pd.DataFrame(per, columns=["tin_value", "tier"])
-    for tin, g in per.groupby("tin_value"):
-        m = g.tier.dropna()
-        if m.empty:
-            tiers[tin] = ("unmatched", 0.0)
-        else:
-            c = m.value_counts()
-            tiers[tin] = (f"T{int(c.index[0])} ({HPHC_TIERS[int(c.index[0]) - 1]:.3f})",
-                          round(c.iloc[0] / len(g), 3))
-    return tiers, bases
+        t1 = vc[((vc.index / b) - 1).__abs__() <= TIER_TOL]
+        bases[(code, mods)] = (b, float(t1.index[0]) if len(t1) else round(b, 2), best[0], int(vc.sum()))
+
+    def tier(code, mods, rate):
+        if (code, mods) not in bases or rate == "":
+            return ""
+        q = float(rate) / bases[(code, mods)][0]
+        k = next((i + 1 for i, t in enumerate(HPHC_TIERS) if abs(q - t) <= TIER_TOL), None)
+        return f"T{k}" if k else "off-grid"
+    return tier, bases
 
 
 # ------------------------------------------------------------ main
@@ -360,9 +358,13 @@ def main():
     npi_df.to_csv(os.path.join(OUT, "npi_enrichment.csv.gz"), index=False)
 
     p("\n== 3. Flags")
-    names_bcbs = bcbs_tin_names()
+    # keyed by TIN digits so Harvard Pilgrim rows (no dash) pick up Blue Cross
+    # business names for the same tax ID
+    names_bcbs = defaultdict(list)
+    for t, ns in bcbs_tin_names().items():
+        names_bcbs[digits(t)] += ns
     df, samples, stats, npis_full = N.build_rows(refs, keep_npis=True)
-    tiers, bases = hphc_tiers(df)
+    tier_of, bases = hphc_tiers(df)
     flags = defaultdict(list)
     hosp_hits = Counter()
     for tin_type, tin, npis in zip(df.tin_type, df.tin_value, npis_full):
@@ -372,7 +374,7 @@ def main():
         flags["idtf"].append("Y" if any(v["idtf"] for v in vs) else "")
         flags["ma_located"].append("Y" if any(v["ma"] for v in vs) else "")
         org_names = sorted({v["org_name"] for v in vs if v["entity_type"] == "organization" and v["org_name"]})
-        cands = names_bcbs.get(tin, []) + org_names + sorted({v["parent_org_lbn"] for v in vs if v["parent_org_lbn"]})
+        cands = (names_bcbs.get(digits(tin), []) if tin_type != "npi" else []) + org_names + sorted({v["parent_org_lbn"] for v in vs if v["parent_org_lbn"]})
         match = ""
         if tin_type != "npi" and digits(tin) in KNOWN_HOSPITAL_TINS:
             match = f"tin:{KNOWN_HOSPITAL_TINS[digits(tin)]}"
@@ -398,8 +400,13 @@ def main():
         flags["biller_npis"].append("|".join(n for n in npis if n in biller_npis))
     for k, v in flags.items():
         df[k] = v
-    df["hphc_fee_tier"] = [tiers.get(t, ("", 0))[0] if p_ == "Harvard Pilgrim Health Care" else ""
-                           for p_, t in zip(df.payer, df.tin_value)]
+    is_h = df.payer == "Harvard Pilgrim Health Care"
+    df["hphc_rate_tier"] = [tier_of(c, m, r) if h and nt == "fee schedule" else ""
+                            for h, c, m, r, nt in zip(is_h, df.code, df.modifiers, df.negotiated_rate,
+                                                      df.negotiated_type)]
+    tin_tiers = df[is_h & (df.hphc_rate_tier != "")].groupby("tin_value").hphc_rate_tier.apply(
+        lambda s: ",".join(sorted(set(s), key=lambda x: (x == "off-grid", x))))
+    df["hphc_tin_tiers"] = df.tin_value.map(tin_tiers).where(is_h, "").fillna("")
     out = df.drop(columns=["biller_npis"]).sort_values(
         ["payer", "network_file", "code", "modifiers", "billing_class", "setting_group",
          "negotiated_rate", "tin_value"])
@@ -420,45 +427,37 @@ def main():
     p("   neurology taxonomies: " + ", ".join(f"{k} {v}" for k, v in NEURO_TAXONOMY.items()))
     p("   idtf taxonomy: 293D00000X (CMS crosswalk: Medicare specialty 47 IDTF -> Laboratories/Physiological Laboratory)")
 
-    p("\n== 4b. Harvard Pilgrim fee tiers")
-    p("   base rate per code/modifier (TIN-rate entries matching a tier / total):")
-    for (c, m), (b, ok, tot) in sorted(bases.items()):
-        p(f"     {c} {m:6} base {b:8.2f}  matched {ok:6,} / {tot:6,} ({ok / tot:.1%})")
-    # TIN-level attributes for HPHC
-    tin_attr = defaultdict(lambda: {"states": Counter(), "tax": Counter(), "hosp": False, "biller": False})
-    for payer, tin, npis, hosp, bil in zip(df.payer, df.tin_value, npis_full, df.hospital_affiliated,
-                                           df.known_autonomic_biller):
-        if payer != "Harvard Pilgrim Health Care":
-            continue
-        a = tin_attr[tin]
-        if not a["states"]:
-            for n in npis:
-                v = info.get(n)
-                if v:
-                    a["states"][v["state"] or "?"] += 1
-                    a["tax"][v["primary_taxonomy_desc"] or "?"] += 1
-        a["hosp"] |= hosp == "Y"
-        a["biller"] |= bil == "Y"
-    t = pd.DataFrame([dict(tin_value=tin, tier=tiers.get(tin, ("unmatched", 0))[0],
-                           tier_consistency=tiers.get(tin, ("", 0))[1],
-                           state=(a["states"].most_common(1)[0][0] if a["states"] else "?"),
-                           taxonomy=(a["tax"].most_common(1)[0][0] if a["tax"] else "?"),
-                           hospital_affiliated="Y" if a["hosp"] else "N",
-                           known_autonomic_biller="Y" if a["biller"] else "N")
-                      for tin, a in tin_attr.items()])
-    t.to_csv(os.path.join(OUT, "hphc_tin_tiers.csv"), index=False)
-    p(f"   {len(t):,} Harvard Pilgrim tax IDs; tier counts: " +
-      ", ".join(f"{k} {v:,}" for k, v in t.tier.value_counts().sort_index().items()))
-    p(f"   median tier consistency across a TIN's code/modifier rates: {t.tier_consistency.median():.2f}")
-    for dim in ["state", "hospital_affiliated", "known_autonomic_biller"]:
-        ct = pd.crosstab(t[dim], t.tier)
-        if dim == "state":
-            ct = ct.loc[ct.sum(axis=1).sort_values(ascending=False).index[:12]]
-        p(f"\n   tier x {dim} (tax IDs):")
+    p("\n== 4b. Harvard Pilgrim fee tiers (tier ratios " + ", ".join(f"{t:.3f}" for t in HPHC_TIERS) + ")")
+    p("   base (T1) rate per code/modifier; rows = distinct (file, TIN, rate) rows on the tier grid / all:")
+    for (c, m), (b, t1, ok, tot) in sorted(bases.items()):
+        p(f"     {c} {m or 'global':6} T1 {t1:8.2f}  on-grid {ok:7,} / {tot:7,} ({ok / tot:.1%})  "
+          + "  ".join(f"T{i + 1} {b * t:.2f}" for i, t in enumerate(HPHC_TIERS)))
+    ht = df[is_h & (df.hphc_rate_tier != "")]
+    tt = ht.groupby("tin_value").hphc_rate_tier.apply(lambda s: frozenset(s))
+    p(f"\n   {len(tt):,} Harvard Pilgrim tax IDs by the tiers their rate rows carry (top 12 combinations):")
+    for combo, n in tt.map(lambda s: ",".join(sorted(s, key=lambda x: (x == 'off-grid', x)))).value_counts().head(12).items():
+        p(f"     {n:6,}  {combo}")
+    # NPI-level view on office global 95924 rows
+    sel = is_h & (df.code == "95924") & (df.modifiers == "") & (df.setting_group == "office") \
+        & (df.hphc_rate_tier != "")
+    recs = set()
+    for i in sel[sel].index:
+        for n in npis_full[i]:
+            recs.add((n, df.at[i, "hphc_rate_tier"], df.at[i, "hospital_affiliated"] or "N",
+                      "Y" if n in biller_npis else "N"))
+    nv = pd.DataFrame(list(recs), columns=["npi", "tier", "hospital_affiliated", "known_autonomic_biller"])
+    nv["state"] = nv.npi.map(lambda n: (info.get(n) or {}).get("state") or "?")
+    nv["taxonomy"] = nv.npi.map(lambda n: (info.get(n) or {}).get("primary_taxonomy_desc") or "?")
+    nv.to_csv(os.path.join(OUT, "hphc_npi_tiers_95924.csv"), index=False)
+    p(f"\n   NPI-level (office global 95924 rows, all HPHC files pooled): {nv.npi.nunique():,} NPIs, "
+      f"{len(nv):,} NPI x tier x flag combinations")
+    for dim, top in [("state", 10), ("taxonomy", 20), ("hospital_affiliated", None),
+                     ("known_autonomic_biller", None)]:
+        ct = pd.crosstab(nv[dim], nv.tier)
+        if top:
+            ct = ct.loc[ct.sum(axis=1).sort_values(ascending=False).index[:top]]
+        p(f"\n   tier x {dim} (NPIs):")
         p(ct.to_string())
-    top_tax = t.taxonomy.value_counts().index[:15]
-    p("\n   tier x primary taxonomy (15 most common, tax IDs):")
-    p(pd.crosstab(t[t.taxonomy.isin(top_tax)].taxonomy, t.tier).to_string())
 
     p("\n== 4c. Every rate row for known autonomic billers (collapsed over network files)")
     kb = df[df.known_autonomic_biller == "Y"]
