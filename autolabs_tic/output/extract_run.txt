@@ -1,0 +1,73 @@
+== Blue Cross file sizes (selected)
+   Blue-Care-Elect-Fully-Insured                    0.128 GB
+   HMO-Blue-Fully-Insured                           0.128 GB
+   New-England-Managed-Care-Fully-Insured           0.133 GB
+   PAR-Providers                                    0.128 GB
+
+-- Harvard Pilgrim Health Care / A001-FS (107 MB)
+
+== Validating pre-filter on A001-FS against a full ijson parse of the first 2 GiB
+   ijson items() full parse: 2.15 GB decompressed in 33s = 64.4 MB/s
+   in_network items within range: pre-filter 8,691 vs full 8,691
+   target items within range:     pre-filter 0 vs full 0  identical=True
+   ijson.parse() event loop: 44.8 MB/s (60,830,585 events on 512 MiB)
+   pre-filter: 88.1 MB/s over the whole file
+   pre-filter validated OK
+   disk-zip: downloaded 107 MB, decompressed 3.63 GB, scanned 17244, kept 5 [93660=1; 95921=1; 95922=1; 95923=1; 95924=1], refs 1163 groups / 148383 rows, remote 0, 41.2s (88.1 MB/s), peak 222 MB
+
+-- Harvard Pilgrim Health Care / A002-FS (108 MB)
+   disk-zip: downloaded 108 MB, decompressed 3.63 GB, scanned 17244, kept 5 [93660=1; 95921=1; 95922=1; 95923=1; 95924=1], refs 1162 groups / 150008 rows, remote 0, 40.8s (88.8 MB/s), peak 233 MB
+
+-- Harvard Pilgrim Health Care / A002-P1 (108 MB)
+   disk-zip: downloaded 108 MB, decompressed 3.62 GB, scanned 17244, kept 5 [93660=1; 95921=1; 95922=1; 95923=1; 95924=1], refs 1165 groups / 150008 rows, remote 0, 40.1s (90.3 MB/s), peak 233 MB
+
+-- Harvard Pilgrim Health Care / A008-FS (108 MB)
+   disk-zip: downloaded 108 MB, decompressed 3.60 GB, scanned 17244, kept 5 [93660=1; 95921=1; 95922=1; 95923=1; 95924=1], refs 1180 groups / 150026 rows, remote 0, 39.1s (91.9 MB/s), peak 234 MB
+
+-- Harvard Pilgrim Health Care / A008-P1 (109 MB)
+   disk-zip: downloaded 109 MB, decompressed 3.62 GB, scanned 17244, kept 5 [93660=1; 95921=1; 95922=1; 95923=1; 95924=1], refs 1188 groups / 150026 rows, remote 0, 39.6s (91.3 MB/s), peak 235 MB
+
+-- Harvard Pilgrim Health Care / A013-P1 (109 MB)
+   disk-zip: downloaded 109 MB, decompressed 3.62 GB, scanned 17244, kept 5 [93660=1; 95921=1; 95922=1; 95923=1; 95924=1], refs 1188 groups / 150025 rows, remote 0, 49.6s (72.9 MB/s), peak 235 MB
+
+-- Harvard Pilgrim Health Care / A014-P1 (109 MB)
+   disk-zip: downloaded 109 MB, decompressed 3.62 GB, scanned 17244, kept 5 [93660=1; 95921=1; 95922=1; 95923=1; 95924=1], refs 1188 groups / 150024 rows, remote 0, 41.3s (87.6 MB/s), peak 237 MB
+
+-- Tufts Health Plan / TuftsHealthPublicPlans_DirectNonSubsidizedGroup (12 MB)
+   disk-zip: downloaded 12 MB, decompressed 0.07 GB, scanned 1736, kept 0 [], refs 53715 groups / 1198932 rows, remote 0, 3.5s (18.9 MB/s), peak 228 MB
+
+-- Tufts Health Plan / TuftsHealthPublicPlans_DirectNonSubsidizedIndividual (12 MB)
+   disk-zip: downloaded 12 MB, decompressed 0.07 GB, scanned 1736, kept 0 [], refs 53702 groups / 1198950 rows, remote 0, 3.4s (18.9 MB/s), peak 228 MB
+
+-- Tufts Health Plan / TuftsHealthPublicPlans_DirectSubsidizedIndividual (11 MB)
+   disk-zip: downloaded 11 MB, decompressed 0.06 GB, scanned 1736, kept 0 [], refs 52195 groups / 1169910 rows, remote 0, 3.2s (19.8 MB/s), peak 228 MB
+
+-- Blue Cross Blue Shield of Massachusetts / Blue-Care-Elect-Fully-Insured (128 MB)
+   stream: downloaded 128 MB, decompressed 1.04 GB, scanned 19272, kept 5 [93660=1; 95921=1; 95922=1; 95923=1; 95924=1], refs 110763 groups / 8182265 rows, remote 0, 55.4s (18.8 MB/s), peak 300 MB
+
+-- Blue Cross Blue Shield of Massachusetts / HMO-Blue-Fully-Insured (128 MB)
+   stream: downloaded 128 MB, decompressed 1.04 GB, scanned 19271, kept 5 [93660=1; 95921=1; 95922=1; 95923=1; 95924=1], refs 110297 groups / 8122752 rows, remote 0, 52.6s (19.8 MB/s), peak 341 MB
+
+-- Blue Cross Blue Shield of Massachusetts / New-England-Managed-Care-Fully-Insured (133 MB)
+   stream: downloaded 133 MB, decompressed 1.07 GB, scanned 19290, kept 5 [93660=1; 95921=1; 95922=1; 95923=1; 95924=1], refs 110970 groups / 8234461 rows, remote 0, 55.3s (19.3 MB/s), peak 279 MB
+
+-- Blue Cross Blue Shield of Massachusetts / PAR-Providers (128 MB)
+   stream: downloaded 128 MB, decompressed 1.04 GB, scanned 19277, kept 5 [93660=1; 95921=1; 95922=1; 95923=1; 95924=1], refs 112817 groups / 8162340 rows, remote 0, 52.0s (20.0 MB/s), peak 316 MB
+
+== Remote provider references needed: 0
+
+== Extraction log
+  payer=Harvard Pilgrim Health Care, file_id=A001-FS, mode=disk-zip, size_bytes=107421636, bytes_downloaded=107421636, bytes_decompressed=3632255419, items_scanned=17244, items_kept=5, kept_by_code=93660=1; 95921=1; 95922=1; 95923=1; 95924=1, candidates_rejected=7, items_without_code=0, provider_ref_groups=1163, provider_ref_rows=148383, remote_ref_urls=0, needed_refs=1075, elapsed_s=41.2, mb_per_s=88.1, peak_rss_mb=222, reporting_entity_name=Harvard Pilgrim Health Care Inc., version=2.0.1, last_updated_on=2026-09-05, error=
+  payer=Harvard Pilgrim Health Care, file_id=A002-FS, mode=disk-zip, size_bytes=108083062, bytes_downloaded=108083062, bytes_decompressed=3626185132, items_scanned=17244, items_kept=5, kept_by_code=93660=1; 95921=1; 95922=1; 95923=1; 95924=1, candidates_rejected=7, items_without_code=0, provider_ref_groups=1162, provider_ref_rows=150008, remote_ref_urls=0, needed_refs=1074, elapsed_s=40.8, mb_per_s=88.8, peak_rss_mb=233, reporting_entity_name=Harvard Pilgrim Health Care Inc., version=2.0.1, last_updated_on=2026-09-05, error=
+  payer=Harvard Pilgrim Health Care, file_id=A002-P1, mode=disk-zip, size_bytes=108099754, bytes_downloaded=108099754, bytes_decompressed=3623886442, items_scanned=17244, items_kept=5, kept_by_code=93660=1; 95921=1; 95922=1; 95923=1; 95924=1, candidates_rejected=7, items_without_code=0, provider_ref_groups=1165, provider_ref_rows=150008, remote_ref_urls=0, needed_refs=1077, elapsed_s=40.1, mb_per_s=90.3, peak_rss_mb=233, reporting_entity_name=Harvard Pilgrim Health Care Inc., version=2.0.1, last_updated_on=2026-09-05, error=
+  payer=Harvard Pilgrim Health Care, file_id=A008-FS, mode=disk-zip, size_bytes=108389872, bytes_downloaded=108389872, bytes_decompressed=3596709584, items_scanned=17244, items_kept=5, kept_by_code=93660=1; 95921=1; 95922=1; 95923=1; 95924=1, candidates_rejected=7, items_without_code=0, provider_ref_groups=1180, provider_ref_rows=150026, remote_ref_urls=0, needed_refs=1092, elapsed_s=39.1, mb_per_s=91.9, peak_rss_mb=234, reporting_entity_name=Harvard Pilgrim Health Care Inc., version=2.0.1, last_updated_on=2026-09-05, error=
+  payer=Harvard Pilgrim Health Care, file_id=A008-P1, mode=disk-zip, size_bytes=108748364, bytes_downloaded=108748364, bytes_decompressed=3615661796, items_scanned=17244, items_kept=5, kept_by_code=93660=1; 95921=1; 95922=1; 95923=1; 95924=1, candidates_rejected=7, items_without_code=0, provider_ref_groups=1188, provider_ref_rows=150026, remote_ref_urls=0, needed_refs=1100, elapsed_s=39.6, mb_per_s=91.3, peak_rss_mb=235, reporting_entity_name=Harvard Pilgrim Health Care Inc., version=2.0.1, last_updated_on=2026-09-05, error=
+  payer=Harvard Pilgrim Health Care, file_id=A013-P1, mode=disk-zip, size_bytes=108860794, bytes_downloaded=108860794, bytes_decompressed=3615675211, items_scanned=17244, items_kept=5, kept_by_code=93660=1; 95921=1; 95922=1; 95923=1; 95924=1, candidates_rejected=7, items_without_code=0, provider_ref_groups=1188, provider_ref_rows=150025, remote_ref_urls=0, needed_refs=1100, elapsed_s=49.6, mb_per_s=72.9, peak_rss_mb=235, reporting_entity_name=Harvard Pilgrim Health Care Inc., version=2.0.1, last_updated_on=2026-09-05, error=
+  payer=Harvard Pilgrim Health Care, file_id=A014-P1, mode=disk-zip, size_bytes=109383368, bytes_downloaded=109383368, bytes_decompressed=3616921013, items_scanned=17244, items_kept=5, kept_by_code=93660=1; 95921=1; 95922=1; 95923=1; 95924=1, candidates_rejected=7, items_without_code=0, provider_ref_groups=1188, provider_ref_rows=150024, remote_ref_urls=0, needed_refs=1100, elapsed_s=41.3, mb_per_s=87.6, peak_rss_mb=237, reporting_entity_name=Harvard Pilgrim Health Care Inc., version=2.0.1, last_updated_on=2026-09-05, error=
+  payer=Tufts Health Plan, file_id=DirectNonSubsidizedGroup, mode=disk-zip, size_bytes=11654491, bytes_downloaded=11654491, bytes_decompressed=65287867, items_scanned=1736, items_kept=0, kept_by_code=, candidates_rejected=0, items_without_code=0, provider_ref_groups=53715, provider_ref_rows=1198932, remote_ref_urls=0, needed_refs=0, elapsed_s=3.5, mb_per_s=18.9, peak_rss_mb=228, reporting_entity_name=Tufts Health Public Plans, Inc., version=2.0.0, last_updated_on=2026-09-01, error=
+  payer=Tufts Health Plan, file_id=DirectNonSubsidizedIndividual, mode=disk-zip, size_bytes=11650090, bytes_downloaded=11650090, bytes_decompressed=65266584, items_scanned=1736, items_kept=0, kept_by_code=, candidates_rejected=0, items_without_code=0, provider_ref_groups=53702, provider_ref_rows=1198950, remote_ref_urls=0, needed_refs=0, elapsed_s=3.4, mb_per_s=18.9, peak_rss_mb=228, reporting_entity_name=Tufts Health Public Plans, Inc., version=2.0.0, last_updated_on=2026-09-01, error=
+  payer=Tufts Health Plan, file_id=DirectSubsidizedIndividual, mode=disk-zip, size_bytes=11418100, bytes_downloaded=11418100, bytes_decompressed=62735142, items_scanned=1736, items_kept=0, kept_by_code=, candidates_rejected=0, items_without_code=0, provider_ref_groups=52195, provider_ref_rows=1169910, remote_ref_urls=0, needed_refs=0, elapsed_s=3.2, mb_per_s=19.8, peak_rss_mb=228, reporting_entity_name=Tufts Health Public Plans, Inc., version=2.0.0, last_updated_on=2026-09-01, error=
+  payer=Blue Cross Blue Shield of Massachusetts, file_id=Blue-Care-Elect-Fully-Insured, mode=stream, size_bytes=128036791, bytes_downloaded=128036791, bytes_decompressed=1039584804, items_scanned=19272, items_kept=5, kept_by_code=93660=1; 95921=1; 95922=1; 95923=1; 95924=1, candidates_rejected=8, items_without_code=0, provider_ref_groups=110763, provider_ref_rows=8182265, remote_ref_urls=0, needed_refs=7715, elapsed_s=55.4, mb_per_s=18.8, peak_rss_mb=300, reporting_entity_name=Blue Cross and Blue Shield of Massachusetts Inc, version=2.0.0, last_updated_on=2026-09-01, error=
+  payer=Blue Cross Blue Shield of Massachusetts, file_id=HMO-Blue-Fully-Insured, mode=stream, size_bytes=128061514, bytes_downloaded=128061514, bytes_decompressed=1042219378, items_scanned=19271, items_kept=5, kept_by_code=93660=1; 95921=1; 95922=1; 95923=1; 95924=1, candidates_rejected=8, items_without_code=0, provider_ref_groups=110297, provider_ref_rows=8122752, remote_ref_urls=0, needed_refs=7706, elapsed_s=52.6, mb_per_s=19.8, peak_rss_mb=341, reporting_entity_name=Blue Cross and Blue Shield of Massachusetts Inc, version=2.0.0, last_updated_on=2026-09-01, error=
+  payer=Blue Cross Blue Shield of Massachusetts, file_id=New-England-Managed-Care-Fully-Insured, mode=stream, size_bytes=132997799, bytes_downloaded=132997799, bytes_decompressed=1066937061, items_scanned=19290, items_kept=5, kept_by_code=93660=1; 95921=1; 95922=1; 95923=1; 95924=1, candidates_rejected=8, items_without_code=0, provider_ref_groups=110970, provider_ref_rows=8234461, remote_ref_urls=0, needed_refs=7706, elapsed_s=55.3, mb_per_s=19.3, peak_rss_mb=279, reporting_entity_name=Blue Cross and Blue Shield of Massachusetts Inc, version=2.0.0, last_updated_on=2026-09-01, error=
+  payer=Blue Cross Blue Shield of Massachusetts, file_id=PAR-Providers, mode=stream, size_bytes=128059732, bytes_downloaded=128059732, bytes_decompressed=1041679286, items_scanned=19277, items_kept=5, kept_by_code=93660=1; 95921=1; 95922=1; 95923=1; 95924=1, candidates_rejected=8, items_without_code=0, provider_ref_groups=112817, provider_ref_rows=8162340, remote_ref_urls=0, needed_refs=7721, elapsed_s=52.0, mb_per_s=20.0, peak_rss_mb=316, reporting_entity_name=Blue Cross and Blue Shield of Massachusetts Inc, version=2.0.0, last_updated_on=2026-09-01, error=
