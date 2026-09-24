@@ -1,0 +1,8 @@
+payer,toc_url,role,note
+Harvard Pilgrim Health Care,https://eusprdtransparencymrfp32.blob.core.windows.net/hphc/2026-09-01_Harvard-Pilgrim-Health-Care-Inc-HPHC_index.json,primary,HPHC Inc fully insured
+Harvard Pilgrim Health Care,https://eusprdtransparencymrfp32.blob.core.windows.net/hphc/2026-09-01_Harvard-Pilgrim-Health-Care-House-Acct-HPHC_index.json,primary,HPHC house account fully insured
+Harvard Pilgrim Health Care,https://eusprdtransparencymrfp32.blob.core.windows.net/hphc/2026-09-01_Harvard-Pilgrim-Health-Care-House-Acct-HPHCNE_index.json,primary,HPHC of New England house account fully insured
+Harvard Pilgrim Health Care,https://eusprdtransparencymrfp32.blob.core.windows.net/hphc/2026-09-01_Harvard-Pilgrim-Health-Care-of-New-England-HPHCNE_index.json,primary,HPHC of New England fully insured
+Tufts Health Plan,https://eusprdtransparencymrfp32.blob.core.windows.net/thp/2026-09-01_TuftsHealthPublicPlansInc_index.json,primary,Current TOC per plan-list page (supersedes 2026-06-01 URL found by browsing)
+Tufts Health Plan,https://eusprdtransparencymrfp32.blob.core.windows.net/thp/2026-06-01_TuftsHealthPublicPlansInc_index.json,head_only,Superseded June TOC; HEAD recorded but not parsed
+Blue Cross Blue Shield of Massachusetts,https://transparency-in-coverage.bluecrossma.com/,head_only,Portal only - TOC requires EIN/HIOS form input; no direct TOC URL
