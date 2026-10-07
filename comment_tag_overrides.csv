@@ -1044,6 +1044,7 @@ CMS-2026-1916-0217,commenter_type,other,identity reviewed
 CMS-2026-1916-0217,commenter_subtype,ambulance/EMS provider,identity reviewed
 CMS-2026-1916-0287,commenter_type,hospital/health system,identity reviewed
 CMS-2026-1916-0287,commenter_subtype,critical access hospital,identity reviewed
+CMS-2026-1916-0287,commenter_org,Okeene Municipal Hospital,identity reviewed
 CMS-2026-1916-0287,state,OK,identity reviewed
 CMS-2026-1916-0548,commenter_type,hospital/health system,identity reviewed
 CMS-2026-1916-0548,commenter_subtype,critical access hospital,identity reviewed
@@ -1147,6 +1148,18 @@ CMS-2026-1916-0480,state,NC,identity reviewed
 CMS-2026-1916-0919,commenter_type,individual,identity reviewed
 CMS-2026-1916-0919,commenter_subtype,former state legislator,identity reviewed
 CMS-2026-1916-0919,state,TX,identity reviewed
+CMS-2026-1916-0835,commenter_type,state agency,identity reviewed
+CMS-2026-1916-0835,commenter_subtype,,identity reviewed
+CMS-2026-1916-0835,commenter_org,New Mexico Health Care Authority,identity reviewed
+CMS-2026-1916-0835,state,NM,identity reviewed
+CMS-2026-1916-0758,commenter_type,state agency,identity reviewed
+CMS-2026-1916-0758,commenter_subtype,,identity reviewed
+CMS-2026-1916-0758,commenter_org,Pennsylvania Department of Human Services,identity reviewed
+CMS-2026-1916-0758,state,PA,identity reviewed
+CMS-2026-1916-0387,commenter_type,state agency,identity reviewed
+CMS-2026-1916-0387,commenter_subtype,,identity reviewed
+CMS-2026-1916-0387,commenter_org,North Carolina Department of Health and Human Services,identity reviewed
+CMS-2026-1916-0387,state,NC,identity reviewed
 CMS-2026-1916-0493,commenter_type,association,identity reviewed
 CMS-2026-1916-0493,commenter_subtype,provider association,identity reviewed
 CMS-2026-1916-0671,commenter_type,hospital/health system,identity reviewed

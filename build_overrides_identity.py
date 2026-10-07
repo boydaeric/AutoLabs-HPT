@@ -51,6 +51,8 @@ ID = {
     # former legislators writing as individuals
     "1916-0294": ("", I, "former state legislator", "WV"), "1916-0307": ("", I, "former state legislator", "FL"),
     "1916-0480": ("", I, "former state legislator", "NC"), "1916-0919": ("", I, "former state legislator", "TX"),
+    "1916-0835": ("New Mexico Health Care Authority", S, "", "NM"), "1916-0758": ("Pennsylvania Department of Human Services", S, "", "PA"),
+    "1916-0387": ("North Carolina Department of Health and Human Services", S, "", "NC"), "1916-0287": ("Okeene Municipal Hospital", H, "critical access hospital", "OK"),
     # org-type corrections
     "1916-0493": ("", A, "provider association", ""), "1916-0671": ("", H, "", ""), "1916-0789": ("", H, "", ""),
     "1916-0473": ("", O, "long-term care / IDD provider", ""), "1916-0834": ("", O, "academic institution", ""),
