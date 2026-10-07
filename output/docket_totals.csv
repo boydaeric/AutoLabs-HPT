@@ -1,0 +1,52 @@
+file,measure,docket,rule,as_filed,corrected,note
+comments_tagged.csv,comments,CMS-2026-1916,CMS-2449-P,960,961,differs after moving 2476-0199 (see docket_corrections.csv)
+comments_tagged.csv,comments,CMS-2026-2476,CMS-2452-P,214,213,differs after moving 2476-0199 (see docket_corrections.csv)
+comments_tagged.csv,comments,both,both rules,1174,1174,
+comments_tagged.csv,distinct texts (campaign copies counted once; campaigns do not span dockets),CMS-2026-1916,CMS-2449-P,660,660,
+comments_tagged.csv,distinct texts (campaign copies counted once; campaigns do not span dockets),CMS-2026-2476,CMS-2452-P,188,187,differs after moving 2476-0199 (see docket_corrections.csv)
+comments_tagged.csv,distinct texts (campaign copies counted once; campaigns do not span dockets),both,both rules,848,847,differs after moving 2476-0199 (see docket_corrections.csv)
+comments_tagged.csv,campaigns (2+ comments),CMS-2026-1916,CMS-2449-P,61,61,
+comments_tagged.csv,campaigns (2+ comments),CMS-2026-2476,CMS-2452-P,10,10,
+comments_tagged.csv,campaigns (2+ comments),both,both rules,71,71,
+comments_tagged.csv,comments inside campaigns,CMS-2026-1916,CMS-2449-P,361,362,differs after moving 2476-0199 (see docket_corrections.csv)
+comments_tagged.csv,comments inside campaigns,CMS-2026-2476,CMS-2452-P,36,36,
+comments_tagged.csv,comments inside campaigns,both,both rules,397,398,differs after moving 2476-0199 (see docket_corrections.csv)
+comments_tagged.csv,"comments, position = oppose",CMS-2026-1916,CMS-2449-P,351,351,
+comments_tagged.csv,"comments, position = oppose",CMS-2026-2476,CMS-2452-P,75,75,
+comments_tagged.csv,"comments, position = oppose",both,both rules,426,426,
+comments_tagged.csv,"comments, position = request for changes",CMS-2026-1916,CMS-2449-P,461,462,differs after moving 2476-0199 (see docket_corrections.csv)
+comments_tagged.csv,"comments, position = request for changes",CMS-2026-2476,CMS-2452-P,127,126,differs after moving 2476-0199 (see docket_corrections.csv)
+comments_tagged.csv,"comments, position = request for changes",both,both rules,588,588,
+comments_tagged.csv,"comments, position = mixed",CMS-2026-1916,CMS-2449-P,121,121,
+comments_tagged.csv,"comments, position = mixed",CMS-2026-2476,CMS-2452-P,8,8,
+comments_tagged.csv,"comments, position = mixed",both,both rules,129,129,
+comments_tagged.csv,"comments, position = support",CMS-2026-1916,CMS-2449-P,14,14,
+comments_tagged.csv,"comments, position = support",CMS-2026-2476,CMS-2452-P,4,4,
+comments_tagged.csv,"comments, position = support",both,both rules,18,18,
+comments_tagged.csv,"comments, position = unclear / off-topic",CMS-2026-1916,CMS-2449-P,13,13,
+comments_tagged.csv,"comments, position = unclear / off-topic",CMS-2026-2476,CMS-2452-P,0,0,
+comments_tagged.csv,"comments, position = unclear / off-topic",both,both rules,13,13,
+campaigns.csv,campaigns (rows),CMS-2026-1916,CMS-2449-P,61,61,
+campaigns.csv,campaigns (rows),CMS-2026-2476,CMS-2452-P,10,10,
+campaigns.csv,campaigns (rows),both,both rules,71,71,
+campaigns.csv,comments covered (sum of campaign sizes),CMS-2026-1916,CMS-2449-P,361,362,differs after moving 2476-0199 (see docket_corrections.csv)
+campaigns.csv,comments covered (sum of campaign sizes),CMS-2026-2476,CMS-2452-P,36,36,
+campaigns.csv,comments covered (sum of campaign sizes),both,both rules,397,398,differs after moving 2476-0199 (see docket_corrections.csv)
+campaigns.csv,exact duplicates inside campaigns,CMS-2026-1916,CMS-2449-P,9,10,differs after moving 2476-0199 (see docket_corrections.csv)
+campaigns.csv,exact duplicates inside campaigns,CMS-2026-2476,CMS-2452-P,2,2,
+campaigns.csv,exact duplicates inside campaigns,both,both rules,11,12,differs after moving 2476-0199 (see docket_corrections.csv)
+parse_flags.csv,flagged comments (rows),CMS-2026-1916,CMS-2449-P,4,4,
+parse_flags.csv,flagged comments (rows),CMS-2026-2476,CMS-2452-P,1,1,
+parse_flags.csv,flagged comments (rows),both,both rules,5,5,
+evidence_ledger_delta.csv,ledger rows,CMS-2026-1916,CMS-2449-P,3636,3637,differs after moving 2476-0199 (see docket_corrections.csv)
+evidence_ledger_delta.csv,ledger rows,CMS-2026-2476,CMS-2452-P,568,567,differs after moving 2476-0199 (see docket_corrections.csv)
+evidence_ledger_delta.csv,ledger rows,both,both rules,4204,4204,
+evidence_ledger_delta.csv,comments with at least one ledger row,CMS-2026-1916,CMS-2449-P,473,474,differs after moving 2476-0199 (see docket_corrections.csv)
+evidence_ledger_delta.csv,comments with at least one ledger row,CMS-2026-2476,CMS-2452-P,114,113,differs after moving 2476-0199 (see docket_corrections.csv)
+evidence_ledger_delta.csv,comments with at least one ledger row,both,both rules,587,587,
+verification_log.csv,ledger rows checked (rows),CMS-2026-1916,CMS-2449-P,115,115,
+verification_log.csv,ledger rows checked (rows),CMS-2026-2476,CMS-2452-P,47,47,
+verification_log.csv,ledger rows checked (rows),both,both rules,162,162,
+verification_log.csv,"ledger rows checked, status = corrected",CMS-2026-1916,CMS-2449-P,16,16,
+verification_log.csv,"ledger rows checked, status = corrected",CMS-2026-2476,CMS-2452-P,2,2,
+verification_log.csv,"ledger rows checked, status = corrected",both,both rules,18,18,

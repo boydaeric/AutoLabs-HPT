@@ -1,5 +1,6 @@
 """Shared loading / cleaning / clustering helpers for the comment-tagging pipeline."""
 import collections
+import csv
 import glob
 import hashlib
 import html
@@ -9,12 +10,25 @@ import zlib
 from pathlib import Path
 
 DATA = Path("data")
+DOCKET_CORRECTIONS = Path("docket_corrections.csv")
 SHINGLE = 5
 CLUSTER_JACCARD = 0.5     # shingle Jaccard to a cluster leader => same campaign
 
 
+def load_docket_corrections():
+    """comment id -> corrected docket, for letters filed in the wrong docket (docket_corrections.csv)."""
+    if not DOCKET_CORRECTIONS.exists():
+        return {}
+    return {r["comment_id"]: r["docket_corrected"] for r in csv.DictReader(DOCKET_CORRECTIONS.open(newline="", encoding="utf-8"))}
+
+
 def load_comments():
-    """id -> {record fields..., text: merged raw text, text_info: extraction metadata}"""
+    """id -> {record fields..., text: merged raw text, text_info: extraction metadata}
+
+    `docket` is the docket the comment was filed in on regulations.gov; `docket_corrected` is the docket
+    whose rule the letter actually addresses (same value unless listed in docket_corrections.csv).
+    """
+    moves = load_docket_corrections()
     out = {}
     for p in sorted(glob.glob(str(DATA / "*/CMS-*.json"))):
         rec = json.loads(Path(p).read_text())
@@ -23,6 +37,7 @@ def load_comments():
         rec["text"] = t["merged_text"]
         rec["comment_only"] = t["comment_text"] if "comment_text" in t else ""
         rec["text_info"] = t
+        rec["docket_corrected"] = moves.get(rec["id"], rec["docket"])
         out[rec["id"]] = rec
     return out
 
@@ -48,7 +63,7 @@ def jaccard(a, b):
     return len(a & b) / len(a | b) if a and b else 0.0
 
 
-def cluster(comments):
+def cluster(comments, docket_key="docket"):
     """Greedy leader clustering on shingle Jaccard.
 
     Returns {id: (leader_id, kind, jaccard_to_leader)} where kind is
@@ -57,6 +72,8 @@ def cluster(comments):
       'leader' - the cluster's representative (also used for singletons)
     Leader = longest document in the cluster (processed first), so a member is always
     a subset-ish variant of its leader, which avoids chaining unrelated letters.
+    Campaigns never span dockets; `docket_key` picks which docket field defines that boundary:
+    "docket" (as filed on regulations.gov) or "docket_corrected" (after moving misfiled letters).
     """
     W = {k: words(v["text"]) for k, v in comments.items()}
     S = {k: shingles(w) for k, w in W.items()}
@@ -68,7 +85,7 @@ def cluster(comments):
     leaders, assign = set(), {}
     for k in sorted(S, key=lambda k: (-len(S[k]), k)):
         if len(W[k]) < 8:        # near-empty text: merge only on exact match, never on shingle noise
-            same = next((o for o in leaders if digest[o] == digest[k] and comments[o]["docket"] == comments[k]["docket"]), None)
+            same = next((o for o in leaders if digest[o] == digest[k] and comments[o][docket_key] == comments[k][docket_key]), None)
             if same:
                 assign[k] = (same, "exact", 1.0)
             else:
@@ -78,7 +95,7 @@ def cluster(comments):
         cnt = collections.Counter()
         for h in S[k]:
             for o in inv[h]:
-                if o in leaders and comments[o]["docket"] == comments[k]["docket"]:   # campaigns never span the two rules
+                if o in leaders and comments[o][docket_key] == comments[k][docket_key]:   # campaigns never span the two rules
                     cnt[o] += 1
         best = None
         for o, _ in cnt.most_common(10):

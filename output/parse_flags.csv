@@ -1,6 +1,6 @@
-comment_id,docket,commenter_name,commenter_org,text_chars,parse_flag,url
-CMS-2026-1916-0169,CMS-2026-1916,Anonymous Anonymous,,22,almost no text (under 5 words),https://www.regulations.gov/comment/CMS-2026-1916-0169
-CMS-2026-1916-0217,CMS-2026-1916,Joel Deutsch,,3450,comment refers to an attachment but none was published,https://www.regulations.gov/comment/CMS-2026-1916-0217
-CMS-2026-1916-0269,CMS-2026-1916,Eva Gomez,,1868,comment refers to an attachment but none was published,https://www.regulations.gov/comment/CMS-2026-1916-0269
-CMS-2026-1916-0816,CMS-2026-1916,,,0,no comment text and no attachment text,https://www.regulations.gov/comment/CMS-2026-1916-0816
-CMS-2026-2476-0023,CMS-2026-2476,Steven Singleton,,5276,comment refers to an attachment but none was published,https://www.regulations.gov/comment/CMS-2026-2476-0023
+comment_id,docket,docket_corrected,commenter_name,commenter_org,text_chars,parse_flag,url
+CMS-2026-1916-0169,CMS-2026-1916,CMS-2026-1916,Anonymous Anonymous,,22,almost no text (under 5 words),https://www.regulations.gov/comment/CMS-2026-1916-0169
+CMS-2026-1916-0217,CMS-2026-1916,CMS-2026-1916,Joel Deutsch,,3450,comment refers to an attachment but none was published,https://www.regulations.gov/comment/CMS-2026-1916-0217
+CMS-2026-1916-0269,CMS-2026-1916,CMS-2026-1916,Eva Gomez,,1868,comment refers to an attachment but none was published,https://www.regulations.gov/comment/CMS-2026-1916-0269
+CMS-2026-1916-0816,CMS-2026-1916,CMS-2026-1916,,,0,no comment text and no attachment text,https://www.regulations.gov/comment/CMS-2026-1916-0816
+CMS-2026-2476-0023,CMS-2026-2476,CMS-2026-2476,Steven Singleton,,5276,comment refers to an attachment but none was published,https://www.regulations.gov/comment/CMS-2026-2476-0023

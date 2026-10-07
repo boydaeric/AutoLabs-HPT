@@ -1,16 +1,37 @@
 # Public comments on CMS-2449-P and CMS-2452-P: analysis
 
-Source data: `output/comments_tagged.csv` (1,174 comments), the comment texts and attachments under `data/`, and `output/evidence_ledger_delta.csv` (every dollar figure and impact estimate, with commenter, file and comment ID).
+## Methods note
 
-## How to read this document
+This is the report's only methods note; the sections below do not repeat it.
 
-* **Plain text is my paraphrase.** It summarizes what commenters argued; it is not their wording.
-* **Verbatim** lines are exact quotes, each under 25 words, copied from the extracted comment text. `…` marks where a quote was cut mid-sentence. Every quote carries its comment ID.
-* **[inferred]** marks anything I did not read directly in a comment: keyword-based counts, classifications, totals I computed, or a judgment about what a figure means.
-* "Distinct texts" collapses form-letter copies to one. CMS-2449-P has 660 distinct texts among 960 comments; CMS-2452-P has 188 among 214.
-* Comment IDs drop the `CMS-2026-` prefix in the body text (e.g. `1916-0128` = `CMS-2026-1916-0128`).
+**Sources.** 1,174 public comments collected from regulations.gov (API v4): 960 filed on CMS-2449-P (docket CMS-2026-1916) and 214 filed on CMS-2452-P (docket CMS-2026-2476). Text comes from each comment body and every attachment, with OCR for scanned pages. Tags are in `output/comments_tagged.csv`; every dollar figure and impact estimate is in `output/evidence_ledger_delta.csv`.
 
-**Limits.** Positions were assigned by a person reading excerpts of every distinct text, not full reads of long letters. Theme counts are keyword matches and over- or under-count **[inferred]**. Figures were extracted mechanically. Every figure in this document was then checked against its source file for number, unit, time period and attribution (`output/verification_log.csv`), as were the 64 ledger rows found only in OCR output or not re-located. The ledger has 4,204 rows and most were not individually read.
+**Reading conventions.**
+
+* Plain text is my paraphrase of what commenters argued; it is not their wording.
+* **Verbatim** lines are exact quotes, each under 25 words, taken from the merged comment text in `data/<docket>/_text/`. They keep source typos and OCR errors, and `…` marks where a quote was cut mid-sentence. Every quote carries its comment ID.
+* **[inferred]** marks anything I did not read directly in a comment: classifications, totals I computed, keyword-based counts, or a judgment about what a figure means.
+* Comment IDs drop the `CMS-2026-` prefix in the body text (`1916-0128` = `CMS-2026-1916-0128`).
+
+**Docket totals, two ways.** Every docket total is given as filed on regulations.gov and corrected after moving the one letter filed in the wrong docket, `2476-0199`. That letter is the California Behavioral Health Association's comment on CMS-2449-P. Its text is identical to `1916-0958`, which the association filed in the CMS-2449-P docket on 28 July; the copy in the CMS-2452-P docket was posted on 22 September. Moved to CMS-2449-P, it adds one comment but no new distinct text: it becomes an exact duplicate in the 12-letter campaign headed by `1916-0958`.
+
+| | CMS-2449-P as filed | CMS-2449-P corrected | CMS-2452-P as filed | CMS-2452-P corrected |
+|---|---:|---:|---:|---:|
+| Comments | 960 | 961 | 214 | 213 |
+| Distinct texts (campaign copies counted once) | 660 | 660 | 188 | 187 |
+| Comments inside campaigns | 361 | 362 | 36 | 36 |
+| Evidence-ledger rows | 3,636 | 3,637 | 568 | 567 |
+| Comments with a ledger row | 473 | 474 | 114 | 113 |
+
+Both rules combined: 1,174 comments either way; 848 distinct texts as filed, 847 corrected. The same two views are in `output/docket_totals.csv` for every output file. The `docket` column in each row-level file is always as filed, and a `docket_corrected` column gives the corrected docket; `docket_corrections.csv` is the source for the move. The position-by-type tables below are shown both ways.
+
+**Misfiled-letter check.** I scanned every comment's full text for the rule number it cites, for content terms from each rule (directed payments and Medicare limits vs. provider taxes and hold harmless), and for near-duplicate text across the two dockets, then read the borderline cases. `2476-0199` is the only letter filed under the wrong one of the two rules. Letters that mention the other rule are on their own rule: the Idaho and Iowa hospital associations (`2476-0095`, `2476-0076`) and AMGA (`2476-0131`) cite CMS-2449-P only as a cross-reference, and Sutter Health's page footers read "Docket No. CMS-2449-P" (`2476-0123`) although its subject line and argument are CMS-2452-P. Six comments address neither rule, so they cannot be moved. Three are coaching-code letters in the CMS-2449-P docket (`1916-0851`, `1916-0937`, `1916-0941`). Three are individual comments about Medicaid work requirements (`1916-0031` in CMS-2449-P; `2476-0002` and `2476-0017` in CMS-2452-P). All six stay in their filed docket in both views and carry a `filing_note` in `comments_tagged.csv`. The three coaching letters and `1916-0031` are tagged unclear / off-topic. The two CMS-2452-P work-requirement comments are still counted as "oppose" (2 of 75). Many short comments (for example "Cuts to Medicaid will cost lives") do not say which rule they address, so they stay where filed **[inferred]**.
+
+**What is exact and what is approximate.**
+
+* *Exact counts* come straight from the CSVs: comments by docket, commenter type and position, and campaign sizes. Positions were assigned by a person reading the opening, closing and key-ask excerpts of each distinct text, not full reads of long letters, and campaign copies inherit their representative's position. Commenter type and state are rule-based with manual corrections. Campaigns are groups of letters with similar text (word 5-gram Jaccard similarity, within one docket) **[inferred]**.
+* *Approximate counts* are every "about N" count of comments or distinct texts that raise a theme or cite a figure. They come from keyword matching over the full text (`count_themes.py`), are rounded to the nearest 10, and can over-count passing mentions or miss different wording **[inferred]**. They show scale, not tallies. Moving `2476-0199` changes none of them at this rounding.
+* *Figures.* The ledger's 4,204 rows were extracted mechanically. Every figure cited in this report was checked against its source file for number, unit, time period and attribution, as were the 64 rows found only in OCR output or not re-located (`output/verification_log.csv`: 162 rows, 144 confirmed, 18 corrected; none unverifiable). `build_evidence_ledger.py` applies the corrections from `ledger_corrections.csv`, so a rebuild keeps them. In the ledger, `file_basis` shows whether an excerpt was re-found in the original text layer (4,141 rows) or in OCR output (60 rows, each page image read visually); three docx-table rows were read directly. The `figure_source_inferred` column (own figure, cites CMS or CBO, example, table) is rule-based and **[inferred]**. Ledger rows outside the verification log were not read individually.
 
 ---
 
@@ -18,7 +39,7 @@ Source data: `output/comments_tagged.csv` (1,174 comments), the comment texts an
 
 ## Counts by commenter type and position
 
-**All comments (n = 960)**
+**All comments, as filed (n = 960)**
 
 | Commenter type | Oppose | Request for changes | Mixed | Support | Unclear / off-topic | Total |
 |---|---:|---:|---:|---:|---:|---:|
@@ -30,7 +51,19 @@ Source data: `output/comments_tagged.csv` (1,174 comments), the comment texts an
 | State agency | 6 | 19 | 2 | 0 | 0 | 27 |
 | **Total** | **351** | **461** | **121** | **14** | **13** | **960** |
 
-**Distinct texts (n = 660)**
+**All comments, corrected (n = 961).** The moved letter is an association asking for changes, so only the Association row (176 to 177) and the request-for-changes column (461 to 462) change.
+
+| Commenter type | Oppose | Request for changes | Mixed | Support | Unclear / off-topic | Total |
+|---|---:|---:|---:|---:|---:|---:|
+| Hospital / health system | 41 | 138 | 94 | 0 | 0 | 273 |
+| Other | 128 | 107 | 10 | 3 | 1 | 249 |
+| Individual | 90 | 94 | 0 | 5 | 8 | 197 |
+| Association | 63 | 95 | 15 | 0 | 4 | 177 |
+| Advocacy group | 23 | 9 | 0 | 6 | 0 | 38 |
+| State agency | 6 | 19 | 2 | 0 | 0 | 27 |
+| **Total** | **351** | **462** | **121** | **14** | **13** | **961** |
+
+**Distinct texts, as filed (n = 660)**
 
 | Commenter type | Oppose | Request for changes | Mixed | Support | Unclear / off-topic | Total |
 |---|---:|---:|---:|---:|---:|---:|
@@ -42,78 +75,80 @@ Source data: `output/comments_tagged.csv` (1,174 comments), the comment texts an
 | State agency | 6 | 19 | 2 | 0 | 0 | 27 |
 | **Total** | **287** | **324** | **22** | **14** | **13** | **660** |
 
+**Distinct texts, corrected (n = 660).** Unchanged: the moved letter is an exact copy of `1916-0958`, which is already counted.
+
 The 94 "mixed" hospital comments are almost all one campaign: 90 letters from Tennessee-area hospitals (representative `1916-0909`, Parkwest Medical Center). They support keeping separate payment terms through the grandfathering period but oppose other provisions. Collapsing campaigns shrinks "mixed" from 121 to 22.
 
-**Campaigns:** 61 campaigns cover 361 comments: 9 exact duplicates, 76 near-identical form letters and 215 template variants with organization-specific content **[inferred: Jaccard similarity of word 5-grams]**. The largest:
+**Campaigns:** 61 campaigns cover 361 comments as filed (362 corrected, because `2476-0199` joins the `1916-0958` campaign). By role, as filed: 9 exact duplicates, 76 near-identical form letters and 215 template variants with organization-specific content (10 exact duplicates corrected) **[inferred: Jaccard similarity of word 5-grams]**. The largest:
 
 * 90 Tennessee-area hospital letters (`1916-0909`)
 * 39 fire-service letters asking for an EMS exemption (`1916-0425`)
 * Two 12-letter ambulance-district and fire-district templates (`1916-0132`, `1916-0206`)
 * 11 chronic-illness patient letters (`1916-0174`)
-* 11 behavioral health provider letters (`1916-0958`)
+* 11 behavioral health provider letters as filed (`1916-0958`); 12 corrected
 
 ## Top recurring arguments
 
-Prevalence counts are keyword matches over the full texts **[inferred]**. They show scale, not exact tallies.
+Counts below are "about N" keyword-match counts of distinct texts (see the methods note) **[inferred]**.
 
-### 1. The rule goes beyond what Congress enacted (~233 distinct texts)
+### 1. The rule goes beyond what Congress enacted (about 230 distinct texts)
 Section 71116 of P.L. 119-21 capped SDPs only for four service types: inpatient hospital, outpatient hospital, nursing facility, and practitioner services at academic medical centers. Commenters argued that CMS extends Medicare-based limits to all other SDP services and adds a new FFS targeted-payment limit (§447.381) that Congress never directed. Many call the extensions legally vulnerable and ask CMS to implement only the statute.
 * Temple University Health System (`1916-0121`). **Verbatim:** “…the proposed rule extends beyond both the statute’s text and congressional intent.”
 * Illinois Academy of Family Physicians (`1916-0122`). **Verbatim:** “Rather than limiting implementation to the four service categories identified by Congress, the proposed rule would extend Medicare-based payment limits to virtually all non-grandfathered…”
 * Legal Action Center and 39 co-signers (`1916-0407`). **Verbatim:** “…as CMS has exceeded its statutory authority and failed to act within the bounds of reasoned decision-making in extending SDP limits to all Medicaid…”
 
-### 2. CMS's own savings estimate is over three times the statute's (~108 distinct texts)
+### 2. CMS's own savings estimate is over three times the statute's (about 110 distinct texts)
 Commenters set CMS's regulatory impact analysis ($510.1 billion in federal savings over 2026–2035; $774.8 billion including the state share) against CBO's $149.4 billion score for §71116. They cite the gap as proof that the rule cuts far deeper than Congress authorized.
 * American Academy of Family Physicians (`1916-0128`). **Verbatim:** “CMS estimates that the combined statutory and regulatory changes would reduce federal Medicaid spending by approximately $510 billion over 10 years—more than three times…”
 * Lee County Community Hospital (`1916-0902`). **Verbatim:** “CMS’s own projected federal savings exceed CBO’s score for the statute by $360.7 billion.”
 * Allegheny Health Network (`1916-0756`) makes the same $510 billion vs. $149.4 billion comparison.
 
-### 3. Calculate the Medicare limit in the aggregate, not claim by claim (~202 distinct texts)
+### 3. Calculate the Medicare limit in the aggregate, not claim by claim (about 200 distinct texts)
 CMS proposes testing compliance at the individual service or discharge level, including all Medicare adjustments. Hospitals and states argued this is administratively unworkable and asked for an aggregate, class-level test like the existing FFS upper payment limit (UPL). Several states described the scale of repricing involved; North Carolina cited nearly 2 million unique payment rates (`1916-0387`).
 * Rural Hospital Coalition (`1916-0130`). **Verbatim:** “We respectfully urge CMS to permit states to calculate the Medicare payment limit in the aggregate, consistent with existing Medicaid payment methodologies.”
 * Mercy Health Ministry (`1916-0058`). **Verbatim:** “CMS proposes to implement SDP limits at the patient and service level rather than on an aggregate basis.”
 * Tennessee hospital campaign (`1916-0909` and 89 others). **Verbatim:** “…we urge CMS to allow states to calculate fhe Medicare limit in the aggregate, consistent with the current approach to determining compliance with SDP…” (OCR typo "fhe" is in the source text.)
 
-### 4. "10 percentage points" means points of Medicare, not 10% of the dollar amount (~140 distinct texts)
+### 4. "10 percentage points" means points of Medicare, not 10% of the dollar amount (about 140 distinct texts)
 The statute phases grandfathered SDPs down by "10 percentage points" a year. CMS reads this as cutting 10% of the original grandfathered dollar amount each year. Commenters argued the cuts become steeper as the base shrinks (10%, then 11.1%, then 12.5% of the remaining balance). Many proposed stepping the payment rate down in Medicare terms instead (200% to 190% to 180%), or applying 10% to the prior year's balance.
 * Minnesota Hospital Association (`1916-0785`). **Verbatim:** “…a reduction from 200 percent of Medicare to 190, then to 180, and so on.”
 * Monroe County Medical Center (`1916-0255`). **Verbatim:** “The 10-Percentage-Point Reduction Should Be Applied to the Prior Year's Balance, Not the Original Grandfathered Amount…”
 * Tennessee Hospital Association (`1916-0399`) put a dollar figure on it. **Verbatim:** “…for Tennessee’s hospital SDP, this means cuts of $320,411,458 per year, based on the grandfathered amount set…”
 
-### 5. Keep uniform-increase SDPs (~182 distinct texts)
+### 5. Keep uniform-increase SDPs (about 180 distinct texts)
 CMS proposes prohibiting new and renewed uniform rate-increase SDPs from 2028. Physician societies, hospital associations and states argued these are the most common, simplest SDP tool. Policy Matters Ohio (`1916-0699`) said they account for more than two-thirds of SDP spending.
 * American College of Obstetricians and Gynecologists (`1916-0522`). **Verbatim:** “We urge CMS to not finalize this policy and retain uniform increase SDPs to ensure states have flexibility when designing SDPs to address the…”
 * American College of Physicians (`1916-0231`). **Verbatim:** “ACP therefore recommends that CMS retain uniform increase SDPs when states can demonstrate that such arrangements are being used to strengthen clinician participation, improve…”
 * AAMC (`1916-0763`) asked CMS to withdraw the prohibition.
 
-### 6. Exempt public and fire-based EMS (GEMT) from Medicare-based limits (~138 distinct texts, ~239 comments)
+### 6. Exempt public and fire-based EMS (GEMT) from Medicare-based limits (about 140 distinct texts, about 240 comments)
 This is the largest single bloc by volume, mostly fire departments, fire districts and ambulance districts in California, Illinois, Oregon and Missouri. They argued the Medicare Ambulance Fee Schedule pays far below cost and ignores 24/7 readiness costs. Their GEMT programs are cost-reconciled certified public expenditures rather than inflated payments, they said, so they should qualify for the cost-reconciliation exception (§447.381(d)(2)) or be exempted outright. Many give their own annual loss (see the figures section).
 * Fire-service campaign (`1916-0425` and 38 others). **Verbatim:** “As a leader in America’s fire service, I urge CMS to modify the proposal to exempt other provider types for state-directed payments for fire-based…”
 * Page, Wolfberg & Wirth, an EMS law firm (`1916-0396`), citing RAND's analysis of CMS ground-ambulance cost data (GADCS). The figure is an all-payer median, not a Medicare-only shortfall. **Verbatim:** “Public safety-based EMS systems face median per-transport shortfalls of –$1,362 (69 percent below cost).”
 * Pasadena Fire Department (`1916-0162`). **Verbatim:** “…we estimate an annual funding shortfall of approximately $1 to $1.5M annually, a gap that would need to be absorbed by the City's general…”
 
-### 7. Withdraw the new FFS targeted-payment limit (§447.381) (~171 distinct texts)
+### 7. Withdraw the new FFS targeted-payment limit (§447.381) (about 170 distinct texts)
 Physician groups, children's hospitals and academic medical centers argued that §71116 covers only managed-care SDPs, so a new Medicare limit on FFS practitioner supplemental payments has no statutory basis. They warned it would end ACR-based (average commercial rate) physician supplemental payments.
 * American Academy of Pediatrics (`1916-0926`). **Verbatim:** “We recommend CMS withdraw its proposal to establish a new Medicare-based limit for targeted Medicaid fee-for-service payments, as this policy exceeds the requirements of…”
 * NAPNAP (`1916-0408`). **Verbatim:** “NAPNAP urges CMS to withdraw the new Medicare-based limit on targeted Medicaid FFS practitioner payments in its entirety, and withdraw the extension of the…”
 * Tufts Medicine (`1916-0781`). **Verbatim:** “We urge CMS to withdraw the proposed FFS practitioner payment limit, or at a minimum to defer it and provide a meaningful transition and…”
 
-### 8. Medicare is the wrong benchmark for children's hospitals and IPPS-exempt providers (~77 distinct texts)
+### 8. Medicare is the wrong benchmark for children's hospitals and IPPS-exempt providers (about 80 distinct texts)
 Freestanding children's hospitals have almost no Medicare volume and are paid on cost by Medicare. They argued a claim-level Medicare limit is meaningless or punitive for them, and asked for a Medicare UPL methodology, an exemption, or a pediatric-specific benchmark. Driscoll argued a cost-based limit would cut far more than Congress intended.
 * Children's Hospital Association (`1916-0404`). **Verbatim:** “We expect these changes to reduce children’s hospitals’ SDP payments by over 40% by 2036.”
 * Children's Hospital Los Angeles (`1916-0818`). **Verbatim:** “CMS should adopt the Medicare Upper Payment Limit (UPL) methodology as the payment rate limit framework.”
 * Driscoll Children's Hospital (`1916-0922`). **Verbatim:** “…rejecting a cost-based SDP limit, which would cut payments well beyond Congress's intended savings; granting IPPS-exempt children's hospitals a targeted exemption or delaying implementation…”
 
-### 9. No Medicare rate, and behavioral health services Medicare doesn't price (~98 and ~41 distinct texts)
+### 9. No Medicare rate, and behavioral health services Medicare doesn't price (about 100 and about 40 distinct texts)
 Where no Medicare rate exists, the proposed limit defaults to the Medicaid state plan rate. Commenters argued this freezes payment at the levels SDPs were designed to fix. The concern is sharpest for community behavioral health (CCBHCs, mobile crisis, peer support), HCBS, dental and pediatric services.
 * Virginia DMAS (`1916-0755`). **Verbatim:** “CMS Should Not Default Payment Limits to State Plan Rates for Services Without a Medicare Equivalent…”
 * WellPower (`1916-0807`). **Verbatim:** “Medicare does not adequately recognize many of the community-based behavioral health services we are required to provide, including crisis response, peer support and care…”
 * Ohio Department of Medicaid (`1916-0209`), on its statewide youth mobile-crisis system. **Verbatim:** “A per-service reconciliation does not recognize the defining characteristic of population-based payments.”
 
 ### 10. Technical fixes to the Medicare comparison (wage index, net of provider tax, value-based payment)
-* **Area wage index (~32 distinct texts, ~157 comments via the Tennessee campaign).** Low-wage states said Medicare wage adjustments would lock in lower limits; several asked for a 1.0 floor. Vanderbilt Health (`1916-0466`). **Verbatim:** “…we encourage CMS to include a wage index floor of 1.0.”
-* **Net of provider taxes (~9 distinct texts).** Providers fund part of the non-federal share through taxes, so gross Medicaid payments overstate what they keep. Texas Hospital Association (`1916-0581`). **Verbatim:** “CMS should consider aggregate Medicare payment limits from a net-of-tax perspective.” Catawba Valley Medical Center (`1916-0715`) proposed testing only the federal share.
-* **Value-based and population-based SDPs (~162 distinct texts).** Per-service reconciliation conflicts with population-based payment. NAACOS (`1916-0765`). **Verbatim:** “…we do not support requiring States to provide a detailed validation methodology to ensure that payments from value-based payment (VBP) state directed payments (SDPs)…”
+* **Area wage index (about 30 distinct texts, about 160 comments counting the Tennessee campaign letters).** Low-wage states said Medicare wage adjustments would lock in lower limits; several asked for a 1.0 floor. Vanderbilt Health (`1916-0466`). **Verbatim:** “…we encourage CMS to include a wage index floor of 1.0.”
+* **Net of provider taxes (about 10 distinct texts).** Providers fund part of the non-federal share through taxes, so gross Medicaid payments overstate what they keep. Texas Hospital Association (`1916-0581`). **Verbatim:** “CMS should consider aggregate Medicare payment limits from a net-of-tax perspective.” Catawba Valley Medical Center (`1916-0715`) proposed testing only the federal share.
+* **Value-based and population-based SDPs (about 160 distinct texts).** Per-service reconciliation conflicts with population-based payment. NAACOS (`1916-0765`). **Verbatim:** “…we do not support requiring States to provide a detailed validation methodology to ensure that payments from value-based payment (VBP) state directed payments (SDPs)…”
 
 ### 11. The supporting side: fiscal integrity and financing loopholes (14 support comments)
 The 14 supporters were six fiscally conservative think tanks, five individuals, a county fiscal officer (`1916-0309`), a one-person company (`1916-0017`) and one large private ambulance operator. They described uncapped SDPs, funded by provider taxes and intergovernmental transfers (IGTs), as a way to draw extra federal match, and backed the Medicare benchmark.
@@ -127,16 +162,16 @@ Paraphrase: Most individual comments are short and oppose Medicaid "cuts" in gen
 
 ## Dollar figures and impact estimates cited (CMS-2449-P)
 
-The full list is in `output/evidence_ledger_delta.csv`: 3,636 rows from 473 CMS-2449-P comments. The table below lists the figures I read in context, chosen for size, specificity or how often they recur. The excerpts are verbatim; "Means" is my paraphrase. Classifying whether a figure is the commenter's own estimate or cited from CMS, CBO or another source is **[inferred]**.
+The full list is in `output/evidence_ledger_delta.csv`: 3,636 rows from 473 CMS-2449-P comments as filed (3,637 rows from 474 comments corrected). The table below lists the figures I read in context, chosen for size, specificity or how often they recur. The excerpts are verbatim; "Means" is my paraphrase. Classifying whether a figure is the commenter's own estimate or cited from CMS, CBO or another source is **[inferred]**.
 
 **National estimates (cited, not original to the commenters)**
 
 | Figure | Means (paraphrase) | Commenter / ID | Source file |
 |---|---|---|---|
-| $510 billion | CMS RIA federal savings, 2026–2035; cited in ~77 comments **[inferred count]** | AAFP, `1916-0128` | `data/CMS-2026-1916/attachments/CMS-2026-1916-0128_attachment_1.docx` |
-| $149.4 billion | CBO score of §71116, cited in ~49 comments | Allegheny Health Network, `1916-0756` | `…/CMS-2026-1916-0756_attachment_1.pdf` |
+| $510 billion | CMS RIA federal savings, 2026–2035; cited in about 120 comments (about 90 distinct texts) **[inferred count]** | AAFP, `1916-0128` | `data/CMS-2026-1916/attachments/CMS-2026-1916-0128_attachment_1.docx` |
+| $149.4 billion | CBO score of §71116, cited in about 90 comments (about 60 distinct texts) **[inferred count]** | Allegheny Health Network, `1916-0756` | `…/CMS-2026-1916-0756_attachment_1.pdf` |
 | $360.7 billion | CMS estimate minus CBO score | Lee County Community Hospital, `1916-0902` | `…/CMS-2026-1916-0902_attachment_1.docx` |
-| $774.8 billion | CMS total (federal + state) SDP reduction, 2026–2035 | e.g. Kentucky Health Collaborative, `2476-0056` (cited cross-docket) and ~30 CMS-2449-P comments | see ledger |
+| $774.8 billion | CMS total (federal + state) SDP reduction, 2026–2035 | e.g. Kentucky Health Collaborative, `2476-0056` (cited cross-docket) and about 30 CMS-2449-P comments (about 10 distinct texts) **[inferred count]** | see ledger |
 | $0.13 million | RIA's annualized cost-saving line; SPAN asks CMS to clarify it, given the RIA says benefits cannot be quantified | SPAN, `1916-0629` | `…/CMS-2026-1916-0629_attachment_1.docx` |
 
 **State and system impact estimates (commenters' own figures)**
@@ -198,7 +233,7 @@ Pattern **[inferred]**: national figures in this docket are almost all citations
 * **Fix the ambulance fee schedule instead.** The International Association of Fire Fighters (`1916-0444`) urges a holistic reform of the Medicare and Medicaid ambulance fee schedules rather than tying Medicaid to Medicare's rates.
 * **Narrow support from a value-based-care company.** Diverge Health (`1916-0405`) supports guardrails on SDPs that **Verbatim:** “…exist to enrich a narrow set of providers with no clear connection to…” while objecting to how the limits treat value-based arrangements **[inferred from its position tag; not read in full]**.
 * **Individual supporter on debt grounds.** Leona Herndon (`1916-0048`). **Verbatim:** “…which I greatly support because this country needs to reduce our debt.”
-* **Off-topic or misfiled.** Three nursing/coaching organizations (`1916-0851`, `1916-0937`, `1916-0941`) comment on national payment for health-coaching billing codes (CPT 0591T–0593T), which is not part of this rule **[inferred: they belong to a different rulemaking]**. Conversely, the California Behavioral Health Association's CMS-2449-P letter was filed in the CMS-2452-P docket (`2476-0199`).
+* **Off-topic or misfiled.** Three nursing/coaching organizations (`1916-0851`, `1916-0937`, `1916-0941`) comment on national payment for health-coaching billing codes (CPT 0591T–0593T), which is not part of this rule **[inferred: they belong to a different rulemaking]**. Conversely, the California Behavioral Health Association's CMS-2449-P letter was filed a second time in the CMS-2452-P docket (`2476-0199`, an exact copy of `1916-0958`); the methods note covers the corrected totals. A work-requirements question from an individual (`1916-0031`) also does not concern this rule.
 
 ---
 
@@ -206,7 +241,7 @@ Pattern **[inferred]**: national figures in this docket are almost all citations
 
 ## Counts by commenter type and position
 
-**All comments (n = 214)**
+**All comments, as filed (n = 214)**
 
 | Commenter type | Oppose | Request for changes | Mixed | Support | Unclear / off-topic | Total |
 |---|---:|---:|---:|---:|---:|---:|
@@ -219,51 +254,66 @@ Pattern **[inferred]**: national figures in this docket are almost all citations
 | MCO | 1 | 0 | 0 | 0 | 0 | 1 |
 | **Total** | **75** | **127** | **8** | **4** | **0** | **214** |
 
-**Distinct texts (n = 188):** oppose 66, request for changes 110, mixed 8, support 4. By type: association 72, advocacy group 31, individual 28, hospital / health system 26, state agency 22, other 8, MCO 1.
+**All comments, corrected (n = 213).** Removing the CMS-2449-P letter `2476-0199` changes only the Association row (83 to 82) and the request-for-changes column (127 to 126).
 
-These counts include `2476-0199`, which is actually a CMS-2449-P letter (see the outliers section). Campaigns are small: 10 campaigns cover 36 comments. The largest is 11 behavioral health and IDD provider letters (`2476-0136`, Ability Network of Delaware).
+| Commenter type | Oppose | Request for changes | Mixed | Support | Unclear / off-topic | Total |
+|---|---:|---:|---:|---:|---:|---:|
+| Association | 19 | 59 | 4 | 0 | 0 | 82 |
+| Advocacy group | 19 | 11 | 0 | 3 | 0 | 33 |
+| Individual | 22 | 9 | 1 | 1 | 0 | 33 |
+| Hospital / health system | 3 | 25 | 2 | 0 | 0 | 30 |
+| State agency | 9 | 12 | 1 | 0 | 0 | 22 |
+| Other | 2 | 10 | 0 | 0 | 0 | 12 |
+| MCO | 1 | 0 | 0 | 0 | 0 | 1 |
+| **Total** | **75** | **126** | **8** | **4** | **0** | **213** |
+
+**Distinct texts, as filed (n = 188):** oppose 66, request for changes 110, mixed 8, support 4. By type: association 72, advocacy group 31, individual 28, hospital / health system 26, state agency 22, other 8, MCO 1.
+
+**Distinct texts, corrected (n = 187):** oppose 66, request for changes 109, mixed 8, support 4. By type: association 71, advocacy group 31, individual 28, hospital / health system 26, state agency 22, other 8, MCO 1.
+
+Campaigns are small: 10 campaigns cover 36 comments, as filed and corrected. The largest is 11 behavioral health and IDD provider letters (`2476-0136`, Ability Network of Delaware).
 
 The mix differs from CMS-2449-P. Hospital associations mostly *request changes* to how the threshold is measured and enforced. Opposition is concentrated among individuals, advocacy groups and state budget think tanks, plus insurance regulators and state-based marketplaces objecting to the new health insurer tax class.
 
 ## Top recurring arguments
 
-### 1. Drop the new "services of health insurers" tax class (~95 distinct texts)
+### 1. Drop the new "services of health insurers" tax class (about 100 distinct texts)
 CMS proposes a new permissible class, §433.56(a)(19). Commenters argued it would sweep premium taxes, marketplace user fees, reinsurance assessments and other non-Medicaid levies into Medicaid provider-tax rules and the new caps. State insurance departments, marketplaces and the NAIC said CMS lacks authority and the class threatens marketplace funding. Some, like Oklahoma, Pennsylvania and Indiana, accepted the goal but asked for explicit exclusions.
 * NAIC (`2476-0027`). **Verbatim:** “This would impact state premium taxes, state guarantee association assessments, state-based reinsurance programs, licensing fees used to support the operations of state insurance departments…”
 * Oregon Department of Consumer and Business Services (`2476-0096`). **Verbatim:** “We oppose the proposed addition of “services of health insurers” to section 433.56 because CMS lacks statutory authority to make this change.”
 * Families USA (`2476-0099`). **Verbatim:** “…we strongly urge CMS to withdraw its proposal to include taxes on the “services of health insurers” within the CMS-regulated provider tax framework.”
 
-### 2. Keep the 75/75 test, the second prong of the hold harmless test (~84 distinct texts)
+### 2. Keep the 75/75 test, the second prong of the hold harmless test (about 80 distinct texts)
 Commenters argued P.L. 119-21 does not require eliminating it, that it was codified by Congress in 2006, and that CMS cites almost no evidence of abuse.
 * National Health Law Program (`2476-0031`). **Verbatim:** “The Department lacks the authority to eliminate the 75/75 test, which was codified by Congress in the Tax Relief and Health Care Act of…”
 * Sutter Health (`2476-0123`). **Verbatim:** “Given that there is no evidence of gaming occurring through this long-legitimate pathway, Sutter Health urges CMS to maintain the 75/75 test as an…”
 * Arizona Hospital & Healthcare Association (`2476-0077`). **Verbatim:** “Rare use indicates a narrow compliance pathway, not a loophole.”
 
-### 3. Enforce prospectively, and penalize only the excess (~117 and ~38 distinct texts)
+### 3. Enforce prospectively, and penalize only the excess (about 120 and about 40 distinct texts)
 CMS would set thresholds from actual collections reconciled years later. Exceeding a threshold by any amount would disallow the entire tax for the class. Commenters argued this "cliff" is disproportionate and unmanageable, and asked for prospective, rate-based compliance and disallowance limited to the excess.
 * Michigan Health & Hospital Association (`2476-0036`). **Verbatim:** “…theoretically by even one penny, would result in invalidation of the entire provider tax for the entire class.”
 * Hospital and Healthsystem Association of Pennsylvania (`2476-0089`), illustrating the cliff. **Verbatim:** “CMS would deduct the full $1,000,000,000.29, not just $0.29 from the state’s Medical Assistance expenditures.”
 * Mosaic (`2476-0054`). **Verbatim:** “…breaching the tax threshold by even a tiny fraction triggers a class-wide "cliff" penalty that invalidates the entire tax structure, exposing states to multi-hundred-million-dollar…”
 
-### 4. "Enacted and imposed": support for the new definitions, requests for flexibility (~97 distinct texts)
+### 4. "Enacted and imposed": support for the new definitions, requests for flexibility (about 100 distinct texts)
 This is the provision most often praised. Many commenters welcomed the broader reading of which taxes count as enacted and imposed by July 4, 2025, which grandfathers more existing taxes than CMS's November 2025 guidance. Many also asked to choose the 12-month measurement period, since the choice can move a state's grandfathered amount materially.
 * Alliance of Community Health Plans (`2476-0040`). **Verbatim:** “We particularly support CMS' proposed interpretation of "enacted and imposed," which preserves more existing provider taxes than CMS' earlier guidance suggested.”
 * National Conference of State Legislatures (`2476-0210`). **Verbatim:** “We strongly support the clarification of the November 2025 guidance included in the proposed rule regarding the definition of an “imposed” provider tax which…”
 * Arizona Hospital & Healthcare Association (`2476-0077`). **Verbatim:** “Allow each state to select any 12-month measurement period that includes July 4, 2025.”
 
-### 5. Reporting burden and deadlines (§433.74) (~93 distinct texts)
+### 5. Reporting burden and deadlines (§433.74) (about 90 distinct texts)
 The new one-time and quarterly reporting would require provider-level data, often from local governments. Commenters said the deadlines are unrealistic: December 31, 2026 for interim data and June 30, 2028 for final data.
 * Defend Forgotten America (`2476-0045`). **Verbatim:** “A reporting requirement that seems modest when viewed from Baltimore may require a State Medicaid agency to contact dozens of local governments, each of…”
 * NAIC (`2476-0027`). **Verbatim:** “It does seem clear that the proposal would place onerous reporting requirements on many states.”
 * Steven Singleton (`2476-0023`, individual). **Verbatim:** “…set fixed, concrete deadlines -- December 31, 2026, for interim data and June 30, 2028, for final data -- for the one-time submissions that…”
 
-### 6. The impact analysis understates harm (~37–43 distinct texts)
+### 6. The impact analysis understates harm (about 40 distinct texts)
 CMS projects $246 billion in federal savings against CBO's $183–191 billion for §71115 (CBO attribution as cited by AHCCCS `2476-0201`, UHA `2476-0097` and PA DHS `2476-0126`). Commenters argued this shows the rule goes beyond the statute. They also faulted the RIA for assuming no coverage loss, against CBO's 1.1 million more uninsured, and for assuming states replace 30% of lost revenue.
 * Hospital and Healthsystem Association of Pennsylvania (`2476-0089`). **Verbatim:** “CMS projects federal savings of approximately $246 billion, substantially exceeding the estimated $183 billion associated with the statutory changes enacted by Congress.”
 * Jason Levitis (`2476-0179`). **Verbatim:** “CMS assumes without any basis that the rule would have no effect on health coverage, despite reducing federal Medicaid spending by almost $250 billion.”
 * Texas Hospital Association (`2476-0109`), on the 30% offset assumption. **Verbatim:** “…it is highly improbable that it would be equal to 30 percent of lost funds (or even a much smaller fraction of that).”
 
-### 7. Expansion-state phase-down and state budget effects (~57 distinct texts)
+### 7. Expansion-state phase-down and state budget effects (about 60 distinct texts)
 The threshold falls from 6% toward 3.5% in expansion states from FFY 2028. State budget groups and hospital associations quantified state-level losses (see figures) and warned of rate cuts and lost coverage.
 * Missouri Hospital Association (`2476-0035`). **Verbatim:** “Once the tax threshold reaches 3.5%, the ongoing annual impact to Missouri would be $1.25 billion.”
 * New Mexico Health Care Authority (`2476-0186`). **Verbatim:** “…will result in $125M less in collections from hospitals annually to the State of New Mexico and a nearly $8.5B reduction in revenue to…”
@@ -278,7 +328,7 @@ Supporters framed provider taxes as a financing gimmick that shifts cost to fede
 
 ## Dollar figures and impact estimates cited (CMS-2452-P)
 
-Full list: 568 ledger rows from 114 CMS-2452-P comments. The table below lists the figures I read in context; "Means" is my paraphrase and source classification is **[inferred]**.
+Full list: 568 ledger rows from 114 CMS-2452-P comments as filed (567 rows from 113 comments corrected; the one row moved is a Medi-Cal enrollment count in `2476-0199`, not cited here). The table below lists the figures I read in context; "Means" is my paraphrase and source classification is **[inferred]**.
 
 **National estimates (cited)**
 
@@ -323,18 +373,9 @@ Pattern **[inferred]**: CMS-2452-P commenters lean even more heavily on the RIA'
 
 ## Notable outliers and novel arguments (CMS-2452-P)
 
-* **A misfiled letter.** `2476-0199` is the California Behavioral Health Association's CMS-2449-P (SDP) letter filed in this docket. It is tagged against the SDP rule in `comments_tagged.csv` but still counts toward this docket's totals above.
+* **A misfiled letter.** `2476-0199` is the California Behavioral Health Association's CMS-2449-P (SDP) letter, an exact copy of `1916-0958`. It is tagged against the SDP rule in `comments_tagged.csv`, counts in this docket's as-filed totals, and is left out of the corrected totals above.
 * **A private-coverage consumer opposes the rule.** Alex Li (`2476-0010`), a privately insured California resident, argues insurer taxes will be passed on in premiums. **Verbatim:** “I oppose CMS-2452-P because it may shift Medicaid financing costs onto people with private coverage.”
 * **Non-Medicaid assessments caught by the insurer class.** PATH Foundation (`2476-0119`) asks that SUVP assessments be excluded. **Verbatim:** “…establish conclusively that SUVP assessments are not considered health care-related taxes under federal Medicaid law.” A Washington state agency (`2476-0202`) asks the same for its universal childhood vaccine program's assessment. Marketplaces and vendors (HealthSource RI `2476-0177`, Access Health CT `2476-0132`, Vimo `2476-0024`) raise exchange user fees.
 * **Supporters cite rural closures.** Paragon (`2476-0130`) claims provider-tax states had more than three times the rural hospital closures of non-provider-tax states (**Verbatim:** “…rural hospital closures per 10 million residents.”). Opponents argue the opposite: provider taxes sustain rural hospitals.
 * **Cross-rule interaction.** Several commenters (Kentucky Health Collaborative `2476-0056`, CBPP `2476-0033`, CHLA Medical Group `2476-0212`) argue the two rules must be analyzed together, since much of the SDP spending capped by CMS-2449-P is financed by the taxes capped here.
-* **Off-topic individual comments.** Several individuals (e.g. `2476-0002`, `2476-0017`) write about Medicaid work requirements rather than provider taxes.
-
----
-
-## Method notes
-
-* Counts come from `output/comments_tagged.csv` as of this commit. Theme prevalence uses keyword patterns over full comment and attachment text and is **[inferred]**.
-* Quotes were extracted programmatically from the merged text in `data/<docket>/_text/` and trimmed to 24 words or fewer. They keep source typos and OCR errors.
-* Figures and files come from `output/evidence_ledger_delta.csv`, built by `build_evidence_ledger.py`. Its `figure_source_inferred` column (own figure vs. citing CMS, CBO or another source vs. example vs. table) is rule-based, marked INFERRED, and not individually checked. Its `file_basis` column records where the excerpt was re-located: the original text layer (4,141 rows) or OCR output only (60 rows, each page image read visually). Three rows from a docx table were not re-located automatically and were read directly; one OCR row was removed because its "figure" was a fax number.
-* Verification: `output/verification_log.csv` lists every ledger row checked (162): each figure cited here, plus the 64 OCR-only or not re-located rows, with status (confirmed / corrected), correction and page. 144 were confirmed and 18 corrected; none was unverifiable. Corrections are applied by `build_evidence_ledger.py` from `ledger_corrections.csv`, so a rebuild keeps them. The ledger's `ledger_row` column is the row number used in the log; `page`, `verification_status` and `verification_note` come from the log.
+* **Off-topic individual comments.** Two individuals (`2476-0002`, `2476-0017`) write about Medicaid work requirements rather than provider taxes. Both are still counted as "oppose" in the tables above.

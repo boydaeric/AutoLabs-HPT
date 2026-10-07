@@ -3,6 +3,8 @@
 cited as an impact (loss, cut, reduction, closure...), in the comments on CMS-2449-P / CMS-2452-P.
 
 claim   = verbatim excerpt (<=25 words) around the figure, machine-extracted from the comment text.
+docket  = docket the comment was filed in on regulations.gov; docket_corrected = docket of the rule the
+          letter addresses (differs only for letters listed in docket_corrections.csv).
 figure  = the figure exactly as written.
 file    = the file the excerpt was found in (comment body JSON or the attachment); located by
           re-reading each attachment's text layer. Where the excerpt only exists in OCR output,
@@ -120,7 +122,7 @@ def apply_verification(rows, tagged):
             if c["action"] == "add":
                 d = json.loads(c["value"])
                 tg = tagged[d["comment ID"]]
-                d.update(commenter_type=tg["commenter_type"], campaign_id=tg["campaign_id"],
+                d.update(commenter_type=tg["commenter_type"], campaign_id=tg["campaign_id"], docket_corrected=tg["docket_corrected"],
                          figure_source_inferred="added in verification (verified)",
                          file_basis="text layer",
                          ledger_row=len(rows) + 1)
@@ -171,6 +173,7 @@ def main():
                     "figure": fig,
                     "commenter": tg["commenter_org"] or tg["commenter_name"] or "(anonymous)",
                     "docket": rec["docket"],
+                    "docket_corrected": rec["docket_corrected"],
                     "file": path,
                     "comment ID": cid,
                     "commenter_type": tg["commenter_type"],
