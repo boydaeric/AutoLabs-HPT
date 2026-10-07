@@ -2,3 +2,4 @@ requests
 ijson
 pandas
 openpyxl
+python-docx
