@@ -1,0 +1,122 @@
+action,ledger_row,comment ID,figure,field,value
+drop,117,CMS-2026-1916-0162,9164 ambulances,,
+edit,3242,CMS-2026-1916-0842,"$810,000,",figure,"$810,000"
+edit,3243,CMS-2026-1916-0842,"$800,000,",figure,"$800,000"
+edit,1418,CMS-2026-1916-0437,$2B,claim,"“[table, illustrative] State A | base rate $1.9B | SDP $100M | total payment rate $2B | Medicare rate $1.9B | phasedown annual rate cut $10M | phasedown years 10”"
+edit,1419,CMS-2026-1916-0437,$10M,claim,"“[table, illustrative] State A | base rate $1.9B | SDP $100M | total payment rate $2B | Medicare rate $1.9B | phasedown annual rate cut $10M | phasedown years 10”"
+edit,1420,CMS-2026-1916-0437,$1B,claim,"“[table, illustrative] State B | base rate $1B | SDP $1B | total payment rate $2B | Medicare rate $1.9B | phasedown annual rate cut $100M | phasedown years 1”"
+edit,1418,CMS-2026-1916-0437,$2B,file_basis,"docx table, read directly in verification (extractor had dropped repeated cells)"
+edit,1418,CMS-2026-1916-0437,$2B,figure_source_inferred,illustrative example (verified)
+edit,1419,CMS-2026-1916-0437,$10M,file_basis,"docx table, read directly in verification (extractor had dropped repeated cells)"
+edit,1419,CMS-2026-1916-0437,$10M,figure_source_inferred,illustrative example (verified)
+edit,1420,CMS-2026-1916-0437,$1B,file_basis,"docx table, read directly in verification (extractor had dropped repeated cells)"
+edit,1420,CMS-2026-1916-0437,$1B,figure_source_inferred,illustrative example (verified)
+edit,635,CMS-2026-1916-0396,$795,file_basis,OCR output; page image checked visually in verification
+edit,636,CMS-2026-1916-0396,"$1,845",file_basis,OCR output; page image checked visually in verification
+edit,637,CMS-2026-1916-0396,"$1,050",file_basis,OCR output; page image checked visually in verification
+edit,638,CMS-2026-1916-0396,$447,file_basis,OCR output; page image checked visually in verification
+edit,639,CMS-2026-1916-0396,$959,file_basis,OCR output; page image checked visually in verification
+edit,640,CMS-2026-1916-0396,$512,file_basis,OCR output; page image checked visually in verification
+edit,641,CMS-2026-1916-0396,"$1,147",file_basis,OCR output; page image checked visually in verification
+edit,642,CMS-2026-1916-0396,"$2,673",file_basis,OCR output; page image checked visually in verification
+edit,643,CMS-2026-1916-0396,"$1,526",file_basis,OCR output; page image checked visually in verification
+edit,644,CMS-2026-1916-0396,56.9%,file_basis,OCR output; page image checked visually in verification
+edit,645,CMS-2026-1916-0396,53.4%,file_basis,OCR output; page image checked visually in verification
+edit,646,CMS-2026-1916-0396,57.1%,file_basis,OCR output; page image checked visually in verification
+edit,814,CMS-2026-1916-0396,$840,file_basis,OCR output; page image checked visually in verification
+edit,815,CMS-2026-1916-0396,"$1,907",file_basis,OCR output; page image checked visually in verification
+edit,816,CMS-2026-1916-0396,"$1,067",file_basis,OCR output; page image checked visually in verification
+edit,817,CMS-2026-1916-0396,$464,file_basis,OCR output; page image checked visually in verification
+edit,818,CMS-2026-1916-0396,$999,file_basis,OCR output; page image checked visually in verification
+edit,819,CMS-2026-1916-0396,$535,file_basis,OCR output; page image checked visually in verification
+edit,820,CMS-2026-1916-0396,"$1,268",file_basis,OCR output; page image checked visually in verification
+edit,821,CMS-2026-1916-0396,"$2,763",file_basis,OCR output; page image checked visually in verification
+edit,822,CMS-2026-1916-0396,"$1,495",file_basis,OCR output; page image checked visually in verification
+edit,823,CMS-2026-1916-0396,$613,file_basis,OCR output; page image checked visually in verification
+edit,824,CMS-2026-1916-0396,"$1,335",file_basis,OCR output; page image checked visually in verification
+edit,825,CMS-2026-1916-0396,$722,file_basis,OCR output; page image checked visually in verification
+edit,826,CMS-2026-1916-0396,56.0%,file_basis,OCR output; page image checked visually in verification
+edit,827,CMS-2026-1916-0396,53.6%,file_basis,OCR output; page image checked visually in verification
+edit,828,CMS-2026-1916-0396,54.1%,file_basis,OCR output; page image checked visually in verification
+edit,463,CMS-2026-1916-0362,1.4 million,file_basis,OCR output; page image checked visually in verification
+edit,1808,CMS-2026-1916-0596,"$1,262,703,035",file_basis,OCR output; page image checked visually in verification
+edit,1809,CMS-2026-1916-0596,"$224,181",file_basis,OCR output; page image checked visually in verification
+edit,1810,CMS-2026-1916-0596,"$1,262,703,035",file_basis,OCR output; page image checked visually in verification
+edit,1811,CMS-2026-1916-0596,"$126,270,000",file_basis,OCR output; page image checked visually in verification
+edit,1812,CMS-2026-1916-0596,"$22,418",file_basis,OCR output; page image checked visually in verification
+edit,1813,CMS-2026-1916-0596,50 beds,file_basis,OCR output; page image checked visually in verification
+edit,1814,CMS-2026-1916-0596,$149.4 billion,file_basis,OCR output; page image checked visually in verification
+edit,1815,CMS-2026-1916-0596,"$127,410,566",file_basis,OCR output; page image checked visually in verification
+edit,1816,CMS-2026-1916-0596,"$2,090,800,621",file_basis,OCR output; page image checked visually in verification
+edit,1817,CMS-2026-1916-0596,"$1,262,703,035",file_basis,OCR output; page image checked visually in verification
+edit,1818,CMS-2026-1916-0596,"$224,181",file_basis,OCR output; page image checked visually in verification
+edit,1819,CMS-2026-1916-0596,"$1,262,703,035",file_basis,OCR output; page image checked visually in verification
+edit,1820,CMS-2026-1916-0596,"$127,410,566",file_basis,OCR output; page image checked visually in verification
+edit,1821,CMS-2026-1916-0596,"$134,330,110",file_basis,OCR output; page image checked visually in verification
+edit,1822,CMS-2026-1916-0596,"$46,316,476",file_basis,OCR output; page image checked visually in verification
+edit,3051,CMS-2026-1916-0817,"$ 16,149,570",file_basis,OCR output; page image checked visually in verification
+edit,3052,CMS-2026-1916-0817,$2.77,file_basis,OCR output; page image checked visually in verification
+edit,3054,CMS-2026-1916-0817,$ 8.40,file_basis,OCR output; page image checked visually in verification
+edit,3237,CMS-2026-1916-0842,$600 million,file_basis,OCR output; page image checked visually in verification
+edit,3238,CMS-2026-1916-0842,$149.4 billion,file_basis,OCR output; page image checked visually in verification
+edit,3239,CMS-2026-1916-0842,$510 billion,file_basis,OCR output; page image checked visually in verification
+edit,3240,CMS-2026-1916-0842,"$1,000,000",file_basis,OCR output; page image checked visually in verification
+edit,3241,CMS-2026-1916-0842,"$900,000",file_basis,OCR output; page image checked visually in verification
+edit,3242,CMS-2026-1916-0842,"$810,000,",file_basis,OCR output; page image checked visually in verification
+edit,3243,CMS-2026-1916-0842,"$800,000,",file_basis,OCR output; page image checked visually in verification
+edit,3244,CMS-2026-1916-0842,200%,file_basis,OCR output; page image checked visually in verification
+edit,3245,CMS-2026-1916-0842,190%,file_basis,OCR output; page image checked visually in verification
+edit,3246,CMS-2026-1916-0842,180%,file_basis,OCR output; page image checked visually in verification
+edit,3881,CMS-2026-2476-0094,9.9 million,file_basis,OCR output; page image checked visually in verification
+edit,3882,CMS-2026-2476-0095,2 percent,file_basis,OCR output; page image checked visually in verification
+edit,4200,CMS-2026-2476-0215,2.2 million,file_basis,OCR output; page image checked visually in verification
+edit,4201,CMS-2026-2476-0215,3.1 million,file_basis,OCR output; page image checked visually in verification
+edit,635,CMS-2026-1916-0396,$795,figure_source_inferred,table: PWW tabulation of CMS GADCS data (verified)
+edit,636,CMS-2026-1916-0396,"$1,845",figure_source_inferred,table: PWW tabulation of CMS GADCS data (verified)
+edit,637,CMS-2026-1916-0396,"$1,050",figure_source_inferred,table: PWW tabulation of CMS GADCS data (verified)
+edit,638,CMS-2026-1916-0396,$447,figure_source_inferred,table: PWW tabulation of CMS GADCS data (verified)
+edit,639,CMS-2026-1916-0396,$959,figure_source_inferred,table: PWW tabulation of CMS GADCS data (verified)
+edit,640,CMS-2026-1916-0396,$512,figure_source_inferred,table: PWW tabulation of CMS GADCS data (verified)
+edit,641,CMS-2026-1916-0396,"$1,147",figure_source_inferred,table: PWW tabulation of CMS GADCS data (verified)
+edit,642,CMS-2026-1916-0396,"$2,673",figure_source_inferred,table: PWW tabulation of CMS GADCS data (verified)
+edit,643,CMS-2026-1916-0396,"$1,526",figure_source_inferred,table: PWW tabulation of CMS GADCS data (verified)
+edit,644,CMS-2026-1916-0396,56.9%,figure_source_inferred,table: PWW tabulation of CMS GADCS data (verified)
+edit,645,CMS-2026-1916-0396,53.4%,figure_source_inferred,table: PWW tabulation of CMS GADCS data (verified)
+edit,646,CMS-2026-1916-0396,57.1%,figure_source_inferred,table: PWW tabulation of CMS GADCS data (verified)
+edit,814,CMS-2026-1916-0396,$840,figure_source_inferred,table: PWW tabulation of CMS GADCS data (verified)
+edit,815,CMS-2026-1916-0396,"$1,907",figure_source_inferred,table: PWW tabulation of CMS GADCS data (verified)
+edit,816,CMS-2026-1916-0396,"$1,067",figure_source_inferred,table: PWW tabulation of CMS GADCS data (verified)
+edit,817,CMS-2026-1916-0396,$464,figure_source_inferred,table: PWW tabulation of CMS GADCS data (verified)
+edit,818,CMS-2026-1916-0396,$999,figure_source_inferred,table: PWW tabulation of CMS GADCS data (verified)
+edit,819,CMS-2026-1916-0396,$535,figure_source_inferred,table: PWW tabulation of CMS GADCS data (verified)
+edit,820,CMS-2026-1916-0396,"$1,268",figure_source_inferred,table: PWW tabulation of CMS GADCS data (verified)
+edit,821,CMS-2026-1916-0396,"$2,763",figure_source_inferred,table: PWW tabulation of CMS GADCS data (verified)
+edit,822,CMS-2026-1916-0396,"$1,495",figure_source_inferred,table: PWW tabulation of CMS GADCS data (verified)
+edit,823,CMS-2026-1916-0396,$613,figure_source_inferred,table: PWW tabulation of CMS GADCS data (verified)
+edit,824,CMS-2026-1916-0396,"$1,335",figure_source_inferred,table: PWW tabulation of CMS GADCS data (verified)
+edit,825,CMS-2026-1916-0396,$722,figure_source_inferred,table: PWW tabulation of CMS GADCS data (verified)
+edit,826,CMS-2026-1916-0396,56.0%,figure_source_inferred,table: PWW tabulation of CMS GADCS data (verified)
+edit,827,CMS-2026-1916-0396,53.6%,figure_source_inferred,table: PWW tabulation of CMS GADCS data (verified)
+edit,828,CMS-2026-1916-0396,54.1%,figure_source_inferred,table: PWW tabulation of CMS GADCS data (verified)
+edit,3240,CMS-2026-1916-0842,"$1,000,000",figure_source_inferred,illustrative example (verified)
+edit,3241,CMS-2026-1916-0842,"$900,000",figure_source_inferred,illustrative example (verified)
+edit,3242,CMS-2026-1916-0842,"$810,000,",figure_source_inferred,illustrative example (verified)
+edit,3243,CMS-2026-1916-0842,"$800,000,",figure_source_inferred,illustrative example (verified)
+edit,3244,CMS-2026-1916-0842,200%,figure_source_inferred,illustrative example (verified)
+edit,3245,CMS-2026-1916-0842,190%,figure_source_inferred,illustrative example (verified)
+edit,3246,CMS-2026-1916-0842,180%,figure_source_inferred,illustrative example (verified)
+edit,338,CMS-2026-1916-0305,"$2,610",figure_source_inferred,illustrative example (verified)
+edit,339,CMS-2026-1916-0305,$700,figure_source_inferred,illustrative example (verified)
+edit,3863,CMS-2026-2476-0089,"$1,000,000,000.29",figure_source_inferred,illustrative example (verified)
+edit,3864,CMS-2026-2476-0089,$0.29,figure_source_inferred,illustrative example (verified)
+edit,4183,CMS-2026-2476-0212,$220.3 billion,figure_source_inferred,illustrative example (verified)
+edit,4184,CMS-2026-2476-0212,$138 billion,figure_source_inferred,illustrative example (verified)
+edit,582,CMS-2026-1916-0396,"$1,362",figure_source_inferred,"cites third-party source: RAND analysis of CMS GADCS Year 1-4 data, all payers (verified)"
+edit,1299,CMS-2026-1916-0415,$4.3 billion,figure_source_inferred,commenter's estimate of the WFTC statute's effect (verified)
+edit,3779,CMS-2026-2476-0072,$1.5 billion,figure_source_inferred,commenter's figure; caused by CMS Feb 2026 uniformity-waiver final rule (verified)
+edit,3854,CMS-2026-2476-0089,$183 billion,figure_source_inferred,source not named by the commenter (verified)
+edit,1969,CMS-2026-1916-0629,$0.13 million,figure_source_inferred,cites CMS / proposed rule (verified)
+add,,CMS-2026-1916-0009,50%,,"{""claim"": ""“The proposed cuts in Medicaid funding proposed by CMS will have a severe effect on the 50% of kids that I take care of…”"", ""figure"": ""50%"", ""commenter"": ""(anonymous)"", ""docket"": ""CMS-2026-1916"", ""file"": ""data/CMS-2026-1916/CMS-2026-1916-0009.json (comment field)"", ""comment ID"": ""CMS-2026-1916-0009""}"
+add,,CMS-2026-1916-0890,68 full-time employees,,"{""claim"": ""“…to approximately 68 full-time employees—at an estimated annual personnel cost of $6.6 million…”"", ""figure"": ""68 full-time employees"", ""commenter"": ""Commonwealth of Virginia"", ""docket"": ""CMS-2026-1916"", ""file"": ""data/CMS-2026-1916/attachments/CMS-2026-1916-0890_attachment_1.pdf"", ""comment ID"": ""CMS-2026-1916-0890""}"
+add,,CMS-2026-1916-0333,15%,,"{""claim"": ""“PPGEMT reimbursement represents approximately 15% of CENCAL's annual operating budget—roughly $10 million a year—…”"", ""figure"": ""15%"", ""commenter"": ""CENCAL FIRE & EMS AUTHORITY"", ""docket"": ""CMS-2026-1916"", ""file"": ""data/CMS-2026-1916/attachments/CMS-2026-1916-0333_attachment_1.pdf"", ""comment ID"": ""CMS-2026-1916-0333""}"
+add,,CMS-2026-1916-0101,286 percent,,"{""claim"": ""“California is currently seeking approval of SPAs that would increase reimbursement to approximately $2,609 per transport, producing reimbursement approximately 286 percent above documented costs.”"", ""figure"": ""286 percent"", ""commenter"": ""Center for a Free Economy"", ""docket"": ""CMS-2026-1916"", ""file"": ""data/CMS-2026-1916/CMS-2026-1916-0101.json (comment field)"", ""comment ID"": ""CMS-2026-1916-0101""}"

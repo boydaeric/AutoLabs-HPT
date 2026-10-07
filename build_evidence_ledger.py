@@ -10,6 +10,10 @@ file    = the file the excerpt was found in (comment body JSON or the attachment
 figure_source_inferred = rule-based guess (INFERRED, not read) whether the figure is the
           commenter's own number, a citation of CMS / the proposed rule, a third party, or an
           illustrative example.
+Verification (see output/verification_log.csv): corrections in ledger_corrections.csv are applied
+after extraction, keyed by ledger_row (the 1-based row number before corrections) and checked
+against comment ID + figure so a stale correction fails loudly instead of editing the wrong row.
+`page`, `verification_status` and `verification_note` are joined from the verification log.
 """
 import csv
 import json
@@ -22,6 +26,8 @@ import comment_tagger as T
 import comment_text_utils as U
 
 OUT = Path("output/evidence_ledger_delta.csv")
+CORRECTIONS = Path("ledger_corrections.csv")
+VERIFICATION_LOG = Path("output/verification_log.csv")
 DOLLAR = re.compile(r"\$\s?\d[\d,]*(?:\.\d+)?(?:\s*(?:billion|million|thousand|trillion)|\s?[BMK]\b)?", re.I)
 BIG = re.compile(r"(?<![\d.,$])\b\d[\d,]*(?:\.\d+)?\s*(?:billion|million)\b", re.I)
 PCT = re.compile(r"(?<![\d.,])\b\d{1,3}(?:\.\d+)?\s?(?:%|percent)", re.I)
@@ -103,6 +109,43 @@ def source_guess(sentence):
     return "unclear (INFERRED)"
 
 
+def apply_verification(rows, tagged):
+    for i, r in enumerate(rows, 1):
+        r["ledger_row"] = i
+    by_row = {r["ledger_row"]: r for r in rows}
+    original = {r["ledger_row"]: (r["comment ID"], r["figure"]) for r in rows}
+    dropped = set()
+    if CORRECTIONS.exists():
+        for c in csv.DictReader(CORRECTIONS.open(newline="", encoding="utf-8")):
+            if c["action"] == "add":
+                d = json.loads(c["value"])
+                tg = tagged[d["comment ID"]]
+                d.update(commenter_type=tg["commenter_type"], campaign_id=tg["campaign_id"],
+                         figure_source_inferred="added in verification (verified)",
+                         file_basis="text layer",
+                         ledger_row=len(rows) + 1)
+                rows.append(d)
+                by_row[d["ledger_row"]] = d
+                continue
+            n = int(c["ledger_row"])
+            if original.get(n) != (c["comment ID"], c["figure"]):
+                raise SystemExit(f"stale correction for ledger_row {n}: expected {c['comment ID']} {c['figure']}, found {original.get(n)}")
+            if c["action"] == "drop":
+                dropped.add(n)
+            else:
+                by_row[n][c["field"]] = c["value"]
+    log = {}
+    if VERIFICATION_LOG.exists():
+        for v in csv.DictReader(VERIFICATION_LOG.open(newline="", encoding="utf-8")):
+            log[int(v["ledger row"])] = v
+    for r in rows:
+        v = log.get(r["ledger_row"], {})
+        r["page"] = v.get("page", "")
+        r["verification_status"] = v.get("status", "")
+        r["verification_note"] = " ".join(x for x in (v.get("correction", ""), v.get("note", "")) if x)
+    return [r for r in rows if r["ledger_row"] not in dropped]
+
+
 def main():
     C = U.load_comments()
     tagged = {r["comment_id"]: r for r in csv.DictReader(open("output/comments_tagged.csv", newline=""))}
@@ -135,6 +178,7 @@ def main():
                     "figure_source_inferred": source_guess(s),
                     "file_basis": basis,
                 })
+    rows = apply_verification(rows, tagged)
     with OUT.open("w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, list(rows[0]))
         w.writeheader()

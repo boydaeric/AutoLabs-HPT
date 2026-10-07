@@ -10,7 +10,7 @@ Source data: `output/comments_tagged.csv` (1,174 comments), the comment texts an
 * "Distinct texts" collapses form-letter copies to one. CMS-2449-P has 660 distinct texts among 960 comments; CMS-2452-P has 188 among 214.
 * Comment IDs drop the `CMS-2026-` prefix in the body text (e.g. `1916-0128` = `CMS-2026-1916-0128`).
 
-**Limits.** Positions were assigned by a person reading excerpts of every distinct text, not full reads of long letters. Theme counts are keyword matches and over- or under-count **[inferred]**. Figures were extracted mechanically; each one in this document was read in context, but the ledger has 4,201 rows and most were not individually read.
+**Limits.** Positions were assigned by a person reading excerpts of every distinct text, not full reads of long letters. Theme counts are keyword matches and over- or under-count **[inferred]**. Figures were extracted mechanically. Every figure in this document was then checked against its source file for number, unit, time period and attribution (`output/verification_log.csv`), as were the 64 ledger rows found only in OCR output or not re-located. The ledger has 4,204 rows and most were not individually read.
 
 ---
 
@@ -89,7 +89,7 @@ CMS proposes prohibiting new and renewed uniform rate-increase SDPs from 2028. P
 ### 6. Exempt public and fire-based EMS (GEMT) from Medicare-based limits (~138 distinct texts, ~239 comments)
 This is the largest single bloc by volume, mostly fire departments, fire districts and ambulance districts in California, Illinois, Oregon and Missouri. They argued the Medicare Ambulance Fee Schedule pays far below cost and ignores 24/7 readiness costs. Their GEMT programs are cost-reconciled certified public expenditures rather than inflated payments, they said, so they should qualify for the cost-reconciliation exception (§447.381(d)(2)) or be exempted outright. Many give their own annual loss (see the figures section).
 * Fire-service campaign (`1916-0425` and 38 others). **Verbatim:** “As a leader in America’s fire service, I urge CMS to modify the proposal to exempt other provider types for state-directed payments for fire-based…”
-* Page, Wolfberg & Wirth, an EMS law firm (`1916-0396`), citing ground-ambulance cost data. **Verbatim:** “Public safety-based EMS systems face median per-transport shortfalls of –$1,362 (69 percent below cost).”
+* Page, Wolfberg & Wirth, an EMS law firm (`1916-0396`), citing RAND's analysis of CMS ground-ambulance cost data (GADCS). The figure is an all-payer median, not a Medicare-only shortfall. **Verbatim:** “Public safety-based EMS systems face median per-transport shortfalls of –$1,362 (69 percent below cost).”
 * Pasadena Fire Department (`1916-0162`). **Verbatim:** “…we estimate an annual funding shortfall of approximately $1 to $1.5M annually, a gap that would need to be absorbed by the City's general…”
 
 ### 7. Withdraw the new FFS targeted-payment limit (§447.381) (~171 distinct texts)
@@ -127,7 +127,7 @@ Paraphrase: Most individual comments are short and oppose Medicaid "cuts" in gen
 
 ## Dollar figures and impact estimates cited (CMS-2449-P)
 
-The full list is in `output/evidence_ledger_delta.csv`: 3,633 rows from 472 CMS-2449-P comments. The table below lists the figures I read in context, chosen for size, specificity or how often they recur. The excerpts are verbatim; "Means" is my paraphrase. Classifying whether a figure is the commenter's own estimate or cited from CMS, CBO or another source is **[inferred]**.
+The full list is in `output/evidence_ledger_delta.csv`: 3,636 rows from 473 CMS-2449-P comments. The table below lists the figures I read in context, chosen for size, specificity or how often they recur. The excerpts are verbatim; "Means" is my paraphrase. Classifying whether a figure is the commenter's own estimate or cited from CMS, CBO or another source is **[inferred]**.
 
 **National estimates (cited, not original to the commenters)**
 
@@ -137,7 +137,7 @@ The full list is in `output/evidence_ledger_delta.csv`: 3,633 rows from 472 CMS-
 | $149.4 billion | CBO score of §71116, cited in ~49 comments | Allegheny Health Network, `1916-0756` | `…/CMS-2026-1916-0756_attachment_1.pdf` |
 | $360.7 billion | CMS estimate minus CBO score | Lee County Community Hospital, `1916-0902` | `…/CMS-2026-1916-0902_attachment_1.docx` |
 | $774.8 billion | CMS total (federal + state) SDP reduction, 2026–2035 | e.g. Kentucky Health Collaborative, `2476-0056` (cited cross-docket) and ~30 CMS-2449-P comments | see ledger |
-| $0.13 million | RIA's annualized cost-saving line, quoted by SPAN as implausibly small | SPAN, `1916-0629` | `…/CMS-2026-1916-0629_attachment_1.docx` |
+| $0.13 million | RIA's annualized cost-saving line; SPAN asks CMS to clarify it, given the RIA says benefits cannot be quantified | SPAN, `1916-0629` | `…/CMS-2026-1916-0629_attachment_1.docx` |
 
 **State and system impact estimates (commenters' own figures)**
 
@@ -145,13 +145,13 @@ The full list is in `output/evidence_ledger_delta.csv`: 3,633 rows from 472 CMS-
 |---|---|---|---|
 | $320,411,458 / yr | Tennessee hospital SDP cut under CMS's dollar-based phase-down (same claim in the 90-letter campaign as "over $320 million") | Tennessee Hospital Association, `1916-0399`; Parkwest, `1916-0909` | `…/CMS-2026-1916-0399_attachment_1.pdf`; `…/CMS-2026-1916-0909_attachment_1.pdf` |
 | $2.4 billion | Tennessee uncompensated care that would have been higher in 2025 without the SDP | Tennessee Hospital Association, `1916-0399` | `…/CMS-2026-1916-0399_attachment_1.pdf` |
-| $4.3 billion / yr | Texas hospital payment reduction once phase-down completes | Texas Essential Healthcare Partnerships, `1916-0415` (also DHR Health, `1916-0814`) | `…/CMS-2026-1916-0415_attachment_1.pdf` |
+| $4.3 billion / yr | Texas hospital payment reduction once the phase-down completes, which TEHP attributes to the statute's SDP provisions (WFTC), not to the rule's extensions | Texas Essential Healthcare Partnerships, `1916-0415` (also DHR Health, `1916-0814`) | `…/CMS-2026-1916-0415_attachment_1.pdf` |
 | $915 million / yr | Removed from Texas CHIRP each year from SFY 2029 | Texas Health Resources, `1916-0885` | `…/CMS-2026-1916-0885_attachment_1.pdf` |
 | $4.4 billion | Florida DPP payment reduction when fully implemented | Florida Essential Healthcare Partnerships, `1916-0417` | `…/CMS-2026-1916-0417_attachment_1.pdf` |
 | $1.2 billion / yr (66.7%) | New Mexico SDPs falling from $1.8 billion to about $600 million | New Mexico Health Care Authority, `1916-0835` | `…/CMS-2026-1916-0835_attachment_1.pdf` |
 | $3.4 billion through 2032 | New Jersey hospital funding loss from §71116 alone | New Jersey Hospital Association, `1916-0751` | `…/CMS-2026-1916-0751_attachment_1.pdf` |
 | $30 billion+ | Projected reductions for Virginia hospitals from the H.R. 1 SDP provisions | Virginia Hospital & Healthcare Association, `1916-0555` | `…/CMS-2026-1916-0555_attachment_1.pdf` |
-| $11.7 billion | Cumulative Louisiana statewide reductions | FMOL Health, `1916-0338` | `…/CMS-2026-1916-0338_attachment_1.pdf` |
+| $11.7 billion | Cumulative statewide reductions over the implementation period; the state, Louisiana, is **[inferred]** from the next heading (the sentence does not name it) | FMOL Health, `1916-0338` | `…/CMS-2026-1916-0338_attachment_1.pdf` |
 | $160 million / yr | Mississippi hospital losses | Baptist Memorial Health Care, `1916-0650` | `…/CMS-2026-1916-0650_attachment_1.pdf` |
 | $2 billion+ | New York hospital Medicaid revenue lost to the H.R. 1 SDP changes | GNYHA, `1916-0822` | `…/CMS-2026-1916-0822_attachment_1.pdf` |
 | $600 million | Cumulative Massachusetts hospital SDP reduction by phase-down year 3 | Tufts Medicine, `1916-0781` | `…/CMS-2026-1916-0781_attachment_1.pdf` |
@@ -169,7 +169,7 @@ The full list is in `output/evidence_ledger_delta.csv`: 3,633 rows from 472 CMS-
 
 | Figure | Means (paraphrase) | Commenter / ID | Source file |
 |---|---|---|---|
-| –$1,362 per transport | Median shortfall for public-safety EMS (69% below cost), citing cost-collection data | Page, Wolfberg & Wirth, `1916-0396` | `…/CMS-2026-1916-0396_attachment_1.pdf` |
+| –$1,362 per transport | Median all-payer revenue shortfall per transport for public-safety EMS (69% below cost), from RAND's analysis of CMS GADCS Year 1–4 data (Dec 2025). PWW's Medicare-only figures for these providers: median –$1,640 (83%), mean –$3,216 (91%) | Page, Wolfberg & Wirth, `1916-0396` | `…/CMS-2026-1916-0396_attachment_1.pdf` |
 | ~$10 million / yr | CENCAL Fire & EMS Authority GEMT revenue at risk (about 15% of budget) | CENCAL, `1916-0333` | `…/CMS-2026-1916-0333_attachment_1.pdf` |
 | $5 million+ | Anaheim Fire & Rescue reimbursement loss | City of Anaheim, `1916-0955` | `…/CMS-2026-1916-0955_attachment_1.docx` |
 | $1.65 million / yr | South Elgin & Countryside FPD (IL) revenue loss | `1916-0230` | `…/CMS-2026-1916-0230_attachment_1.pdf` |
@@ -181,7 +181,7 @@ The full list is in `output/evidence_ledger_delta.csv`: 3,633 rows from 472 CMS-
 |---|---|---|---|
 | $192–385 billion | Reduced "excess burden of taxation" over a decade | Paragon Health Institute, `1916-0648` | `…/CMS-2026-1916-0648_attachment_1.pdf` |
 | $26B to $137B | Growth in annual SDP spending, 2020 to 2026 | Competitive Enterprise Institute, `1916-0817` | `…/CMS-2026-1916-0817_attachment_1.pdf` |
-| ~$2,609 vs. $339 per transport | Pending California public-provider GEMT rate (286% above documented cost) vs. the private ambulance supplemental | Center for a Free Economy, `1916-0101`; 911 Ambulance Provider's Medi-Cal Alliance, `1916-0943` | `data/CMS-2026-1916/CMS-2026-1916-0101.json` (comment field); `…/CMS-2026-1916-0943_attachment_1.pdf` |
+| ~$2,609 vs. $339 per transport | CFE: pending California public-provider rate, "286 percent above documented costs" (measured against Huntington Beach's reported ~$676 cost), vs. private providers' total Medi-Cal payment per transport. The 911 Alliance cites the same $339 but puts the pending public rate at over $1,600 | Center for a Free Economy, `1916-0101` ($2,609, 286%, $339); 911 Ambulance Provider's Medi-Cal Alliance, `1916-0943` ($339) | `data/CMS-2026-1916/CMS-2026-1916-0101.json` (comment field); `…/CMS-2026-1916-0943_attachment_1.pdf` |
 
 Pattern **[inferred]**: national figures in this docket are almost all citations of CMS's RIA or CBO. Original quantification comes from state hospital associations and individual systems (mostly annual dollar losses) and from EMS agencies (per-transport cost vs. Medicare rate, and annual GEMT revenue at risk). Few commenters estimate coverage or access effects in numbers; most access claims are qualitative.
 
@@ -258,7 +258,7 @@ The new one-time and quarterly reporting would require provider-level data, ofte
 * Steven Singleton (`2476-0023`, individual). **Verbatim:** “…set fixed, concrete deadlines -- December 31, 2026, for interim data and June 30, 2028, for final data -- for the one-time submissions that…”
 
 ### 6. The impact analysis understates harm (~37–43 distinct texts)
-CMS projects $246 billion in federal savings against CBO's $183–191 billion for §71115. Commenters argued this shows the rule goes beyond the statute. They also faulted the RIA for assuming no coverage loss, against CBO's 1.1 million more uninsured, and for assuming states replace 30% of lost revenue.
+CMS projects $246 billion in federal savings against CBO's $183–191 billion for §71115 (CBO attribution as cited by AHCCCS `2476-0201`, UHA `2476-0097` and PA DHS `2476-0126`). Commenters argued this shows the rule goes beyond the statute. They also faulted the RIA for assuming no coverage loss, against CBO's 1.1 million more uninsured, and for assuming states replace 30% of lost revenue.
 * Hospital and Healthsystem Association of Pennsylvania (`2476-0089`). **Verbatim:** “CMS projects federal savings of approximately $246 billion, substantially exceeding the estimated $183 billion associated with the statutory changes enacted by Congress.”
 * Jason Levitis (`2476-0179`). **Verbatim:** “CMS assumes without any basis that the rule would have no effect on health coverage, despite reducing federal Medicaid spending by almost $250 billion.”
 * Texas Hospital Association (`2476-0109`), on the 30% offset assumption. **Verbatim:** “…it is highly improbable that it would be equal to 30 percent of lost funds (or even a much smaller fraction of that).”
@@ -284,7 +284,7 @@ Full list: 568 ledger rows from 114 CMS-2452-P comments. The table below lists t
 
 | Figure | Means (paraphrase) | Commenter / ID | Source file |
 |---|---|---|---|
-| $246B vs. $183B | CMS RIA federal savings vs. CBO's estimate for the statute | HAP, `2476-0089` | `…/CMS-2026-2476-0089_attachment_1.docx` |
+| $246B vs. $183B | CMS RIA federal savings vs. "the estimated $183 billion associated with the statutory changes". HAP does not name the source of $183B; other commenters attribute it to CBO | HAP, `2476-0089` | `…/CMS-2026-2476-0089_attachment_1.docx` |
 | $384B ($245.8B federal + $138.2B state) | CMS RIA total Medicaid spending reduction, 2026–2035 | Center for Civil Justice, `2476-0108` | `…/CMS-2026-2476-0108_attachment_1.pdf` |
 | $198.7B (27%) | CMS RIA reduction in state provider-tax revenue | Massachusetts Medical Society, `2476-0115` | `…/CMS-2026-2476-0115_attachment_1.pdf` |
 | $220.3B | CMS RIA net reduction in payments to providers | AHCCCS, `2476-0201` | `…/CMS-2026-2476-0201_attachment_1.pdf` |
@@ -300,7 +300,7 @@ Full list: 568 ledger rows from 114 CMS-2452-P comments. The table below lists t
 | $1.25B / yr | Missouri annual impact once the threshold reaches 3.5% | Missouri Hospital Association, `2476-0035` | `…/CMS-2026-2476-0035_attachment_1.pdf` |
 | $55.6M per 0.1% | Federal match lost per 0.1-point tax cut in Missouri | Missouri Hospital Association, `2476-0035` | same file |
 | $4.2B | New York hospital revenue loss across three proposals when fully implemented | GNYHA, `2476-0184` | `…/CMS-2026-2476-0184_attachment_1.pdf` |
-| $1.5B | New York MCO tax yielding less revenue than projected | Iroquois Healthcare Association, `2476-0072` | `…/CMS-2026-2476-0072_attachment_1.pdf` |
+| $1.5B | New York MCO tax yielding about $1.5B less than projected (originally $3.7B over two years), which Iroquois attributes to CMS's February 2026 uniformity-waiver final rule, not to CMS-2452-P | Iroquois Healthcare Association, `2476-0072` | `…/CMS-2026-2476-0072_attachment_1.pdf` |
 | $125M / yr; ~$8.5B / decade; 21,600 jobs | New Mexico collections loss, hospital revenue loss, and job impact (the commenter scales a published study) | New Mexico Health Care Authority, `2476-0186` | `…/CMS-2026-2476-0186_attachment_1.pdf` |
 | $1B / yr | Minnesota loss from the provider-tax reforms (citing Minnesota DHS) | Minnesota Medical Association, `2476-0150` | `…/CMS-2026-2476-0150_attachment_1.pdf` |
 | up to $2.5B / yr | Colorado Medicaid funding at risk | Colorado Fiscal Institute, `2476-0178` | `data/CMS-2026-2476/CMS-2026-2476-0178.json` (comment field) |
@@ -336,4 +336,5 @@ Pattern **[inferred]**: CMS-2452-P commenters lean even more heavily on the RIA'
 
 * Counts come from `output/comments_tagged.csv` as of this commit. Theme prevalence uses keyword patterns over full comment and attachment text and is **[inferred]**.
 * Quotes were extracted programmatically from the merged text in `data/<docket>/_text/` and trimmed to 24 words or fewer. They keep source typos and OCR errors.
-* Figures and files come from `output/evidence_ledger_delta.csv`, built by `build_evidence_ledger.py`. Its `figure_source_inferred` column (own figure vs. citing CMS, CBO or another source vs. example vs. table) is rule-based, marked INFERRED, and not individually checked. Its `file_basis` column records where the excerpt was re-located: the original text layer (4,137 rows), OCR output only (61 rows), or not re-located (3 rows).
+* Figures and files come from `output/evidence_ledger_delta.csv`, built by `build_evidence_ledger.py`. Its `figure_source_inferred` column (own figure vs. citing CMS, CBO or another source vs. example vs. table) is rule-based, marked INFERRED, and not individually checked. Its `file_basis` column records where the excerpt was re-located: the original text layer (4,141 rows) or OCR output only (60 rows, each page image read visually). Three rows from a docx table were not re-located automatically and were read directly; one OCR row was removed because its "figure" was a fax number.
+* Verification: `output/verification_log.csv` lists every ledger row checked (162): each figure cited here, plus the 64 OCR-only or not re-located rows, with status (confirmed / corrected), correction and page. 144 were confirmed and 18 corrected; none was unverifiable. Corrections are applied by `build_evidence_ledger.py` from `ledger_corrections.csv`, so a rebuild keeps them. The ledger's `ledger_row` column is the row number used in the log; `page`, `verification_status` and `verification_note` come from the log.
