@@ -11,7 +11,7 @@ One letter, `CMS-2026-2476-0199`, was filed in the CMS-2452-P docket but is the 
 | Distinct texts | 660 | 660 | 188 | 187 |
 | Comments inside campaigns | 361 | 362 | 36 | 36 |
 
-Both rules combined: 1,174 comments either way; 848 distinct texts as filed, 847 corrected. The same two views for every output file are in `docket_totals.csv`. In every row-level output file (`comments_tagged.csv`, `campaigns.csv`, `parse_flags.csv`, `evidence_ledger_delta.csv`, `verification_log.csv`) the `docket` column is as filed and `docket_corrected` is the corrected docket; filter either column to total a docket either way. Only `2476-0199` differs. I scanned all 1,174 texts (rule number cited, content terms for each rule, near-duplicate text across the two dockets) and read the borderline cases; no other letter was filed under the wrong one of the two rules. Six comments address neither rule (three coaching-code letters, three work-requirements comments); they stay in their filed docket and carry a `filing_note`.
+Both rules combined: 1,174 comments either way; 848 distinct texts as filed, 847 corrected. The same two views for every output file are in `docket_totals.csv`. In every row-level output file (`comments_tagged.csv`, `campaigns.csv`, `parse_flags.csv`, `evidence_ledger_delta.csv`, `verification_log.csv`) the `docket` column is as filed and `docket_corrected` is the corrected docket; filter either column to total a docket either way. Only `2476-0199` differs. I scanned all 1,174 texts (rule number cited, content terms for each rule, near-duplicate text across the two dockets) and read the borderline cases; no other letter was filed under the wrong one of the two rules. Six comments address neither rule (three coaching-code letters, three work-requirements comments); they stay in their filed docket and in the comment totals, carry a `filing_note`, and are classified as commenter type `off-topic` and position `unclear / off-topic`.
 
 ## Pipeline
 1. `collect_comments.py` / `backfill_submitter.py` — regulations.gov v4 API collection (see data/ for raw JSON and attachments).
@@ -25,7 +25,7 @@ Both rules combined: 1,174 comments either way; 848 distinct texts as filed, 847
 | `rule`, `docket` | rule and docket the comment was filed under on regulations.gov (as filed) |
 | `docket_corrected`, `rule_corrected` | docket and rule the letter actually addresses; equal to `docket` / `rule` except for `2476-0199` |
 | `commenter_org`, `org_source` | organization from the API field, or from the letter text (`text_*`), or `manual` |
-| `commenter_type` | hospital/health system, association, state agency, MCO, advocacy group, individual, other. `commenter_subtype` gives detail (e.g. ambulance/EMS provider, state legislator) |
+| `commenter_type` | hospital/health system, association, state agency, MCO, advocacy group, individual, other, or `off-topic` (the six comments that address neither rule). `commenter_subtype` gives detail (e.g. ambulance/EMS provider, state legislator) |
 | `state`, `state_source` | 2-letter state, `National`, or blank if not identifiable. Sources: org name > letter address > API submitter state > dominant state mentioned in text > manual |
 | `position` | support / oppose / mixed / request for changes / unclear / off-topic (definitions below) |
 | `provisions_addressed` | up to six provisions of the proposed rule discussed in the text (keyword-based) |
@@ -55,7 +55,7 @@ Support only for a rule's *goals* (transparency, fiscal integrity) does not coun
 ## Known gaps
 * 5 rows are parse-flagged (`parse_flags.csv`): 1916-0816 has neither text nor attachment; 1916-0217, 1916-0269 and 2476-0023 refer to attachments that were never posted; 1916-0169 has four words.
 * 35 comments needed OCR (13 scanned PDFs, 1 image-backed, plus pages with unusable text layers such as 1916-0362 and 1916-0842).
-* 1916-0851, -0937 and -0941 are about national payment for coaching CPT codes (a different rulemaking). 1916-0031, 2476-0002 and 2476-0017 are individual comments about Medicaid work requirements, a different rule; 1916-0031 is tagged unclear / off-topic, the other two keep the "oppose" they express. All six stay in their filed docket.
+* Six comments address neither rule: 1916-0851, -0937 and -0941 (national payment for coaching CPT codes) and 1916-0031, 2476-0002 and 2476-0017 (individual comments about Medicaid work requirements). They stay in their filed docket and in the comment totals, but are classified as commenter type `off-topic` and position `unclear / off-topic`; `filing_note` says why.
 * 2476-0199 is the CMS-2449-P letter filed in the CMS-2452-P docket; it is also an exact copy of 1916-0958. It stays under CMS-2452-P in the as-filed columns and moves to CMS-2449-P in the `*_corrected` columns.
 * Only one commenter (Colorado Access) is classed as an MCO; plans mostly commented through trade associations (classed as associations).
 

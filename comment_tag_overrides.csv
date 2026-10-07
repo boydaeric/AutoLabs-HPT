@@ -6,6 +6,480 @@ CMS-2026-1916-0941,filing_note,appears to address a different rulemaking (nation
 CMS-2026-1916-0851,summary,"The International Nurse Coaching Association strongly supports CMS's proposal to establish national payment for health and well-being coaching CPT codes 0591T-0593T, which does not concern the state directed payment rule.",off-topic
 CMS-2026-1916-0851,filing_note,appears to address a different rulemaking (national payment for health and well-being coaching CPT codes 0591T-0593T),off-topic
 CMS-2026-1916-0816,summary,"Commenter submitted no comment text and no attachment, so the position cannot be determined.",no content
+CMS-2026-1916-0031,filing_note,"appears to address a different rule (Medicaid work / community-engagement requirements), not CMS-2449-P",off-topic
+CMS-2026-2476-0002,filing_note,"mostly addresses a different rule (Medicaid work requirements and check-ins), not CMS-2452-P",off-topic
+CMS-2026-2476-0017,filing_note,"appears to address a different rule (Medicaid work requirements), not CMS-2452-P",off-topic
+CMS-2026-1916-0851,commenter_type,off-topic,off-topic: addresses neither CMS-2449-P nor CMS-2452-P
+CMS-2026-1916-0937,commenter_type,off-topic,off-topic: addresses neither CMS-2449-P nor CMS-2452-P
+CMS-2026-1916-0941,commenter_type,off-topic,off-topic: addresses neither CMS-2449-P nor CMS-2452-P
+CMS-2026-1916-0031,commenter_type,off-topic,off-topic: addresses neither CMS-2449-P nor CMS-2452-P
+CMS-2026-2476-0002,commenter_type,off-topic,off-topic: addresses neither CMS-2449-P nor CMS-2452-P
+CMS-2026-2476-0017,commenter_type,off-topic,off-topic: addresses neither CMS-2449-P nor CMS-2452-P
+CMS-2026-1916-0031,summary,"An individual asks how Medicaid recipients would meet school, work or community-engagement requirements; this concerns a different rule and does not address CMS-2449-P.",off-topic
+CMS-2026-2476-0002,summary,An individual (OR) objects to Medicaid work requirements and monthly check-ins and asks CMS to leave Medicaid as is; this concerns a different rule and does not address CMS-2452-P.,off-topic
+CMS-2026-2476-0017,summary,"An individual (WA) objects to Medicaid and Medicare work requirements for disabled, elderly and terminally ill people; this concerns a different rule and does not address CMS-2452-P.",off-topic
+CMS-2026-2476-0017,provisions_addressed,,off-topic
+CMS-2026-1916-0002,commenter_type,other,identity reviewed
+CMS-2026-1916-0002,commenter_subtype,behavioral health provider,identity reviewed
+CMS-2026-1916-0002,commenter_org,BestCare Treatment Services,identity reviewed
+CMS-2026-1916-0002,state,OR,identity reviewed
+CMS-2026-1916-0096,commenter_type,other,identity reviewed
+CMS-2026-1916-0096,commenter_subtype,academic institution,identity reviewed
+CMS-2026-1916-0096,commenter_org,University of Hawaiʻi Rural Health Research and Policy Center,identity reviewed
+CMS-2026-1916-0096,state,HI,identity reviewed
+CMS-2026-1916-0109,commenter_type,other,identity reviewed
+CMS-2026-1916-0109,commenter_subtype,local government / fire / EMS,identity reviewed
+CMS-2026-1916-0109,commenter_org,Truckee Meadows Fire Protection District,identity reviewed
+CMS-2026-1916-0109,state,NV,identity reviewed
+CMS-2026-1916-0230,commenter_type,other,identity reviewed
+CMS-2026-1916-0230,commenter_subtype,local government / fire / EMS,identity reviewed
+CMS-2026-1916-0230,commenter_org,South Elgin & Countryside Fire Protection District,identity reviewed
+CMS-2026-1916-0230,state,IL,identity reviewed
+CMS-2026-1916-0249,commenter_type,other,identity reviewed
+CMS-2026-1916-0249,commenter_subtype,county children's commission,identity reviewed
+CMS-2026-1916-0249,commenter_org,First 5 LA,identity reviewed
+CMS-2026-1916-0249,state,CA,identity reviewed
+CMS-2026-1916-0295,commenter_type,other,identity reviewed
+CMS-2026-1916-0295,commenter_subtype,local government / fire / EMS,identity reviewed
+CMS-2026-1916-0295,commenter_org,Lemont Fire Protection District,identity reviewed
+CMS-2026-1916-0295,state,IL,identity reviewed
+CMS-2026-1916-0328,commenter_type,association,identity reviewed
+CMS-2026-1916-0328,commenter_subtype,EMS/fire association,identity reviewed
+CMS-2026-1916-0328,commenter_org,Missouri Emergency Medical Services Agent Corporation (MoEMSAC),identity reviewed
+CMS-2026-1916-0328,state,MO,identity reviewed
+CMS-2026-1916-0349,commenter_type,state agency,identity reviewed
+CMS-2026-1916-0349,commenter_subtype,,identity reviewed
+CMS-2026-1916-0349,commenter_org,"Hawaii Department of Human Services, Med-QUEST Division",identity reviewed
+CMS-2026-1916-0349,state,HI,identity reviewed
+CMS-2026-1916-0446,commenter_type,other,identity reviewed
+CMS-2026-1916-0446,commenter_subtype,local government / fire / EMS,identity reviewed
+CMS-2026-1916-0446,commenter_org,Crested Butte Fire Protection District,identity reviewed
+CMS-2026-1916-0446,state,CO,identity reviewed
+CMS-2026-1916-0525,commenter_type,association,identity reviewed
+CMS-2026-1916-0525,commenter_subtype,hospital association,identity reviewed
+CMS-2026-1916-0525,commenter_org,Texas Association of Voluntary Hospitals,identity reviewed
+CMS-2026-1916-0525,state,TX,identity reviewed
+CMS-2026-1916-0571,commenter_type,other,identity reviewed
+CMS-2026-1916-0571,commenter_subtype,local government / fire / EMS,identity reviewed
+CMS-2026-1916-0571,commenter_org,Prospect Heights Fire Protection District,identity reviewed
+CMS-2026-1916-0571,state,IL,identity reviewed
+CMS-2026-1916-0596,commenter_type,hospital/health system,identity reviewed
+CMS-2026-1916-0596,commenter_subtype,,identity reviewed
+CMS-2026-1916-0596,commenter_org,Cordell Memorial Hospital,identity reviewed
+CMS-2026-1916-0596,state,OK,identity reviewed
+CMS-2026-1916-0617,commenter_type,hospital/health system,identity reviewed
+CMS-2026-1916-0617,commenter_subtype,,identity reviewed
+CMS-2026-1916-0617,commenter_org,Memorial Regional Health,identity reviewed
+CMS-2026-1916-0617,state,CO,identity reviewed
+CMS-2026-1916-0733,commenter_type,association,identity reviewed
+CMS-2026-1916-0733,commenter_subtype,long-term care association,identity reviewed
+CMS-2026-1916-0733,commenter_org,Texas Health Care Association (THCA),identity reviewed
+CMS-2026-1916-0733,state,TX,identity reviewed
+CMS-2026-1916-0736,commenter_type,hospital/health system,identity reviewed
+CMS-2026-1916-0736,commenter_subtype,behavioral hospital,identity reviewed
+CMS-2026-1916-0736,commenter_org,"SBH, LLC dba Creekside Behavioral Health",identity reviewed
+CMS-2026-1916-0736,state,TN,identity reviewed
+CMS-2026-1916-0760,commenter_type,hospital/health system,identity reviewed
+CMS-2026-1916-0760,commenter_subtype,,identity reviewed
+CMS-2026-1916-0760,commenter_org,The MetroHealth System,identity reviewed
+CMS-2026-1916-0760,state,OH,identity reviewed
+CMS-2026-1916-0923,commenter_type,state agency,identity reviewed
+CMS-2026-1916-0923,commenter_subtype,,identity reviewed
+CMS-2026-1916-0923,commenter_org,South Carolina Department of Health & Human Services,identity reviewed
+CMS-2026-1916-0923,state,SC,identity reviewed
+CMS-2026-1916-0950,commenter_type,state agency,identity reviewed
+CMS-2026-1916-0950,commenter_subtype,,identity reviewed
+CMS-2026-1916-0950,commenter_org,Arizona Health Care Cost Containment System (AHCCCS),identity reviewed
+CMS-2026-1916-0950,state,AZ,identity reviewed
+CMS-2026-2476-0201,commenter_type,state agency,identity reviewed
+CMS-2026-2476-0201,commenter_subtype,,identity reviewed
+CMS-2026-2476-0201,commenter_org,Arizona Health Care Cost Containment System (AHCCCS),identity reviewed
+CMS-2026-2476-0201,state,AZ,identity reviewed
+CMS-2026-2476-0018,commenter_type,state agency,identity reviewed
+CMS-2026-2476-0018,commenter_subtype,,identity reviewed
+CMS-2026-2476-0018,commenter_org,Oklahoma Insurance Department,identity reviewed
+CMS-2026-2476-0018,state,OK,identity reviewed
+CMS-2026-2476-0151,commenter_type,state agency,identity reviewed
+CMS-2026-2476-0151,commenter_subtype,,identity reviewed
+CMS-2026-2476-0151,commenter_org,Maine Department of Health and Human Services,identity reviewed
+CMS-2026-2476-0151,state,ME,identity reviewed
+CMS-2026-2476-0177,commenter_type,state agency,identity reviewed
+CMS-2026-2476-0177,commenter_subtype,state-based marketplace,identity reviewed
+CMS-2026-2476-0177,commenter_org,HealthSource RI,identity reviewed
+CMS-2026-2476-0177,state,RI,identity reviewed
+CMS-2026-2476-0186,commenter_type,state agency,identity reviewed
+CMS-2026-2476-0186,commenter_subtype,,identity reviewed
+CMS-2026-2476-0186,commenter_org,New Mexico Health Care Authority,identity reviewed
+CMS-2026-2476-0186,state,NM,identity reviewed
+CMS-2026-2476-0198,commenter_type,state agency,identity reviewed
+CMS-2026-2476-0198,commenter_subtype,,identity reviewed
+CMS-2026-2476-0198,commenter_org,California Department of Health Care Services,identity reviewed
+CMS-2026-2476-0198,state,CA,identity reviewed
+CMS-2026-2476-0202,commenter_type,state agency,identity reviewed
+CMS-2026-2476-0202,commenter_subtype,,identity reviewed
+CMS-2026-2476-0202,commenter_org,Washington State agency (Department of Health),identity reviewed
+CMS-2026-2476-0202,state,WA,identity reviewed
+CMS-2026-2476-0132,commenter_type,state agency,identity reviewed
+CMS-2026-2476-0132,commenter_subtype,state-based marketplace,identity reviewed
+CMS-2026-2476-0132,commenter_org,Access Health CT,identity reviewed
+CMS-2026-2476-0132,state,CT,identity reviewed
+CMS-2026-2476-0084,commenter_type,state agency,identity reviewed
+CMS-2026-2476-0084,commenter_subtype,,identity reviewed
+CMS-2026-2476-0084,commenter_org,"Maryland Department of Health, Department of Insurance, HSCRC and Health Benefit Exchange",identity reviewed
+CMS-2026-2476-0084,state,MD,identity reviewed
+CMS-2026-2476-0124,commenter_type,state agency,identity reviewed
+CMS-2026-2476-0124,commenter_subtype,,identity reviewed
+CMS-2026-2476-0124,commenter_org,Pennsylvania Insurance Department,identity reviewed
+CMS-2026-2476-0124,state,PA,identity reviewed
+CMS-2026-2476-0183,commenter_type,state agency,identity reviewed
+CMS-2026-2476-0183,commenter_subtype,,identity reviewed
+CMS-2026-2476-0183,commenter_org,Indiana Department of Insurance,identity reviewed
+CMS-2026-2476-0183,state,IN,identity reviewed
+CMS-2026-2476-0126,commenter_type,state agency,identity reviewed
+CMS-2026-2476-0126,commenter_subtype,,identity reviewed
+CMS-2026-2476-0126,commenter_org,Pennsylvania Department of Human Services,identity reviewed
+CMS-2026-2476-0126,state,PA,identity reviewed
+CMS-2026-2476-0156,commenter_type,state agency,identity reviewed
+CMS-2026-2476-0156,commenter_subtype,,identity reviewed
+CMS-2026-2476-0156,commenter_org,State of Colorado (Office of the Governor),identity reviewed
+CMS-2026-2476-0156,state,CO,identity reviewed
+CMS-2026-2476-0162,commenter_type,hospital/health system,identity reviewed
+CMS-2026-2476-0162,commenter_subtype,,identity reviewed
+CMS-2026-2476-0162,commenter_org,Children's Wisconsin,identity reviewed
+CMS-2026-2476-0162,state,WI,identity reviewed
+CMS-2026-1916-0954,commenter_type,hospital/health system,identity reviewed
+CMS-2026-1916-0954,commenter_subtype,,identity reviewed
+CMS-2026-1916-0954,commenter_org,Parkland Health,identity reviewed
+CMS-2026-1916-0954,state,TX,identity reviewed
+CMS-2026-1916-0378,commenter_type,other,identity reviewed
+CMS-2026-1916-0378,commenter_subtype,long-term care / IDD provider,identity reviewed
+CMS-2026-1916-0378,commenter_org,Mosaic,identity reviewed
+CMS-2026-1916-0490,commenter_type,other,identity reviewed
+CMS-2026-1916-0490,commenter_subtype,long-term care / IDD provider,identity reviewed
+CMS-2026-1916-0490,commenter_org,"CAYA Collaborative Care, Inc.",identity reviewed
+CMS-2026-1916-0490,state,KY,identity reviewed
+CMS-2026-1916-0478,commenter_type,state agency,identity reviewed
+CMS-2026-1916-0478,commenter_subtype,,identity reviewed
+CMS-2026-1916-0478,commenter_org,Minnesota Department of Human Services,identity reviewed
+CMS-2026-1916-0478,state,MN,identity reviewed
+CMS-2026-2476-0096,commenter_type,state agency,identity reviewed
+CMS-2026-2476-0096,commenter_subtype,,identity reviewed
+CMS-2026-2476-0096,commenter_org,Oregon Department of Consumer and Business Services,identity reviewed
+CMS-2026-2476-0096,state,OR,identity reviewed
+CMS-2026-1916-0774,commenter_type,state agency,identity reviewed
+CMS-2026-1916-0774,commenter_subtype,,identity reviewed
+CMS-2026-1916-0774,commenter_org,Delaware Division of Medicaid and Medical Assistance,identity reviewed
+CMS-2026-1916-0774,state,DE,identity reviewed
+CMS-2026-1916-0209,commenter_type,state agency,identity reviewed
+CMS-2026-1916-0209,commenter_subtype,,identity reviewed
+CMS-2026-1916-0209,commenter_org,Ohio Department of Medicaid,identity reviewed
+CMS-2026-1916-0209,state,OH,identity reviewed
+CMS-2026-2476-0210,commenter_type,association,identity reviewed
+CMS-2026-2476-0210,commenter_subtype,state government association,identity reviewed
+CMS-2026-2476-0210,commenter_org,National Conference of State Legislatures,identity reviewed
+CMS-2026-2476-0210,state,National,identity reviewed
+CMS-2026-1916-0006,commenter_type,other,identity reviewed
+CMS-2026-1916-0006,commenter_subtype,local government / fire / EMS,identity reviewed
+CMS-2026-1916-0006,commenter_org,City of Consolidated Municipality (Nevada) – ambulance program,identity reviewed
+CMS-2026-1916-0006,state,NV,identity reviewed
+CMS-2026-1916-0082,commenter_type,association,identity reviewed
+CMS-2026-1916-0082,commenter_subtype,EMS/fire association,identity reviewed
+CMS-2026-1916-0082,commenter_org,Western Fire Chiefs Association,identity reviewed
+CMS-2026-1916-0112,commenter_type,other,identity reviewed
+CMS-2026-1916-0112,commenter_subtype,local government / fire / EMS,identity reviewed
+CMS-2026-1916-0112,commenter_org,Jefferson County Fire & EMS,identity reviewed
+CMS-2026-1916-0112,state,OR,identity reviewed
+CMS-2026-1916-0114,commenter_type,other,identity reviewed
+CMS-2026-1916-0114,commenter_subtype,ambulance/EMS provider,identity reviewed
+CMS-2026-1916-0114,commenter_org,Tipton Ambulance Service,identity reviewed
+CMS-2026-1916-0114,state,IA,identity reviewed
+CMS-2026-1916-0122,commenter_type,association,identity reviewed
+CMS-2026-1916-0122,commenter_subtype,physician/professional society,identity reviewed
+CMS-2026-1916-0122,commenter_org,Illinois Academy of Family Physicians,identity reviewed
+CMS-2026-1916-0122,state,IL,identity reviewed
+CMS-2026-1916-0178,commenter_type,other,identity reviewed
+CMS-2026-1916-0178,commenter_subtype,local government / fire / EMS,identity reviewed
+CMS-2026-1916-0178,commenter_org,Pontiac Fire Department,identity reviewed
+CMS-2026-1916-0178,state,IL,identity reviewed
+CMS-2026-1916-0216,commenter_type,other,identity reviewed
+CMS-2026-1916-0216,commenter_subtype,area agency on aging,identity reviewed
+CMS-2026-1916-0216,commenter_org,Aging Resources of Central Iowa (Area Agency on Aging),identity reviewed
+CMS-2026-1916-0216,state,IA,identity reviewed
+CMS-2026-1916-0217,commenter_type,other,identity reviewed
+CMS-2026-1916-0217,commenter_subtype,ambulance/EMS provider,identity reviewed
+CMS-2026-1916-0287,commenter_type,hospital/health system,identity reviewed
+CMS-2026-1916-0287,commenter_subtype,critical access hospital,identity reviewed
+CMS-2026-1916-0287,commenter_org,Okeene Municipal Hospital,identity reviewed
+CMS-2026-1916-0287,state,OK,identity reviewed
+CMS-2026-1916-0548,commenter_type,hospital/health system,identity reviewed
+CMS-2026-1916-0548,commenter_subtype,critical access hospital,identity reviewed
+CMS-2026-1916-0548,state,OK,identity reviewed
+CMS-2026-1916-0450,commenter_type,advocacy group,identity reviewed
+CMS-2026-1916-0450,commenter_subtype,,identity reviewed
+CMS-2026-1916-0450,commenter_org,Kentucky Access to Care Coalition,identity reviewed
+CMS-2026-1916-0450,state,KY,identity reviewed
+CMS-2026-1916-0457,commenter_type,association,identity reviewed
+CMS-2026-1916-0457,commenter_subtype,trade/professional,identity reviewed
+CMS-2026-1916-0457,commenter_org,Kentucky Life Science Council,identity reviewed
+CMS-2026-1916-0457,state,KY,identity reviewed
+CMS-2026-1916-0459,commenter_type,other,identity reviewed
+CMS-2026-1916-0459,commenter_subtype,local government / fire / EMS,identity reviewed
+CMS-2026-1916-0521,commenter_type,hospital/health system,identity reviewed
+CMS-2026-1916-0521,commenter_subtype,,identity reviewed
+CMS-2026-1916-0521,commenter_org,Carilion Giles and Tazewell Community Hospitals,identity reviewed
+CMS-2026-1916-0521,state,VA,identity reviewed
+CMS-2026-1916-0542,commenter_type,other,identity reviewed
+CMS-2026-1916-0542,commenter_subtype,local government / fire / EMS,identity reviewed
+CMS-2026-1916-0594,commenter_type,other,identity reviewed
+CMS-2026-1916-0594,commenter_subtype,ambulance/EMS provider,identity reviewed
+CMS-2026-1916-0594,state,OK,identity reviewed
+CMS-2026-1916-0597,commenter_type,other,identity reviewed
+CMS-2026-1916-0597,commenter_subtype,ambulance/EMS provider,identity reviewed
+CMS-2026-1916-0597,state,OK,identity reviewed
+CMS-2026-1916-0659,commenter_type,advocacy group,identity reviewed
+CMS-2026-1916-0659,commenter_subtype,think tank,identity reviewed
+CMS-2026-1916-0659,commenter_org,Manhattan Institute (mental health policy team),identity reviewed
+CMS-2026-1916-0687,commenter_type,association,identity reviewed
+CMS-2026-1916-0687,commenter_subtype,EMS/fire association,identity reviewed
+CMS-2026-1916-0687,state,IL,identity reviewed
+CMS-2026-1916-0695,commenter_type,other,identity reviewed
+CMS-2026-1916-0695,commenter_subtype,ambulance/EMS provider,identity reviewed
+CMS-2026-1916-0695,state,ID,identity reviewed
+CMS-2026-1916-0698,commenter_type,other,identity reviewed
+CMS-2026-1916-0698,commenter_subtype,local government / fire / EMS,identity reviewed
+CMS-2026-1916-0813,commenter_type,advocacy group,identity reviewed
+CMS-2026-1916-0813,commenter_subtype,,identity reviewed
+CMS-2026-1916-0813,commenter_org,Medicaid in Schools Coalition,identity reviewed
+CMS-2026-1916-0813,state,National,identity reviewed
+CMS-2026-1916-0831,commenter_type,other,identity reviewed
+CMS-2026-1916-0831,commenter_subtype,local government / fire / EMS,identity reviewed
+CMS-2026-1916-0831,commenter_org,Yamhill County Board of Commissioners,identity reviewed
+CMS-2026-1916-0831,state,OR,identity reviewed
+CMS-2026-1916-0890,commenter_type,state agency,identity reviewed
+CMS-2026-1916-0890,commenter_subtype,,identity reviewed
+CMS-2026-1916-0890,commenter_org,Commonwealth of Virginia,identity reviewed
+CMS-2026-1916-0890,state,VA,identity reviewed
+CMS-2026-2476-0027,commenter_type,association,identity reviewed
+CMS-2026-2476-0027,commenter_subtype,state government association,identity reviewed
+CMS-2026-2476-0027,commenter_org,National Association of Insurance Commissioners,identity reviewed
+CMS-2026-2476-0027,state,National,identity reviewed
+CMS-2026-2476-0063,commenter_type,other,identity reviewed
+CMS-2026-2476-0063,commenter_subtype,nonprofit service provider,identity reviewed
+CMS-2026-2476-0063,commenter_org,Treatment Alternatives for Stronger Communities (TASC),identity reviewed
+CMS-2026-1916-0309,commenter_type,other,identity reviewed
+CMS-2026-1916-0309,commenter_subtype,local government / fire / EMS,identity reviewed
+CMS-2026-1916-0309,commenter_org,Ross County (fiscal officer / assessor),identity reviewed
+CMS-2026-1916-0309,state,OH,identity reviewed
+CMS-2026-1916-0204,commenter_type,state agency,identity reviewed
+CMS-2026-1916-0204,commenter_subtype,state legislator,identity reviewed
+CMS-2026-1916-0204,state,MS,identity reviewed
+CMS-2026-1916-0259,commenter_type,state agency,identity reviewed
+CMS-2026-1916-0259,commenter_subtype,state legislator,identity reviewed
+CMS-2026-1916-0259,commenter_org,North Carolina House of Representatives (District 67),identity reviewed
+CMS-2026-1916-0259,state,NC,identity reviewed
+CMS-2026-1916-0308,commenter_type,state agency,identity reviewed
+CMS-2026-1916-0308,commenter_subtype,state legislator,identity reviewed
+CMS-2026-1916-0308,commenter_org,Ohio House of Representatives,identity reviewed
+CMS-2026-1916-0308,state,OH,identity reviewed
+CMS-2026-1916-0379,commenter_type,state agency,identity reviewed
+CMS-2026-1916-0379,commenter_subtype,state legislator,identity reviewed
+CMS-2026-1916-0379,commenter_org,North Carolina House of Representatives,identity reviewed
+CMS-2026-1916-0379,state,NC,identity reviewed
+CMS-2026-1916-0489,commenter_type,state agency,identity reviewed
+CMS-2026-1916-0489,commenter_subtype,state legislator,identity reviewed
+CMS-2026-1916-0489,commenter_org,Louisiana Senate Health and Welfare Committee,identity reviewed
+CMS-2026-1916-0489,state,LA,identity reviewed
+CMS-2026-1916-0499,commenter_type,state agency,identity reviewed
+CMS-2026-1916-0499,commenter_subtype,state legislator,identity reviewed
+CMS-2026-1916-0499,commenter_org,Mississippi House of Representatives,identity reviewed
+CMS-2026-1916-0499,state,MS,identity reviewed
+CMS-2026-1916-0706,commenter_type,state agency,identity reviewed
+CMS-2026-1916-0706,commenter_subtype,state legislator,identity reviewed
+CMS-2026-1916-0706,commenter_org,Oregon Legislative Assembly (Rep. Dacia Grayber),identity reviewed
+CMS-2026-1916-0706,state,OR,identity reviewed
+CMS-2026-1916-0960,commenter_type,state agency,identity reviewed
+CMS-2026-1916-0960,commenter_subtype,state legislator,identity reviewed
+CMS-2026-1916-0960,commenter_org,Texas House of Representatives,identity reviewed
+CMS-2026-1916-0960,state,TX,identity reviewed
+CMS-2026-1916-0294,commenter_type,individual,identity reviewed
+CMS-2026-1916-0294,commenter_subtype,former state legislator,identity reviewed
+CMS-2026-1916-0294,state,WV,identity reviewed
+CMS-2026-1916-0307,commenter_type,individual,identity reviewed
+CMS-2026-1916-0307,commenter_subtype,former state legislator,identity reviewed
+CMS-2026-1916-0307,state,FL,identity reviewed
+CMS-2026-1916-0480,commenter_type,individual,identity reviewed
+CMS-2026-1916-0480,commenter_subtype,former state legislator,identity reviewed
+CMS-2026-1916-0480,state,NC,identity reviewed
+CMS-2026-1916-0919,commenter_type,individual,identity reviewed
+CMS-2026-1916-0919,commenter_subtype,former state legislator,identity reviewed
+CMS-2026-1916-0919,state,TX,identity reviewed
+CMS-2026-1916-0835,commenter_type,state agency,identity reviewed
+CMS-2026-1916-0835,commenter_subtype,,identity reviewed
+CMS-2026-1916-0835,commenter_org,New Mexico Health Care Authority,identity reviewed
+CMS-2026-1916-0835,state,NM,identity reviewed
+CMS-2026-1916-0758,commenter_type,state agency,identity reviewed
+CMS-2026-1916-0758,commenter_subtype,,identity reviewed
+CMS-2026-1916-0758,commenter_org,Pennsylvania Department of Human Services,identity reviewed
+CMS-2026-1916-0758,state,PA,identity reviewed
+CMS-2026-1916-0387,commenter_type,state agency,identity reviewed
+CMS-2026-1916-0387,commenter_subtype,,identity reviewed
+CMS-2026-1916-0387,commenter_org,North Carolina Department of Health and Human Services,identity reviewed
+CMS-2026-1916-0387,state,NC,identity reviewed
+CMS-2026-1916-0493,commenter_type,association,identity reviewed
+CMS-2026-1916-0493,commenter_subtype,provider association,identity reviewed
+CMS-2026-1916-0671,commenter_type,hospital/health system,identity reviewed
+CMS-2026-1916-0671,commenter_subtype,,identity reviewed
+CMS-2026-1916-0789,commenter_type,hospital/health system,identity reviewed
+CMS-2026-1916-0789,commenter_subtype,,identity reviewed
+CMS-2026-1916-0473,commenter_type,other,identity reviewed
+CMS-2026-1916-0473,commenter_subtype,long-term care / IDD provider,identity reviewed
+CMS-2026-1916-0834,commenter_type,other,identity reviewed
+CMS-2026-1916-0834,commenter_subtype,academic institution,identity reviewed
+CMS-2026-1916-0154,commenter_type,hospital/health system,identity reviewed
+CMS-2026-1916-0154,commenter_subtype,,identity reviewed
+CMS-2026-1916-0539,commenter_type,association,identity reviewed
+CMS-2026-1916-0539,commenter_subtype,home care association,identity reviewed
+CMS-2026-1916-0539,state,National,identity reviewed
+CMS-2026-1916-0464,commenter_type,association,identity reviewed
+CMS-2026-1916-0464,commenter_subtype,trade/professional,identity reviewed
+CMS-2026-1916-0464,state,National,identity reviewed
+CMS-2026-1916-0819,commenter_type,hospital/health system,identity reviewed
+CMS-2026-1916-0819,commenter_subtype,,identity reviewed
+CMS-2026-1916-0862,commenter_type,association,identity reviewed
+CMS-2026-1916-0862,commenter_subtype,behavioral health association,identity reviewed
+CMS-2026-1916-0862,commenter_org,Texas Council of Community Centers,identity reviewed
+CMS-2026-1916-0862,state,TX,identity reviewed
+CMS-2026-1916-0849,commenter_type,other,identity reviewed
+CMS-2026-1916-0849,commenter_subtype,tribal health organization,identity reviewed
+CMS-2026-1916-0377,commenter_type,hospital/health system,identity reviewed
+CMS-2026-1916-0377,commenter_subtype,,identity reviewed
+CMS-2026-1916-0463,commenter_type,hospital/health system,identity reviewed
+CMS-2026-1916-0463,commenter_subtype,,identity reviewed
+CMS-2026-1916-0766,commenter_type,hospital/health system,identity reviewed
+CMS-2026-1916-0766,commenter_subtype,,identity reviewed
+CMS-2026-1916-0663,commenter_type,hospital/health system,identity reviewed
+CMS-2026-1916-0663,commenter_subtype,,identity reviewed
+CMS-2026-1916-0882,commenter_type,hospital/health system,identity reviewed
+CMS-2026-1916-0882,commenter_subtype,,identity reviewed
+CMS-2026-1916-0343,commenter_type,hospital/health system,identity reviewed
+CMS-2026-1916-0343,commenter_subtype,,identity reviewed
+CMS-2026-1916-0877,commenter_type,hospital/health system,identity reviewed
+CMS-2026-1916-0877,commenter_subtype,,identity reviewed
+CMS-2026-1916-0400,commenter_type,hospital/health system,identity reviewed
+CMS-2026-1916-0400,commenter_subtype,,identity reviewed
+CMS-2026-1916-0400,commenter_org,Covenant Health,identity reviewed
+CMS-2026-1916-0920,commenter_type,hospital/health system,identity reviewed
+CMS-2026-1916-0920,commenter_subtype,,identity reviewed
+CMS-2026-1916-0388,commenter_type,hospital/health system,identity reviewed
+CMS-2026-1916-0388,commenter_subtype,,identity reviewed
+CMS-2026-1916-0601,commenter_type,hospital/health system,identity reviewed
+CMS-2026-1916-0601,commenter_subtype,,identity reviewed
+CMS-2026-1916-0545,commenter_type,hospital/health system,identity reviewed
+CMS-2026-1916-0545,commenter_subtype,,identity reviewed
+CMS-2026-1916-0867,commenter_type,hospital/health system,identity reviewed
+CMS-2026-1916-0867,commenter_subtype,,identity reviewed
+CMS-2026-1916-0746,commenter_type,hospital/health system,identity reviewed
+CMS-2026-1916-0746,commenter_subtype,,identity reviewed
+CMS-2026-2476-0135,commenter_type,hospital/health system,identity reviewed
+CMS-2026-2476-0135,commenter_subtype,,identity reviewed
+CMS-2026-1916-0468,commenter_type,hospital/health system,identity reviewed
+CMS-2026-1916-0468,commenter_subtype,academic medical center,identity reviewed
+CMS-2026-1916-0346,commenter_type,hospital/health system,identity reviewed
+CMS-2026-1916-0346,commenter_subtype,,identity reviewed
+CMS-2026-1916-0346,commenter_org,Children's Hospital Los Angeles Medical Group (CHLAMG),identity reviewed
+CMS-2026-1916-0346,state,CA,identity reviewed
+CMS-2026-1916-0487,commenter_type,other,identity reviewed
+CMS-2026-1916-0487,commenter_subtype,community health center / clinic,identity reviewed
+CMS-2026-2476-0153,commenter_type,MCO,identity reviewed
+CMS-2026-2476-0153,commenter_subtype,Medicaid Regional Accountable Entity,identity reviewed
+CMS-2026-2476-0153,state,CO,identity reviewed
+CMS-2026-1916-0332,commenter_type,other,identity reviewed
+CMS-2026-1916-0332,commenter_subtype,ambulance/EMS provider,identity reviewed
+CMS-2026-1916-0757,commenter_type,other,identity reviewed
+CMS-2026-1916-0757,commenter_subtype,clinic / care provider,identity reviewed
+CMS-2026-1916-0925,commenter_type,association,identity reviewed
+CMS-2026-1916-0925,commenter_subtype,physician group association,identity reviewed
+CMS-2026-1916-0937,commenter_type,off-topic,identity reviewed
+CMS-2026-1916-0937,commenter_subtype,credentialing body,identity reviewed
+CMS-2026-1916-0937,state,National,identity reviewed
+CMS-2026-1916-0436,commenter_type,association,identity reviewed
+CMS-2026-1916-0436,commenter_subtype,physician/professional society,identity reviewed
+CMS-2026-1916-0436,commenter_org,American Nurses Association – Massachusetts,identity reviewed
+CMS-2026-1916-0436,state,MA,identity reviewed
+CMS-2026-1916-0854,commenter_type,association,identity reviewed
+CMS-2026-1916-0854,commenter_subtype,physician/professional society,identity reviewed
+CMS-2026-1916-0854,commenter_org,American Academy of Pediatrics – Pennsylvania Chapter,identity reviewed
+CMS-2026-1916-0854,state,PA,identity reviewed
+CMS-2026-1916-0305,commenter_type,other,identity reviewed
+CMS-2026-1916-0305,commenter_subtype,physician practices,identity reviewed
+CMS-2026-1916-0852,commenter_type,other,identity reviewed
+CMS-2026-1916-0852,commenter_subtype,physician practice / company,identity reviewed
+CMS-2026-1916-0787,commenter_type,other,identity reviewed
+CMS-2026-1916-0787,commenter_subtype,law firm,identity reviewed
+CMS-2026-1916-0396,commenter_type,other,identity reviewed
+CMS-2026-1916-0396,commenter_subtype,law firm,identity reviewed
+CMS-2026-1916-0363,commenter_type,other,identity reviewed
+CMS-2026-1916-0363,commenter_subtype,credentialing body,identity reviewed
+CMS-2026-1916-0298,commenter_type,other,identity reviewed
+CMS-2026-1916-0298,commenter_subtype,ambulance/EMS provider,identity reviewed
+CMS-2026-1916-0549,commenter_type,other,identity reviewed
+CMS-2026-1916-0549,commenter_subtype,ambulance/EMS provider,identity reviewed
+CMS-2026-1916-0856,commenter_type,other,identity reviewed
+CMS-2026-1916-0856,commenter_subtype,ambulance/EMS provider,identity reviewed
+CMS-2026-1916-0858,commenter_type,other,identity reviewed
+CMS-2026-1916-0858,commenter_subtype,ambulance/EMS provider,identity reviewed
+CMS-2026-1916-0313,commenter_type,other,identity reviewed
+CMS-2026-1916-0313,commenter_subtype,ambulance/EMS provider,identity reviewed
+CMS-2026-1916-0150,commenter_type,other,identity reviewed
+CMS-2026-1916-0150,commenter_subtype,ambulance/EMS provider,identity reviewed
+CMS-2026-1916-0656,commenter_type,hospital/health system,identity reviewed
+CMS-2026-1916-0656,commenter_subtype,behavioral hospital,identity reviewed
+CMS-2026-1916-0807,commenter_type,other,identity reviewed
+CMS-2026-1916-0807,commenter_subtype,behavioral health provider,identity reviewed
+CMS-2026-1916-0421,commenter_type,other,identity reviewed
+CMS-2026-1916-0421,commenter_subtype,behavioral health provider,identity reviewed
+CMS-2026-1916-0853,commenter_type,other,identity reviewed
+CMS-2026-1916-0853,commenter_subtype,behavioral health provider,identity reviewed
+CMS-2026-2476-0065,commenter_type,other,identity reviewed
+CMS-2026-2476-0065,commenter_subtype,human services provider,identity reviewed
+CMS-2026-1916-0860,commenter_type,other,identity reviewed
+CMS-2026-1916-0860,commenter_subtype,independent living center,identity reviewed
+CMS-2026-1916-0945,commenter_type,other,identity reviewed
+CMS-2026-1916-0945,commenter_subtype,community health center / clinic,identity reviewed
+CMS-2026-1916-0392,commenter_type,other,identity reviewed
+CMS-2026-1916-0392,commenter_subtype,company (pharmacy / insurer),identity reviewed
+CMS-2026-1916-0389,commenter_type,other,identity reviewed
+CMS-2026-1916-0389,commenter_subtype,company / consultancy,identity reviewed
+CMS-2026-1916-0788,commenter_type,other,identity reviewed
+CMS-2026-1916-0788,commenter_subtype,company / consultancy,identity reviewed
+CMS-2026-1916-0873,commenter_type,other,identity reviewed
+CMS-2026-1916-0873,commenter_subtype,behavioral health provider,identity reviewed
+CMS-2026-1916-0405,commenter_type,other,identity reviewed
+CMS-2026-1916-0405,commenter_subtype,behavioral health provider,identity reviewed
+CMS-2026-1916-0939,commenter_type,other,identity reviewed
+CMS-2026-1916-0939,commenter_subtype,long-term care / IDD provider,identity reviewed
+CMS-2026-1916-0782,commenter_type,other,identity reviewed
+CMS-2026-1916-0782,commenter_subtype,pediatric care provider,identity reviewed
+CMS-2026-1916-0838,commenter_type,association,identity reviewed
+CMS-2026-1916-0838,commenter_subtype,labor union,identity reviewed
+CMS-2026-1916-0848,commenter_type,advocacy group,identity reviewed
+CMS-2026-1916-0848,commenter_subtype,,identity reviewed
+CMS-2026-1916-0331,commenter_type,association,identity reviewed
+CMS-2026-1916-0331,commenter_subtype,behavioral health association,identity reviewed
+CMS-2026-1916-0254,commenter_type,association,identity reviewed
+CMS-2026-1916-0254,commenter_subtype,behavioral health association,identity reviewed
+CMS-2026-1916-0952,commenter_type,other,identity reviewed
+CMS-2026-1916-0952,commenter_subtype,behavioral health provider,identity reviewed
+CMS-2026-1916-0500,commenter_type,other,identity reviewed
+CMS-2026-1916-0500,commenter_subtype,behavioral health provider,identity reviewed
+CMS-2026-1916-0592,commenter_type,association,identity reviewed
+CMS-2026-1916-0592,commenter_subtype,provider coalition / council,identity reviewed
+CMS-2026-2476-0056,commenter_type,association,identity reviewed
+CMS-2026-2476-0056,commenter_subtype,provider coalition / council,identity reviewed
+CMS-2026-1916-0034,commenter_type,advocacy group,identity reviewed
+CMS-2026-1916-0034,commenter_subtype,,identity reviewed
+CMS-2026-1916-0386,commenter_type,advocacy group,identity reviewed
+CMS-2026-1916-0386,commenter_subtype,,identity reviewed
 CMS-2026-1916-0002,position,oppose,reviewed
 CMS-2026-1916-0003,position,support,reviewed
 CMS-2026-1916-0004,position,oppose,reviewed
@@ -666,7 +1140,7 @@ CMS-2026-1916-0955,position,oppose,reviewed
 CMS-2026-1916-0957,position,request for changes,reviewed
 CMS-2026-1916-0958,position,request for changes,reviewed
 CMS-2026-1916-0960,position,oppose,reviewed
-CMS-2026-2476-0002,position,oppose,reviewed
+CMS-2026-2476-0002,position,unclear / off-topic,reviewed
 CMS-2026-2476-0003,position,oppose,reviewed
 CMS-2026-2476-0004,position,oppose,reviewed
 CMS-2026-2476-0005,position,oppose,reviewed
@@ -677,7 +1151,7 @@ CMS-2026-2476-0009,position,request for changes,reviewed
 CMS-2026-2476-0010,position,oppose,reviewed
 CMS-2026-2476-0011,position,oppose,reviewed
 CMS-2026-2476-0016,position,oppose,reviewed
-CMS-2026-2476-0017,position,oppose,reviewed
+CMS-2026-2476-0017,position,unclear / off-topic,reviewed
 CMS-2026-2476-0018,position,request for changes,reviewed
 CMS-2026-2476-0020,position,request for changes,reviewed
 CMS-2026-2476-0021,position,oppose,reviewed
@@ -854,467 +1328,3 @@ CMS-2026-2476-0212,position,request for changes,reviewed
 CMS-2026-2476-0213,position,request for changes,reviewed
 CMS-2026-2476-0214,position,request for changes,reviewed
 CMS-2026-2476-0215,position,request for changes,reviewed
-CMS-2026-1916-0002,commenter_type,other,identity reviewed
-CMS-2026-1916-0002,commenter_subtype,behavioral health provider,identity reviewed
-CMS-2026-1916-0002,commenter_org,BestCare Treatment Services,identity reviewed
-CMS-2026-1916-0002,state,OR,identity reviewed
-CMS-2026-1916-0096,commenter_type,other,identity reviewed
-CMS-2026-1916-0096,commenter_subtype,academic institution,identity reviewed
-CMS-2026-1916-0096,commenter_org,University of Hawaiʻi Rural Health Research and Policy Center,identity reviewed
-CMS-2026-1916-0096,state,HI,identity reviewed
-CMS-2026-1916-0109,commenter_type,other,identity reviewed
-CMS-2026-1916-0109,commenter_subtype,local government / fire / EMS,identity reviewed
-CMS-2026-1916-0109,commenter_org,Truckee Meadows Fire Protection District,identity reviewed
-CMS-2026-1916-0109,state,NV,identity reviewed
-CMS-2026-1916-0230,commenter_type,other,identity reviewed
-CMS-2026-1916-0230,commenter_subtype,local government / fire / EMS,identity reviewed
-CMS-2026-1916-0230,commenter_org,South Elgin & Countryside Fire Protection District,identity reviewed
-CMS-2026-1916-0230,state,IL,identity reviewed
-CMS-2026-1916-0249,commenter_type,other,identity reviewed
-CMS-2026-1916-0249,commenter_subtype,county children's commission,identity reviewed
-CMS-2026-1916-0249,commenter_org,First 5 LA,identity reviewed
-CMS-2026-1916-0249,state,CA,identity reviewed
-CMS-2026-1916-0295,commenter_type,other,identity reviewed
-CMS-2026-1916-0295,commenter_subtype,local government / fire / EMS,identity reviewed
-CMS-2026-1916-0295,commenter_org,Lemont Fire Protection District,identity reviewed
-CMS-2026-1916-0295,state,IL,identity reviewed
-CMS-2026-1916-0328,commenter_type,association,identity reviewed
-CMS-2026-1916-0328,commenter_subtype,EMS/fire association,identity reviewed
-CMS-2026-1916-0328,commenter_org,Missouri Emergency Medical Services Agent Corporation (MoEMSAC),identity reviewed
-CMS-2026-1916-0328,state,MO,identity reviewed
-CMS-2026-1916-0349,commenter_type,state agency,identity reviewed
-CMS-2026-1916-0349,commenter_subtype,,identity reviewed
-CMS-2026-1916-0349,commenter_org,"Hawaii Department of Human Services, Med-QUEST Division",identity reviewed
-CMS-2026-1916-0349,state,HI,identity reviewed
-CMS-2026-1916-0446,commenter_type,other,identity reviewed
-CMS-2026-1916-0446,commenter_subtype,local government / fire / EMS,identity reviewed
-CMS-2026-1916-0446,commenter_org,Crested Butte Fire Protection District,identity reviewed
-CMS-2026-1916-0446,state,CO,identity reviewed
-CMS-2026-1916-0525,commenter_type,association,identity reviewed
-CMS-2026-1916-0525,commenter_subtype,hospital association,identity reviewed
-CMS-2026-1916-0525,commenter_org,Texas Association of Voluntary Hospitals,identity reviewed
-CMS-2026-1916-0525,state,TX,identity reviewed
-CMS-2026-1916-0571,commenter_type,other,identity reviewed
-CMS-2026-1916-0571,commenter_subtype,local government / fire / EMS,identity reviewed
-CMS-2026-1916-0571,commenter_org,Prospect Heights Fire Protection District,identity reviewed
-CMS-2026-1916-0571,state,IL,identity reviewed
-CMS-2026-1916-0596,commenter_type,hospital/health system,identity reviewed
-CMS-2026-1916-0596,commenter_subtype,,identity reviewed
-CMS-2026-1916-0596,commenter_org,Cordell Memorial Hospital,identity reviewed
-CMS-2026-1916-0596,state,OK,identity reviewed
-CMS-2026-1916-0617,commenter_type,hospital/health system,identity reviewed
-CMS-2026-1916-0617,commenter_subtype,,identity reviewed
-CMS-2026-1916-0617,commenter_org,Memorial Regional Health,identity reviewed
-CMS-2026-1916-0617,state,CO,identity reviewed
-CMS-2026-1916-0733,commenter_type,association,identity reviewed
-CMS-2026-1916-0733,commenter_subtype,long-term care association,identity reviewed
-CMS-2026-1916-0733,commenter_org,Texas Health Care Association (THCA),identity reviewed
-CMS-2026-1916-0733,state,TX,identity reviewed
-CMS-2026-1916-0736,commenter_type,hospital/health system,identity reviewed
-CMS-2026-1916-0736,commenter_subtype,behavioral hospital,identity reviewed
-CMS-2026-1916-0736,commenter_org,"SBH, LLC dba Creekside Behavioral Health",identity reviewed
-CMS-2026-1916-0736,state,TN,identity reviewed
-CMS-2026-1916-0760,commenter_type,hospital/health system,identity reviewed
-CMS-2026-1916-0760,commenter_subtype,,identity reviewed
-CMS-2026-1916-0760,commenter_org,The MetroHealth System,identity reviewed
-CMS-2026-1916-0760,state,OH,identity reviewed
-CMS-2026-1916-0923,commenter_type,state agency,identity reviewed
-CMS-2026-1916-0923,commenter_subtype,,identity reviewed
-CMS-2026-1916-0923,commenter_org,South Carolina Department of Health & Human Services,identity reviewed
-CMS-2026-1916-0923,state,SC,identity reviewed
-CMS-2026-1916-0950,commenter_type,state agency,identity reviewed
-CMS-2026-1916-0950,commenter_subtype,,identity reviewed
-CMS-2026-1916-0950,commenter_org,Arizona Health Care Cost Containment System (AHCCCS),identity reviewed
-CMS-2026-1916-0950,state,AZ,identity reviewed
-CMS-2026-2476-0201,commenter_type,state agency,identity reviewed
-CMS-2026-2476-0201,commenter_subtype,,identity reviewed
-CMS-2026-2476-0201,commenter_org,Arizona Health Care Cost Containment System (AHCCCS),identity reviewed
-CMS-2026-2476-0201,state,AZ,identity reviewed
-CMS-2026-2476-0018,commenter_type,state agency,identity reviewed
-CMS-2026-2476-0018,commenter_subtype,,identity reviewed
-CMS-2026-2476-0018,commenter_org,Oklahoma Insurance Department,identity reviewed
-CMS-2026-2476-0018,state,OK,identity reviewed
-CMS-2026-2476-0151,commenter_type,state agency,identity reviewed
-CMS-2026-2476-0151,commenter_subtype,,identity reviewed
-CMS-2026-2476-0151,commenter_org,Maine Department of Health and Human Services,identity reviewed
-CMS-2026-2476-0151,state,ME,identity reviewed
-CMS-2026-2476-0177,commenter_type,state agency,identity reviewed
-CMS-2026-2476-0177,commenter_subtype,state-based marketplace,identity reviewed
-CMS-2026-2476-0177,commenter_org,HealthSource RI,identity reviewed
-CMS-2026-2476-0177,state,RI,identity reviewed
-CMS-2026-2476-0186,commenter_type,state agency,identity reviewed
-CMS-2026-2476-0186,commenter_subtype,,identity reviewed
-CMS-2026-2476-0186,commenter_org,New Mexico Health Care Authority,identity reviewed
-CMS-2026-2476-0186,state,NM,identity reviewed
-CMS-2026-2476-0198,commenter_type,state agency,identity reviewed
-CMS-2026-2476-0198,commenter_subtype,,identity reviewed
-CMS-2026-2476-0198,commenter_org,California Department of Health Care Services,identity reviewed
-CMS-2026-2476-0198,state,CA,identity reviewed
-CMS-2026-2476-0202,commenter_type,state agency,identity reviewed
-CMS-2026-2476-0202,commenter_subtype,,identity reviewed
-CMS-2026-2476-0202,commenter_org,Washington State agency (Department of Health),identity reviewed
-CMS-2026-2476-0202,state,WA,identity reviewed
-CMS-2026-2476-0132,commenter_type,state agency,identity reviewed
-CMS-2026-2476-0132,commenter_subtype,state-based marketplace,identity reviewed
-CMS-2026-2476-0132,commenter_org,Access Health CT,identity reviewed
-CMS-2026-2476-0132,state,CT,identity reviewed
-CMS-2026-2476-0084,commenter_type,state agency,identity reviewed
-CMS-2026-2476-0084,commenter_subtype,,identity reviewed
-CMS-2026-2476-0084,commenter_org,"Maryland Department of Health, Department of Insurance, HSCRC and Health Benefit Exchange",identity reviewed
-CMS-2026-2476-0084,state,MD,identity reviewed
-CMS-2026-2476-0124,commenter_type,state agency,identity reviewed
-CMS-2026-2476-0124,commenter_subtype,,identity reviewed
-CMS-2026-2476-0124,commenter_org,Pennsylvania Insurance Department,identity reviewed
-CMS-2026-2476-0124,state,PA,identity reviewed
-CMS-2026-2476-0183,commenter_type,state agency,identity reviewed
-CMS-2026-2476-0183,commenter_subtype,,identity reviewed
-CMS-2026-2476-0183,commenter_org,Indiana Department of Insurance,identity reviewed
-CMS-2026-2476-0183,state,IN,identity reviewed
-CMS-2026-2476-0126,commenter_type,state agency,identity reviewed
-CMS-2026-2476-0126,commenter_subtype,,identity reviewed
-CMS-2026-2476-0126,commenter_org,Pennsylvania Department of Human Services,identity reviewed
-CMS-2026-2476-0126,state,PA,identity reviewed
-CMS-2026-2476-0156,commenter_type,state agency,identity reviewed
-CMS-2026-2476-0156,commenter_subtype,,identity reviewed
-CMS-2026-2476-0156,commenter_org,State of Colorado (Office of the Governor),identity reviewed
-CMS-2026-2476-0156,state,CO,identity reviewed
-CMS-2026-2476-0162,commenter_type,hospital/health system,identity reviewed
-CMS-2026-2476-0162,commenter_subtype,,identity reviewed
-CMS-2026-2476-0162,commenter_org,Children's Wisconsin,identity reviewed
-CMS-2026-2476-0162,state,WI,identity reviewed
-CMS-2026-1916-0954,commenter_type,hospital/health system,identity reviewed
-CMS-2026-1916-0954,commenter_subtype,,identity reviewed
-CMS-2026-1916-0954,commenter_org,Parkland Health,identity reviewed
-CMS-2026-1916-0954,state,TX,identity reviewed
-CMS-2026-1916-0378,commenter_type,other,identity reviewed
-CMS-2026-1916-0378,commenter_subtype,long-term care / IDD provider,identity reviewed
-CMS-2026-1916-0378,commenter_org,Mosaic,identity reviewed
-CMS-2026-1916-0490,commenter_type,other,identity reviewed
-CMS-2026-1916-0490,commenter_subtype,long-term care / IDD provider,identity reviewed
-CMS-2026-1916-0490,commenter_org,"CAYA Collaborative Care, Inc.",identity reviewed
-CMS-2026-1916-0490,state,KY,identity reviewed
-CMS-2026-1916-0478,commenter_type,state agency,identity reviewed
-CMS-2026-1916-0478,commenter_subtype,,identity reviewed
-CMS-2026-1916-0478,commenter_org,Minnesota Department of Human Services,identity reviewed
-CMS-2026-1916-0478,state,MN,identity reviewed
-CMS-2026-2476-0096,commenter_type,state agency,identity reviewed
-CMS-2026-2476-0096,commenter_subtype,,identity reviewed
-CMS-2026-2476-0096,commenter_org,Oregon Department of Consumer and Business Services,identity reviewed
-CMS-2026-2476-0096,state,OR,identity reviewed
-CMS-2026-1916-0774,commenter_type,state agency,identity reviewed
-CMS-2026-1916-0774,commenter_subtype,,identity reviewed
-CMS-2026-1916-0774,commenter_org,Delaware Division of Medicaid and Medical Assistance,identity reviewed
-CMS-2026-1916-0774,state,DE,identity reviewed
-CMS-2026-1916-0209,commenter_type,state agency,identity reviewed
-CMS-2026-1916-0209,commenter_subtype,,identity reviewed
-CMS-2026-1916-0209,commenter_org,Ohio Department of Medicaid,identity reviewed
-CMS-2026-1916-0209,state,OH,identity reviewed
-CMS-2026-2476-0210,commenter_type,association,identity reviewed
-CMS-2026-2476-0210,commenter_subtype,state government association,identity reviewed
-CMS-2026-2476-0210,commenter_org,National Conference of State Legislatures,identity reviewed
-CMS-2026-2476-0210,state,National,identity reviewed
-CMS-2026-1916-0006,commenter_type,other,identity reviewed
-CMS-2026-1916-0006,commenter_subtype,local government / fire / EMS,identity reviewed
-CMS-2026-1916-0006,commenter_org,City of Consolidated Municipality (Nevada) – ambulance program,identity reviewed
-CMS-2026-1916-0006,state,NV,identity reviewed
-CMS-2026-1916-0082,commenter_type,association,identity reviewed
-CMS-2026-1916-0082,commenter_subtype,EMS/fire association,identity reviewed
-CMS-2026-1916-0082,commenter_org,Western Fire Chiefs Association,identity reviewed
-CMS-2026-1916-0112,commenter_type,other,identity reviewed
-CMS-2026-1916-0112,commenter_subtype,local government / fire / EMS,identity reviewed
-CMS-2026-1916-0112,commenter_org,Jefferson County Fire & EMS,identity reviewed
-CMS-2026-1916-0112,state,OR,identity reviewed
-CMS-2026-1916-0114,commenter_type,other,identity reviewed
-CMS-2026-1916-0114,commenter_subtype,ambulance/EMS provider,identity reviewed
-CMS-2026-1916-0114,commenter_org,Tipton Ambulance Service,identity reviewed
-CMS-2026-1916-0114,state,IA,identity reviewed
-CMS-2026-1916-0122,commenter_type,association,identity reviewed
-CMS-2026-1916-0122,commenter_subtype,physician/professional society,identity reviewed
-CMS-2026-1916-0122,commenter_org,Illinois Academy of Family Physicians,identity reviewed
-CMS-2026-1916-0122,state,IL,identity reviewed
-CMS-2026-1916-0178,commenter_type,other,identity reviewed
-CMS-2026-1916-0178,commenter_subtype,local government / fire / EMS,identity reviewed
-CMS-2026-1916-0178,commenter_org,Pontiac Fire Department,identity reviewed
-CMS-2026-1916-0178,state,IL,identity reviewed
-CMS-2026-1916-0216,commenter_type,other,identity reviewed
-CMS-2026-1916-0216,commenter_subtype,area agency on aging,identity reviewed
-CMS-2026-1916-0216,commenter_org,Aging Resources of Central Iowa (Area Agency on Aging),identity reviewed
-CMS-2026-1916-0216,state,IA,identity reviewed
-CMS-2026-1916-0217,commenter_type,other,identity reviewed
-CMS-2026-1916-0217,commenter_subtype,ambulance/EMS provider,identity reviewed
-CMS-2026-1916-0287,commenter_type,hospital/health system,identity reviewed
-CMS-2026-1916-0287,commenter_subtype,critical access hospital,identity reviewed
-CMS-2026-1916-0287,commenter_org,Okeene Municipal Hospital,identity reviewed
-CMS-2026-1916-0287,state,OK,identity reviewed
-CMS-2026-1916-0548,commenter_type,hospital/health system,identity reviewed
-CMS-2026-1916-0548,commenter_subtype,critical access hospital,identity reviewed
-CMS-2026-1916-0548,state,OK,identity reviewed
-CMS-2026-1916-0450,commenter_type,advocacy group,identity reviewed
-CMS-2026-1916-0450,commenter_subtype,,identity reviewed
-CMS-2026-1916-0450,commenter_org,Kentucky Access to Care Coalition,identity reviewed
-CMS-2026-1916-0450,state,KY,identity reviewed
-CMS-2026-1916-0457,commenter_type,association,identity reviewed
-CMS-2026-1916-0457,commenter_subtype,trade/professional,identity reviewed
-CMS-2026-1916-0457,commenter_org,Kentucky Life Science Council,identity reviewed
-CMS-2026-1916-0457,state,KY,identity reviewed
-CMS-2026-1916-0459,commenter_type,other,identity reviewed
-CMS-2026-1916-0459,commenter_subtype,local government / fire / EMS,identity reviewed
-CMS-2026-1916-0521,commenter_type,hospital/health system,identity reviewed
-CMS-2026-1916-0521,commenter_subtype,,identity reviewed
-CMS-2026-1916-0521,commenter_org,Carilion Giles and Tazewell Community Hospitals,identity reviewed
-CMS-2026-1916-0521,state,VA,identity reviewed
-CMS-2026-1916-0542,commenter_type,other,identity reviewed
-CMS-2026-1916-0542,commenter_subtype,local government / fire / EMS,identity reviewed
-CMS-2026-1916-0594,commenter_type,other,identity reviewed
-CMS-2026-1916-0594,commenter_subtype,ambulance/EMS provider,identity reviewed
-CMS-2026-1916-0594,state,OK,identity reviewed
-CMS-2026-1916-0597,commenter_type,other,identity reviewed
-CMS-2026-1916-0597,commenter_subtype,ambulance/EMS provider,identity reviewed
-CMS-2026-1916-0597,state,OK,identity reviewed
-CMS-2026-1916-0659,commenter_type,advocacy group,identity reviewed
-CMS-2026-1916-0659,commenter_subtype,think tank,identity reviewed
-CMS-2026-1916-0659,commenter_org,Manhattan Institute (mental health policy team),identity reviewed
-CMS-2026-1916-0687,commenter_type,association,identity reviewed
-CMS-2026-1916-0687,commenter_subtype,EMS/fire association,identity reviewed
-CMS-2026-1916-0687,state,IL,identity reviewed
-CMS-2026-1916-0695,commenter_type,other,identity reviewed
-CMS-2026-1916-0695,commenter_subtype,ambulance/EMS provider,identity reviewed
-CMS-2026-1916-0695,state,ID,identity reviewed
-CMS-2026-1916-0698,commenter_type,other,identity reviewed
-CMS-2026-1916-0698,commenter_subtype,local government / fire / EMS,identity reviewed
-CMS-2026-1916-0813,commenter_type,advocacy group,identity reviewed
-CMS-2026-1916-0813,commenter_subtype,,identity reviewed
-CMS-2026-1916-0813,commenter_org,Medicaid in Schools Coalition,identity reviewed
-CMS-2026-1916-0813,state,National,identity reviewed
-CMS-2026-1916-0831,commenter_type,other,identity reviewed
-CMS-2026-1916-0831,commenter_subtype,local government / fire / EMS,identity reviewed
-CMS-2026-1916-0831,commenter_org,Yamhill County Board of Commissioners,identity reviewed
-CMS-2026-1916-0831,state,OR,identity reviewed
-CMS-2026-1916-0890,commenter_type,state agency,identity reviewed
-CMS-2026-1916-0890,commenter_subtype,,identity reviewed
-CMS-2026-1916-0890,commenter_org,Commonwealth of Virginia,identity reviewed
-CMS-2026-1916-0890,state,VA,identity reviewed
-CMS-2026-2476-0027,commenter_type,association,identity reviewed
-CMS-2026-2476-0027,commenter_subtype,state government association,identity reviewed
-CMS-2026-2476-0027,commenter_org,National Association of Insurance Commissioners,identity reviewed
-CMS-2026-2476-0027,state,National,identity reviewed
-CMS-2026-2476-0063,commenter_type,other,identity reviewed
-CMS-2026-2476-0063,commenter_subtype,nonprofit service provider,identity reviewed
-CMS-2026-2476-0063,commenter_org,Treatment Alternatives for Stronger Communities (TASC),identity reviewed
-CMS-2026-1916-0309,commenter_type,other,identity reviewed
-CMS-2026-1916-0309,commenter_subtype,local government / fire / EMS,identity reviewed
-CMS-2026-1916-0309,commenter_org,Ross County (fiscal officer / assessor),identity reviewed
-CMS-2026-1916-0309,state,OH,identity reviewed
-CMS-2026-1916-0204,commenter_type,state agency,identity reviewed
-CMS-2026-1916-0204,commenter_subtype,state legislator,identity reviewed
-CMS-2026-1916-0204,state,MS,identity reviewed
-CMS-2026-1916-0259,commenter_type,state agency,identity reviewed
-CMS-2026-1916-0259,commenter_subtype,state legislator,identity reviewed
-CMS-2026-1916-0259,commenter_org,North Carolina House of Representatives (District 67),identity reviewed
-CMS-2026-1916-0259,state,NC,identity reviewed
-CMS-2026-1916-0308,commenter_type,state agency,identity reviewed
-CMS-2026-1916-0308,commenter_subtype,state legislator,identity reviewed
-CMS-2026-1916-0308,commenter_org,Ohio House of Representatives,identity reviewed
-CMS-2026-1916-0308,state,OH,identity reviewed
-CMS-2026-1916-0379,commenter_type,state agency,identity reviewed
-CMS-2026-1916-0379,commenter_subtype,state legislator,identity reviewed
-CMS-2026-1916-0379,commenter_org,North Carolina House of Representatives,identity reviewed
-CMS-2026-1916-0379,state,NC,identity reviewed
-CMS-2026-1916-0489,commenter_type,state agency,identity reviewed
-CMS-2026-1916-0489,commenter_subtype,state legislator,identity reviewed
-CMS-2026-1916-0489,commenter_org,Louisiana Senate Health and Welfare Committee,identity reviewed
-CMS-2026-1916-0489,state,LA,identity reviewed
-CMS-2026-1916-0499,commenter_type,state agency,identity reviewed
-CMS-2026-1916-0499,commenter_subtype,state legislator,identity reviewed
-CMS-2026-1916-0499,commenter_org,Mississippi House of Representatives,identity reviewed
-CMS-2026-1916-0499,state,MS,identity reviewed
-CMS-2026-1916-0706,commenter_type,state agency,identity reviewed
-CMS-2026-1916-0706,commenter_subtype,state legislator,identity reviewed
-CMS-2026-1916-0706,commenter_org,Oregon Legislative Assembly (Rep. Dacia Grayber),identity reviewed
-CMS-2026-1916-0706,state,OR,identity reviewed
-CMS-2026-1916-0960,commenter_type,state agency,identity reviewed
-CMS-2026-1916-0960,commenter_subtype,state legislator,identity reviewed
-CMS-2026-1916-0960,commenter_org,Texas House of Representatives,identity reviewed
-CMS-2026-1916-0960,state,TX,identity reviewed
-CMS-2026-1916-0294,commenter_type,individual,identity reviewed
-CMS-2026-1916-0294,commenter_subtype,former state legislator,identity reviewed
-CMS-2026-1916-0294,state,WV,identity reviewed
-CMS-2026-1916-0307,commenter_type,individual,identity reviewed
-CMS-2026-1916-0307,commenter_subtype,former state legislator,identity reviewed
-CMS-2026-1916-0307,state,FL,identity reviewed
-CMS-2026-1916-0480,commenter_type,individual,identity reviewed
-CMS-2026-1916-0480,commenter_subtype,former state legislator,identity reviewed
-CMS-2026-1916-0480,state,NC,identity reviewed
-CMS-2026-1916-0919,commenter_type,individual,identity reviewed
-CMS-2026-1916-0919,commenter_subtype,former state legislator,identity reviewed
-CMS-2026-1916-0919,state,TX,identity reviewed
-CMS-2026-1916-0835,commenter_type,state agency,identity reviewed
-CMS-2026-1916-0835,commenter_subtype,,identity reviewed
-CMS-2026-1916-0835,commenter_org,New Mexico Health Care Authority,identity reviewed
-CMS-2026-1916-0835,state,NM,identity reviewed
-CMS-2026-1916-0758,commenter_type,state agency,identity reviewed
-CMS-2026-1916-0758,commenter_subtype,,identity reviewed
-CMS-2026-1916-0758,commenter_org,Pennsylvania Department of Human Services,identity reviewed
-CMS-2026-1916-0758,state,PA,identity reviewed
-CMS-2026-1916-0387,commenter_type,state agency,identity reviewed
-CMS-2026-1916-0387,commenter_subtype,,identity reviewed
-CMS-2026-1916-0387,commenter_org,North Carolina Department of Health and Human Services,identity reviewed
-CMS-2026-1916-0387,state,NC,identity reviewed
-CMS-2026-1916-0493,commenter_type,association,identity reviewed
-CMS-2026-1916-0493,commenter_subtype,provider association,identity reviewed
-CMS-2026-1916-0671,commenter_type,hospital/health system,identity reviewed
-CMS-2026-1916-0671,commenter_subtype,,identity reviewed
-CMS-2026-1916-0789,commenter_type,hospital/health system,identity reviewed
-CMS-2026-1916-0789,commenter_subtype,,identity reviewed
-CMS-2026-1916-0473,commenter_type,other,identity reviewed
-CMS-2026-1916-0473,commenter_subtype,long-term care / IDD provider,identity reviewed
-CMS-2026-1916-0834,commenter_type,other,identity reviewed
-CMS-2026-1916-0834,commenter_subtype,academic institution,identity reviewed
-CMS-2026-1916-0154,commenter_type,hospital/health system,identity reviewed
-CMS-2026-1916-0154,commenter_subtype,,identity reviewed
-CMS-2026-1916-0539,commenter_type,association,identity reviewed
-CMS-2026-1916-0539,commenter_subtype,home care association,identity reviewed
-CMS-2026-1916-0539,state,National,identity reviewed
-CMS-2026-1916-0464,commenter_type,association,identity reviewed
-CMS-2026-1916-0464,commenter_subtype,trade/professional,identity reviewed
-CMS-2026-1916-0464,state,National,identity reviewed
-CMS-2026-1916-0819,commenter_type,hospital/health system,identity reviewed
-CMS-2026-1916-0819,commenter_subtype,,identity reviewed
-CMS-2026-1916-0862,commenter_type,association,identity reviewed
-CMS-2026-1916-0862,commenter_subtype,behavioral health association,identity reviewed
-CMS-2026-1916-0862,commenter_org,Texas Council of Community Centers,identity reviewed
-CMS-2026-1916-0862,state,TX,identity reviewed
-CMS-2026-1916-0849,commenter_type,other,identity reviewed
-CMS-2026-1916-0849,commenter_subtype,tribal health organization,identity reviewed
-CMS-2026-1916-0377,commenter_type,hospital/health system,identity reviewed
-CMS-2026-1916-0377,commenter_subtype,,identity reviewed
-CMS-2026-1916-0463,commenter_type,hospital/health system,identity reviewed
-CMS-2026-1916-0463,commenter_subtype,,identity reviewed
-CMS-2026-1916-0766,commenter_type,hospital/health system,identity reviewed
-CMS-2026-1916-0766,commenter_subtype,,identity reviewed
-CMS-2026-1916-0663,commenter_type,hospital/health system,identity reviewed
-CMS-2026-1916-0663,commenter_subtype,,identity reviewed
-CMS-2026-1916-0882,commenter_type,hospital/health system,identity reviewed
-CMS-2026-1916-0882,commenter_subtype,,identity reviewed
-CMS-2026-1916-0343,commenter_type,hospital/health system,identity reviewed
-CMS-2026-1916-0343,commenter_subtype,,identity reviewed
-CMS-2026-1916-0877,commenter_type,hospital/health system,identity reviewed
-CMS-2026-1916-0877,commenter_subtype,,identity reviewed
-CMS-2026-1916-0400,commenter_type,hospital/health system,identity reviewed
-CMS-2026-1916-0400,commenter_subtype,,identity reviewed
-CMS-2026-1916-0400,commenter_org,Covenant Health,identity reviewed
-CMS-2026-1916-0920,commenter_type,hospital/health system,identity reviewed
-CMS-2026-1916-0920,commenter_subtype,,identity reviewed
-CMS-2026-1916-0388,commenter_type,hospital/health system,identity reviewed
-CMS-2026-1916-0388,commenter_subtype,,identity reviewed
-CMS-2026-1916-0601,commenter_type,hospital/health system,identity reviewed
-CMS-2026-1916-0601,commenter_subtype,,identity reviewed
-CMS-2026-1916-0545,commenter_type,hospital/health system,identity reviewed
-CMS-2026-1916-0545,commenter_subtype,,identity reviewed
-CMS-2026-1916-0867,commenter_type,hospital/health system,identity reviewed
-CMS-2026-1916-0867,commenter_subtype,,identity reviewed
-CMS-2026-1916-0746,commenter_type,hospital/health system,identity reviewed
-CMS-2026-1916-0746,commenter_subtype,,identity reviewed
-CMS-2026-2476-0135,commenter_type,hospital/health system,identity reviewed
-CMS-2026-2476-0135,commenter_subtype,,identity reviewed
-CMS-2026-1916-0468,commenter_type,hospital/health system,identity reviewed
-CMS-2026-1916-0468,commenter_subtype,academic medical center,identity reviewed
-CMS-2026-1916-0346,commenter_type,hospital/health system,identity reviewed
-CMS-2026-1916-0346,commenter_subtype,,identity reviewed
-CMS-2026-1916-0346,commenter_org,Children's Hospital Los Angeles Medical Group (CHLAMG),identity reviewed
-CMS-2026-1916-0346,state,CA,identity reviewed
-CMS-2026-1916-0487,commenter_type,other,identity reviewed
-CMS-2026-1916-0487,commenter_subtype,community health center / clinic,identity reviewed
-CMS-2026-2476-0153,commenter_type,MCO,identity reviewed
-CMS-2026-2476-0153,commenter_subtype,Medicaid Regional Accountable Entity,identity reviewed
-CMS-2026-2476-0153,state,CO,identity reviewed
-CMS-2026-1916-0332,commenter_type,other,identity reviewed
-CMS-2026-1916-0332,commenter_subtype,ambulance/EMS provider,identity reviewed
-CMS-2026-1916-0757,commenter_type,other,identity reviewed
-CMS-2026-1916-0757,commenter_subtype,clinic / care provider,identity reviewed
-CMS-2026-1916-0925,commenter_type,association,identity reviewed
-CMS-2026-1916-0925,commenter_subtype,physician group association,identity reviewed
-CMS-2026-1916-0937,commenter_type,other,identity reviewed
-CMS-2026-1916-0937,commenter_subtype,credentialing body,identity reviewed
-CMS-2026-1916-0937,state,National,identity reviewed
-CMS-2026-1916-0436,commenter_type,association,identity reviewed
-CMS-2026-1916-0436,commenter_subtype,physician/professional society,identity reviewed
-CMS-2026-1916-0436,commenter_org,American Nurses Association – Massachusetts,identity reviewed
-CMS-2026-1916-0436,state,MA,identity reviewed
-CMS-2026-1916-0854,commenter_type,association,identity reviewed
-CMS-2026-1916-0854,commenter_subtype,physician/professional society,identity reviewed
-CMS-2026-1916-0854,commenter_org,American Academy of Pediatrics – Pennsylvania Chapter,identity reviewed
-CMS-2026-1916-0854,state,PA,identity reviewed
-CMS-2026-1916-0305,commenter_type,other,identity reviewed
-CMS-2026-1916-0305,commenter_subtype,physician practices,identity reviewed
-CMS-2026-1916-0852,commenter_type,other,identity reviewed
-CMS-2026-1916-0852,commenter_subtype,physician practice / company,identity reviewed
-CMS-2026-1916-0787,commenter_type,other,identity reviewed
-CMS-2026-1916-0787,commenter_subtype,law firm,identity reviewed
-CMS-2026-1916-0396,commenter_type,other,identity reviewed
-CMS-2026-1916-0396,commenter_subtype,law firm,identity reviewed
-CMS-2026-1916-0363,commenter_type,other,identity reviewed
-CMS-2026-1916-0363,commenter_subtype,credentialing body,identity reviewed
-CMS-2026-1916-0298,commenter_type,other,identity reviewed
-CMS-2026-1916-0298,commenter_subtype,ambulance/EMS provider,identity reviewed
-CMS-2026-1916-0549,commenter_type,other,identity reviewed
-CMS-2026-1916-0549,commenter_subtype,ambulance/EMS provider,identity reviewed
-CMS-2026-1916-0856,commenter_type,other,identity reviewed
-CMS-2026-1916-0856,commenter_subtype,ambulance/EMS provider,identity reviewed
-CMS-2026-1916-0858,commenter_type,other,identity reviewed
-CMS-2026-1916-0858,commenter_subtype,ambulance/EMS provider,identity reviewed
-CMS-2026-1916-0313,commenter_type,other,identity reviewed
-CMS-2026-1916-0313,commenter_subtype,ambulance/EMS provider,identity reviewed
-CMS-2026-1916-0150,commenter_type,other,identity reviewed
-CMS-2026-1916-0150,commenter_subtype,ambulance/EMS provider,identity reviewed
-CMS-2026-1916-0656,commenter_type,hospital/health system,identity reviewed
-CMS-2026-1916-0656,commenter_subtype,behavioral hospital,identity reviewed
-CMS-2026-1916-0807,commenter_type,other,identity reviewed
-CMS-2026-1916-0807,commenter_subtype,behavioral health provider,identity reviewed
-CMS-2026-1916-0421,commenter_type,other,identity reviewed
-CMS-2026-1916-0421,commenter_subtype,behavioral health provider,identity reviewed
-CMS-2026-1916-0853,commenter_type,other,identity reviewed
-CMS-2026-1916-0853,commenter_subtype,behavioral health provider,identity reviewed
-CMS-2026-2476-0065,commenter_type,other,identity reviewed
-CMS-2026-2476-0065,commenter_subtype,human services provider,identity reviewed
-CMS-2026-1916-0860,commenter_type,other,identity reviewed
-CMS-2026-1916-0860,commenter_subtype,independent living center,identity reviewed
-CMS-2026-1916-0945,commenter_type,other,identity reviewed
-CMS-2026-1916-0945,commenter_subtype,community health center / clinic,identity reviewed
-CMS-2026-1916-0392,commenter_type,other,identity reviewed
-CMS-2026-1916-0392,commenter_subtype,company (pharmacy / insurer),identity reviewed
-CMS-2026-1916-0389,commenter_type,other,identity reviewed
-CMS-2026-1916-0389,commenter_subtype,company / consultancy,identity reviewed
-CMS-2026-1916-0788,commenter_type,other,identity reviewed
-CMS-2026-1916-0788,commenter_subtype,company / consultancy,identity reviewed
-CMS-2026-1916-0873,commenter_type,other,identity reviewed
-CMS-2026-1916-0873,commenter_subtype,behavioral health provider,identity reviewed
-CMS-2026-1916-0405,commenter_type,other,identity reviewed
-CMS-2026-1916-0405,commenter_subtype,behavioral health provider,identity reviewed
-CMS-2026-1916-0939,commenter_type,other,identity reviewed
-CMS-2026-1916-0939,commenter_subtype,long-term care / IDD provider,identity reviewed
-CMS-2026-1916-0782,commenter_type,other,identity reviewed
-CMS-2026-1916-0782,commenter_subtype,pediatric care provider,identity reviewed
-CMS-2026-1916-0838,commenter_type,association,identity reviewed
-CMS-2026-1916-0838,commenter_subtype,labor union,identity reviewed
-CMS-2026-1916-0848,commenter_type,advocacy group,identity reviewed
-CMS-2026-1916-0848,commenter_subtype,,identity reviewed
-CMS-2026-1916-0331,commenter_type,association,identity reviewed
-CMS-2026-1916-0331,commenter_subtype,behavioral health association,identity reviewed
-CMS-2026-1916-0254,commenter_type,association,identity reviewed
-CMS-2026-1916-0254,commenter_subtype,behavioral health association,identity reviewed
-CMS-2026-1916-0952,commenter_type,other,identity reviewed
-CMS-2026-1916-0952,commenter_subtype,behavioral health provider,identity reviewed
-CMS-2026-1916-0500,commenter_type,other,identity reviewed
-CMS-2026-1916-0500,commenter_subtype,behavioral health provider,identity reviewed
-CMS-2026-1916-0592,commenter_type,association,identity reviewed
-CMS-2026-1916-0592,commenter_subtype,provider coalition / council,identity reviewed
-CMS-2026-2476-0056,commenter_type,association,identity reviewed
-CMS-2026-2476-0056,commenter_subtype,provider coalition / council,identity reviewed
-CMS-2026-1916-0034,commenter_type,advocacy group,identity reviewed
-CMS-2026-1916-0034,commenter_subtype,,identity reviewed
-CMS-2026-1916-0386,commenter_type,advocacy group,identity reviewed
-CMS-2026-1916-0386,commenter_subtype,,identity reviewed
-CMS-2026-1916-0031,filing_note,"appears to address a different rule (Medicaid work / community-engagement requirements), not CMS-2449-P",off-topic
-CMS-2026-2476-0002,filing_note,"mostly addresses a different rule (Medicaid work requirements and check-ins), not CMS-2452-P",off-topic
-CMS-2026-2476-0017,filing_note,"appears to address a different rule (Medicaid work requirements), not CMS-2452-P",off-topic

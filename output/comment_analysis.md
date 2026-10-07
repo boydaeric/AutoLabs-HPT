@@ -25,7 +25,20 @@ This is the report's only methods note; the sections below do not repeat it.
 
 Both rules combined: 1,174 comments either way; 848 distinct texts as filed, 847 corrected. The same two views are in `output/docket_totals.csv` for every output file. The `docket` column in each row-level file is always as filed, and a `docket_corrected` column gives the corrected docket; `docket_corrections.csv` is the source for the move. The position-by-type tables below are shown both ways.
 
-**Misfiled-letter check.** I scanned every comment's full text for the rule number it cites, for content terms from each rule (directed payments and Medicare limits vs. provider taxes and hold harmless), and for near-duplicate text across the two dockets, then read the borderline cases. `2476-0199` is the only letter filed under the wrong one of the two rules. Letters that mention the other rule are on their own rule: the Idaho and Iowa hospital associations (`2476-0095`, `2476-0076`) and AMGA (`2476-0131`) cite CMS-2449-P only as a cross-reference, and Sutter Health's page footers read "Docket No. CMS-2449-P" (`2476-0123`) although its subject line and argument are CMS-2452-P. Six comments address neither rule, so they cannot be moved. Three are coaching-code letters in the CMS-2449-P docket (`1916-0851`, `1916-0937`, `1916-0941`). Three are individual comments about Medicaid work requirements (`1916-0031` in CMS-2449-P; `2476-0002` and `2476-0017` in CMS-2452-P). All six stay in their filed docket in both views and carry a `filing_note` in `comments_tagged.csv`. The three coaching letters and `1916-0031` are tagged unclear / off-topic. The two CMS-2452-P work-requirement comments are still counted as "oppose" (2 of 75). Many short comments (for example "Cuts to Medicaid will cost lives") do not say which rule they address, so they stay where filed **[inferred]**.
+**Misfiled-letter check.** I scanned every comment's full text for the rule number it cites, for content terms from each rule (directed payments and Medicare limits vs. provider taxes and hold harmless), and for near-duplicate text across the two dockets, then read the borderline cases. `2476-0199` is the only letter filed under the wrong one of the two rules. Letters that mention the other rule are on their own rule: the Idaho and Iowa hospital associations (`2476-0095`, `2476-0076`) and AMGA (`2476-0131`) cite CMS-2449-P only as a cross-reference, and Sutter Health's page footers read "Docket No. CMS-2449-P" (`2476-0123`) although its subject line and argument are CMS-2452-P. Six comments address neither rule, so they cannot be moved. Three are coaching-code letters in the CMS-2449-P docket (`1916-0851`, `1916-0937`, `1916-0941`). Three are individual comments about Medicaid work requirements (`1916-0031` in CMS-2449-P; `2476-0002` and `2476-0017` in CMS-2452-P). All six stay in their filed docket in both views and carry a `filing_note` in `comments_tagged.csv`. They are classified as commenter type "off-topic" and position "unclear / off-topic", so they appear in that row and column of every table and in `output/docket_totals.csv`, and they remain in the comment totals. Many short comments (for example "Cuts to Medicaid will cost lives") do not say which rule they address, so they stay where filed **[inferred]**.
+
+**Off-topic reclassification, before and after.** Reclassifying the six moved two comments in CMS-2452-P out of "oppose" (`2476-0002`, `2476-0017`) and left the four in CMS-2449-P in the same position, because they were already tagged unclear / off-topic. Positions, as filed on regulations.gov:
+
+| Position | CMS-2449-P before | CMS-2449-P after | CMS-2452-P before | CMS-2452-P after |
+|---|---:|---:|---:|---:|
+| Oppose | 351 | 351 | 75 | 73 |
+| Request for changes | 461 | 461 | 127 | 127 |
+| Mixed | 121 | 121 | 8 | 8 |
+| Support | 14 | 14 | 4 | 4 |
+| Unclear / off-topic | 13 | 13 | 0 | 2 |
+| **Total** | **960** | **960** | **214** | **214** |
+
+The corrected view differs from as filed only by `2476-0199` (one request-for-changes comment), so its before-and-after change is the same. Commenter types changed in both dockets. CMS-2449-P: association 176 to 174, individual 197 to 196, other 249 to 248, off-topic 0 to 4. CMS-2452-P: individual 33 to 31, off-topic 0 to 2. All other type counts are unchanged.
 
 **What is exact and what is approximate.**
 
@@ -44,35 +57,38 @@ Both rules combined: 1,174 comments either way; 848 distinct texts as filed, 847
 | Commenter type | Oppose | Request for changes | Mixed | Support | Unclear / off-topic | Total |
 |---|---:|---:|---:|---:|---:|---:|
 | Hospital / health system | 41 | 138 | 94 | 0 | 0 | 273 |
-| Other (mostly fire departments, ambulance services, local governments) | 128 | 107 | 10 | 3 | 1 | 249 |
-| Individual | 90 | 94 | 0 | 5 | 8 | 197 |
-| Association | 63 | 94 | 15 | 0 | 4 | 176 |
+| Other | 128 | 107 | 10 | 3 | 0 | 248 |
+| Individual | 90 | 94 | 0 | 5 | 7 | 196 |
+| Association | 63 | 94 | 15 | 0 | 2 | 174 |
 | Advocacy group | 23 | 9 | 0 | 6 | 0 | 38 |
 | State agency | 6 | 19 | 2 | 0 | 0 | 27 |
+| Off-topic (addresses neither rule) | 0 | 0 | 0 | 0 | 4 | 4 |
 | **Total** | **351** | **461** | **121** | **14** | **13** | **960** |
 
-**All comments, corrected (n = 961).** The moved letter is an association asking for changes, so only the Association row (176 to 177) and the request-for-changes column (461 to 462) change.
+**All comments, corrected (n = 961).** The moved letter is an association asking for changes, so only the Association row (174 to 175) and the request-for-changes column (461 to 462) change.
 
 | Commenter type | Oppose | Request for changes | Mixed | Support | Unclear / off-topic | Total |
 |---|---:|---:|---:|---:|---:|---:|
 | Hospital / health system | 41 | 138 | 94 | 0 | 0 | 273 |
-| Other | 128 | 107 | 10 | 3 | 1 | 249 |
-| Individual | 90 | 94 | 0 | 5 | 8 | 197 |
-| Association | 63 | 95 | 15 | 0 | 4 | 177 |
+| Other | 128 | 107 | 10 | 3 | 0 | 248 |
+| Individual | 90 | 94 | 0 | 5 | 7 | 196 |
+| Association | 63 | 95 | 15 | 0 | 2 | 175 |
 | Advocacy group | 23 | 9 | 0 | 6 | 0 | 38 |
 | State agency | 6 | 19 | 2 | 0 | 0 | 27 |
+| Off-topic (addresses neither rule) | 0 | 0 | 0 | 0 | 4 | 4 |
 | **Total** | **351** | **462** | **121** | **14** | **13** | **961** |
 
 **Distinct texts, as filed (n = 660)**
 
 | Commenter type | Oppose | Request for changes | Mixed | Support | Unclear / off-topic | Total |
 |---|---:|---:|---:|---:|---:|---:|
-| Other | 89 | 74 | 2 | 3 | 1 | 169 |
-| Association | 56 | 80 | 10 | 0 | 4 | 150 |
+| Other | 89 | 74 | 2 | 3 | 0 | 168 |
+| Association | 56 | 80 | 10 | 0 | 2 | 148 |
 | Hospital / health system | 31 | 103 | 8 | 0 | 0 | 142 |
-| Individual | 83 | 40 | 0 | 5 | 8 | 136 |
+| Individual | 83 | 40 | 0 | 5 | 7 | 135 |
 | Advocacy group | 22 | 8 | 0 | 6 | 0 | 36 |
 | State agency | 6 | 19 | 2 | 0 | 0 | 27 |
+| Off-topic (addresses neither rule) | 0 | 0 | 0 | 0 | 4 | 4 |
 | **Total** | **287** | **324** | **22** | **14** | **13** | **660** |
 
 **Distinct texts, corrected (n = 660).** Unchanged: the moved letter is an exact copy of `1916-0958`, which is already counted.
@@ -157,7 +173,7 @@ The 14 supporters were six fiscally conservative think tanks, five individuals, 
 * Arnold Ventures (`1916-0117`). **Verbatim:** “We strongly support CMS’s implementation of limits on SDPs, which will break the tie between Medicaid and ACR and curb the rapidly rising use…”
 * Others in support: Competitive Enterprise Institute (`1916-0817`, supporting "several of the provisions"), Americans for Prosperity (`1916-0883`), Center for a Free Economy (`1916-0101`) and Global Medical Response (`1916-0332`).
 
-### Individuals (197 comments)
+### Individuals (196 comments)
 Paraphrase: Most individual comments are short and oppose Medicaid "cuts" in general, often from pediatricians, behavioral health clinicians, home-care aides and chronic-illness patients. Many do not engage the rule's provisions. A coordinated 11-letter chronic-illness campaign (`1916-0174`) asks CMS to weigh patients' perspectives. Eight sitting state legislators filed in their official capacity (counted as state agencies). They argued the rule usurps state authority (`1916-0259`, `1916-0379`, `1916-0960`); one puts the cuts at nearly $800 billion (`1916-0204`). An anonymous pediatrician (`1916-0009`). **Verbatim:** “The proposed cuts in Medicaid funding proposed by CMS will have a severe effect on the 50% of kids that I take care of…”
 
 ## Dollar figures and impact estimates cited (CMS-2449-P)
@@ -233,7 +249,7 @@ Pattern **[inferred]**: national figures in this docket are almost all citations
 * **Fix the ambulance fee schedule instead.** The International Association of Fire Fighters (`1916-0444`) urges a holistic reform of the Medicare and Medicaid ambulance fee schedules rather than tying Medicaid to Medicare's rates.
 * **Narrow support from a value-based-care company.** Diverge Health (`1916-0405`) supports guardrails on SDPs that **Verbatim:** “…exist to enrich a narrow set of providers with no clear connection to…” while objecting to how the limits treat value-based arrangements **[inferred from its position tag; not read in full]**.
 * **Individual supporter on debt grounds.** Leona Herndon (`1916-0048`). **Verbatim:** “…which I greatly support because this country needs to reduce our debt.”
-* **Off-topic or misfiled.** Three nursing/coaching organizations (`1916-0851`, `1916-0937`, `1916-0941`) comment on national payment for health-coaching billing codes (CPT 0591T–0593T), which is not part of this rule **[inferred: they belong to a different rulemaking]**. Conversely, the California Behavioral Health Association's CMS-2449-P letter was filed a second time in the CMS-2452-P docket (`2476-0199`, an exact copy of `1916-0958`); the methods note covers the corrected totals. A work-requirements question from an individual (`1916-0031`) also does not concern this rule.
+* **Off-topic or misfiled.** Three nursing/coaching organizations (`1916-0851`, `1916-0937`, `1916-0941`) comment on national payment for health-coaching billing codes (CPT 0591T–0593T), which is not part of this rule **[inferred: they belong to a different rulemaking]**. They are counted as off-topic in the type and position tables. Conversely, the California Behavioral Health Association's CMS-2449-P letter was filed a second time in the CMS-2452-P docket (`2476-0199`, an exact copy of `1916-0958`); the methods note covers the corrected totals. A work-requirements question from an individual (`1916-0031`) also does not concern this rule and is counted as off-topic.
 
 ---
 
@@ -247,12 +263,13 @@ Pattern **[inferred]**: national figures in this docket are almost all citations
 |---|---:|---:|---:|---:|---:|---:|
 | Association | 19 | 60 | 4 | 0 | 0 | 83 |
 | Advocacy group | 19 | 11 | 0 | 3 | 0 | 33 |
-| Individual | 22 | 9 | 1 | 1 | 0 | 33 |
+| Individual | 20 | 9 | 1 | 1 | 0 | 31 |
 | Hospital / health system | 3 | 25 | 2 | 0 | 0 | 30 |
 | State agency | 9 | 12 | 1 | 0 | 0 | 22 |
 | Other | 2 | 10 | 0 | 0 | 0 | 12 |
 | MCO | 1 | 0 | 0 | 0 | 0 | 1 |
-| **Total** | **75** | **127** | **8** | **4** | **0** | **214** |
+| Off-topic (addresses neither rule) | 0 | 0 | 0 | 0 | 2 | 2 |
+| **Total** | **73** | **127** | **8** | **4** | **2** | **214** |
 
 **All comments, corrected (n = 213).** Removing the CMS-2449-P letter `2476-0199` changes only the Association row (83 to 82) and the request-for-changes column (127 to 126).
 
@@ -260,16 +277,17 @@ Pattern **[inferred]**: national figures in this docket are almost all citations
 |---|---:|---:|---:|---:|---:|---:|
 | Association | 19 | 59 | 4 | 0 | 0 | 82 |
 | Advocacy group | 19 | 11 | 0 | 3 | 0 | 33 |
-| Individual | 22 | 9 | 1 | 1 | 0 | 33 |
+| Individual | 20 | 9 | 1 | 1 | 0 | 31 |
 | Hospital / health system | 3 | 25 | 2 | 0 | 0 | 30 |
 | State agency | 9 | 12 | 1 | 0 | 0 | 22 |
 | Other | 2 | 10 | 0 | 0 | 0 | 12 |
 | MCO | 1 | 0 | 0 | 0 | 0 | 1 |
-| **Total** | **75** | **126** | **8** | **4** | **0** | **213** |
+| Off-topic (addresses neither rule) | 0 | 0 | 0 | 0 | 2 | 2 |
+| **Total** | **73** | **126** | **8** | **4** | **2** | **213** |
 
-**Distinct texts, as filed (n = 188):** oppose 66, request for changes 110, mixed 8, support 4. By type: association 72, advocacy group 31, individual 28, hospital / health system 26, state agency 22, other 8, MCO 1.
+**Distinct texts, as filed (n = 188):** oppose 64, request for changes 110, mixed 8, support 4, unclear / off-topic 2. By type: association 72, advocacy group 31, hospital / health system 26, individual 26, state agency 22, other 8, MCO 1, off-topic 2.
 
-**Distinct texts, corrected (n = 187):** oppose 66, request for changes 109, mixed 8, support 4. By type: association 71, advocacy group 31, individual 28, hospital / health system 26, state agency 22, other 8, MCO 1.
+**Distinct texts, corrected (n = 187):** oppose 64, request for changes 109, mixed 8, support 4, unclear / off-topic 2. By type: association 71, advocacy group 31, hospital / health system 26, individual 26, state agency 22, other 8, MCO 1, off-topic 2.
 
 Campaigns are small: 10 campaigns cover 36 comments, as filed and corrected. The largest is 11 behavioral health and IDD provider letters (`2476-0136`, Ability Network of Delaware).
 
@@ -378,4 +396,4 @@ Pattern **[inferred]**: CMS-2452-P commenters lean even more heavily on the RIA'
 * **Non-Medicaid assessments caught by the insurer class.** PATH Foundation (`2476-0119`) asks that SUVP assessments be excluded. **Verbatim:** “…establish conclusively that SUVP assessments are not considered health care-related taxes under federal Medicaid law.” A Washington state agency (`2476-0202`) asks the same for its universal childhood vaccine program's assessment. Marketplaces and vendors (HealthSource RI `2476-0177`, Access Health CT `2476-0132`, Vimo `2476-0024`) raise exchange user fees.
 * **Supporters cite rural closures.** Paragon (`2476-0130`) claims provider-tax states had more than three times the rural hospital closures of non-provider-tax states (**Verbatim:** “…rural hospital closures per 10 million residents.”). Opponents argue the opposite: provider taxes sustain rural hospitals.
 * **Cross-rule interaction.** Several commenters (Kentucky Health Collaborative `2476-0056`, CBPP `2476-0033`, CHLA Medical Group `2476-0212`) argue the two rules must be analyzed together, since much of the SDP spending capped by CMS-2449-P is financed by the taxes capped here.
-* **Off-topic individual comments.** Two individuals (`2476-0002`, `2476-0017`) write about Medicaid work requirements rather than provider taxes. Both are still counted as "oppose" in the tables above.
+* **Off-topic individual comments.** Two individuals (`2476-0002`, `2476-0017`) write about Medicaid work requirements rather than provider taxes. Both are counted as off-topic in the tables above (they were "oppose" before the reclassification).

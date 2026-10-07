@@ -20,7 +20,9 @@ OUT = Path("output")
 DOCKETS = [("CMS-2026-1916", "CMS-2449-P"), ("CMS-2026-2476", "CMS-2452-P")]
 POSITIONS = ["oppose", "request for changes", "mixed", "support", "unclear / off-topic"]
 TYPE_LABEL = {"hospital/health system": "Hospital / health system", "association": "Association", "individual": "Individual",
-              "advocacy group": "Advocacy group", "state agency": "State agency", "MCO": "MCO", "other": "Other"}
+              "advocacy group": "Advocacy group", "state agency": "State agency", "MCO": "MCO", "other": "Other",
+              "off-topic": "Off-topic (addresses neither rule)"}
+TYPES = ["hospital/health system", "association", "individual", "advocacy group", "state agency", "MCO", "other", "off-topic"]
 
 
 def read(name):
@@ -72,6 +74,9 @@ def totals():
         count(tagged, "docket_corrected", lambda r: r["campaign_role_corrected"] == "representative"))
     add(n, "comments inside campaigns", count(tagged, "docket", lambda r: int(r["campaign_size"]) > 1),
         count(tagged, "docket_corrected", lambda r: int(r["campaign_size_corrected"]) > 1))
+    for typ in TYPES:
+        add(n, f"comments, commenter type = {typ}", count(tagged, "docket", lambda r, t=typ: r["commenter_type"] == t),
+            count(tagged, "docket_corrected", lambda r, t=typ: r["commenter_type"] == t))
     for pos in POSITIONS:
         add(n, f"comments, position = {pos}", count(tagged, "docket", lambda r, p=pos: r["position"] == p),
             count(tagged, "docket_corrected", lambda r, p=pos: r["position"] == p))
@@ -125,7 +130,7 @@ def markdown_tables():
                 by = collections.defaultdict(collections.Counter)
                 for r in rows:
                     by[r["commenter_type"]][r["position"]] += 1
-                order = sorted(by, key=lambda t: (-sum(by[t].values()), t))
+                order = sorted(by, key=lambda t: (t == "off-topic", -sum(by[t].values()), t))   # off-topic row last
                 print(f"\n[{rule} | {label} | {view}] n = {len(rows)}\n")
                 print("| Commenter type | Oppose | Request for changes | Mixed | Support | Unclear / off-topic | Total |")
                 print("|---|---:|---:|---:|---:|---:|---:|")
