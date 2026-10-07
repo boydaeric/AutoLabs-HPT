@@ -34,6 +34,7 @@ RESULT_CAP = 5000        # 20 pages x 250
 DATE_FMT = "%Y-%m-%d %H:%M:%S"   # filter dates are interpreted as US Eastern
 SLICE_START = datetime(2025, 12, 1)
 DATA = Path("data")
+BROWSER_UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36"
 
 
 def log(msg):
@@ -261,6 +262,8 @@ def fetch_attachments(d):
     adir = d / "attachments"
     adir.mkdir(exist_ok=True)
     session = requests.Session()
+    # downloads.regulations.gov (CloudFront) 403s the default python-requests UA
+    session.headers["User-Agent"] = BROWSER_UA
     failures = {}
     for path in sorted(d.glob("*.json")):
         if path.name.startswith("_"):
