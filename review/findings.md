@@ -9,7 +9,7 @@
   * CMS-2452-P: 214 comments as filed / 213 corrected; 188 distinct texts as filed / 187 corrected.
   * The corrected view moves `CMS-2026-2476-0199`, the California Behavioral Health Association's CMS-2449-P letter, which is an exact copy of `CMS-2026-1916-0958`. 1,174 comments in total either way.
 * **Compared against.** The Evidence Ledger v3 (`260927_Evidence_Ledger_v3.md` and `260927_Evidence_Ledger_SectionA_v3.xlsx`; the spreadsheet's 201 Section A rows match the markdown), `output/evidence_ledger_delta.csv`, and the verified rows of `output/verification_log.csv`.
-* **`review/article_draft.md` was not available.** It is not in the repository or on any branch. Article sections are therefore given as the published note's sections, as the ledger maps them (synced to note v9): sec. 1-7, footnotes, figures and ledger row IDs. Re-map once the draft is in place.
+* **Sections are mapped to draft v16** (`review/article_draft.md`, v16; the block between the REVIEW-NOTES markers was not used except to cross-reference its “Still open” list). The earlier mapping was to the published note v9 as the ledger cites it. Three columns were added: **old → new section** (filled where the section changed), **v16 flag** (where v16's wording, numbering or tags differ from Evidence Ledger v3 or from the comments; where the v16 text matches the ledger the flag says so) and **review-notes “Still open” item**. No other field was changed. v16 differences that no finding covers are in the section “v16 differences not tied to a finding” below and in `review/findings_v16_unmapped.csv`.
 * **What counts as a finding.** Anything in the comments that confirms, contradicts, adds detail to or opens a new angle on a claim the ledger records. No article text is drafted here.
 
 ## Conventions applied
@@ -23,42 +23,42 @@
 
 30 findings. By effect: adds detail 12, confirms 11, contradicts 4, new angle 3. By candidate use: lead 1, support 12, footnote 11, hold 6.
 
-| ID | Rule | Effect | Use | Section | Finding |
+| ID | Rule | Effect | Use | v16 section | Finding |
 |---|---|---|---|---|---|
-| F-001 | CMS-2452-P | adds detail | support | status box; sec. 6, gap 6 and gap table; Limitations | The CMS-2452-P comment record is now complete as posted: 214 comments as filed / 213 corrected, of which the 186 numbered -0030 to -0215 were posted on September 22, 2026, after the 28 comments (-0002 to -0029) the ledger reviewed. |
-| F-002 | CMS-2452-P | adds detail | footnote | sec. 3b | Of the six organizations whose September 21 letters the ledger could not find on public sites, four filed in the docket: the Children's Hospital Association, NAMD, the Texas Hospital Association and the California Hospital Association. The Illinois Health and Hospital Association and the Illinois Attorney General did not, and MACPAC's letter, which the ledger read on MACPAC's site, is not in the posted docket either. |
-| F-003 | CMS-2449-P | contradicts | footnote | sec. 1 | The ledger records 6,344 comments 'posted' in the CMS-2449-P docket, but the regulations.gov API returned 960 posted comments for that docket (961 corrected), so the 6,344 is likely a different counter, such as comments received. |
-| F-004 | CMS-2452-P | confirms | support | sec. 1 | Commenters cite CBO's Section 71115 estimate on two different measures with inconsistent labels. Some use $191.1 billion in outlays. Others use $183 billion: a three-letter campaign calls it CBO's 'pre-enactment' estimate, the Pennsylvania human services department calls it a deficit reduction, HAP leaves it unattributed, and AHCCCS presents the two as a '$183 billion to $191 billion' range. |
-| F-005 | CMS-2452-P | confirms | support | sec. 1 and footnote 4, fifth axis | Commenters quote CMS's RIA as assuming the provider tax rule has no effect on Medicaid enrollment, and CBPP says the assumption holds across all scenarios. This supports the CMS limb of the note's enrollment axis, which the ledger rates single-source. |
-| F-006 | both | new angle | hold | sec. 1 and status box | Commenters bring a third, already-final rule into the accounting: the Section 71117 uniformity-waiver rule. BCBSA says CMS's CMS-2452-P analysis considers it alongside the two proposed rules; CBPP sets its CMS estimate against CBO's; and Iroquois blames it for a $1.5 billion shortfall in New York's MCO tax. |
-| F-007 | CMS-2452-P | contradicts | support | sec. 2.3 and Figure 4 note | Commenters quote CMS's primary scenario as assuming states offset 30 percent of lost provider tax revenue, citing 91 FR 46591. The ledger says the primary-scenario narrative carries no offset parameter. |
-| F-008 | CMS-2452-P | adds detail | hold | footnote 4, fifth axis 'enrollment and behavioral assumptions' | The Texas Hospital Association says CBO assumed states would replace 50 percent of lost financing when it scored Section 71115, against CMS's 30 percent: a behavioral-assumption difference between the two estimates the note compares. |
-| F-009 | both | confirms | footnote | sec. 2.3 | Commenters restate CMS's tax-financing parameter as a share of spending: the Minnesota Hospital Association calls the 65 percent a share of 'state directed payment spending', and NRHA applies CMS's 55-75 percent range to the $774.8 billion SDP reduction. |
-| F-010 | CMS-2452-P | confirms | footnote | sec. 2.2-2.4 | Two commenters cite CMS's interaction-inclusive figures as the provider tax rule's effect: Saving Hospitals Saves Lives ($90.9 billion federal, and a $136.1 billion net provider reduction in the high scenario) and NRHA ($90.9 billion federal and $147.5 billion to states, from the accounting statement). |
-| F-011 | CMS-2452-P | confirms | support | Summary of findings; sec. 2.4, cautions 2 and 4; Figures 3 and 5 | CHLA Medical Group explains that the +$21.7 billion arises because CMS's interaction analysis assigns most of the payment cut to the SDP rule. It quotes CMS saying the two rules together 'would still be a significant reduction to provider payments', a CMS sentence the ledger does not record. |
-| F-012 | CMS-2452-P | adds detail | footnote | sec. 2.4, caution 2 | CHLA Medical Group allocates CMS's provider line to hospitals by their 63 percent share of 2026 provider tax revenue, giving about $138 billion over ten years. It labels this 'an illustrative allocation, not a CMS estimate', which is the disclosed distributional assumption the note says any hospital figure needs. |
-| F-013 | CMS-2452-P | confirms | support | sec. 3a | Four commenters, including a state Medicaid agency and a state hospital association, describe CMS's $220.3 billion as a cut in Medicaid payments to providers. Only CHLA Medical Group (and, earlier, Georgetown CCF) describes it as net of the $163.7 billion in tax relief. |
-| F-014 | CMS-2452-P | confirms | support | sec. 3b | One comment in the full CMS-2452-P record uses the $681 billion: an individual restates it as a hospital loss, 'in addition to' a $340 billion statutory cost, with no source and no derivation. |
-| F-015 | CMS-2452-P | contradicts | lead | sec. 3b, 'The core problem', and footnote 4 | CBPP sets CMS's combined, overlap-adjusted federal estimate ($601 billion) against CBO's $341 billion. In a footnote it argues that adjusting for the extra year, the interaction and the dollar basis would leave a large gap, because two of the three adjustments lower CMS's figure. |
-| F-016 | CMS-2449-P | confirms | support | sec. 3b and footnote 4 | Setting CMS's $510 billion against CBO's $149.4 billion is the dominant quantitative argument in the SDP docket, mostly offered as proof that the rule exceeds the statute. Lee County Community Hospital even computes a $360.7 billion difference. |
-| F-017 | CMS-2452-P | adds detail | footnote | sec. 3c and the KFF $155 billion | Two national trade groups misstate CMS's interaction-adjusted federal figures. AHIP calls the $154.9 billion federal overlap the reduction remaining after the SDP rule (CMS's figure for that is $90.9 billion). BCBSA gives CMS's range as $9.1 to $90.9 billion, leaving out the $191.8 billion high scenario. |
-| F-018 | CMS-2449-P | adds detail | support | sec. 3c | In the SDP docket, the argument that CMS should measure Medicaid payments net of provider taxes is made by the American Hospital Association, a state Medicaid agency (South Carolina DHHS) and a template used by Texas and South Carolina hospitals. That is beyond the six sources the note credits with the gross/net distinction. |
-| F-019 | CMS-2449-P | adds detail | footnote | sec. 3c | FAH's argument that CMS should account for the provider taxes that partly finance SDPs is in its CMS-2449-P letter (1916-0676) on page 2, not page 1 as the note cites. The letter confirms the substance. |
-| F-020 | both | confirms | footnote | footnote 1 | Commenters reproduce CMS's narrative state figure of $264.4 billion for the SDP rule (FEHP, BCBSA, Paragon), while the one commenter citing CMS-2452-P's restatement uses the table-consistent $264.7 billion. |
-| F-021 | CMS-2452-P | confirms | footnote | sec. 3d | Paragon Health Institute carries ASPE's $502-875 billion benefit to non-Medicaid payers and 3.5 percent price effect into the record as support for the rule. It attributes them, correctly, to the 2025 law's reforms. |
-| F-022 | CMS-2452-P | contradicts | support | sec. 4 and Figure 6 | The Idaho Hospital Association says Idaho's inpatient hospital assessment already sits above the phased-down threshold class by class, while outpatient is about 1 percent of net patient revenue. If so, the phase-down reaches Idaho, which the note's grouping places in Group E without the phase-down. |
-| F-023 | both | adds detail | hold | sec. 4 and Figure 6 | State hospital associations and others put their own dollar figures on several states that the note's grouping flags for data quality or leaves blank. These include Missouri and Minnesota (no estimable above-limit figure) and Florida, Texas, Tennessee and Mississippi (flagged Group D). |
-| F-024 | CMS-2452-P | adds detail | support | sec. 7, items 6 and 7 | Texas commenters tie the directed-payment approval dispute to Texas's local provider participation funds. CHAT says CMS is withholding approval of Texas SDP preprints over hold-harmless concerns, using a test CHAT says a federal court has enjoined. TEHP cites CMS's 'Round 1-4' questions on the SFY2027 CHIRP preprint. |
-| F-025 | CMS-2452-P | adds detail | footnote | sec. 4, Group D and Texas panel | The Texas Hospital Association says Texas has no statewide hospital tax: its hospital Medicaid payments are funded almost entirely by intergovernmental transfers and 35 local provider assessments, which the state says support about $12 billion in Medicaid payments a year. |
-| F-026 | CMS-2449-P | confirms | support | sec. 5, rural paragraph | Many CMS-2449-P commenters, including the Virginia Medicaid agency, argue that defaulting the payment limit to the State plan rate where no Medicare rate exists would freeze payments at the levels SDPs were meant to fix. That supports the note's reading that the default could be more restrictive, not just more uncertain. |
-| F-027 | CMS-2452-P | new angle | hold | sec. 5 | NRHA cites third-party figures on rural hospital finances: nearly half operating at negative margins and a median margin of about 1 percent (Chartis). That is the kind of evidence the note says its cited studies do not provide. |
-| F-028 | both | adds detail | footnote | sec. 7, item 11 | Many commenters in both dockets set out the legal arguments a challenge would use (Loper Bright, the APA, exceeding statutory authority), and one says CMS is already bound by an injunction on the hold-harmless test. No comment reports a filed suit against either rule. |
-| F-029 | CMS-2449-P | new angle | hold | sec. 2.4 caution 2 | The largest single bloc in the SDP docket is fire-based and public EMS agencies opposing Medicare-based limits on GEMT payments. This provider class is inside CMS's provider aggregate but outside the note's hospital-focused exposure analysis. |
-| F-030 | CMS-2449-P | adds detail | hold | sec. 5, psychiatric beds and IMD paragraph | The Manhattan Institute flags that the proposed FFS limit's exception for IMDs and psychiatric residential treatment facilities depends on cross-references that do not name them, a drafting gap relevant to the note's point about IMDs and Medicaid adults. |
+| F-001 | CMS-2452-P | adds detail | support | Appendix C, ‘Limits of the analysis and the five data gaps’, and Appendix I, ‘Status as of [DATE]’ | The CMS-2452-P comment record is now complete as posted: 214 comments as filed / 213 corrected, of which the 186 numbered -0030 to -0215 were posted on September 22, 2026, after the 28 comments (-0002 to -0029) the ledger reviewed. |
+| F-002 | CMS-2452-P | adds detail | footnote | sec. 5, ‘POLITICO’s $681 billion and the Congressional Budget Office’s $340.5 billion’ | Of the six organizations whose September 21 letters the ledger could not find on public sites, four filed in the docket: the Children's Hospital Association, NAMD, the Texas Hospital Association and the California Hospital Association. The Illinois Health and Hospital Association and the Illinois Attorney General did not, and MACPAC's letter, which the ledger read on MACPAC's site, is not in the posted docket either. |
+| F-003 | CMS-2449-P | contradicts | footnote | Appendix I, ‘Status as of [DATE]’ | The ledger records 6,344 comments 'posted' in the CMS-2449-P docket, but the regulations.gov API returned 960 posted comments for that docket (961 corrected), so the 6,344 is likely a different counter, such as comments received. |
+| F-004 | CMS-2452-P | confirms | support | sec. 5, ‘POLITICO’s $681 billion and the Congressional Budget Office’s $340.5 billion’ | Commenters cite CBO's Section 71115 estimate on two different measures with inconsistent labels. Some use $191.1 billion in outlays. Others use $183 billion: a three-letter campaign calls it CBO's 'pre-enactment' estimate, the Pennsylvania human services department calls it a deficit reduction, HAP leaves it unattributed, and AHCCCS presents the two as a '$183 billion to $191 billion' range. |
+| F-005 | CMS-2452-P | confirms | support | sec. 5, ‘POLITICO’s $681 billion and the Congressional Budget Office’s $340.5 billion’ | Commenters quote CMS's RIA as assuming the provider tax rule has no effect on Medicaid enrollment, and CBPP says the assumption holds across all scenarios. This supports the CMS limb of the note's enrollment axis, which the ledger rates single-source. |
+| F-006 | both | new angle | hold | sec. 1, ‘1. The OBBBA and the two proposed rules’; sec. 3, ‘3. CMS’s estimates for each rule’ | Commenters bring a third, already-final rule into the accounting: the Section 71117 uniformity-waiver rule. BCBSA says CMS's CMS-2452-P analysis considers it alongside the two proposed rules; CBPP sets its CMS estimate against CBO's; and Iroquois blames it for a $1.5 billion shortfall in New York's MCO tax. |
+| F-007 | CMS-2452-P | contradicts | support | sec. 3, ‘3. CMS’s estimates for each rule’ | Commenters quote CMS's primary scenario as assuming states offset 30 percent of lost provider tax revenue, citing 91 FR 46591. The ledger says the primary-scenario narrative carries no offset parameter. |
+| F-008 | CMS-2452-P | adds detail | hold | sec. 5, ‘POLITICO’s $681 billion and the Congressional Budget Office’s $340.5 billion’ | The Texas Hospital Association says CBO assumed states would replace 50 percent of lost financing when it scored Section 71115, against CMS's 30 percent: a behavioral-assumption difference between the two estimates the note compares. |
+| F-009 | both | confirms | footnote | sec. 2, ‘2. What links the two rules’ | Commenters restate CMS's tax-financing parameter as a share of spending: the Minnesota Hospital Association calls the 65 percent a share of 'state directed payment spending', and NRHA applies CMS's 55-75 percent range to the $774.8 billion SDP reduction. |
+| F-010 | CMS-2452-P | confirms | footnote | sec. 5, ‘The provider tax rule’s two figures for providers’ and the sec. 5 table; sec. 3, ‘3. CMS’s estimates for each rule’ | Two commenters cite CMS's interaction-inclusive figures as the provider tax rule's effect: Saving Hospitals Saves Lives ($90.9 billion federal, and a $136.1 billion net provider reduction in the high scenario) and NRHA ($90.9 billion federal and $147.5 billion to states, from the accounting statement). |
+| F-011 | CMS-2452-P | confirms | support | sec. 4, ‘4. The net effect on providers’, and sec. 5, ‘The provider tax rule’s two figures for providers’ | CHLA Medical Group explains that the +$21.7 billion arises because CMS's interaction analysis assigns most of the payment cut to the SDP rule. It quotes CMS saying the two rules together 'would still be a significant reduction to provider payments', a CMS sentence the ledger does not record. |
+| F-012 | CMS-2452-P | adds detail | footnote | sec. 4, ‘4. The net effect on providers’ | CHLA Medical Group allocates CMS's provider line to hospitals by their 63 percent share of 2026 provider tax revenue, giving about $138 billion over ten years. It labels this 'an illustrative allocation, not a CMS estimate', which is the disclosed distributional assumption the note says any hospital figure needs. |
+| F-013 | CMS-2452-P | confirms | support | sec. 5, ‘HFMA’s $56.6 billion’ and ‘The provider tax rule’s two figures for providers’ | Four commenters, including a state Medicaid agency and a state hospital association, describe CMS's $220.3 billion as a cut in Medicaid payments to providers. Only CHLA Medical Group (and, earlier, Georgetown CCF) describes it as net of the $163.7 billion in tax relief. |
+| F-014 | CMS-2452-P | confirms | support | sec. 5, ‘POLITICO’s $681 billion and the Congressional Budget Office’s $340.5 billion’ | One comment in the full CMS-2452-P record uses the $681 billion: an individual restates it as a hospital loss, 'in addition to' a $340 billion statutory cost, with no source and no derivation. |
+| F-015 | CMS-2452-P | contradicts | lead | sec. 5, ‘POLITICO’s $681 billion and the Congressional Budget Office’s $340.5 billion’ | CBPP sets CMS's combined, overlap-adjusted federal estimate ($601 billion) against CBO's $341 billion. In a footnote it argues that adjusting for the extra year, the interaction and the dollar basis would leave a large gap, because two of the three adjustments lower CMS's figure. |
+| F-016 | CMS-2449-P | confirms | support | sec. 5, ‘POLITICO’s $681 billion and the Congressional Budget Office’s $340.5 billion’ | Setting CMS's $510 billion against CBO's $149.4 billion is the dominant quantitative argument in the SDP docket, mostly offered as proof that the rule exceeds the statute. Lee County Community Hospital even computes a $360.7 billion difference. |
+| F-017 | CMS-2452-P | adds detail | footnote | sec. 5, ‘KFF’s $155 billion’; sec. 2, ‘2. What links the two rules’ | Two national trade groups misstate CMS's interaction-adjusted federal figures. AHIP calls the $154.9 billion federal overlap the reduction remaining after the SDP rule (CMS's figure for that is $90.9 billion). BCBSA gives CMS's range as $9.1 to $90.9 billion, leaving out the $191.8 billion high scenario. |
+| F-018 | CMS-2449-P | adds detail | support | sec. 5, ‘ASPE’s $891 billion’ | In the SDP docket, the argument that CMS should measure Medicaid payments net of provider taxes is made by the American Hospital Association, a state Medicaid agency (South Carolina DHHS) and a template used by Texas and South Carolina hospitals. That is beyond the six sources the note credits with the gross/net distinction. |
+| F-019 | CMS-2449-P | adds detail | footnote | sec. 5, ‘ASPE’s $891 billion’ | FAH's argument that CMS should account for the provider taxes that partly finance SDPs is in its CMS-2449-P letter (1916-0676) on page 2, not page 1 as the note cites. The letter confirms the substance. |
+| F-020 | both | confirms | footnote | Appendix E, ‘CMS printing errors, citation traps and rounding’ | Commenters reproduce CMS's narrative state figure of $264.4 billion for the SDP rule (FEHP, BCBSA, Paragon), while the one commenter citing CMS-2452-P's restatement uses the table-consistent $264.7 billion. |
+| F-021 | CMS-2452-P | confirms | footnote | sec. 5, ‘ASPE’s $891 billion’ | Paragon Health Institute carries ASPE's $502-875 billion benefit to non-Medicaid payers and 3.5 percent price effect into the record as support for the rule. It attributes them, correctly, to the 2025 law's reforms. |
+| F-022 | CMS-2452-P | contradicts | support | sec. 6, ‘6. Where exposure is concentrated’ | The Idaho Hospital Association says Idaho's inpatient hospital assessment already sits above the phased-down threshold class by class, while outpatient is about 1 percent of net patient revenue. If so, the phase-down reaches Idaho, which the note's grouping places in Group E without the phase-down. |
+| F-023 | both | adds detail | hold | sec. 6, ‘6. Where exposure is concentrated’ | State hospital associations and others put their own dollar figures on several states that the note's grouping flags for data quality or leaves blank. These include Missouri and Minnesota (no estimable above-limit figure) and Florida, Texas, Tennessee and Mississippi (flagged Group D). |
+| F-024 | CMS-2452-P | adds detail | support | sec. 9, ‘9. What to watch’, items 5 and 6 under ‘Events that would change CMS’s estimates or the rules’ | Texas commenters tie the directed-payment approval dispute to Texas's local provider participation funds. CHAT says CMS is withholding approval of Texas SDP preprints over hold-harmless concerns, using a test CHAT says a federal court has enjoined. TEHP cites CMS's 'Round 1-4' questions on the SFY2027 CHIRP preprint. |
+| F-025 | CMS-2452-P | adds detail | footnote | sec. 6, ‘6. Where exposure is concentrated’ | The Texas Hospital Association says Texas has no statewide hospital tax: its hospital Medicaid payments are funded almost entirely by intergovernmental transfers and 35 local provider assessments, which the state says support about $12 billion in Medicaid payments a year. |
+| F-026 | CMS-2449-P | confirms | support | sec. 8, ‘Rural hospitals have more time, not immunity’ | Many CMS-2449-P commenters, including the Virginia Medicaid agency, argue that defaulting the payment limit to the State plan rate where no Medicare rate exists would freeze payments at the levels SDPs were meant to fix. That supports the note's reading that the default could be more restrictive, not just more uncertain. |
+| F-027 | CMS-2452-P | new angle | hold | sec. 8, ‘Rural hospitals have more time, not immunity’ | NRHA cites third-party figures on rural hospital finances: nearly half operating at negative margins and a median margin of about 1 percent (Chartis). That is the kind of evidence the note says its cited studies do not provide. |
+| F-028 | both | adds detail | footnote | sec. 9, ‘9. What to watch’, item 7 under ‘Events that would change CMS’s estimates or the rules’ | Many commenters in both dockets set out the legal arguments a challenge would use (Loper Bright, the APA, exceeding statutory authority), and one says CMS is already bound by an injunction on the hold-harmless test. No comment reports a filed suit against either rule. |
+| F-029 | CMS-2449-P | new angle | hold | sec. 4, ‘4. The net effect on providers’ | The largest single bloc in the SDP docket is fire-based and public EMS agencies opposing Medicare-based limits on GEMT payments. This provider class is inside CMS's provider aggregate but outside the note's hospital-focused exposure analysis. |
+| F-030 | CMS-2449-P | adds detail | hold | sec. 8, ‘8. Services already under strain’ | The Manhattan Institute flags that the proposed FFS limit's exception for IMDs and psychiatric residential treatment facilities depends on cross-references that do not name them, a drafting gap relevant to the note's point about IMDs and Medicaid adults. |
 
 **Read first:**
 
-* **F-015 (lead).** CBPP publishes the same CMS-versus-CBO comparison the note makes in sec. 3b and argues that the gap survives comparability adjustments. This is a direct counter-argument the note does not yet answer.
+* **F-015 (lead).** CBPP publishes the same CMS-versus-CBO comparison the note makes (v16 sec. 5) and argues that the gap survives comparability adjustments. This is a direct counter-argument the note does not yet answer.
 * **F-007.** Commenters quote a 30 percent primary-scenario offset at 91 FR 46591, which contradicts the ledger's description of the scenario parameters (CE-32).
 * **F-022.** Idaho's own hospital association describes a class-level tax position that would put Idaho within the phase-down's reach, against the note's Group E reading.
 * **F-003.** The ledger's 6,344 'posted' comments for the SDP docket do not match the API's 960 posted comments.
@@ -75,7 +75,10 @@
 * **Figure:** Counts, docket CMS-2026-2476: 214 comments as filed / 213 corrected; 188 distinct texts as filed / 187 corrected; 10 campaigns covering 36 comments in both views. Positions as filed / corrected: oppose 73/73, request for changes 127/126, mixed 8/8, support 4/4, unclear or off-topic 2/2. Collected from the regulations.gov v4 API on October 7, 2026; the API's reported total (214) matched the download.
 * **Verification:** Counts reproduce from output/comments_tagged.csv and output/docket_totals.csv. Posting dates are the API's postedDate field: the 186 later comments all carry 2026-09-22.
 * **Distinct texts vs campaign copies:** Distinct texts 188 as filed / 187 corrected; comments inside campaigns 36 in both views.
-* **Article section:** Note status box; sec. 6, gap 6 and gap table; Limitations (ledger RM-21, RM-22, NC-14, C-11, B-7, monitoring trigger M-1).
+* **Article section:** v16 Appendix C, ‘Limits of the analysis and the five data gaps’, and Appendix I, ‘Status as of [DATE]’ (comment periods and counts), both to be written; body: sec. 1, ‘1. The OBBBA and the two proposed rules’ (comment-close dates only) (ledger RM-21, RM-22, NC-14, C-11, B-7, monitoring trigger M-1)
+* **Old → new section:** Note status box; sec. 6, gap 6 and gap table; Limitations (ledger RM-21, RM-22, NC-14, C-11, B-7, monitoring trigger M-1). → v16 Appendix C, ‘Limits of the analysis and the five data gaps’, and Appendix I, ‘Status as of [DATE]’ (comment periods and counts), both to be written; body: sec. 1, ‘1. The OBBBA and the two proposed rules’ (comment-close dates only)
+* **v16 flag:** v16 has no status box, gap table or statement of which posted comments were reviewed; Appendices C and I are not written, so ledger RM-22/NC-14's scope (posted comments reviewed only for the $681 billion figure) has no v16 counterpart. Appendix C says ‘five data gaps’; ledger NC-14 and RM-21 count six. The docket now holds 214 comments as filed / 213 corrected, 186 of them posted September 22 after the 28 the ledger reviewed (F-001).
+* **Review-notes “Still open” item:** re-dating “as of September 22, 2026”; the $681B docket sweep from comment -0029; appendix (C, I) is not written
 * **What it changes:** The ledger's M-1 re-sweep (scheduled from ID -0030) can be run against the full posted record. Gap 6 rates the CMS-2452-P comment record 'Partial (reviewed only for the $681 billion figure)'; the whole posted record has now been read for the figures and claims in F-002 to F-030. Whether the note extends its scope is the author's decision.
 * **Risk:** Low for the counts. Medium if the note widens its negative claims: the record is a snapshot (October 7, 2026), keyword searches over OCR text can miss figures printed as images, and letters published only on submitters' sites are not in it (F-002).
 
@@ -87,7 +90,10 @@
 * **Figure:** n/a
 * **Verification:** Matched on the organization field of each posted comment (output/comments_tagged.csv). Each letter's text was searched for the $681 billion, a multi-state net-of-tax estimate and a reconciliation of CMS's overlap or net provider figures (results in F-014, F-015, F-018, F-011).
 * **Distinct texts vs campaign copies:** 10 comments, 10 distinct texts in both views; none is a campaign copy.
-* **Article section:** Note sec. 3b (search scope for the $681 billion); ledger C-4, C-9, NC-04, NC-09.
+* **Article section:** v16 sec. 5, ‘POLITICO’s $681 billion and the Congressional Budget Office’s $340.5 billion’ (last sentence); Appendix G, ‘Sources searched for the $681 billion figure’ (to be written) (ledger C-4, C-9, NC-04, NC-09)
+* **Old → new section:** Note sec. 3b (search scope for the $681 billion); ledger C-4, C-9, NC-04, NC-09. → v16 sec. 5, ‘POLITICO’s $681 billion and the Congressional Budget Office’s $340.5 billion’ (last sentence); Appendix G, ‘Sources searched for the $681 billion figure’ (to be written)
+* **v16 flag:** v16's body states the negative result (‘no independent derivation of $681 billion before September 2, 2026’) without the search scope ledger C-4 records (five associations, eight comment letters, five consultancies, the 28 posted comments, seven site letters); Appendix G is not written. C-4's list of organizations with no letter located is out of date for four of six (F-002), so Appendix G should not repeat the ‘28 posted comments’ scope.
+* **Review-notes “Still open” item:** the $681B docket sweep from comment -0029; appendix (G) is not written
 * **What it changes:** The list of organizations 'for which no letter was located' in C-4 is out of date for four of six. None of the four contains the $681 billion figure.
 * **Risk:** Low. Organization names were matched by text; a letter filed under an individual's name would be missed.
 
@@ -99,7 +105,10 @@
 * **Figure:** 960 posted comments as filed / 961 corrected (adding 2476-0199), collected October 7, 2026; the API's reported total (960) matched the download. Ledger figure: 6,344 'posted' (RM-04, as of September 5, 2026).
 * **Verification:** API total and enumerated IDs both 960 in the collection log. The regulations.gov docket page's 'comments received' counter was not checked.
 * **Distinct texts vs campaign copies:** All 960 comments; 660 distinct texts in both views.
-* **Article section:** Note sec. 1 (ledger RM-04, RM-21; decision log B-7, which contrasts 20 CMS-2452-P comments with 6,344).
+* **Article section:** v16 Appendix I, ‘Status as of [DATE]’ (‘comment periods and counts’; to be written); body: sec. 1, ‘1. The OBBBA and the two proposed rules’ (close dates only) (ledger RM-04, RM-21; decision log B-7, which contrasts 20 CMS-2452-P comments with 6,344)
+* **Old → new section:** Note sec. 1 (ledger RM-04, RM-21; decision log B-7, which contrasts 20 CMS-2452-P comments with 6,344). → v16 Appendix I, ‘Status as of [DATE]’ (‘comment periods and counts’; to be written); body: sec. 1, ‘1. The OBBBA and the two proposed rules’ (close dates only)
+* **v16 flag:** v16's body carries no comment count, so it does not repeat the ledger's 6,344 ‘posted’ comments (RM-04); Appendix I will carry ‘counts’. If the 6,344 goes there it conflicts with the API's 960 posted comments for CMS-2449-P (961 corrected) (F-003). v16's close dates (July 21 and September 21, 2026) match the ledger and the comment record.
+* **Review-notes “Still open” item:** re-dating “as of September 22, 2026”; appendix (I) is not written
 * **What it changes:** The note's comment count for the SDP docket may need relabelling ('received', not 'posted') or replacing. B-7's comparison of 20 against 6,344 mixes the two counters if 6,344 is a received count.
 * **Risk:** Medium. Until the docket page is checked, either number could be the right one for the note's purpose. The 6,344 is perishable in the ledger's own terms.
 
@@ -111,7 +120,10 @@
 * **Figure:** CBO figures as quoted by commenters: $191.1 billion, federal outlays, FY2025-2034 (Georgetown CCF); $183 billion, '10 years' (UHA campaign) or 'reduction in federal deficits' (PA DHS). Ledger: CBO Sec. 71115 outlays $191.1B and net deficit $182.7B, FY2025-2034, nominal (SB-09, SB-14).
 * **Verification:** AHCCCS range: verification_log row 4145 confirmed, p. 1. Georgetown $191.1B: row 3648 confirmed, p. 1. HAP $183B: row 3854 corrected (source unnamed by HAP). UHA campaign (p. 17 of 20) and PA DHS (p. 1 of 23): located for this review; not in the verification log.
 * **Distinct texts vs campaign copies:** Keyword count of comments citing $183 billion or $191 billion: 17 comments (14 distinct texts) in both views. The UHA wording appears in all three campaign letters.
-* **Article section:** Note sec. 1 (CBO comparison) and footnote 2 (ledger SB-09, SB-14, SB-17, CE-28, D-13; C-4 'nearest passage' on HAP).
+* **Article section:** v16 sec. 5, ‘POLITICO’s $681 billion and the Congressional Budget Office’s $340.5 billion’ (CBO $191.1 billion and $149.4 billion); Appendix F, ‘Congressional Budget Office and CMS comparison detail, including the $182.7 billion net deficit figure’ (to be written) (ledger SB-09, SB-14, SB-17, CE-28, D-13; C-4 'nearest passage' on HAP)
+* **Old → new section:** Note sec. 1 (CBO comparison) and footnote 2 (ledger SB-09, SB-14, SB-17, CE-28, D-13; C-4 'nearest passage' on HAP). → v16 sec. 5, ‘POLITICO’s $681 billion and the Congressional Budget Office’s $340.5 billion’ (CBO $191.1 billion and $149.4 billion); Appendix F, ‘Congressional Budget Office and CMS comparison detail, including the $182.7 billion net deficit figure’ (to be written)
+* **v16 flag:** v16's body gives only CBO's outlay figures ($191.1B + $149.4B = $340.5B, CRS R48633) and drops the $182.7B net-deficit figure that ledger v3 keeps in note sec. 1 and footnote 2 (SB-09, CE-28, D-13); it now sits in Appendix F (not written). The comments use $183 billion under three labels (‘pre-enactment’ CBO estimate, federal deficit reduction, unattributed) that v16's body does not explain (F-004).
+* **Review-notes “Still open” item:** appendix (F) is not written
 * **What it changes:** This is direct evidence for D-13's diagnosis: readers treat one CBO estimate on two measures as two vintages ('pre-enactment') or as a range. It also updates C-4, which found that none of four site letters attributed a Sec. 71115 figure to CBO; several posted comments do.
 * **Risk:** Low. Commenters are quoting CBO second-hand; the CBO figures themselves rest on CRS R48633 per the ledger.
 
@@ -123,7 +135,9 @@
 * **Figure:** CBO, as quoted by commenters: Sec. 71115 increases the uninsured by 1.1 million by 2034. CMS (as quoted): no enrollment effect in any scenario.
 * **Verification:** Georgetown 1.1 million: verification_log row 3655 confirmed, p. 4. Levitis quotation located at p. 11 of 12; CBPP 'zero enrollment impacts … across its full range of scenarios' at p. 9 of 13. Neither quotation was checked against the Federal Register page, which the commenters do not give in the quoted passage.
 * **Distinct texts vs campaign copies:** Keyword counts, docket CMS-2026-2476 (approximate): about 14 comments (about 13 distinct texts) in both views state the no-enrollment assumption; about 14 comments (about 13 distinct texts) in both views cite '1.1 million'.
-* **Article section:** Note sec. 1 and footnote 4, fifth axis (ledger SB-24, SB-21).
+* **Article section:** v16 sec. 5, ‘POLITICO’s $681 billion and the Congressional Budget Office’s $340.5 billion’ (sentence on CBO enrollment effects; ‘differ in years, dollar values, comparison projections and enrollment assumptions’) (ledger SB-24, SB-21)
+* **Old → new section:** Note sec. 1 and footnote 4, fifth axis (ledger SB-24, SB-21). → v16 sec. 5, ‘POLITICO’s $681 billion and the Congressional Budget Office’s $340.5 billion’ (sentence on CBO enrollment effects; ‘differ in years, dollar values, comparison projections and enrollment assumptions’)
+* **v16 flag:** v16 says CBO's score includes ‘enrollment effects CMS’s estimates do not model’ and tags it [I]; ledger SB-24 rates this single-source (CBO limb not re-checked). Two comments quote CMS's own sentence that the rule has no effect on enrollment (Levitis 2476-0179, CBPP 2476-0033), which bears on the tag once the Federal Register page is found. v16 names four differences; ledger SB-21/footnote 4 names five (baseline; nominal vs real; fiscal vs calendar-year framing; statutory scoring vs regulatory implementation; enrollment and behavioral assumptions), so ‘statutory scoring vs regulatory implementation’ and ‘behavioral’ have no v16 counterpart.
 * **What it changes:** SB-24's CMS limb rests on the worksheet's lack of an enrollment series. A CMS sentence quoted in the record would let the note cite CMS directly, once the Federal Register page is found.
 * **Risk:** Low to medium: commenter quotation of CMS, not yet matched to the RIA page.
 
@@ -135,7 +149,9 @@
 * **Figure:** CBPP, quoting CBO: $34 billion net federal reduction from the uniformity-waiver restrictions; CBPP, quoting CMS's final-rule RIA: $78.2 billion federal and $46.9 billion state (period not stated in the passage). Advocacy figure (Iroquois): New York MCO tax yields about $1.5 billion less than the $3.7 billion originally projected over two years.
 * **Verification:** Iroquois $1.5B: verification_log row 3779 corrected (cause is the February 2026 uniformity-waiver final rule, not CMS-2452-P), p. 1. BCBSA's CMS-2448-F statement and CBPP's $34B / $78.2B / $46.9B located at p. 27 of 28 and p. 2 of 13; not in the verification log; CMS's RIA for the final rule was not read.
 * **Distinct texts vs campaign copies:** Keyword count (approximate): about 40 comments (about 40 distinct texts) in both views mention Sec. 71117, uniformity waivers or CMS-2448-F; most mention them in passing.
-* **Article section:** Note sec. 1 and status box (scope of rules analyzed); ledger CE-43 (baselines), TP-13 (ASPE covers Secs. 71115-71117).
+* **Article section:** v16 sec. 1, ‘1. The OBBBA and the two proposed rules’; sec. 3, ‘3. CMS’s estimates for each rule’ (baseline sentence); sec. 5, ‘ASPE’s $891 billion’ (ledger CE-43 (baselines), TP-13 (ASPE covers Secs. 71115-71117))
+* **Old → new section:** Note sec. 1 and status box (scope of rules analyzed); ledger CE-43 (baselines), TP-13 (ASPE covers Secs. 71115-71117). → v16 sec. 1, ‘1. The OBBBA and the two proposed rules’; sec. 3, ‘3. CMS’s estimates for each rule’ (baseline sentence); sec. 5, ‘ASPE’s $891 billion’
+* **v16 flag:** v16 never mentions Section 71117, the uniformity-waiver rule or CMS-2448-F: sec. 1 says the OBBBA ‘sets two limits’ with ‘one rule for each’, and the ASPE paragraph names only the provider tax and SDP provisions (ledger TP-13: ASPE covers Secs. 71115-71117). BCBSA (2476-0091) says CMS's CMS-2452-P analysis considers CMS-2448-F alongside the two proposed rules (F-006). v16 sec. 3 says both RIAs are measured against a projection without the OBBBA and tags it [E] with only provider tax rule pages (91 FR 46589–46591); ledger CE-43 verifies that for the provider tax rule only and says the SDP rule's limb rests on table captions.
 * **What it changes:** The note analyzes two proposed rules. If CMS-2452-P's RIA does fold in the finalized Sec. 71117 rule, that bears on what the provider tax rule's figures include (CE-43) and on the overlap. It also shows the CMS-versus-CBO gap recurring for a third provision.
 * **Risk:** Medium: BCBSA's description of CMS's analysis is unverified, and the third rule is outside the note's stated scope.
 
@@ -147,7 +163,10 @@
 * **Figure:** CMS assumption, as quoted: states offset 30 percent of the provider tax revenue reductions (primary), 20 percent (high scenario) and 40 percent (low scenario), with the provider tax rule's 10-year horizon 2026-2035.
 * **Verification:** THA: verification_log row 3939 confirmed (p. 6) and row 3941 confirmed (p. 7); THA's footnote 10 ('Ibid.') points to 91 FR 46591. CHLA scenario split located (docx). The Federal Register page itself was not read.
 * **Distinct texts vs campaign copies:** All quoting comments were read: 12 comments (9 distinct texts) in both views. Three are copies in the UHA campaign; two in another 2-letter campaign (2476-0075 / -0125).
-* **Article section:** Note sec. 2.3 and Figure 4 note (ledger CE-32, CE-34, CE-46).
+* **Article section:** v16 sec. 3, ‘3. CMS’s estimates for each rule’ (bullet ‘Provider tax rule’); sec. 2, ‘2. What links the two rules’ (65 percent paragraph); Appendix D, ‘Scenario detail’ (to be written) (ledger CE-32, CE-34, CE-46)
+* **Old → new section:** Note sec. 2.3 and Figure 4 note (ledger CE-32, CE-34, CE-46). → v16 sec. 3, ‘3. CMS’s estimates for each rule’ (bullet ‘Provider tax rule’); sec. 2, ‘2. What links the two rules’ (65 percent paragraph); Appendix D, ‘Scenario detail’ (to be written)
+* **v16 flag:** v16 sec. 3 gives the provider tax rule's scenario parameters as tax-financed share (75/65/55), share of the cut falling on SDPs (up to 90 / up to 70) and offset (40 low-savings, 20 high-savings), with no offset for the central estimate; ledger CE-32 likewise gives the primary set one parameter (65%). THA (2476-0109) cites 91 FR 46591 for a 30 percent central offset, and CHLA, Georgetown, UHA and others repeat it (F-007). THA calls 20 percent the ‘low scenario’; v16, CE-32 and CHLA give 40 percent for low-savings. v16 sec. 2 says a higher tax-financed share ‘means more overlap, and a lower share less [I]’ without ledger CE-34's qualifier that CMS moves three parameters together (direction only).
+* **Review-notes “Still open” item:** appendix (D) is not written
 * **What it changes:** CE-32's cross-check says the primary set is 'specified on one parameter' (65 percent) where the low and high sets are specified on three. If 91 FR 46591 carries the 30 percent offset, the primary scenario has at least two stated parameters, and the description of how the scenarios differ needs correcting. The offset also enters the overlap and the net provider line.
 * **Risk:** Medium: rests on commenters' quotation until 91 FR 46591 is read. THA itself attaches 20 percent to the low scenario, against CHLA and CE-32 (40 percent low, 20 percent high), so the scenario labels need checking too.
 
@@ -159,7 +178,10 @@
 * **Figure:** Assumption shares as reported by THA: CBO 50 percent of lost financing replaced (Sec. 71115 score); CMS 30 percent (primary), 20 or 40 percent (other scenarios). Not a dollar figure.
 * **Verification:** Located at p. 6 of 9 (paraphrased here; THA is quoted in F-007). THA's account of CBO's assumption was not checked against CBO's cost estimate.
 * **Distinct texts vs campaign copies:** 1 comment, 1 distinct text in both views; not in a campaign.
-* **Article section:** Note footnote 4, fifth axis 'enrollment and behavioral assumptions' (ledger SB-21, SB-23).
+* **Article section:** v16 sec. 5, ‘POLITICO’s $681 billion and the Congressional Budget Office’s $340.5 billion’ (‘differ in years, dollar values, comparison projections and enrollment assumptions’) (ledger SB-21, SB-23)
+* **Old → new section:** Note footnote 4, fifth axis 'enrollment and behavioral assumptions' (ledger SB-21, SB-23). → v16 sec. 5, ‘POLITICO’s $681 billion and the Congressional Budget Office’s $340.5 billion’ (‘differ in years, dollar values, comparison projections and enrollment assumptions’)
+* **v16 flag:** v16 says ‘enrollment assumptions’ where ledger SB-21/footnote 4 says ‘enrollment and behavioral assumptions’. THA's point (CBO assumed states replace 50 percent of lost financing, against CMS's 30 percent) is a behavioral assumption, not an enrollment one, so it has no place in v16's four-item list (F-008). THA's account of CBO is unverified.
+* **Review-notes “Still open” item:** appendix (F) is not written
 * **What it changes:** If confirmed in CBO's estimate, this gives a named, quantified behavioral difference behind the CMS-CBO gap. That is concrete support for footnote 4's point that the two sides rest on different assumptions.
 * **Risk:** Medium to high: single advocacy source describing CBO's method; hold until CBO's documentation is read.
 
@@ -171,7 +193,10 @@
 * **Figure:** CMS parameters as quoted: 65 percent (primary) and 55-75 percent (range) of SDPs financed with provider taxes. NRHA pairs the range with CMS's $774.8 billion SDP reduction, 2026-2035, real 2026 dollars.
 * **Verification:** Located: MHA p. 10 of 11; KHC p. 2 of 2; BAYADA p. 10 of 12; NRHA p. 7 of 10. Not in the verification log (no dollar figures of the commenters' own).
 * **Distinct texts vs campaign copies:** Keyword count: 4 comments (4 distinct texts) in both views.
-* **Article section:** Note sec. 2.3 (ledger CE-48, CE-49, CE-31; TP-19 withdrawn).
+* **Article section:** v16 sec. 2, ‘2. What links the two rules’ (65 percent and 55–75 percent sentence; financing shares); sec. 3, ‘3. CMS’s estimates for each rule’ (bullet ‘Provider tax rule’); Appendix D (38 and 37 percent preprint figures; to be written) (ledger CE-48, CE-49, CE-31; TP-19 withdrawn)
+* **Old → new section:** Note sec. 2.3 (ledger CE-48, CE-49, CE-31; TP-19 withdrawn). → v16 sec. 2, ‘2. What links the two rules’ (65 percent and 55–75 percent sentence; financing shares); sec. 3, ‘3. CMS’s estimates for each rule’ (bullet ‘Provider tax rule’); Appendix D (38 and 37 percent preprint figures; to be written)
+* **v16 flag:** v16 uses CMS's own words as ledger CE-48 requires (65 percent of ‘SDPs’; 55–75 percent ‘of SDP spending’); commenters (Minnesota Hospital Association 2476-0204, Kentucky Health Collaborative 2476-0056) restate the 65 percent as ‘state directed payment spending’. v16 sec. 2 adds a CMS split of SDPs above 100 percent of Medicare (39.8 percent IGT-only, 26.9 provider-tax-only, 14.2 both; 91 FR 30410) and says these ‘count arrangements, not dollars’; ledger v3 has no row for those figures, and CE-48 says CMS does not state whether its ‘SDPs’ percentages count arrangements or dollars. No comment quotes them.
+* **Review-notes “Still open” item:** GAO-24-106202 Table 4 (separate or combined provider taxes and IGTs); appendix (D) is not written
 * **What it changes:** This supports the note's care in keeping CMS's word 'SDPs' for the 65 percent (CE-48). Readers already convert it into a share of dollars, which is the reading behind the withdrawn TP-19 answer. BAYADA's 'of SDP spending' matches CMS's own range sentence (CE-31), so only the 65 percent restatements depart from CMS's wording.
 * **Risk:** Low. NRHA also repeats CMS's misprinted docket number 'CMS-2249-P' (RM-20) on the same page.
 
@@ -183,7 +208,9 @@
 * **Figure:** CMS figures as quoted: federal -$90.9 billion (Table 14, primary, including interaction); states -$147.5 billion net; providers -$136.1 billion (high scenario, including interaction); 2026-2035, real 2026 dollars.
 * **Verification:** Located: SHSL p. 3 of 9 ($90.9B) and p. 4 ($136.1B); NRHA p. 8 of 10. Values match the ledger's CE-11 and CE-18. Not in the verification log.
 * **Distinct texts vs campaign copies:** 2 comments, 2 distinct texts in both views; neither in a campaign.
-* **Article section:** Note sec. 2.2-2.4 (ledger CE-11, CE-18, CE-44).
+* **Article section:** v16 sec. 5, ‘The provider tax rule’s two figures for providers’ and the sec. 5 table; sec. 3, ‘3. CMS’s estimates for each rule’ (ledger CE-11, CE-18, CE-44)
+* **Old → new section:** Note sec. 2.2-2.4 (ledger CE-11, CE-18, CE-44). → v16 sec. 5, ‘The provider tax rule’s two figures for providers’ and the sec. 5 table; sec. 3, ‘3. CMS’s estimates for each rule’
+* **v16 flag:** Values match ledger CE-11/CE-18 (Appendix D carries the low and high series, including −$136.1B). v16 has no counterpart for CE-44 (Table 19 accounting statement, 91 FR 46596), the source NRHA cites for $90.9B federal and $147.5B state (F-010).
 * **What it changes:** This shows CE-44's point in use: CMS's accounting statement presents the interaction-inclusive figures as the rule's effect, and commenters carry them forward. Neither commenter stacks them with the SDP rule, so the +$21.7 billion versus combined-loss question (sec. 2.4) is not resolved in their letters.
 * **Risk:** Low.
 
@@ -195,7 +222,10 @@
 * **Figure:** CMS figure as quoted: providers +$21.7 billion over ten years (CMS-2452-P including interaction, primary, 2026-2035, real 2026 dollars); high scenario -$136.1 billion.
 * **Verification:** Located in the docx attachment (no page numbers). The $220.3B and $138B rows of the same letter are verified (verification_log rows 4183, 4184, confirmed). The quoted CMS sentence was not matched to a Federal Register page; CHLA gives none in the passage.
 * **Distinct texts vs campaign copies:** 1 comment, 1 distinct text in both views; not in a campaign.
-* **Article section:** Note Summary of findings; sec. 2.4, cautions 2 and 4; Figures 3 and 5 (ledger CE-51, CE-52, D-14).
+* **Article section:** v16 sec. 4, ‘4. The net effect on providers’, and sec. 5, ‘The provider tax rule’s two figures for providers’ ([Figure 2], [Figure 3]) (ledger CE-51, CE-52, D-14)
+* **Old → new section:** Note Summary of findings; sec. 2.4, cautions 2 and 4; Figures 3 and 5 (ledger CE-51, CE-52, D-14). → v16 sec. 4, ‘4. The net effect on providers’, and sec. 5, ‘The provider tax rule’s two figures for providers’ ([Figure 2], [Figure 3])
+* **v16 flag:** v16 does not carry the CMS sentence CHLA quotes (‘would still be a significant reduction to provider payments through Medicaid over time’), and ledger v3 does not record it, so it needs a Federal Register cite before use. v16's figure numbering and captions differ from ledger Cluster 8: the body has Figures 1, 2, 3, 6, 7 and 8 (placeholders), and ledger Figure 5 appears only by reference in Appendix D.
+* **Review-notes “Still open” item:** figures and exhibit grid
 * **What it changes:** If the sentence is in the RIA, CMS itself states the note's central caution: the +$21.7 billion is an increment, not the combined effect. CE-52 currently rests on the note's own stacking arithmetic.
 * **Risk:** Medium until the CMS sentence is found in the Federal Register text. CHLA is a provider group arguing against the rule.
 
@@ -207,7 +237,9 @@
 * **Figure:** Advocacy figure (CHLA Medical Group): about $138 billion less net Medicaid support to the hospital tax class over ten years (about $13.8 billion a year), computed as 63 percent ($61.8B of $98.6B CY2026 provider tax revenue) of CMS's -$220.3 billion net provider line (Table 12, 2026-2035, real 2026 dollars).
 * **Verification:** verification_log rows 4183 ($220.3B) and 4184 ($138B) confirmed (docx). Paraphrased here (CHLA is quoted in F-011).
 * **Distinct texts vs campaign copies:** 1 comment, 1 distinct text in both views; not in a campaign.
-* **Article section:** Note sec. 2.4, caution 2 (ledger CE-51, NC-07, C-7; durable finding 'a provider aggregate is not a hospital figure').
+* **Article section:** v16 sec. 4, ‘4. The net effect on providers’ (last paragraph, on hospitals); sec. 3, ‘3. CMS’s estimates for each rule’ (paragraph citing 91 FR 30462); Executive summary (ledger CE-51, NC-07, C-7; durable finding 'a provider aggregate is not a hospital figure')
+* **Old → new section:** Note sec. 2.4, caution 2 (ledger CE-51, NC-07, C-7; durable finding 'a provider aggregate is not a hospital figure'). → v16 sec. 4, ‘4. The net effect on providers’ (last paragraph, on hospitals); sec. 3, ‘3. CMS’s estimates for each rule’ (paragraph citing 91 FR 30462); Executive summary
+* **v16 flag:** v16 says CMS ‘expects the majority of SDP cuts to fall on hospitals’ ([E], Executive summary; sec. 3 and sec. 4 cite 91 FR 30462) and that hospitals receive most of step 2's relief as payers of $61.8B of the $98.6B in 2026 taxes. Ledger v3 has no row for the 91 FR 30462 claim, says no CMS table isolates a hospital line (NC-07) and that the provider aggregate ‘is not a hospital figure’ (CE-51). Two comments (Nicklaus Children's 1916-0472, fn 6; Catawba Valley 1916-0715) cite the same page, 91 FR 30462, for CMS saying it lacks data to ‘reliably attribute or disaggregate these impacts to specific provider types’. CHLA's allocation (F-012) uses the same $61.8B-of-$98.6B share and labels it ‘an illustrative allocation, not a CMS estimate’.
 * **What it changes:** This is a worked example of the conversion the note says cannot be made without a disclosed distributional assumption, made with the assumption disclosed. It applies a one-year tax-revenue share to a ten-year net payment line, which shows how much such an allocation assumes.
 * **Risk:** Low as an example. High if cited as a hospital estimate.
 
@@ -219,7 +251,10 @@
 * **Figure:** CMS figure as quoted: $220.3 billion, CMS-2452-P Table 12 provider line, standalone, primary, 2026-2035, real 2026 dollars; net of $163.7 billion provider tax relief per the ledger (CE-36).
 * **Verification:** AHCCCS: verification_log row 4145 confirmed, p. 1. CHLA: row 4183 confirmed (docx). ACOG p. 2 of 7, PAR p. 1 of 2, NJHA p. 2 of 8: located for this review; not in the verification log.
 * **Distinct texts vs campaign copies:** Every comment citing $220.3 billion was read: 5 comments (5 distinct texts) in both views; none in a campaign.
-* **Article section:** Note sec. 3a (HFMA's $56.6 billion) and sec. 3c (ledger CE-36, CE-55, TP-01, TP-08, TP-24).
+* **Article section:** v16 sec. 5, ‘HFMA’s $56.6 billion’ and ‘The provider tax rule’s two figures for providers’ (ledger CE-36, CE-55, TP-01, TP-08, TP-24)
+* **Old → new section:** Note sec. 3a (HFMA's $56.6 billion) and sec. 3c (ledger CE-36, CE-55, TP-01, TP-08, TP-24). → v16 sec. 5, ‘HFMA’s $56.6 billion’ and ‘The provider tax rule’s two figures for providers’
+* **v16 flag:** v16 tags the net reading of $220.3B as [I] and cites CMS's Table 12 title as [E] (ledger CE-36/CE-37). Four comments (ACOG 2476-0049, PAR 2476-0085, NJHA 2476-0190, AHCCCS 2476-0201) describe the $220.3B as a payment cut, so HFMA's reading is common in the record (F-013). v16's ‘HFMA had not replied to THEIA Services' request … sent [DATE SENT]’ has no ledger row.
+* **Review-notes “Still open” item:** [DATE SENT] for HFMA
 * **What it changes:** HFMA's reading of the provider line as a payment cut is common in the docket, not isolated, which supports CE-55's suggestion that CMS's own 'as shown in table 12' wording invites it. None of the five subtracts the tax relief a second time, so none reproduces the $56.6 billion.
 * **Risk:** Low to medium: commenters may mean 'payments net of taxes' loosely. NJHA's period (2025-2035, 11 years) is a commenter error.
 
@@ -231,7 +266,10 @@
 * **Figure:** Figure as restated by the commenter: $681 billion over ten years, attributed to hospitals; $340 billion attributed to H.R. 1. Matches POLITICO's construction (756 + 265 - 340 = 681, ledger SB-02).
 * **Verification:** Exact search of every comment's full text, attachments and OCR included: 1 comments (1 distinct texts) in both views contain '$681 billion'. Located in the comment field. Not in the verification log.
 * **Distinct texts vs campaign copies:** 1 comment, 1 distinct text in both views; not in a campaign. A second '681' hit is a telephone number (1916-0300).
-* **Article section:** Note sec. 3b (ledger SB-01, SB-03, SB-11, SB-12, SB-20, NC-04, C-4).
+* **Article section:** v16 sec. 5, ‘POLITICO’s $681 billion and the Congressional Budget Office’s $340.5 billion’ (last sentence); Appendix G (to be written) (ledger SB-01, SB-03, SB-11, SB-12, SB-20, NC-04, C-4)
+* **Old → new section:** Note sec. 3b (ledger SB-01, SB-03, SB-11, SB-12, SB-20, NC-04, C-4). → v16 sec. 5, ‘POLITICO’s $681 billion and the Congressional Budget Office’s $340.5 billion’ (last sentence); Appendix G (to be written)
+* **v16 flag:** v16: ‘no independent derivation of $681 billion before September 2, 2026; later references restate POLITICO’s figure [E]’. The full CMS-2452-P record holds one later restatement (comment 2476-0079, an individual), which reads it as a hospital loss, with no derivation; v16's claim holds. The sweep scope behind it is not in v16's body (Appendix G is not written) and the review notes list the sweep from comment -0029 as open; F-001 and F-014 give the full-record result (the only other ‘681’ hit is a telephone number, 1916-0300).
+* **Review-notes “Still open” item:** the $681B docket sweep from comment -0029; appendix (G) is not written
 * **What it changes:** This extends NC-04 and SB-12 to the full posted record: no derivation, one restatement. The restatement reads the figure as a hospital loss, which the note's SB-20 says it cannot be.
 * **Risk:** Low. It is an individual's comment and is not evidence of where the figure came from.
 
@@ -243,7 +281,10 @@
 * **Figure:** CMS figure as quoted: $601 billion combined federal Medicaid outlay reduction, both rules, overlap-adjusted (2026-2035, real 2026 dollars; ledger SB-23: 510.1 + 90.9). CBO figure as quoted: $341 billion federal outlays from Secs. 71115 and 71116 (CBPP's rounding of 191.1 + 149.4 = 340.5, FY2025-2034, nominal).
 * **Verification:** $601B: verification_log row 3691 confirmed, p. 9. $341B and footnote 23 located at p. 9 of 13 (not in the verification log). CBPP's directional reasoning is its own analysis.
 * **Distinct texts vs campaign copies:** 1 comment, 1 distinct text in both views; not in a campaign.
-* **Article section:** Note sec. 3b, 'The core problem', and footnote 4 (ledger SB-21, SB-23, NC-10, C-10, NC-13).
+* **Article section:** v16 sec. 5, ‘POLITICO’s $681 billion and the Congressional Budget Office’s $340.5 billion’ (paragraph beginning ‘Counting federal savings only…’); Appendix F (to be written) (ledger SB-21, SB-23, NC-10, C-10, NC-13)
+* **Old → new section:** Note sec. 3b, 'The core problem', and footnote 4 (ledger SB-21, SB-23, NC-10, C-10, NC-13). → v16 sec. 5, ‘POLITICO’s $681 billion and the Congressional Budget Office’s $340.5 billion’ (paragraph beginning ‘Counting federal savings only…’); Appendix F (to be written)
+* **v16 flag:** v16 reaches ledger SB-23's conclusion (CMS $601.0B vs CBO $340.5B ‘does not show the rules exceed the OBBBA’), tagged [I], on four named differences. CBPP (2476-0033, footnote 23) makes the same comparison ($601 billion vs $341 billion) and argues a ‘very large gap … would remain even with plausible adjustments’ for window, interaction and dollar basis; v16 does not engage that claim. v16 names four differences; ledger footnote 4 names five (see F-005). v16's body no longer carries the $182.7B net-deficit figure (Appendix F).
+* **Review-notes “Still open” item:** appendix (F) is not written
 * **What it changes:** SB-23 says the $601.0B-versus-$340.5B gap 'does not show that the rules go beyond the statute' and that footnote 4's axes 'leave its cause unresolved'. CBPP, a published source, makes the same comparison and argues the opposite on three axes: window, interaction and dollar basis. It does not address baseline, fiscal-year framing or enrollment assumptions. The note also says it located no public document reconciling these figures (NC-10); CBPP's comment is a partial one on the federal side.
 * **Risk:** High if unaddressed: a direct, citable counter-argument from a prominent organization. CBPP opposes the rule, and its footnote is qualitative (no adjusted figures).
 
@@ -255,7 +296,9 @@
 * **Figure:** CMS figure as quoted: $510.1 billion federal, 2026-2035, real 2026 dollars. CBO figure as quoted: $149.4 billion, Sec. 71116, FY2025-2034, nominal. Advocacy figure (Lee County): $360.7 billion difference.
 * **Verification:** verification_log rows 3411 ($360.7B, docx), 87 ($510B, docx), 2532-2533 ($510B, $149.4B, p. 2), all confirmed.
 * **Distinct texts vs campaign copies:** Keyword counts, docket CMS-2026-1916: $510 billion in about 120 comments (about 90 distinct texts) in both views; $149.4 billion in about 90 comments (about 60 distinct texts) in both views; 'beyond the statute' language in about 380 comments (about 230 distinct texts) in both views. Approximate.
-* **Article section:** Note sec. 3b and footnote 4 (ledger SB-21, SB-23, CE-43).
+* **Article section:** v16 sec. 5, ‘POLITICO’s $681 billion and the Congressional Budget Office’s $340.5 billion’ (CBO's $149.4 billion appears only inside the $340.5 billion) (ledger SB-21, SB-23, CE-43)
+* **Old → new section:** Note sec. 3b and footnote 4 (ledger SB-21, SB-23, CE-43). → v16 sec. 5, ‘POLITICO’s $681 billion and the Congressional Budget Office’s $340.5 billion’ (CBO's $149.4 billion appears only inside the $340.5 billion)
+* **v16 flag:** v16 compares CMS and CBO only on the combined, two-rule basis ($601.0B vs $340.5B). The SDP-docket comparison most CMS-2449-P commenters make, CMS's $510.1 billion against CBO's $149.4 billion (about 120 comments, about 90 distinct texts), is not addressed in v16's body. THA, MDA and PPC give the CMS figure as $515 billion (= $510.1B + $5.34B ‘other policy’), which differs from v16's $510.1B (see unmapped item U-1).
 * **What it changes:** POLITICO's construction mirrors what most CMS-2449-P commenters already did. The note's caution about subtracting a CBO statutory score from CMS rule estimates applies to the docket as a whole, not to one article. Note also that both RIAs score the statute as the rules implement it (CE-43), so the comparison cannot isolate the rule's own effect, which is the claim these commenters make.
 * **Risk:** Low for the pattern. Counts are keyword-based and approximate.
 
@@ -267,7 +310,9 @@
 * **Figure:** CMS figures per the ledger: federal overlap $154.9 billion (CE-15); federal including interaction +$90.9B primary, +$9.1B low, +$191.8B high (CE-11, CE-29, CE-44); 2026-2035, real 2026 dollars.
 * **Verification:** BCBSA: verification_log rows 3869-3870 confirmed, p. 27. AHIP located at p. 1 of 12 (footnote 1); not in the verification log.
 * **Distinct texts vs campaign copies:** 2 comments, 2 distinct texts in both views; neither in a campaign.
-* **Article section:** Note sec. 3c and the KFF $155 billion (ledger TP-15, CE-15, CE-44).
+* **Article section:** v16 sec. 5, ‘KFF’s $155 billion’; sec. 2, ‘2. What links the two rules’ (overlap paragraph) (ledger TP-15, CE-15, CE-44)
+* **Old → new section:** Note sec. 3c and the KFF $155 billion (ledger TP-15, CE-15, CE-44). → v16 sec. 5, ‘KFF’s $155 billion’; sec. 2, ‘2. What links the two rules’ (overlap paragraph)
+* **v16 flag:** v16 states the federal/total-computable relation as ledger TP-15 does (KFF $155B = CMS $154.9B federal overlap). AHIP's reading of $154.9B as the reduction after accounting for the SDP rule inverts it, and BCBSA's $9.1–90.9B range leaves out the +$191.8B high scenario; v16 has no counterpart for either (the low/high federal series are in Appendix D).
 * **What it changes:** This is more evidence for the note's thesis that the overlap figures are hard to read. AHIP's version inverts KFF's correct framing of the $155 billion (TP-15): it calls the overlap what remains after the SDP rule.
 * **Risk:** Low to medium: AHIP's footnote is terse, and its intended quantity is inferred.
 
@@ -279,7 +324,9 @@
 * **Figure:** n/a (methodological position).
 * **Verification:** Located: AHA p. 11 of 17; SC DHHS p. 3 of 4. Positions, not figures; not in the verification log.
 * **Distinct texts vs campaign copies:** Keyword count, docket CMS-2026-1916: 11 comments (8 distinct texts) in both views; several are template variants sharing a heading.
-* **Article section:** Note sec. 3c (ledger NC-13, TP-21, TP-17).
+* **Article section:** v16 sec. 5, ‘ASPE’s $891 billion’ (last paragraph, ‘Several organizations already separate these quantities’) (ledger NC-13, TP-21, TP-17)
+* **Old → new section:** Note sec. 3c (ledger NC-13, TP-21, TP-17). → v16 sec. 5, ‘ASPE’s $891 billion’ (last paragraph, ‘Several organizations already separate these quantities’)
+* **v16 flag:** v16 lists CMS, FAH and THA in one sentence (HFMA, Georgetown and KFF have their own subsections) and states no count; ledger NC-13 says the discipline ‘sits across six sources’. The comments add AHA (1916-0928), South Carolina DHHS (1916-0923) and template letters (e.g. 1916-0369, 1916-0476) asking for a net-of-tax payment-limit test, a different use from the RIA's gross/net provider line; v16's phrase ‘separate these quantities’ for FAH's request blurs the two (F-018). v16 gives FAH without a page (ledger TP-21 has ‘p. 1’; see F-019).
 * **What it changes:** NC-13 says the measurement discipline 'sits across six sources' and has not been assembled. The record shows the net-of-tax argument is broader, including the largest hospital association and a state agency. These letters apply it to the payment-limit test (Medicaid rate net of taxes against the Medicare rate), not to the RIA's net provider aggregate, so they support the point without assembling it.
 * **Risk:** Medium: different concept from the note's gross/net provider line. Conflating the two would overstate the support.
 
@@ -291,7 +338,9 @@
 * **Figure:** n/a (methodological position).
 * **Verification:** Located at p. 2 of 45 (printed page number 2; p. 1 is the letter's opening). Not in the verification log.
 * **Distinct texts vs campaign copies:** 1 comment, 1 distinct text in both views; not in a campaign.
-* **Article section:** Note sec. 3c (ledger TP-21, which records 'p. 1' and 'letter not re-read').
+* **Article section:** v16 sec. 5, ‘ASPE’s $891 billion’ (last paragraph, FAH comments on CMS-2449-P, July 21, 2026) (ledger TP-21, which records 'p. 1' and 'letter not re-read')
+* **Old → new section:** Note sec. 3c (ledger TP-21, which records 'p. 1' and 'letter not re-read'). → v16 sec. 5, ‘ASPE’s $891 billion’ (last paragraph, FAH comments on CMS-2449-P, July 21, 2026)
+* **v16 flag:** v16 cites FAH's letter with no page. Ledger TP-21's ‘p. 1’ is wrong: the sentence is on p. 2 of the 45-page PDF (F-019), and the letter has now been re-read for that sentence. The letter's date (July 21, 2026) matches v16.
 * **What it changes:** TP-21 can move from single-source to verified, with the pin cite corrected to p. 2.
 * **Risk:** Low.
 
@@ -303,7 +352,10 @@
 * **Figure:** CMS figures as quoted: state reduction $264.4 billion (CMS-2449-P narrative) or $264.7 billion (table-consistent), 2026-2035, real 2026 dollars.
 * **Verification:** Located: FEHP p. 6 of 14; BCBSA p. 38 of 40; Paragon p. 3 of 14; KHC p. 2 of 2 (KHC's $774.8B is verification_log row 3757, confirmed). Not otherwise in the verification log.
 * **Distinct texts vs campaign copies:** Every hit was read: $264.4 billion in 3 comments (3 distinct texts) in both views; $264.7 billion in 1 comments (1 distinct texts) in both views.
-* **Article section:** Note footnote 1 (ledger CE-03, CE-24, B-3).
+* **Article section:** v16 Appendix E, ‘CMS printing errors, citation traps and rounding’ (to be written); sec. 4, ‘4. The net effect on providers’ (source note, Table 23 sum) (ledger CE-03, CE-24, B-3)
+* **Old → new section:** Note footnote 1 (ledger CE-03, CE-24, B-3). → v16 Appendix E, ‘CMS printing errors, citation traps and rounding’ (to be written); sec. 4, ‘4. The net effect on providers’ (source note, Table 23 sum)
+* **v16 flag:** v16 has no footnotes. Ledger footnote 1 (the $264.4B/$264.7B state figure; CE-03, CE-24) belongs in Appendix E (not written), which cites ‘v13 footnotes 1–3’, a numbering ledger v3 does not use (it uses the v9 footnotes). v16 uses $264.7B throughout; FEHP, BCBSA and Paragon use $264.4B (F-020). The sec. 4 source note says CMS's narrative ‘rounds’ the $340.0B cell sum to $339.6B; ledger CE-25/CE-53 record it as a narrative-to-table gap.
+* **Review-notes “Still open” item:** appendix (E) is not written
 * **What it changes:** This confirms footnote 1's point that CMS's narrative figure circulates and does not close against $510.1B + X = $774.8B.
 * **Risk:** Low.
 
@@ -315,7 +367,9 @@
 * **Figure:** ASPE figures as quoted: $502-875 billion benefit to non-Medicaid consumers, 2025-2034; non-Medicaid prices down up to 3.5 percent in provider-tax markets. Advocacy figure (Paragon): $61.5-123 billion less excess tax burden over a decade (0.25-0.5 x CMS's $246 billion).
 * **Verification:** verification_log rows 3987-3988 (p. 2) and 3991-3992 (p. 12), all confirmed. ASPE's figures match the ledger's TP-12.
 * **Distinct texts vs campaign copies:** 1 comment, 1 distinct text in both views; not in a campaign.
-* **Article section:** Note sec. 3d (ledger TP-10, TP-12, TP-13, TP-14).
+* **Article section:** v16 sec. 5, ‘ASPE’s $891 billion’ (ledger TP-10, TP-12, TP-13, TP-14)
+* **Old → new section:** Note sec. 3d (ledger TP-10, TP-12, TP-13, TP-14). → v16 sec. 5, ‘ASPE’s $891 billion’
+* **v16 flag:** v16 gives ASPE's $502–875B and 3.5 percent as ledger TP-12 does. It describes the $891B as a combined spending cut ‘used to estimate benefits to other payers’ without ledger TP-10's ‘sensitivity-analysis’ label, and says ASPE ‘does not say whether it removes the overlap [E]’, where TP-11 records ASPE's remark that its combined federal figure is about the size of the SDP effect alone ($510B). v16 does not say ASPE also covers Section 71117 (TP-13; F-006).
 * **What it changes:** ASPE's statute-level estimate is entering the rule record on the supporting side, while the note treats ASPE as analysis of the statute (TP-13). It is a balancing example: the statute-versus-rule blur is not one-sided.
 * **Risk:** Low: Paragon's attribution is accurate; the use of the figure is the point.
 
@@ -327,7 +381,10 @@
 * **Figure:** Advocacy figures (IHA): outpatient assessment about 1 percent of net patient revenue; combined effective assessment projected below 2 percent once the phase-down is complete (assessed class by class), against a 3.5 percent threshold from FFY2032.
 * **Verification:** verification_log row 3882 ('2 percent') confirmed, p. 1, from the page image; the quoted sentence is on the same page (OCR text).
 * **Distinct texts vs campaign copies:** 1 comment, 1 distinct text in both views; not in a campaign.
-* **Article section:** Note sec. 4 and Figure 6 (ledger SE-04, SE-09, SE-10, SE-21; decision log B-8).
+* **Article section:** v16 sec. 6, ‘6. Where exposure is concentrated’ (Group table, Group E paragraph, [Figure 6]); sec. 1, ‘The provider tax rule (CMS-2452-P)’ (threshold table) (ledger SE-04, SE-09, SE-10, SE-21; decision log B-8)
+* **Old → new section:** Note sec. 4 and Figure 6 (ledger SE-04, SE-09, SE-10, SE-21; decision log B-8). → v16 sec. 6, ‘6. Where exposure is concentrated’ (Group table, Group E paragraph, [Figure 6]); sec. 1, ‘The provider tax rule (CMS-2452-P)’ (threshold table)
+* **v16 flag:** v16's Group E row and paragraph say the lower threshold reaches only Colorado, Connecticut, Indiana and Vermont among the 14 states; Idaho (Group E in ledger SE-09) is not named, but the Idaho Hospital Association (2476-0095) says its inpatient assessment is above the phased-down threshold class by class (F-022). v16 sec. 1 describes the test as a share of ‘taxed providers’ net patient revenue’ without saying thresholds are set by state and tax class (ledger RM-19). Threshold ‘at most 6.0%’ and the nursing facility/ICF exemption: see unmapped items U-3 and U-4.
+* **Review-notes “Still open” item:** statutory basis of the nursing and intermediate care facility exemption; the hold harmless description (91 FR 46562); figures and exhibit grid
 * **What it changes:** SE-10 names four Group E expansion states the phase-down reaches (CO, CT, IN, VT) because KFF's indicator shows a hospital tax above 3.5 percent. Idaho is absent, presumably because its combined hospital rate is below 3.5 percent. The rule applies the threshold class by class, so a state-level indicator can miss states like Idaho, the same correction B-8 made for four other states.
 * **Risk:** Medium: IHA's 'phased-down threshold' is not given as a number. KFF's indicator definition (file C2) is unavailable to the ledger, so the conflict is inferred, not shown.
 
@@ -339,7 +396,10 @@
 * **Figure:** Advocacy figures. MO: $1.25 billion a year once the threshold reaches 3.5 percent; $55.6 million per 0.1-point tax cut. MN: $1 billion a year (Minnesota DHS, as cited). FL: $4.4 billion DPP reduction when fully implemented; $272 million a year of tax capacity lost to the freeze (2024 data). TX: more than $4.3 billion a year once the phase-down is complete (attributed to the statute); $1.7 billion a year of tax capacity (2024 data); $915 million a year removed from CHIRP from SFY2029. TN: $320,411,458 a year. MS: at least $160 million a year; $150 million immediate cut to one academic medical center.
 * **Verification:** verification_log: MO rows 3712, 3698, 3706 confirmed; FL rows 1303, 4050 confirmed; TX rows 1299 corrected (statute, not rule), 4044 and 3313 confirmed; TN row 1220 confirmed; MS rows 2032, 4040 confirmed. MN $1B located at p. 1 of 3 (not in the log).
 * **Distinct texts vs campaign copies:** 10 comments, 10 distinct texts in both views; none is a campaign copy (1916-0415 heads a 2-letter campaign).
-* **Article section:** Note sec. 4 and Figure 6 (ledger SE-12, SE-13, SE-14, SE-19, D-8, B-10).
+* **Article section:** v16 sec. 6, ‘6. Where exposure is concentrated’ (KFF cautions; Group D and Minnesota/Missouri paragraphs); Appendix H (to be written) (ledger SE-12, SE-13, SE-14, SE-19, D-8, B-10)
+* **Old → new section:** Note sec. 4 and Figure 6 (ledger SE-12, SE-13, SE-14, SE-19, D-8, B-10). → v16 sec. 6, ‘6. Where exposure is concentrated’ (KFF cautions; Group D and Minnesota/Missouri paragraphs); Appendix H (to be written)
+* **v16 flag:** v16's body does not give the count of twelve flagged states (ledger SE-19, D-8); it names the Group D flags and Alabama/Wyoming, and the full list awaits Appendix H. None of the state-sourced figures in the comments (MO, MN, FL, TX, TN, MS) appears in v16 (F-023). v16's KFF sentence (states with most SDP spending above the caps ‘already have base rates at or near the caps, while low base rates leave more SDP spending under them’) reverses ledger SE-16 (KFF's caveat that a high share above limits ‘partly reflects low base payment rates’); the review notes list ‘the KFF base-rate correction’, so this looks deliberate. Comments split: Ensemble (1916-0389) cites KFF for supplemental payments offsetting low base rates; OSU Wexner (1916-0779) says pressure arises where base rates are ‘already near the cap’.
+* **Review-notes “Still open” item:** newsletter propagation, including the KFF base-rate correction; appendix (H) is not written; figures and exhibit grid
 * **What it changes:** This gives state-sourced magnitudes where the note shows blanks or flags. None is on KFF's measure (federal hospital SDP spending above the limits, FFY2025), so none can be placed in the group table or summed with it. Any use must keep the measure and the advocacy label.
 * **Risk:** High if mixed with KFF's dollars: different measures (all-funds versus federal, tax capacity versus payments, statute versus rule), different years.
 
@@ -351,7 +411,10 @@
 * **Figure:** n/a. Citations given by commenters: Texas v. Centers for Medicare & Medicaid Svcs., 805 F. Supp. 3d 734 (E.D. Tex. 2025); CMS Round 1-4 questions on the SFY2027 CHIRP preprint (June-September 2026), posted by Texas HHSC (the file's web address carries the date 9-9-2026).
 * **Verification:** Located: CHAT p. 13 of 14 (case citation) and p. 14 of 14; TEHP p. 5 of 7 (footnote 12). Characterizations of CMS's conduct are the commenters' own; the court opinion and the Texas HHSC document were not read.
 * **Distinct texts vs campaign copies:** 2 comments, 2 distinct texts in both views. CHAT (2476-0114) heads a 4-letter campaign, but the preprint and injunction passages are only in CHAT's own letter; the three template variants (2476-0048, -0051, -0061) do not contain them. TEHP (2476-0172) is not in a campaign.
-* **Article section:** Note sec. 7, items 6 and 7 (ledger RM-25, RM-26, M-7, M-8).
+* **Article section:** v16 sec. 9, ‘9. What to watch’, items 5 and 6 under ‘Events that would change CMS’s estimates or the rules’ (ledger RM-25, RM-26, M-7, M-8)
+* **Old → new section:** Note sec. 7, items 6 and 7 (ledger RM-25, RM-26, M-7, M-8). → v16 sec. 9, ‘9. What to watch’, items 5 and 6 under ‘Events that would change CMS’s estimates or the rules’
+* **v16 flag:** v16 item 5 tags the September 2026 lapse and reauthorization [E] on two press articles; ledger RM-25 rates it single-source and says neither article was re-read. The comments name Texas (CHAT 2476-0114; TEHP 2476-0172 footnote 12 on the SFY2027 CHIRP preprint); v16, like the ledger, names no state. v16 item 6 says the district court ‘set aside’ 2024 provisions and guidance; CHAT calls the Texas ruling a permanent injunction on the hold-harmless test for Texas LPPFs (805 F. Supp. 3d 734). CHAT's account of CMS's test in that litigation (tax on a class of providers plus use of the tax funds to pay that class) differs from v16 sec. 1's two-part description.
+* **Review-notes “Still open” item:** the hold harmless description (91 FR 46562)
 * **What it changes:** The note treats the preprint lapse (item 6) and the Fifth Circuit appeal (item 7) as separate monitoring items and does not name the state. These comments put on record that the Texas preprint dispute turns on the same hold-harmless question as the litigation. They also supply the district court citation RM-26 lacks.
 * **Risk:** Medium: advocacy accounts of CMS's motives. Both letters are dated September 21, 2026, after the September 18 reauthorization the ledger records (M-7), so 'presently' may refer to other preprints.
 
@@ -363,7 +426,10 @@
 * **Figure:** Figure as cited by THA from the state of Texas: about $12 billion a year in total Medicaid payments supported by local hospital assessments (year not stated). Count: 35 local provider assessments.
 * **Verification:** Located at p. 1 of 9 (no statewide assessment) and p. 2 of 9 ($12 billion, footnote 1). Paraphrased here (THA is quoted in F-007). Not in the verification log.
 * **Distinct texts vs campaign copies:** 1 comment, 1 distinct text in both views; not in a campaign.
-* **Article section:** Note sec. 4, Group D and Texas panel (ledger SE-11, SE-12, SE-21) and sec. 7 item 6 (M-7).
+* **Article section:** v16 sec. 6, ‘6. Where exposure is concentrated’ (Group D row and paragraph; last paragraph on tax- vs IGT-funded SDPs); sec. 9, ‘9. What to watch’, item 5 (ledger SE-11, SE-12, SE-21; M-7)
+* **Old → new section:** Note sec. 4, Group D and Texas panel (ledger SE-11, SE-12, SE-21) and sec. 7 item 6 (M-7). → v16 sec. 6, ‘6. Where exposure is concentrated’ (Group D row and paragraph; last paragraph on tax- vs IGT-funded SDPs); sec. 9, ‘9. What to watch’, item 5
+* **v16 flag:** No conflict found with v16's text. THA's description of Texas (IGTs plus 35 local assessments, no statewide hospital tax) illustrates v16 sec. 6's closing point that no group separates tax-funded from IGT-funded SDPs, and bears on sec. 2's statement that no public source gives SDP financing in dollars by source and state. v16 gives no dollar amount for item 5's reauthorization, so THA's $12B has no counterpart.
+* **Review-notes “Still open” item:** GAO-24-106202 Table 4 (separate or combined provider taxes and IGTs)
 * **What it changes:** Texas, the largest Group D exposure ($3.5 billion above limits), finances through local assessments and IGTs, a split the grouping cannot show (SE-21). Group D's 'not assessed' tax indicators (SE-11) say nothing about these local taxes. The $12 billion should not be equated with the roughly $12 billion reauthorization in M-7 without a source linking them.
 * **Risk:** Medium: a state figure relayed by an advocate, year unstated. Coincidence with M-7's amount invites a false link.
 
@@ -375,7 +441,9 @@
 * **Figure:** Advocacy figures: children's hospitals' SDP payments down more than 40 percent by 2036 (CHA); Cordell Memorial's proportional exposure about $22,418 a year from the first rating period after January 1, 2028 (10 percent of its $224,181 SHOPP share for April 2024-June 2025).
 * **Verification:** verification_log rows 1265 (CHA 40%, p. 1) and 1812 (Cordell $22,418, p. 2, page image read) confirmed. DMAS heading located at p. 3 of 5.
 * **Distinct texts vs campaign copies:** Keyword count for the 'no Medicare rate' argument, docket CMS-2026-1916: about 140 comments (about 100 distinct texts) in both views. Approximate.
-* **Article section:** Note sec. 5, rural paragraph (ledger AC-16, RM-18, AC-06).
+* **Article section:** v16 sec. 8, ‘Rural hospitals have more time, not immunity’ (second paragraph, cost-paid hospitals with no Medicare rate) (ledger AC-16, RM-18, AC-06)
+* **Old → new section:** Note sec. 5, rural paragraph (ledger AC-16, RM-18, AC-06). → v16 sec. 8, ‘Rural hospitals have more time, not immunity’ (second paragraph, cost-paid hospitals with no Medicare rate)
+* **v16 flag:** Matches ledger AC-16 (‘may leave little or no room for SDPs above base rates’, [I]). v16 sec. 8 says rural hospitals keep SDPs approved ‘by July 4, 2025, against May 1, 2025 for other hospitals’; v16 sec. 1's table says ‘before May 1, 2025’, as ledger RM-16 does, so ‘by’ and ‘before’ differ for May 1.
 * **What it changes:** AC-16's 'small or zero room, more restrictive' reading is conditional and rests on single-source rule mechanics. State Medicaid agencies make the same argument on the record, which strengthens it without making it a prediction.
 * **Risk:** Low to medium: these are agencies' and providers' positions, not evidence of outcomes. Keyword counts are approximate.
 
@@ -387,7 +455,10 @@
 * **Figure:** Third-party figures as cited by NRHA: about 50 percent of rural hospitals with negative margins; median rural operating margin about 1 percent (Chartis Center for Rural Health, 2025 State of the State); 432 hospitals at risk of closure.
 * **Verification:** Located at p. 1 of 10. Chartis was not read; these are NRHA's citations. Not in the verification log.
 * **Distinct texts vs campaign copies:** 1 comment, 1 distinct text in both views; not in a campaign.
-* **Article section:** Note sec. 5 (ledger NC-12, C-12, D-4, AC-05 superseded).
+* **Article section:** v16 sec. 8, ‘Rural hospitals have more time, not immunity’ (last sentence); Appendix C, ‘Limits of the analysis’ (to be written) (ledger NC-12, C-12, D-4, AC-05 superseded)
+* **Old → new section:** Note sec. 5 (ledger NC-12, C-12, D-4, AC-05 superseded). → v16 sec. 8, ‘Rural hospitals have more time, not immunity’ (last sentence); Appendix C, ‘Limits of the analysis’ (to be written)
+* **v16 flag:** Consistent with ledger NC-12 (v16: ‘does not assess whether rural hospitals are less able to absorb these changes; the studies cited track services, not hospital finances [I]’). NRHA's Chartis margin figures are not in v16; ledger C-12's unsearched-sources list has no counterpart until Appendix C is written.
+* **Review-notes “Still open” item:** appendix (C) is not written
 * **What it changes:** The note deliberately declines to assess rural financial capacity (NC-12) and lists Chartis among sources not searched (C-12). This comment points to that literature but does not change the note's scoped claim.
 * **Risk:** Medium: secondary citation by an advocacy group. Using it reopens a decision the note made on purpose (D-4).
 
@@ -399,7 +470,10 @@
 * **Figure:** n/a.
 * **Verification:** Legal Action Center located at p. 1 of 7. Keyword counts only; no comment was found reporting litigation filed against either proposed rule.
 * **Distinct texts vs campaign copies:** Keyword counts citing Loper Bright: CMS-2449-P about 40 comments (about 20 distinct texts) in both views; CMS-2452-P about 11 comments (about 8 distinct texts) in both views. Approximate.
-* **Article section:** Note sec. 7, item 11 (ledger NC-15, C-5, TP-28).
+* **Article section:** v16 sec. 9, ‘9. What to watch’, item 7 under ‘Events that would change CMS’s estimates or the rules’ (ledger NC-15, C-5, TP-28)
+* **Old → new section:** Note sec. 7, item 11 (ledger NC-15, C-5, TP-28). → v16 sec. 9, ‘9. What to watch’, item 7 under ‘Events that would change CMS’s estimates or the rules’
+* **v16 flag:** v16 item 7 keeps the litigation and bills limbs ([E], ‘as of September 22, 2026’) but drops NC-15's sentence that the formal opposition located is in comment letters and that press reports describe hospital lobbying (TP-28). The comment record reports no filed suit; CHAT cites an existing Texas injunction tied to the Fifth Circuit appeal in item 6.
+* **Review-notes “Still open” item:** re-dating “as of September 22, 2026”
 * **What it changes:** This adds texture to 'the formal opposition we located is in comment letters': the letters lay the legal groundwork, which bears on how quickly litigation could follow a final rule. It does not contradict NC-15.
 * **Risk:** Low. Keyword counts are approximate, and commenters' legal claims are advocacy.
 
@@ -411,7 +485,9 @@
 * **Figure:** Advocacy figures: Pasadena Fire Department $1-1.5 million a year; per-transport shortfalls from RAND's analysis of CMS ambulance cost data (all-payer median -$1,362 for public-safety EMS, per PWW).
 * **Verification:** verification_log rows 116 (Pasadena, confirmed) and 582 (PWW -$1,362, corrected: all-payer median, RAND/GADCS).
 * **Distinct texts vs campaign copies:** Keyword count, docket CMS-2026-1916: about 240 comments (about 140 distinct texts) in both views; includes a 39-letter campaign. Approximate.
-* **Article section:** Note sec. 2.4 caution 2 (provider aggregate; ledger CE-51) and sec. 4 (KFF's ambulance tax count, SE-04).
+* **Article section:** v16 sec. 4, ‘4. The net effect on providers’ (paragraph beginning ‘CMS’s figures cover all providers…’); sec. 6, ‘6. Where exposure is concentrated’ (KFF bullets) (ledger CE-51, SE-04)
+* **Old → new section:** Note sec. 2.4 caution 2 (provider aggregate; ledger CE-51) and sec. 4 (KFF's ambulance tax count, SE-04). → v16 sec. 4, ‘4. The net effect on providers’ (paragraph beginning ‘CMS’s figures cover all providers…’); sec. 6, ‘6. Where exposure is concentrated’ (KFF bullets)
+* **v16 flag:** v16 says CMS's figures ‘cover all providers, including hospitals, managed care organizations and nursing facilities’ and does not name ambulance or other EMS providers, the largest single bloc of CMS-2449-P comments (about 240 comments, about 140 distinct texts) and part of KFF's 10 ambulance-tax states (F-029). v16 tags ‘no separate hospital figure’ [E]; ledger NC-07 scopes it as a negative claim about the RIAs as transcribed. See F-012 for the 91 FR 30462 conflict.
 * **What it changes:** It shows who else sits in the 'provider aggregate' the note distinguishes from hospitals. It is outside the note's scope unless the author wants a non-hospital example.
 * **Risk:** Low as context. Medium if per-transport advocacy figures are used.
 
@@ -423,6 +499,45 @@
 * **Figure:** n/a.
 * **Verification:** Located at p. 1 of 3. Rule text not re-read.
 * **Distinct texts vs campaign copies:** 1 comment, 1 distinct text in both views; not in a campaign.
-* **Article section:** Note sec. 5, psychiatric beds and IMD paragraph (ledger AC-14, AC-15).
+* **Article section:** v16 sec. 8, ‘8. Services already under strain’ (paragraph on inpatient psychiatry and institutions for mental diseases) (ledger AC-14, AC-15)
+* **Old → new section:** Note sec. 5, psychiatric beds and IMD paragraph (ledger AC-14, AC-15). → v16 sec. 8, ‘8. Services already under strain’ (paragraph on inpatient psychiatry and institutions for mental diseases)
+* **v16 flag:** v16 keeps ledger AC-14's claim that most freestanding psychiatric hospitals are IMDs and AC-15's description of the exclusion, tagged [I] and [E], still with no source (the ledger offers SSA §1905(a) and 42 CFR 438.6(e)). The Manhattan Institute comment (1916-0659) concerns the SDP rule's FFS exception for IMDs and PRTFs, which v16's paragraph does not mention.
 * **What it changes:** AC-15 treats the IMD exclusion as long-standing and outside the rules. This comment shows the SDP rule's own FFS-limit exception touches IMDs, which could matter if the note expands the psychiatric point. It does not support AC-14's uncited claim that most freestanding psychiatric hospitals are IMDs.
 * **Risk:** Low.
+
+## v16 differences not tied to a finding
+
+These are places where v16 differs from Evidence Ledger v3 or from the comments but no finding F-001 to F-030 covers the point. They are not new findings.
+
+### U-1
+
+* **v16 location:** v16 sec. 1, ‘The SDP rule (CMS-2449-P)’ (table, ‘Added by CMS’ column)
+* **v16 text vs comments:** v16 gives −$5.34 billion (extension to other services) and −$2.44 billion (FFS limit), both ‘over 2029–2035’, as separate additions. Comments describe them differently: PHCA (1916-0550) and AHCA/NCAL (1916-0611) say the RIA prices the extension at $5.34 billion ‘of the $774.8 billion total … over 2026 through 2035’ and the FFS limit adds ‘a further’ $2.44 billion over 2029–2035; THA (1916-0399), MDA (1916-0891) and PPC (1916-0933) give a $515 billion federal figure = $510.1B + $5.34B ‘other policy’, which MDA and PPC say includes the FFS limits.
+* **Ledger reference:** ledger CE-05, CE-06 (single-source; neither says whether the figures are inside $774.8B or $510.1B)
+
+### U-2
+
+* **v16 location:** v16 sec. 7, ‘7. Estimating one hospital’s position’ (Step 2), and sec. 9, ‘Events that would show who bears the cuts’, item 8
+* **v16 text vs comments:** v16 says CMS ‘announces final state thresholds on September 30, 2028’. Comments describe it as intended or latest: FAH 2476-0070 (‘intends’), AzHHA 2476-0077 and DCHA 2476-0071 (‘no later than’), CBHA template (‘currently anticipated … by’); two letters in the Texas campaign (2476-0048, 2476-0061) say ‘at the earliest’. Interim data due December 31, 2026 agrees with v16.
+* **Ledger reference:** ledger RM-19, D-1 (single-source, conditional)
+
+### U-3
+
+* **v16 location:** v16 sec. 1, ‘The provider tax rule (CMS-2452-P)’ (hold harmless paragraph and threshold table)
+* **v16 text vs comments:** v16: a tax fails if it exceeds a threshold share of net patient revenue ‘and most taxed providers also get most of their tax back’; FFY2027 threshold ‘at most 6.0%’. Comments define the second prong as the 75/75 test (a tax over the safe harbor is not a hold harmless unless 75 percent of taxpayers get back 75 percent or more of their tax; Georgetown 2476-0029, CBHA template 2476-0026), say CMS would drop it from October 1, 2026 (CBHA, Missouri Hospital Association 2476-0035), and say a threshold above 6 percent survives only for a state that showed it passed the 75/75 test as of July 4, 2025, which CMS does not expect any state to do (CBHA template).
+* **Ledger reference:** ledger RM-07, RM-28, RM-30; review-notes item
+* **Review-notes “Still open” item:** the hold harmless description (91 FR 46562)
+
+### U-4
+
+* **v16 location:** v16 sec. 1, ‘The provider tax rule (CMS-2452-P)’ (table, OBBBA column: nursing and intermediate care facility taxes exempt)
+* **v16 text vs comments:** v16 puts the exemption in the ‘Required by the OBBBA (Section 71115)’ column. Comments agree it is statutory (AAMC 2476-0086 fn 6: ‘The WFTCA legislative text excludes’ the classes; LeadingAge 2476-0118; GNYHA 2476-0184; Arkansas Health Care Association 2476-0142; CBHA template ‘statutory protection’) except NRHA 2476-0093 and AMGA 2476-0131, which say CMS ‘proposed’ or ‘already’ exempts them.
+* **Ledger reference:** ledger RM-29 (single-source, rule text not re-read); review-notes item
+* **Review-notes “Still open” item:** statutory basis of the nursing and intermediate care facility exemption
+
+### U-5
+
+* **v16 location:** v16 sec. 2, ‘2. What links the two rules’, and sec. 7, ‘7. Estimating one hospital’s position’ (Step 3)
+* **v16 text vs comments:** v16 says the most recent state-by-state SDP financing dollars cover 2022 (GAO-24-106202, Table 4) and that a state's preprint ‘lists funding sources by type and reports IGT dollars by transferring entity but no provider tax dollars [E]’. Ledger v3 has no row for either, and the comments do not address them (the one comment citing GAO-24-106202, FGA 1916-0734, cites it only for oversight and transparency).
+* **Ledger reference:** no ledger row; review-notes item
+* **Review-notes “Still open” item:** GAO-24-106202 Table 4 (separate or combined provider taxes and IGTs)
