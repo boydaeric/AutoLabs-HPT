@@ -40,3 +40,8 @@ A new role adds a row here only through the editor.
 * A quote is verbatim and at most 24 words. Mark a cut with `…`.
 * Use at most one quote per source (one comment, letter or document) across a file. Paraphrase anything else from that source.
 * Every quote carries its source ID (for comments, the regulations.gov comment ID) and, where the source has pages, a page.
+
+## Departures
+
+* **Repeated quotes from one source.** The verification notes (October 8, 2026) in `review/findings.csv`, `review/findings.md` and `review/findings_v16_unmapped.csv` quote CMS-2452-P more than once, in F-005, F-006, F-007, F-011, F-015 and U-3, because the verification request asked for exact wording in each note. This departs from the one-quote-per-source rule in section 5. Each quote is verbatim and at most 24 words.
+* **Idaho quote not checked word for word.** The quotation from Idaho Code § 56-1404(4) in the F-022 verification note came through a web-fetch tool that returns extracted text, so it was not compared word for word with the statute. Every other verification-note quote was matched by script against the downloaded source document.
