@@ -302,3 +302,148 @@ Only one finding goes to lead: F-011. None contradicts the headline range or the
 3. **CMS against CBO (F-015, F-005).** Sec. 5 should keep its critique of POLITICO's construction. It should stop implying that the differences it names explain the CMS–CBO gap. On CMS's own tables they do not, and the CBO side cannot be checked in this pass. "Unresolved" is the supportable word, and it is consistent with the no-position line.
 
 **The one change that would help the reader most:** open sec. 4 with CMS's own statement that the net effect of both rules is still a significant reduction in provider payments (F-011, 91 FR 46593), placed beside the +$21.7 billion, and point to it from Executive summary paragraph 2. The biggest risk to the reader is taking +$21.7 billion or $220.3 billion as the answer, and F-010 and F-013 show that commenters already do. CMS's sentence closes that gap. It also turns "THEIA Services found no published estimate" from THEIA's assertion into a gap CMS itself leaves open: CMS says the combined effect is a significant net reduction and publishes no figure for it.
+
+---
+
+# Round 2
+
+*Messaging reviewer, October 9, 2026. Follows `review/CONVENTIONS.md`. Reviews `review/article_v2.md` against Round 1 above, using `review/article_changes.md`, `review/decision_log.md` and `review/verification_summary.md`, including "Citation check" and "Round 2 verification". Section references are to v2, whose section numbers and headings match v16. No other file was edited. The only quote added in this round is from v2, quoted once.*
+
+## 1. Round 1 points
+
+| Round 1 point | Status | Where v2 handles it |
+|---|---|---|
+| F-001: footnote, out of the body | Resolved | Appendix C and I notes; Appendix G scope. The body has no count. |
+| F-002: Appendix G; drop the old 28-comment scope | Resolved | Appendix G note. |
+| F-003: posted counts only; hold the 6,344; no comparison across dockets | Resolved, with Round 2 update | Appendix I methods note. It now gives the Federal Register counts (6,344 and 245) with refresh dates, which Round 2 confirmed, and makes no comparison across dockets. See new issue N-8 on what the note says those counts cover. |
+| F-004: footnote, descriptive part only | Resolved | Appendix F. Round 2 confirmed CBO's figures, so the match between $183 billion and $182.7 billion can now stand as an [I] reading. |
+| F-005: support for CMS's part; hold CBO's part; cite CMS directly | Resolved | Sec. 5, POLITICO and CBO subsection, paragraph 2. Both parts are now confirmed and cited at the source. |
+| F-006: footnote on sec. 1; hold CMS-2448-F's figures, CBO's $34 billion and Iroquois | Resolved | Sec. 1, paragraph 1, second sentence. All three held. The optional clause about ASPE also covering Section 71117 was not added; that is fine. |
+| F-007: support in sec. 2 and sec. 3; one cross-reference in sec. 4; don't cite THA | Resolved, with a scope problem I introduced | Sec. 3 bullet; sec. 2, paragraphs 4–5; sec. 4, paragraph 2; Executive summary paragraph 4; sec. 7, step 3, third case; Appendix D. The sec. 7 sentence follows my Round 1 wording, which was too broad. See N-3. |
+| F-008: hold | Resolved (cut) | Round 2 found no 50 percent in CBO. |
+| F-009: Appendix D or cut | Resolved | Appendix D. |
+| F-010: footnote; keep NRHA's $147.5 billion out of the body | Resolved differently | CMS's −$147.5 billion and −$60.5 billion are in the sec. 3 body and in a new "Net for states" row in the sec. 5 exhibit, with a reconciliation, following your state-effects instruction. Commenters' readings are in an Appendix E note. My crowding concern is reassessed under item 3 below. I accept the body placement, but recommend trimming it (cut 4). |
+| F-011: lead, sec. 4 paragraph 1; pointers from Executive summary paragraph 2 and sec. 5; cite CMS, not CHLA | Resolved | Sec. 4, paragraph 1, paraphrased with the 91 FR 46593 pin cite and the qualifier that the statement confirms no figure. Pointers are in Executive summary paragraph 2 and in sec. 5, "two figures". See N-6 on the summary's paraphrase. |
+| F-012: support for both CMS statements, pointing to sec. 7; cut CHLA's $138 billion | Resolved | Executive summary paragraph 1; sec. 3, paragraph after the table; sec. 4, last paragraph. Each points to sec. 7 and $138 billion is cut. Sec. 4 now discloses its own one-year-share assumption. |
+| F-013: one supporting sentence in the HFMA subsection; no implication that anyone reached $56.6 billion | Resolved | Sec. 5, HFMA, paragraph 2. Counts are given in both views. |
+| F-014: footnote, no name in the body | Resolved | Appendix G, pointed to from the end of sec. 5's POLITICO subsection. |
+| F-015: support for CMS's tables only; hold the comparative conclusion; call the gap unresolved; drop the verdict | Partly resolved | Sec. 5, last POLITICO paragraph, and Appendix F. The verdict is gone, "unresolved" is used, CBPP is in Appendix F, and the comparison against $340.5 billion is allowed now that Round 2 confirmed CBO's two components. Still open: the heading still attributes $340.5 billion to CBO (decision 1), and one new sentence overstates what CMS's tables show (N-1). |
+| F-016: footnote framed as scope, paired with F-021; Lee County left out | Resolved | Appendix F. |
+| F-017: footnote, "appears to" | Resolved | Appendix E. |
+| F-018: footnote; scope the sentence about organizations that separate these quantities | Resolved | The sentence is split in sec. 5, ASPE, paragraph 3, and Appendix F has the payment-limit note. |
+| F-019: pin cite p. 2 | Resolved for the wording | FAH's ask is now described as about the total payment rate. The page went to the citation-to-add list, as the writer's citation rule requires. |
+| F-020: Appendix E, pointer from sec. 4 | Resolved | Appendix E. Both sec. 4 source notes now say "text gives" instead of "rounds". |
+| F-021: footnote paired with F-016 | Resolved | Appendix F. |
+| F-022: hold; the per-class point is usable only if sourced to CMS | Resolved (hold) | The per-class point now enters sec. 7, step 2, under the wrong citation. See N-4. |
+| F-023, F-025, F-027, F-029, F-030: hold | Resolved | Not used. |
+| F-024: footnote, HHSC document only | Resolved | Appendix I, pointed to from sec. 9, item 5. |
+| F-026: support, positions only | Resolved | Sec. 8, rural subsection, paragraph 2. See N-7 on naming Ohio. |
+| F-028: footnote | Resolved | Appendix I, pointed to from sec. 9, item 7. |
+| Quote budget: one CMS-2452-P quote | Resolved | v2 keeps the Table 12 title as its one CMS-2452-P quote and paraphrases the "shown in table 12" wording. |
+| Verdict 1: hospital emphasis is CMS's expectation | Resolved | See F-012. |
+| Verdict 2: the range is conditional on CMS's state-offset assumption | Resolved, with N-2 and N-3 | Executive summary paragraph 4; sec. 4, paragraph 2. |
+| Verdict 3: CMS against CBO is unresolved, with no verdict | Partly resolved | See F-015: the heading and N-1 remain. |
+| The one change: open sec. 4 with CMS's statement (F-011) | Resolved | Sec. 4, paragraph 1. |
+
+## 2. New issues the revision introduced
+
+Ranked by effect on the reader.
+
+**N-1. Sec. 5 claims more than CMS's tables show.** The reconciliation paragraph says: "Of the differences between them, only the extra year lowers CMS's figure." Round 1 and the verification files support that for only three adjustments: window, interaction and dollar basis. Read literally, "the differences between them" also covers the comparison projection, CMS's unseparated additions and coverage effects. The same paragraph says those are unresolved, and their direction is not known. The sentence should name the three adjustments CMS's tables allow. Otherwise sec. 5 slides back toward a verdict on the gap, the point Round 1 asked v2 to drop.
+
+**N-2. Sec. 4, paragraph 2 now contradicts itself.** Sentence 1 still says the range is driven entirely by how much of the state share providers fund. Sentence 2, new, says the range also rests on CMS's central assumptions, including the 30 percent offset. Both are true if "entirely" refers to the width of the range within the central estimate, but a reader sees "entirely" followed by "also". The fix is to say that the gap between $488 billion and $753 billion comes from step 3 alone, while both ends rest on CMS's central assumptions.
+
+**N-3. Sec. 7, step 3, third case is too broad. My Round 1 wording caused this.** CMS's 30 percent offset applies to the provider tax rule's cuts, the payment reductions that follow lost tax revenue (91 FR 46591). The Executive summary and sec. 4 scope it that way. The third case covers a state replacing lost SDPs in general, including SDPs lost to the SDP rule's cap. Nothing in the findings or verification files says CMS's SDP rule estimate assumes any replacement. So only replacement of provider-tax-driven cuts is "a departure from CMS's assumption". Replacing cap losses would be relief CMS's range does not include. As written, the sentence could lead a hospital to discount real relief. The sentence should be limited to the provider tax rule's cuts, which also matches sec. 4's sentence on states that replace more or less than CMS assumes.
+
+**N-4. Sec. 7, step 2, the wording the writer reconstructed without v15.** The new definition (step 2 is the tax the hospital would no longer pay, its current bill minus its bill under each lower threshold) matches the description of v15 in `new_text_check.md` §6, so it is traceable. It is not in v16, the findings or a verified source, and it is tagged [I], which is correct. Three problems:
+* **It does not match the national step 2.** The national step 2 subtracts $163.7 billion, which is net of the $35.0 billion CMS assigns to private payers because providers pass part of their tax costs into commercial prices (Table 8, 91 FR 46590). The hospital step 2, as defined, counts the full drop in the tax bill. Sec. 7's closing paragraph mentions the $35.0 billion only as something outside the three steps. A hospital comparing its result with the national range should be told that its step 2 is before pass-through, and the national figure after.
+* **It reads as universal.** As a definition, it applies to every hospital. Step 2 is zero in non-expansion states, where the freeze does not lower anyone's bill, and for a hospital whose tax class is already at or below the threshold. The next sentence scopes the lower threshold to expansion states, but the definition comes first. Adding "in expansion states, for taxes above the threshold" to the definition fixes this.
+* **The citation covers only part of the sentence.** "Final thresholds by state and tax class … (91 FR 46574)" is new in step 2. v16's step 2 said only "final state thresholds", with no cite. The Citation check confirms 46574 for CMS's intention and the no-later-than date. It does not confirm "by state and tax class", which comes from v16's uncited sec. 9 wording. The per-class fact is at 91 FR 46570 in F-022's note, but that page is on the citation-to-add list. Until 46570 is confirmed, the sentence should either say "final thresholds" or put the 46574 cite where it covers only the date. The same applies to sec. 9, item 8.
+
+**N-5. A partly verified claim moved up into the Executive summary.** Paragraph 1 now states as [E], with no cite, that CMS measures both rules against a projection without the OBBBA. `article_changes.md` itself flags the underlying citation (91 FR 46589–46591) for re-check, because it is verified for the provider tax rule only (F-006 flag; ledger CE-43). In v16, this sat in sec. 3. In the summary it frames the headline. Either confirm the SDP rule's baseline at its own Federal Register page before publication, or limit the summary sentence to what is verified. This is the one new claim that touches the headline.
+
+**N-6. The summary's paraphrase of F-011 drops "net".** Executive summary paragraph 2 says CMS expects the two rules together to still cut provider payments significantly. CMS's statement, as sec. 4 renders it, is about the net effect. The article's whole contribution is the net figure, and "on net" is three words. Put it back.
+
+**N-7. Sec. 8 names Ohio's Medicaid agency, but nobody checked Ohio's letter.** F-026 confirms the Virginia agency's heading (located, p. 3 of 5) and lists Ohio only as a commenter. Name Virginia's agency alone, or confirm Ohio's letter first.
+
+**N-8. Appendix I says what the Federal Register counts cover.** The methods note says the 6,344 and 245 cover each docket as filed. Round 2 confirmed the counts and refresh dates, but recorded what they count as unverifiable. Drop "as filed" for those two figures, or say the docket view is not stated.
+
+**No other new citation fails the Citation check.** Every citation v2 adds matches a confirmed row in the Citation check, the verification summary or a confirmed finding note. That includes the CBO table and pages, 91 FR 46596 and 46592 for the state nets, 42 CFR 433.70(b), and the statute and regulation pinpoints. The CBO wording I expected to be unconfirmed (no coverage effect from Section 71116; no revenue row for Section 71116 behind the $332.1 billion) is confirmed in the F-005 and F-015 Round 2 notes.
+
+## 3. Findings moved to confirmed or corrected
+
+### F-003: Federal Register comment counts (now confirmed; what they count is still unverifiable)
+
+* **Effect.** Neutral. It changes only how Appendix I labels counts.
+* **Headline, takeaway, call to action.** None changes.
+* **Crowds out.** No. It stays out of the body.
+* **Placement.** **Footnote** in Appendix I, as v2 has it. Keep the bar on comparing dockets, and fix the as-filed wording (N-8).
+
+### F-005, CBO part: 1.1 million more uninsured from Section 71115, none from Section 71116 (now confirmed)
+
+* **Effect.** Neutral to the central argument. Sec. 5's list of differences now sets out both sides of the enrollment difference from primary sources, without implying which way it moves the gap.
+* **Headline, takeaway, call to action.** No change to the headline or the call to action. It supports sec. 5's revised takeaway that the CMS–CBO difference is unresolved, as long as N-1 is fixed. With N-1 unfixed, the reader could take CBO's coverage effects as something that lowers CMS's figure, which nothing shows.
+* **Crowds out.** No. It replaced a sentence rather than adding one.
+* **Placement.** **Support** in sec. 5, POLITICO and CBO subsection, paragraph 2, as v2 has it. Round 1 held this part; that hold has lapsed.
+
+### F-006, CBO part: Section 71117, $34.6 billion in outlays and $0.6 billion in revenue (now confirmed)
+
+* **Effect.** Neutral. It concerns a provision whose final rule CMS says does not significantly change its estimates.
+* **Headline, takeaway, call to action.** None changes.
+* **Crowds out.** Yes, if added. A third section's CBO figures in sec. 1 or sec. 5 would invite readers to stack them with the two sections the note covers.
+* **Placement.** **Hold**, as the decision log has it. Confirmation removes the evidence bar, not the scope bar.
+
+### F-010: CMS's state figures, −$147.5 billion with the interaction and −$60.5 billion without (now confirmed)
+
+* **Effect.** Strengthens accuracy, neutral to the central argument. It corrects v16's sign: the state column is a spending reduction before lost tax revenue, and CMS calls the state result a net loss. It adds a second storyline, states losing, to a note about providers.
+* **Headline, takeaway, call to action.** No change to the headline or the call to action. It improves sec. 5's takeaway about POLITICO's $265 billion. Round 1 worried that the $147.5 billion would need its own explanation. v2 supplies it (51.2 − 198.7 and 138.2 − 198.7), so the concern is met.
+* **Crowds out.** Mildly. The state net now appears in three places: sec. 3, the sec. 5 exhibit row and its source note, and sec. 5, POLITICO paragraph 3.
+* **Placement.** **Support** for the CMS figures in sec. 3, after the $198.7 billion paragraph, and in the sec. 5 exhibit row. **Footnote** for commenters' readings in Appendix E. Trim the repeats (cut 4).
+
+### F-015 as now placed in sec. 5 (corrected; CBO components now confirmed)
+
+* **Effect.** It qualifies a sub-claim and is neutral to the central argument. Sec. 5 now critiques POLITICO's construction and reconciles CMS's published federal figures on CMS's own tables against the sum of CBO's two confirmed outlay estimates. It calls the rest unresolved and gives no verdict, which is consistent with the no-position line.
+* **Headline, takeaway, call to action.** No change to the headline or the call to action. The sec. 5 takeaway is now the supportable one Round 1 asked for, apart from N-1 and the heading.
+* **Crowds out.** Somewhat. The reconciliation is now the longest paragraph in sec. 5, at seven sentences. It carries the no-interaction figures that Appendix F already tabulates. That is the start of the CMS-against-CBO contest Round 1 warned would pull readers away from the net loss to providers.
+* **Placement.** **Support** in sec. 5, last POLITICO paragraph, cited to CMS's tables and CBO's Table 7, as v2 has it. Not lead. CBPP stays in Appendix F as its own reasoning. Fix N-1, retitle the heading (decision 1), and move the no-interaction sentence to Appendix F (cut 5).
+
+## 4. The five decisions that need input
+
+1. **F-015 placement. Agree:** support, not lead, with the verdict removed and the rest called unresolved, is right. The comparison may now use $340.5 billion because CBO's two components are confirmed. **The heading should not still attribute $340.5 billion to CBO.** CBO prints no such total, the body's first mention says so, and a heading that contradicts its own body on a verified point is the first thing a skeptical reader will quote. Something like "POLITICO's $681 billion and the Congressional Budget Office's estimates" keeps the subsection's job without the misattribution.
+2. **F-011 and the quote slot. Agree:** F-011's point survives paraphrase. The Table 12 title is documentary evidence for the HFMA reading and is worth more verbatim. Fix N-6 so the paraphrase keeps "net".
+3. **Hospital share of tax relief. Agree:** with the assumption disclosed, the sentence gives hospitals a useful direction without a number. It no longer does what the note faulted in CHLA's allocation.
+4. **Existing v16 citations. Agree:** reading the citation rule as governing new and proposed citations is right. But the one flagged citation that now supports an Executive summary sentence (91 FR 46589–46591 for both rules' baseline, N-5) should be re-checked before publication, not after.
+5. **Footnote material in appendix notes. Agree:** notes under the existing bullets keep v16's structure. The body's pointers to appendices still marked "to be written" are acceptable in a draft, but every pointed-to note must exist before publication.
+
+## 5. Cuts
+
+Measured without v16's review-notes block, v2's body runs about 7,370 words against v16's 5,700, about 29 percent longer. The new appendix notes add about 1,170 words on top. Most of the growth is required corrections and qualifiers, which these cuts keep. The five cuts below remove repetition only and recover about 380 words, roughly 5 percent of the body. Getting closer to v16's length would mean moving material, not just cutting repeats.
+
+1. **Repeats in the Executive summary (about 125 words).**
+   * Cut paragraph 4, sentences 2–3: the 80–90 percent statistic, the IGT gloss, and the sentence saying lower SDPs may reduce the taxes and transfers that fund them. Sec. 2 carries the statistic and gloss with cites; sec. 4 carries the reasoning.
+   * Cut paragraph 5, sentences 2–3: what state exposure depends on, and that it shows where the rules reach. Sec. 6, paragraph 1 and Figure 6's caption both carry these.
+   * Cut paragraph 1's last sentence, which paragraph 5's last sentence repeats.
+
+   Kept: the $264.7 billion ceiling, the no-current-public-source sentence, the sentence saying CMS's data cannot narrow the range, the 30 percent assumption, and "a range, not a single number".
+2. **The third statement of the 91 FR 30462 pair, in sec. 3 (about 45 words).** In the paragraph after the table, keep CMS's description of who bears the reductions (providers and other entities, such as local governments) and the low-savings and high-savings totals. Drop the hospital half, which the Executive summary and sec. 4 carry with the same-page caveat. Removing the uncaveated claim satisfies the correction.
+3. **Repeats of the offset reading (about 75 words).**
+   * Move sec. 3 bullet's last two sentences, CMS's sequence and THEIA's reading, to Appendix D. Appendix D already notes that CMS prints no total before the offset. In the bullet, leave a one-clause [I] reading with "(Appendix D)".
+   * Drop the 30 percent clause from sec. 2, paragraph 4. The reading is then stated in the Executive summary, sec. 3, sec. 4 and sec. 7, instead of five times.
+4. **Repeats of the state net (about 70 words).**
+   * Replace the second sentence of the sec. 5 exhibit's source note, which explains why THEIA gives no state net, with "(sec. 3, sec. 4)".
+   * Cut the clause added to sec. 5, POLITICO, paragraph 3, about the $198.7 billion leaving states a net loss, and replace it with "(sec. 3)".
+
+   Kept: sec. 3's figures, reconciliation and "not a state saving" label, and the exhibit row itself.
+5. **The reconciliation paragraph in sec. 5 (about 65 words).** Move the no-interaction sentence ($755.9 billion; $630.9 billion without 2035) to Appendix F, which already tabulates both figures. Keep the direction in the body ("removing the interaction would raise it"). Drop the sentence calling this a reconciliation of published estimates and saying THEIA attributes the rest to no single cause, because "unresolved on public data" in the previous sentence already says it.
+
+## Round 2 verdict
+
+The thesis holds, and v2 carries the three qualifications Round 1 asked for. The headline stays first and net. CMS's own statement now anchors the missing-total claim. The hospital framing and the CMS–CBO discussion no longer outrun the sources.
+
+Before publication, fix four things:
+* **The sec. 5 heading** still credits CBO with a figure it does not print (decision 1).
+* **N-1:** the reconciliation sentence that covers every difference instead of the three adjustments CMS's tables allow.
+* **N-3:** the over-broad third case in sec. 7, step 3. My Round 1 wording caused this.
+* **N-4:** the step 2 definition, which does not match the national step 2 and reads as universal.
+
+Of these, the heading is the one a reader is most likely to catch and quote.
