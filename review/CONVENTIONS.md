@@ -18,6 +18,9 @@ These rules apply to every file in `./review/`.
 | `review/CONVENTIONS.md` | Editor (changes only on the editor's instruction) |
 | `review/article_draft.md` | Author |
 | `review/findings.csv`, `review/findings.md` | Comment analyst (public-comment evidence) |
+| `review/feedback/messaging.md` | Messaging reviewer |
+| `review/feedback/skeptic.md` | Skeptic reviewer |
+| `review/decision_log.md`, `review/article_v2.md`, `review/article_changes.md` | Writer |
 
 A new role adds a row here only through the editor.
 
