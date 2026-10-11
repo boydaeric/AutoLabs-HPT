@@ -116,3 +116,150 @@ Default is accept. Specific items are listed only where v2 departs from the prop
 | 3 | "Your hospital framing outruns CMS, and you do what you fault CHLA for." | **Answered.** CMS's same-page statement that it cannot attribute impacts by provider type sits beside every "mostly hospitals" sentence; sec. 4 discloses its one-year share as THEIA's assumption; CHLA's $138 billion is cut, so the piece no longer faults an allocation it also makes. The 87.5 percent is given with its base (one year's preprint-reviewed SDPs, not the projected cuts). EMS stays out (F-029 hold); v16 already says CMS's figures cover all providers. |
 | 4 | "You called HFMA's figure an error when CMS's text and most citing commenters read it the same way." | **Answered in part.** v2 keeps "appears, on THEIA Services' reading", restores "matches" for the Table 12 line, adds that four of the five citing comments read $220.3 billion as a payment cut (none reaching $56.6 billion), and restores that Table 12 shows the net. App. E states the rule: v2 uses CMS's table sums where CMS's text differs ($264.7 billion against $264.4 billion; $340.0 billion against $339.6 billion). **Not answered:** HFMA's reply ([DATE SENT] still open) and any CMS correction notice. |
 | 5 | "Your 'net' leaves out what a CFO actually loses." | **Answered in part.** v2 states the dollar basis (2026 dollars) in the first sentence, keeps sec. 7's scope paragraph (commercial prices, other OBBBA provisions), notes CMS's zero-enrollment assumption for the provider tax rule, and notes Section 71117's interaction in sec. 1. **Not answered:** no nominal-dollar or annual series and no estimate of commercial-price or uncompensated-care effects; no verified source supplies them, and the note does not claim to cover them. State-level advocacy figures (Idaho, Missouri, Minnesota, Texas) stay on hold. |
+
+---
+
+# Round 2 decisions
+
+*Writer, October 11, 2026. Inputs: "Round 2" in `review/feedback/messaging.md` (M2) and `review/feedback/skeptic.md` (S2); "Round 3 verification" in `review/verification_summary.md` (R3); your decisions of October 11. Output: `review/article_v3.md`. `review/article_v2.md` is unchanged. Section references are to v3, whose section numbers and headings match v16 except the sec. 5 subsection heading you retitled.*
+
+## Your decisions, as applied
+
+| # | Decision | How v3 applies it |
+|---|---|---|
+| 1 | The five recommendations are approved, but no citation on the re-check list goes into the Executive summary. | The Executive summary carries no citations. Its baseline sentence is scoped to CMS's SDP and provider tax estimates and points to sec. 3, which carries the cites (91 FR 30447; 91 FR 46589–46591). |
+| 2 | Retitle the sec. 5 heading. | "POLITICO's $681 billion and the Congressional Budget Office's estimates". The section number is unchanged. |
+| 3 | F-006's CBO figures stay out; F-003 stays an Appendix I note. | No Section 71117 CBO figure anywhere in v3. F-003 is in Appendix I's methods note only. |
+| 4 | Keep v16's handling of HFMA; no nominal-dollar or commercial-price analysis. | HFMA subsection keeps v16's framing ("appears, on THEIA Services' reading"; request sent [DATE SENT]). The nominal-dollar and commercial-price gaps are stated as limits in an Appendix C note. |
+| 5 | Body at most 15 percent longer than v16's, without cutting a correction, qualifier or verified fact. | Met (word counts below). Length came from removing repeats and moving reference material (statute and regulation pinpoints, payer breakdown, scenario parameters and the scenario table, the 91 FR 30410 shares, Group D flags, dates, bill numbers, rural and IMD definitions) to Appendices B, C, D, F, H and I. |
+
+**Body word counts** (title through sec. 9; review-notes block excluded; tokens containing a letter or digit; table cells included):
+
+| Version | Body words | Against v16 | Raw whitespace tokens (as the reviewers counted) |
+|---|---:|---:|---:|
+| v16 (`article_draft.md`) | 5,465 | — | 5,698 |
+| v2 (`article_v2.md`) | 7,119 | +30.3% | 7,366 |
+| v3 (`article_v3.md`) | 6,246 | +14.3% | 6,447 (+13.1%) |
+
+The 15 percent cap is 6,284 words (or 6,552 raw tokens). Appendix notes grew from 1,356 to 2,244 words, mostly from material moved out of the body.
+
+**One wording note on your step 1 instruction.** You described "the up to 20 percent of the provider tax rule's cut that falls outside SDPs". CMS's ceiling is that states apply *at most* 80 percent of the cut to SDPs (91 FR 46592), so the share outside SDPs is *at least* 20 percent. v3 says "at least 20 percent". Tell me if you meant something else.
+
+**One judgment on coverage effects.** You asked me to state the direction of CBO's coverage effects only if the verification files support it. S2 (N-4) argues that CBO's $191.1 billion includes savings from 2.4 million fewer Medicaid enrollees, which would widen the gap. The files confirm the 2.4 million (F-005, Round 2 note), but none says the $191.1 billion includes savings from it. v3 therefore drops coverage from the list of possible causes in sec. 5 and moves the coverage facts to Appendix F, saying the direction is not established.
+
+## Messaging reviewer, Round 2 (M2)
+
+### M2 part 1: Round 1 points
+
+| Item | Status in M2 | v3 |
+|---|---|---|
+| F-001, F-002, F-004, F-005, F-006, F-008, F-009, F-011, F-012, F-013, F-014, F-016, F-017, F-018, F-020, F-021, F-023, F-025, F-027, F-029, F-030, F-024, F-028, quote budget, verdict 1, "the one change" | Resolved | No action needed; v3 keeps v2's handling. Comment IDs are added wherever these findings describe what commenters said (your commenter rule). F-024's pointer from sec. 9 item 5 is removed (S2 N-9). |
+| F-003 (Round 2 update; N-8) | Resolved, with N-8 open | **Fixed.** See N-8. |
+| F-007 (scope problem, N-3) | Resolved, with N-3 open | **Fixed.** See N-3. |
+| F-010 (resolved differently; trim) | Accepted, trim asked | **Fixed.** CMS's net state figures appear as the sec. 5 exhibit row plus one sentence in sec. 3; POLITICO ¶3's clause became "(sec. 3)"; the exhibit source note points to sec. 3. |
+| F-015 (heading; N-1) | Partly resolved | **Fixed.** Heading retitled; N-1 fixed; see part 3 below. |
+| F-019 (page to citation-to-add list) | Resolved for wording | **Fixed further.** Sec. 5 ASPE ¶3 now cites comment CMS-2026-1916-0676, p. 2, under your commenter rule. |
+| F-022 (per-class point under the wrong cite, N-4) | Resolved (hold) | **Fixed.** R3 confirms 91 FR 46574 for CMS's intent to calculate and provide each state a threshold for each permissible class; sec. 7 step 2 and sec. 9 item 8 now say exactly that, and do not say each state's figures will be published. F-022 itself stays on hold. |
+| F-026 (Ohio, N-7) | Resolved, with N-7 open | **Fixed.** See N-7. |
+| Verdict 2 (N-2, N-3) | Resolved, with N-2 and N-3 open | **Fixed.** See N-2 and N-3. |
+| Verdict 3 (heading; N-1) | Partly resolved | **Fixed.** See F-015. |
+
+### M2 part 2: new issues
+
+| Item | Fixed? | Where, or why not |
+|---|---|---|
+| N-1 "only the extra year lowers" covers every difference | **Fixed** | Sec. 5, last POLITICO ¶: "Of the three adjustments CMS's tables allow (years, interaction, dollar basis), only dropping the extra year lowers CMS's figure"; the direction of the remaining differences is called unknown. |
+| N-2 sec. 4 ¶2 "driven entirely" vs "also rests" | **Fixed** | Sec. 4 ¶2: the gap between the two ends comes from step 3 alone; both ends rest on CMS's central assumptions. |
+| N-3 sec. 7 third case too broad | **Fixed** | Sec. 7, step 3, third case: the 30 percent offset covers only the provider tax rule's cuts; replacing SDP payments lost to the cap is relief the national range does not include. |
+| N-4 step 2: basis, universality, cite | **Fixed** | Sec. 7, step 2: defined as the drop in the hospital's own tax bill; zero in non-expansion states and for taxes at or below the threshold; threshold not the hospital's own rate; not directly comparable with the national $163.7 billion (no-OBBBA baseline, $51.0 billion freeze component in the $198.7 billion, after the $35.0 billion to private payers); 91 FR 46574 cited only for CMS's intent to calculate and provide per-class thresholds no later than September 30, 2028. Same fix in sec. 9 item 8. |
+| N-5 baseline [E] moved into the summary | **Fixed** | R3 confirms the baseline for the SDP rule's SDP estimates (91 FR 30447) and not for its fee-for-service estimates (91 FR 30455). Summary sentence scoped to "SDP and provider tax estimates", no cite (decision 1); sec. 3 ¶1 carries both cites and says the fee-for-service estimates state no baseline. |
+| N-6 summary drops "net" | **Fixed** | Executive summary ¶2: "would on net still cut provider payments significantly". |
+| N-7 Ohio named without check | **Fixed** | R3: Ohio's comment (CMS-2026-1916-0209) concerns youth mobile-crisis services. Ohio removed; sec. 8 names only Virginia's agency, with comment CMS-2026-1916-0755, p. 3, and states only what its located heading says. |
+| N-8 Appendix I says Federal Register counts cover each docket as filed | **Fixed** | Appendix I methods note: the claim is removed; it says the Federal Register gives one count per docket, with no corrected view [I], and does not say what it counts [E]. |
+
+### M2 parts 3 and 4: findings moved and the five decisions
+
+| Item | Fixed? | Where, or why not |
+|---|---|---|
+| F-003 placement (footnote; fix N-8) | **Fixed** | Appendix I. |
+| F-005 CBO part (support in sec. 5 ¶2) | **Changed** | Moved to Appendix F. Your instruction drops coverage from the list of causes unless its direction is supported, and it is not (see note above); keeping it in the body would invite the reading M2 warns against. The correction of v16's "do not model" claim stands: v3 no longer says it. |
+| F-006 CBO part (hold) | **Kept on hold** | Your decision 3. |
+| F-010 (support; trim repeats) | **Fixed** | See F-010 above. |
+| F-015 (support; fix N-1; retitle; move no-interaction sentence) | **Fixed, one part changed** | Support placement kept, framed as a reconciliation; N-1 fixed; heading retitled. The no-interaction figure stays in the body as one clause because your instruction makes $755.9 billion the like-for-like CMS figure; its arithmetic, the $630.9 billion derivation and the with-interaction figures moved to Appendix F. |
+| Decision 1 (heading) | **Fixed** | Your decision 2. |
+| Decision 2 (restore "net") | **Fixed** | N-6. |
+| Decision 3 (hospital share) | **No change needed** | Sec. 4 keeps the disclosed one-year-share assumption. |
+| Decision 4 (re-check the baseline cite before publication) | **Fixed** | R3 checked it; see N-5. |
+| Decision 5 (every pointed-to note must exist) | **Fixed** | Every body pointer (Appendices B, C, D, E, F, G, H, I) now has a draft note under it. |
+
+### M2 part 5: cuts
+
+| Cut | Fixed? | Where, or why not |
+|---|---|---|
+| 1 Executive summary repeats | **Fixed** | Cut ¶4's 80–90 percent statistic, IGT gloss and "lower SDPs may reduce" sentence; cut ¶5's state-exposure sentences; cut ¶1's last sentence (folded into ¶5). Also cut the summary's 30 percent sentence (S2 cut 1). |
+| 2 Third statement of the 91 FR 30462 pair, in sec. 3 | **Fixed differently** | Your instruction is to give the caveat in full once. v3 follows S2 cut 2: full in sec. 3 (with CMS's reason), a short clause in the summary, a back-reference in sec. 4. Dropping the hospital half from sec. 3 instead would leave no full statement anywhere. |
+| 3 Repeats of the offset reading | **Fixed** | Body states it twice: sec. 3 bullet (evidence and [I] reading, now including "prints no total before the offset") and sec. 7 step 3 case 3. Sec. 2 clause cut; sec. 4 is a pointer. M2 suggested moving the sec. 3 reading to Appendix D; I kept it in sec. 3 because it is one of your two allowed statements and the evidence it rests on is there. |
+| 4 Repeats of the state net | **Fixed** | Exhibit source note points to sec. 3; POLITICO ¶3 clause replaced by "(sec. 3)". |
+| 5 Reconciliation paragraph | **Fixed, partly** | The "this is a reconciliation … no single cause" sentence is cut; "unresolved" appears once. The no-interaction arithmetic is in Appendix F; the $755.9 billion stays in the body (see F-015). |
+
+## Skeptic reviewer, Round 2 (S2)
+
+### S2 part 1: Round 1 points
+
+| Item | Status in S2 | v3 |
+|---|---|---|
+| Cross-cutting points 2–7 | Resolved | No action needed. Point 6 (two body sentences about commenters) is fixed under N-6. |
+| Cross-cutting point 1 (heading open) | Resolved (evidence), open (heading) | **Fixed.** Heading retitled. |
+| F-001, F-002, F-004, F-005, F-006, F-007, F-008, F-011, F-012, F-014, F-016 to F-023, F-025, F-027 to F-030 | Resolved | No action needed; comment IDs added where these findings describe commenters. |
+| F-003 | Partly resolved | **Fixed.** See part 3. |
+| F-009 (91 FR 30410 "count arrangements") | Open | **Fixed.** R3: not found. The claim is cut. The shares moved to Appendix C with CMS's stated base: 402 SDPs it approved (91 FR 30410, footnote 40). |
+| F-010 | Moved to confirmed | **Fixed.** See part 3 and N-3. |
+| F-013 ("not unusual"; [E] with no cited document) | Partly resolved | **Fixed.** "HFMA's reading is not unusual" is cut; the sentence now cites comments CMS-2026-2476-0049, -0085, -0190 and -0201 (payment cut) and -0212 (net). |
+| F-015 | Moved | **Fixed.** See part 3. |
+| F-024 (item 6 "set aside"; item 5 pointer) | Partly resolved | **Fixed.** Item 6 keeps only the case, its pending appeal and CHAT's description, labelled as CHAT's and cited (comment CMS-2026-2476-0114, pp. 13–14); "set aside", the 2024 rule provisions, the 2023–2024 guidance and September 2025 are cut (R3: no source). Item 5's pointer to Appendix I is removed. |
+| F-026 (Ohio; [E] with no cited document) | Partly resolved | **Fixed.** See N-6. |
+| Attack 1 | Partly resolved | **Fixed, except one item.** Interaction like-for-like (R3), coverage direction (dropped from causes), heading: fixed in sec. 5. **Not fixed:** whether CMS's 2026–2035 are fiscal or calendar years; no verified source says, so Appendix F keeps it as open. |
+| Attack 2 (overcorrected) | Resolved, overcorrected | **Fixed.** See N-3. |
+| Attack 3 | Resolved | No action needed. |
+| Attack 4 (HFMA reply, CMS correction notice) | Partly resolved | **Not fixed.** HFMA has not replied; your decision 4 keeps v16's handling. No CMS correction notice is in the sources. |
+| Attack 5 (no nominal or annual view; no commercial-price or uncompensated-care figure; step 2 basis) | Partly resolved | **Fixed as stated limits; step 2 basis fixed.** Your decision 4: no new analysis. Appendix C states the limits. Step 2 basis: see N-1. |
+
+### S2 part 2: new issues
+
+| Item | Fixed? | Where, or why not |
+|---|---|---|
+| N-1 step 2 basis, threshold as own rate, per-class cite, reconstruction | **Fixed** | Sec. 7, step 2 (see M2 N-4). The definition now matches your instruction rather than v15 as reconstructed. |
+| N-2 step 1 misses funding-driven cuts | **Fixed** | Sec. 7, step 1, last sentence: step 1 covers only SDP amounts above the cap and leaves out cuts that follow lost provider tax revenue, including the share outside SDPs (at least 20 percent under CMS's 80 percent ceiling), a separate exposure. |
+| N-3 sec. 3 state paragraph overcorrects | **Fixed** | Sec. 3: net-loss statement scoped to the provider tax rule; the SDP rule's state figure is described as before any change in the taxes and IGTs that fund it, with no state net, as in the sec. 5 exhibit; "not a state saving" is cut. v3 says it uses $264.7 billion (Table 20 sum) rather than $264.4 billion (CMS's text) because only the table figure equals $774.8 billion less $510.1 billion. S2's +$117.2 billion combined state figure is not used: it is the reviewer's arithmetic, and the exhibit gives no state net for the SDP rule or both rules. |
+| N-4 sec. 5 ¶4: "only the extra year", interaction, coverage direction | **Fixed** | Sec. 5: restricted to the three adjustments; R3 confirms CBO's section rows exclude the interaction (layout; tagged [I]), so the like-for-like CMS figure is $755.9 billion and $601.0 billion has no CBO counterpart; coverage dropped from the causes (direction not supported in the files); arithmetic in Appendix F. |
+| N-5 summary baseline [E] | **Fixed** | See M2 N-5. |
+| N-6 two [E] sentences with no cited document; Ohio | **Fixed** | Sec. 5 HFMA ¶2 cites the five comment IDs; sec. 8 cites Virginia's comment and drops Ohio and the "many providers" count. Appendix notes on commenters now cite comment IDs too. |
+| N-7 Appendix I tags a reading [E] | **Fixed** | Appendix I: "cover each docket as filed" removed; the one-count, no-corrected-view statement is tagged [I]. |
+| N-8 two "Table 19"s | **Fixed** | Body cites only CMS-2452-P's Table 19, named by rule (sec. 3; sec. 5 source note). CMS-2449-P's Table 19 appears only in Appendix F, named by rule. Appendix E lists both as a citation trap. |
+| N-9 item 5 pointer implies a link | **Fixed** | Pointer removed from sec. 9 item 5. |
+| Citation exception: 91 FR 46574 "by state and tax class" | **Fixed** | R3 confirms per-class thresholds at 46574; wording now "calculate and provide to states the new threshold percentage for each permissible class". |
+| Citation exception: summary baseline | **Fixed** | See N-5. |
+| Citation exception: Section 71117 description needs a pinpoint | **Fixed** | Body sentence shortened; the description sits in Appendix C with CMS-2448-F's Federal Register page (91 FR 4794, read in full per the verification summary). |
+
+### S2 part 3: findings moved
+
+| Item | Fixed? | Where, or why not |
+|---|---|---|
+| F-003 (say no corrected view; [I]; never beside posted counts) | **Fixed** | Appendix I methods note. |
+| F-005 (give coverage direction or drop) | **Fixed (dropped)** | Moved to Appendix F; not listed as a cause in sec. 5. |
+| F-006 (hold) | **Kept on hold** | Your decision 3. |
+| F-010 (scope every net-loss statement; revise sec. 3 closing) | **Fixed** | Sec. 3; sec. 5 exhibit. |
+| F-015 (restrict "only the extra year"; interaction conditional or App. F; coverage; keep "unresolved") | **Fixed** | Sec. 5; Appendix F. The interaction is no longer conditional: R3 confirmed CBO's layout. |
+
+### S2 parts 4 and 5: decisions and cuts
+
+| Item | Fixed? | Where, or why not |
+|---|---|---|
+| Decision 1 (heading) | **Fixed** | Your decision 2. |
+| Decisions 2, 3, 5 | **No change needed** | Agreed by S2. |
+| Decision 4 (don't promote a re-check citation) | **Fixed** | Your decision 1; see N-5. |
+| Cut 1 offset stated five times | **Fixed** | Twice in the body (sec. 3 bullet; sec. 7 case 3). |
+| Cut 2 30462 caveat three times | **Fixed** | Full once in sec. 3; summary clause; sec. 4 back-reference. |
+| Cut 3 state net three places | **Fixed** | Exhibit row plus one sentence in sec. 3. |
+| Cut 4 reconciliation said twice; coverage clause | **Fixed** | "Unresolved" once; coverage clause cut. |
+| Cut 5 appendix notes repeating body | **Fixed** | Appendix E Table 12 note cut; Appendix F payment-limit closing sentence cut; Appendix D parameters note now holds only what left the body (no repeat). Appendix F keeps the reconciliation arithmetic because your instruction requires it there. |
