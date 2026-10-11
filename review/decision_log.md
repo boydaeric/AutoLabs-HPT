@@ -263,3 +263,136 @@ The 15 percent cap is 6,284 words (or 6,552 raw tokens). Appendix notes grew fro
 | Cut 3 state net three places | **Fixed** | Exhibit row plus one sentence in sec. 3. |
 | Cut 4 reconciliation said twice; coverage clause | **Fixed** | "Unresolved" once; coverage clause cut. |
 | Cut 5 appendix notes repeating body | **Fixed** | Appendix E Table 12 note cut; Appendix F payment-limit closing sentence cut; Appendix D parameters note now holds only what left the body (no repeat). Appendix F keeps the reconciliation arithmetic because your instruction requires it there. |
+
+---
+
+# New-text check v3 decisions
+
+*Writer, October 11, 2026. Input: `review/new_text_check_v3.md` (NTC3) and your decisions of October 11. Output: `review/article_v4.md`; `review/article_v3.md` is unchanged. Issue numbers are NTC3 section, then the row's order within that section's issue tables (for example, 3b-2 is the second row of the 3b table).*
+
+**Body word count** (same method as before: title through sec. 9, review notes excluded, tokens containing a letter or digit, table cells included):
+
+| Version | Body words | Against v16 (5,465) | Raw whitespace tokens |
+|---|---:|---:|---:|
+| v3 | 6,246 | +14.3% | 6,447 |
+| v4 | 6,278 | +14.9% | 6,476 (+13.7%) |
+
+The cap is 6,284 words. To stay under it while adding the required bases, hedges and citations, v4 moved these to the appendix: the 51.0/147.7 split of the $198.7 billion (App. B), the step 1 data sources (App. C), the Texas and Group E data-quality details (App. H), the FAH/THA netting paragraph (App. F), and the KFF bullet on the share of spending above the caps by state (App. H). It also removed repeats: the expansion-status sentence (the group table shows it), the Minnesota/Missouri exclusion in the table note, the rural repeat in sec. 8, and the sec. 5 table-description sentence (now in the exhibit header). No correction, required qualifier or verified fact was cut.
+
+## Your decisions
+
+| # | Decision | How v4 applies it |
+|---|---|---|
+| 1 | POLITICO's $756 billion: not "same basis". | Sec. 5, POLITICO ¶3: like CBO's section figures, on THEIA Services' reading of CBO's tables [I], it leaves out the interaction between the two sections, but it differs from CBO's figures in years, dollars and baseline; read as the two rules' combined cut it counts the $154.9 billion federal overlap twice. ¶4 calls $755.9 billion "the CMS figure treated the same way", not "like-for-like". |
+| 2 | Year basis. | Sec. 3, one sentence after the combined table: CMS labels the SDP rule's years as fiscal years, federal or state unstated (91 FR 30451–30452), and gives a provider tax rule figure by calendar year (91 FR 46589) [E]; neither rule says whether the bases match, so the windows may be offset by a few months, and THEIA Services sums them as published [I]. Detail in App. F (new "year basis" note). Sec. 5 ¶4 repeats the caveat in a clause ("Year bases may also differ (sec. 3)"). The phrase "Fiscal Year" is paraphrased, not quoted, to keep to the no-new-quotes rule. |
+| 3 | Existing v16 citations with no verification row stay and go on the re-check list. | Kept unchanged in v4; listed in `article_changes.md` under "v3 → v4", "Re-check list". |
+
+## NTC3 issues
+
+### 1d. Number issues
+
+| Issue | Fixed? | Where, or why not |
+|---|---|---|
+| 1d-1 Sec. 5 two figures: reversed subtraction | Fixed | Sec. 5, "two figures": CMS's two figures given as CMS reports them [E]; "$163.7 billion less $142.1 billion is $21.6 billion; the difference is rounding in CMS's components" [I]. |
+| 1d-2 App. E rounding: reversed sign | Fixed | App. E rounding note now subtracts the same way and cites Table 14 for the +$21.7 billion. |
+| 1d-3 Sec. 5 exhibit: dollar basis missing | Fixed | Exhibit header: "CMS central estimates, 2026–2035 (billions of 2026 dollars)". |
+| 1d-4 Sec. 1 −$5.34B / −$2.44B: no basis | Fixed | SDP table source note: −$5.34 billion is federal plus state spending (91 FR 30453); −$2.44 billion is in 2026 dollars (91 FR 30456). |
+| 1d-5 Exec ¶1: "net of the provider taxes" fits only the ceiling | Fixed | Exec ¶1: "net of lower provider taxes and, at the lower end, of the most providers could stop paying to fund the cut payments". |
+
+### 2. Citations
+
+| Issue | Fixed? | Where, or why not |
+|---|---|---|
+| 2-1 Threshold table cites 91 FR 46562 | Fixed | Source note: 91 FR 46565, 46576, 46598 (your pinpoints). P.L. 119-21 § 71115, which NTC3 also suggests, is not added: no verification row covers the schedule's statutory page. |
+| 2-2 42 CFR 438.6(c) → (c)(1) | Fixed | Sec. 1, SDP definition. |
+| 2-3 CBO pinpoint | Fixed | Sec. 5, POLITICO ¶2: section figures cited to Table 7 and October 28, 2025, pp. 4–5; interaction lines to p. 6. |
+| 2-4 GAO-24-106202, Table 4 unverified | Not fixed | Your decision 3: kept; on the re-check list. |
+| 2-5 Sec. 8 studies and sec. 9 item 5 press cites unverified | Not fixed | Your decision 3: kept; on the re-check list. |
+| 2-6 Sec. 8 rural: no cites | Fixed in part | 91 FR 30450 added for the cap's default to the state plan rate (pinpoint from NTC3). The rural rule and the rural definition now name Section 71116 (sec. 8 ¶1; App. B); a statutory page pinpoint is on the re-check list. |
+| 2-7 Sec. 9 item 2: no cite | Fixed | "(91 FR 30453)". |
+| 2-8 Sec. 9 items 4 and 7: no cites; stale "as of September 22, 2026" | Not fixed | Your decision 3: CMS-2450, reginfo and the bills stay and go on the re-check list. The date is not changed: no source in the files supports a later "as of" date. |
+| 2-9 Sec. 9 item 6: case number and "pending" stated flatly | Fixed | Item 6 tags as [E] only what CHAT's letter says, with its ID (2476-0114, pp. 13–14): the case and CHAT's description of it. The Fifth Circuit number and "pending as of June 24, 2026" are attributed to an unverified research note and tagged [I]. |
+| 2-10 Sec. 5 Georgetown: no cite | Not fixed | v16's HFMA handling stays (your earlier decision 4), and the named, dated publication stays (decision 3); on the re-check list. |
+| 2-11 THA 2025 figures: no cite; "state" vs "state hospital association" | Fixed in part | Item 10 now says "state hospital association" and points to App. F. The THA publication is on the re-check list (decision 3). |
+
+### 3a. Sec. 5, "same basis"
+
+| Issue | Fixed? | Where, or why not |
+|---|---|---|
+| 3a-1 POLITICO ¶3 "matches CBO's section-by-section basis" | Fixed | Your decision 1. |
+| 3a-2 POLITICO ¶4 "like-for-like" | Fixed | "the CMS figure treated the same way". |
+| 3a-3 POLITICO ¶4: layout reading stated as fact | Fixed | "On THEIA Services' reading of CBO's table layout, which CBO does not state in words, …" [I]. |
+
+### 3b. Other unsupported or contradicted claims
+
+| Issue | Fixed? | Where, or why not |
+|---|---|---|
+| 3b-1 "Three adjustments the tables allow"; $630.9B label; nine years vs ten | Fixed | Sec. 5 ¶4: "Only CMS's extra year lowers its figure: without 2035, the $601.0 billion becomes $501.5 billion and the no-interaction total $630.9 billion (federal, 2026–2034), nine years against CBO's ten"; the dollar conversion is described as one CMS gives no figure for. App. F labels $630.9 billion "the total without the interaction after dropping 2035". |
+| 3b-2 Sec. 3 "neither rule separates…" | Fixed | Sec. 3 ¶1: the SDP rule prices Section 71116 (Tables 18–20) and its extension to other services (91 FR 30453) separately [E]; for the provider tax rule, only NTC3's search result: THEIA Services found no separate estimate of what the rule adds to Section 71115 [I]. Sec. 5 ¶4's unknown-direction list now names only the provider tax rule's additions and the comparison projections. |
+| 3b-3 "$56.6 billion to $681 billion" range | Fixed | Exec ¶2 and sec. 5 ¶1: limited to the outside estimates the note examines (HFMA, KFF, POLITICO); CMS's own figures and ASPE's $891 billion "measure different things again". |
+| 3b-4 Sec. 4 "cannot attribute by provider type" covers both rules | Fixed | Sec. 4, last ¶: SDP rule only (91 FR 30462); for the provider tax rule CMS expects the largest decreases to fall on hospitals (91 FR 46591). |
+| 3b-5 "Payments providers lose" drops "other entities" | Fixed | Sec. 4 step-table source note: CMS says part of the SDP rule's cut falls on other entities, such as local governments (sec. 3). |
+| 3b-6 "SDPs are … approved in advance" | Fixed | "most approved in advance by CMS (42 CFR 438.6(c)(1); 91 FR 30447)". |
+| 3b-7 "80–90 percent of SDP arrangements" | Fixed | "of SDPs … by the end of 2025, on CMS's preprint data (91 FR 30452)". |
+| 3b-8 Step 2 "zero in non-expansion states" | Fixed | Sec. 7 step 2: zero unless the state enacted or raised the tax after July 4, 2025 [I], since CMS says taxes not in place on that date could not continue past October 1, 2026 (91 FR 46589) [E]. |
+| 3b-9 App. D 65 percent: wrong commenters | Fixed | Cites only 2476-0204, as you asked. NTC3's suggested second sentence (2476-0093 applying the range to $774.8 billion) is not added. |
+| 3b-10 App. D: scenarios' scope may differ | Fixed as a stated limit | App. D: CMS says the high-savings total includes the additional services (91 FR 30454), while the central tables cover Section 71116 (91 FR 30451–30452) [E]; THEIA Services has not confirmed the scopes match [I]. |
+| 3b-11 Exec ¶4 "states have not decided" | Fixed | "THEIA Services found no current public source showing … how states will fund SDPs going forward" [I]. |
+| 3b-12 Sec. 9 item 8: "public" data | Fixed | "data states would file with CMS under the proposed rule, the first basis for calculating…" (91 FR 46583). |
+| 3b-13 "Later references restate" | Fixed | Sec. 5: "one later comment restates it (comment CMS-2026-2476-0079; Appendix G)". |
+
+### 4. Evidence tags
+
+| Issue | Fixed? | Where, or why not |
+|---|---|---|
+| 4-1 Search negatives tagged [E] | Fixed | Retagged [I]: "which CBO does not print"; "THEIA found $56.6 billion in neither rule"; "found no independent derivation"; "located no lawsuit"; "found no public source that makes that link" (item 9, reworded); "found no multi-state version" (item 10); App. G's "found the figure in none of them". Also retagged readings v3 had as [E]: "The article names no source for the $340 billion"; "ASPE does not say whether it removes the overlap"; and "That money flows through provider taxes or IGTs …" (sec. 7 step 3, no cited document). |
+| 4-2 "So they include the OBBBA's effect" | Fixed | Exec ¶1 and sec. 3 ¶1: baseline [E]; "so … include" [I]. |
+| 4-3 "Thus … nets out" | Fixed | [I] before the Table 12 title's [E]. |
+| 4-4 "HFMA had not replied" [E] | Fixed | Retagged [I]. |
+| 4-5 Georgetown, THA, item 10 [E] with no cited document | Fixed in part | Item 10 points to App. F, where the THA publication is named. Georgetown and THA stay [E] as named, dated publications (decision 3) and are on the re-check list. |
+| 4-6 Sec. 8 rural, items 4 and 7 [E] | Fixed in part | Rural: Section 71116 and 91 FR 30450 added. Items 4 and 7 name their documents (agenda entry; bills, listed in App. I) and stay [E] under decision 3; item 7's lawsuit negative is now [I]. |
+| 4-7 Item 6 [E] | Fixed | See 2-9. |
+| 4-8 IMD "most …" and "certain demonstrations" uncited | Fixed by marking | App. B now says both are not yet sourced [I]; on the re-check list. The body keeps v16's [I]. |
+| 4-9 App. C stated limits: CMS facts under [I] | Fixed | Split: limits [I]; CMS's 2026 dollars and $35.0 billion [E]. |
+| 4-10 Sec. 3 "nationally" [E] uncited | Fixed | "(91 FR 30453–30454, 46591–46594)", NTC3's pinpoints. |
+| Other [E] claims without a cited document (your instruction) | Fixed | Exec [E] sentences now point to the body section that cites them; sec. 7 step 1 grandfathering cites Section 71116; the preprint sentence names the SDP preprint, Section VI; sec. 8's opening [E] points to the studies below it; sec. 8's IMD restriction cites Social Security Act § 1905(a). Named, dated outside documents (KFF, HFMA, POLITICO, ASPE, Georgetown, THA, press, reginfo, CMS-2450's agenda entry) stay [E] under decision 3. |
+
+### 5. Body vs appendix
+
+| Issue | Fixed? | Where, or why not |
+|---|---|---|
+| 5-1 $122B / $1,126B basis only in App. D | Fixed | Sec. 4: "about $122 billion (low-savings, after step 3) at one end and about $1,126 billion (high-savings, after step 2) at the other, in 2026 dollars over 2026–2035". |
+| 5-2 $630.9B / $755.9B basis | Fixed | Sec. 5 ¶4: "$755.9 billion for 2026–2035"; "$630.9 billion (federal, 2026–2034)", described as the no-interaction total without 2035. |
+| 5-3 Layout hedge only in App. F | Fixed | See 3a-3; the same hedge is also in POLITICO ¶3. |
+| 5-4 55 and 75 percent: scenario labels only in App. D | Fixed | Sec. 2: "(its high-savings and low-savings values)". |
+| 5-5 App. F does not say what the payment-limit test measures | Fixed | App. F "who nets provider taxes" note: the cap test compares an SDP's total payment rate, base payment plus SDP, with the Medicare-based cap (sec. 7, step 1); netting there changes the rate tested, not the net provider loss [I]. |
+| 5-6 Sec. 8 rural "defines … broadly" with the list only in App. B | Fixed | The sentence is removed; sec. 8 ¶1 says "rural hospitals, as it defines them (Appendix B)". |
+| 5-7 HFMA never spelled out | Fixed | Exec ¶2: "Healthcare Financial Management Association (HFMA)". |
+| 5-8 ASPE used before spelled out | Fixed | Exec ¶2 now says "an $891 billion HHS estimate" without the acronym; the acronym is spelled out at its first use in sec. 5. The sec. 5 subheading still uses "ASPE" (headings unchanged). |
+| 5-9 Low/high vs lower/higher | Fixed | "low-savings" and "high-savings" throughout the body and App. D–E. |
+| 5-10 Figures 4 and 5 not in the body | Not fixed | Placeholders stay unchanged by rule; numbering is for you to decide with the figures. |
+| 5-11 "(moved from sec. 4)" in App. D | Fixed | Removed. |
+
+### 6. Commenters and quotes
+
+| Issue | Fixed? | Where, or why not |
+|---|---|---|
+| 6-1 App. D 65 percent | Fixed | See 3b-9. |
+| 6-2 CBPP's $341 billion unlabelled | Fixed | App. F: "$341 billion, its rounding of the sum of CBO's two section figures". |
+| 6-3 App. G: whose figure is restated | Fixed | "restates POLITICO's $681 billion as a hospital loss". |
+| 6-4 App. F "11 comments, 8 distinct texts" not hedged | Fixed | "about 11 comments, about 8 distinct texts, … keyword count". |
+| 6-5 Georgetown | Not fixed | See 2-10. |
+| 6-6 CMS-2449-P quote is 29 words | Fixed | Sec. 4: the opening clause is paraphrased; the quoted fragments are now 10 and 9 words from one passage (91 FR 30453), 19 words in all. |
+
+### 7. $916.9 billion attribution
+
+| Issue | Fixed? | Where, or why not |
+|---|---|---|
+| 7-1 Sec. 4 step table | Fixed | Row 1 says "both rules combined"; the source note says step 1 scores Sections 71116 and 71115 as the rules would implement them. |
+| 7-2 Sec. 5 exhibit | Fixed | Source note: the combined column scores Sections 71116 and 71115 as the rules would implement them. For consistency, sec. 3's note, Executive summary ¶3 and the ASPE paragraph now also say "implement" instead of "carry out". |
+
+### 8. Year basis
+
+| Issue | Fixed? | Where, or why not |
+|---|---|---|
+| 8-1 CMS's 2026–2035: fiscal or calendar years | Fixed as a stated limit | Your decision 2: sec. 3 sentence, sec. 5 clause, App. F "year basis" note (replacing App. F's "Open:" line). The App. F note gives NTC3's freeze evidence as THEIA's inference [I]: a freeze that starts October 1, 2026 cannot reduce revenue in federal fiscal year 2026. |

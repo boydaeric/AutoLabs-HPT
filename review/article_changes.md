@@ -268,3 +268,109 @@ Each was proposed by a review file or would source a v2 claim, but neither the C
 | 10 (ASPE and Section 71117) | Still on hold (D3 keeps Section 71117 figures out; the ASPE point is not used). |
 
 **Existing citations flagged in v2 for re-check: status.** 91 FR 30410 "arrangements, not dollars": resolved, claim cut (R3 4). 91 FR 46589–46591 for both rules' baseline: resolved, now 91 FR 30447 for the SDP rule's SDP estimates and 46589–46591 for the provider tax rule (R3 1). Sec. 9 item 6 "set aside": resolved, cut (R3 6). Still open: 91 FR 46562 for the threshold schedule and the new permissible class; GAO-24-106202 Table 4 and the preprint's financing fields (U-5).
+
+---
+
+# v3 → v4
+
+*Writer's file, October 11, 2026. Maps every change in `review/article_v4.md` against `review/article_v3.md`. Keys: **NTC3 x-n** = issue n in section x of `review/new_text_check_v3.md` (numbered as in the decision log's "New-text check v3 decisions"); **D1–D3** = your decisions of October 11 (D1 POLITICO basis; D2 year basis; D3 unverified v16 citations); **Instr. 4** = your instructions for this round; **Len** = moved to the appendix or trimmed as a repeat to stay under the 15 percent cap.*
+
+**Unchanged by design.** Section numbers and headings; placeholders; the [E]/[I]/[C] legend; no new quotes from either rule (the CMS-2449-P quote is shortened, not added to).
+
+## Body
+
+| # | v4 location | Change | Source |
+|---|---|---|---|
+| U1 | Exec ¶1, sentence 1 | Basis of the range: net of lower provider taxes and, at the lower end, of the most providers could stop paying to fund the cut payments. | NTC3 1d-5 |
+| U2 | Exec ¶1 | [E] sentences point to the body section that cites them (sec. 1, sec. 3); "so they include the OBBBA's own effect" split off as [I]. | NTC3 4-2; Instr. 4 (every [E] cited) |
+| U3 | Exec ¶2 | Range sentence replaced: the outside estimates examined (HFMA, spelled out; KFF; POLITICO) each measure something narrower or on a different basis; CMS's figures and an $891 billion HHS estimate measure different things. CMS's net-reduction statement: [E] with pointer; "without giving a combined figure" [I]. | NTC3 3b-3, 5-7, 5-8; Instr. 4 |
+| U4 | Exec ¶3, ¶4, ¶6 | "carry them out" → "implement them"; "states have not decided" → no source found [I]; ¶6 [E] points to sec. 1. | NTC3 7-2, 3b-11, 4-1 |
+| U5 | Sec. 1, SDP ¶ | "most approved in advance by CMS"; cite 42 CFR 438.6(c)(1) and 91 FR 30447. | NTC3 2-2, 3b-6 |
+| U6 | Sec. 1, SDP table source note | Bases of −$5.34 billion (federal plus state; 91 FR 30453) and −$2.44 billion (2026 dollars; 91 FR 30456). | NTC3 1d-4 |
+| U7 | Sec. 1, provider tax ¶1 | $98.6 billion labelled calendar year 2026. | NTC3 8-1; D2 |
+| U8 | Sec. 1, threshold source note | 91 FR 46562 → 91 FR 46565, 46576, 46598. | NTC3 2-1; Instr. 4 |
+| U9 | Sec. 2 ¶2 | "SDP arrangements" → CMS's wording, "SDPs … by the end of 2025, on CMS's preprint data"; pointer to App. C replaces the v3 clause about funding shares. | NTC3 3b-7; Len |
+| U10 | Sec. 2, overlap ¶ | "(its high-savings and low-savings values)" after 55 to 75 percent. | NTC3 5-4 |
+| U11 | Sec. 3 ¶1 | Baseline [E] split from "so both include" [I]; "neither rule separates what the OBBBA requires from what CMS added" removed and replaced: the SDP rule prices Section 71116 (Tables 18–20) and its extension to other services (91 FR 30453) separately [E]; no separate estimate found for the provider tax rule's additions [I]. | NTC3 3b-2, 4-2; Instr. 4 |
+| U12 | Sec. 3 ¶2 | SDP-rule bullet folded into the paragraph; provider tax bullet now prose. | Len |
+| U13 | Sec. 3, "nationally" | Cite added (91 FR 30453–30454, 46591–46594); "not differences among states" trimmed. | NTC3 4-10; Len |
+| U14 | Sec. 3, after the combined table | New year-basis sentence. | D2; NTC3 8-1 |
+| U15 | Sec. 3, table note | "carry them out" → "implement them". | NTC3 7-2 (consistency) |
+| U16 | Sec. 3, $198.7 billion ¶ | Freeze/threshold split moved to App. B. | Len |
+| U17 | Sec. 3, state ¶ | Table 20 sentence shortened (same content). | Len |
+| U18 | Sec. 4 ¶1 | F-011 qualifier: "gives no combined figure". | Len (repeat of the [I] search result) |
+| U19 | Sec. 4 step table | Row 1 "both rules combined"; rows 1 and 3 shortened; source note adds the Sections 71116/71115 attribution and CMS's other-entities point. | NTC3 7-1, 3b-5; Instr. 4; Len |
+| U20 | Sec. 4, step 3 quote | Opening clause paraphrased; quoted fragments now 19 words. | NTC3 6-6; Instr. 4 |
+| U21 | Sec. 4, best-case ¶ | Shortened; range sentence states each end's scenario, step, dollars and years. | NTC3 5-1; Instr. 4; Len |
+| U22 | Sec. 4, hospital ¶ | Provider-type caveat scoped to the SDP rule (91 FR 30462); provider tax rule: largest decreases expected on hospitals (91 FR 46591); "calendar year 2026"; "A hospital's own records…" removed (repeats exec ¶5). | NTC3 3b-4; Instr. 4; Len |
+| U23 | Sec. 5 ¶1 | Range sentence replaced as in U3; table-description sentence removed. | NTC3 3b-3; Len |
+| U24 | Sec. 5 exhibit | Header gives central estimates, 2026–2035, billions of 2026 dollars; source note adds the attribution and is shortened. | NTC3 1d-3, 7-2; Instr. 4 |
+| U25 | Sec. 5, two figures | Rewritten: CMS's two reported figures [E]; "$163.7 billion less $142.1 billion is $21.6 billion; the difference is rounding in CMS's components" [I]; "thus … nets out" [I]. | NTC3 1d-1, 4-3; Instr. 4 |
+| U26 | Sec. 5, HFMA | "found $56.6 billion in neither rule" [I]; "had not replied" [I]. | NTC3 4-1, 4-4 |
+| U27 | Sec. 5, POLITICO ¶2 | "names no source" [I]; CBO section figures cited to pp. 4–5, interactions to p. 6; "CBO does not print" [I]. | NTC3 2-3, 4-1; Instr. 4 |
+| U28 | Sec. 5, POLITICO ¶3 | Your D1 wording; basis of the $756 billion stated. | D1; NTC3 3a-1, 5-3 |
+| U29 | Sec. 5, POLITICO ¶4 | Layout hedge in the body; "like-for-like" → "treated the same way"; $501.5 billion and $630.9 billion each labelled; nine years against ten; dollar conversion not given by CMS; year-basis clause; unknown-direction list limited to the provider tax rule's additions and comparison projections; one later comment (ID) instead of "later references". | NTC3 3a-2, 3a-3, 3b-1, 3b-2, 3b-13, 5-2, 8-1; D2; Instr. 4 |
+| U30 | Sec. 5, ASPE | "does not say whether it removes the overlap" [I]; "carry out" → "implement"; netting paragraph moved to App. F, replaced by a one-sentence pointer. | NTC3 4-1, 7-2; Len |
+| U31 | Sec. 6 | KFF share-above-caps bullet moved to App. H; Minnesota/Missouri parenthetical shortened; expansion-status sentence cut (the table shows it); Group E paragraph shortened, flags to App. H; table note no longer repeats the Minnesota/Missouri exclusion; Texas and other state dollars moved to App. H (v3). | Len |
+| U32 | Sec. 7, step 1 | Grandfathering cites Section 71116; data-source sentence moved to App. C. | Instr. 4 (every [E] cited); Len |
+| U33 | Sec. 7, step 2 | Zero in non-expansion states unless a tax was enacted or raised after July 4, 2025 (91 FR 46589); "over 2026–2035" added to the $163.7 billion. | NTC3 3b-8; Instr. 4 |
+| U34 | Sec. 7, step 3 | "That money flows…" retagged [I]; preprint defined here and cited to the SDP preprint, Section VI. | NTC3 4-1; Instr. 4; Len |
+| U35 | Sec. 7, questions | First two questions merged. | Len |
+| U36 | Sec. 8 | Opening [E] points to the studies below; IMD restriction cites § 1905(a); rural ¶1 names Section 71116, points to App. B for the definition and drops the repeated phase-down detail; rural ¶2 cites 91 FR 30450; Virginia sentence trimmed. | NTC3 2-6, 4-6, 5-6; Instr. 4; Len |
+| U37 | Sec. 9, item 2 | "(91 FR 30453)". | NTC3 2-7 |
+| U38 | Sec. 9, item 3 | Shortened. | Len |
+| U39 | Sec. 9, item 6 | [E] only for what CHAT's letter says (ID, pages); the appeal number and pending status attributed to an unverified research note [I]. | NTC3 2-9, 4-7; Instr. 4 |
+| U40 | Sec. 9, item 7 | Lawsuit negative [I]. | NTC3 4-1 |
+| U41 | Sec. 9, item 8 | "would file … under the proposed rule", "first basis" (not "public"), 91 FR 46583. | NTC3 3b-12 |
+| U42 | Sec. 9, items 9 and 10 | Negatives reworded and tagged [I]; "state hospital association", pointer to App. F. | NTC3 4-1, 2-11, 4-5 |
+
+## Appendix (headings and bullets A–J unchanged)
+
+| # | Location | Change | Source |
+|---|---|---|---|
+| U43 | B | IMD note marks "most … are IMDs" and "certain demonstrations" as not yet sourced; rural note cites Section 71116; new note on the freeze/threshold split of the $198.7 billion. | NTC3 4-8; Len |
+| U44 | C | Stated-limits note split into [I] limits and [E] CMS facts; new note on step 1's data sources. | NTC3 4-9; Len |
+| U45 | D | Scope note on the SDP rule's high-savings total (91 FR 30454); "(moved from sec. 4)" removed; low/high labels; 65 percent note cites only 2476-0204. | NTC3 3b-10, 5-11, 5-9, 3b-9, 6-1; Instr. 4 |
+| U46 | E | Rounding note fixed and cited; high-savings label. | NTC3 1d-2, 5-9; Instr. 4 |
+| U47 | F | $630.9 billion labelled; "Open:" line replaced by a year-basis note; CBPP's $341 billion labelled; netting note absorbs the moved body paragraph, says what the cap test measures and hedges its keyword count. | NTC3 3b-1, 8-1, 6-2, 5-5, 6-4; D2; Instr. 4; Len |
+| U48 | G | Restated figure named as POLITICO's; search negatives [I]. | NTC3 6-3, 4-1 |
+| U49 | H | New notes: share of spending above the caps by state (moved from sec. 6); Texas and other state dollars; Alabama and Wyoming flags. | Len |
+
+## Pinpoints from new-text check
+
+Each Federal Register pinpoint below appears in v4 because `new_text_check_v3.md` quotes or reads it from the Federal Register text, not because the Citation check or a verification row confirms it. **Each is: pinpoint from new-text check; re-check in ledger delta.**
+
+| Pinpoint | v4 use |
+|---|---|
+| 91 FR 46565, 46576, 46598 | Threshold schedule (sec. 1 source note) |
+| 91 FR 30453 | −$5.34 billion as federal plus state spending; extension to other services priced separately; SDP rule defers its interaction analysis to future rulemaking (sec. 1, sec. 3, sec. 9 item 2) |
+| 91 FR 30456 | −$2.44 billion in 2026 dollars (sec. 1) |
+| 91 FR 30451–30452 | Tables 18–20 priced under Section 71116; year columns labelled fiscal years (sec. 3; App. D, App. F) |
+| 91 FR 30452 | 80 to 90 percent of SDPs, by the end of 2025, on preprint data (sec. 2) |
+| 91 FR 30454 | High-savings total includes the additional services (App. D) |
+| 91 FR 30450 | Cap defaults to the state plan rate where no Medicare rate exists (sec. 8) |
+| 91 FR 46589 | $98.6 billion for calendar year 2026; freeze begins October 1, 2026; taxes not in place on July 4, 2025 could not continue past October 1, 2026 (sec. 1, sec. 3, sec. 7 step 2, App. F) |
+| 91 FR 46591 | Provider tax rule: largest decreases expected on hospitals (sec. 4) |
+| 91 FR 46583 | Data states would file with CMS (sec. 9 item 8) |
+| 91 FR 30453–30454, 46591–46594 | Each set of assumptions applied nationally (sec. 3) |
+
+## Re-check list (your decision 3)
+
+Existing v16 citations with no verification row. v4 keeps each unchanged.
+
+| Citation | Where in v4 |
+|---|---|
+| GAO-24-106202, Table 4 | Sec. 2 |
+| GAO-23-105515; Michelson et al., December 2024; Lindenfeld et al., PLoS Medicine, July 2025 | Sec. 8 |
+| Texas Tribune, September 17, 2026; Fierce Healthcare, September 18, 2026 | Sec. 9 item 5 |
+| CMS-2450 (RIN 0938-AV70), its agenda entry and the May 12, 2026 review date; reginfo.gov | Sec. 9 items 3–4; App. I |
+| S. 2279, H.R. 4807 and their status; "as of September 22, 2026" | Sec. 9 item 7; App. I |
+| Georgetown University Center for Children and Families, July 27, 2026 | Sec. 5, HFMA |
+| Texas Hospital Association, paired gross and net figures, 2025 | App. F; sec. 9 item 10 |
+| KFF, August 14, 2026 (state file, expansion tracker, $155 billion); HFMA, July 22, 2026; POLITICO, September 2, 2026; ASPE, August 12, 2026 | Secs. 5–6; App. H |
+| SDP preprint, Section VI (financing fields) | Sec. 7 step 3 |
+| Fifth Circuit No. 25-40766 and its June 24, 2026 status (research note, unverified) | Sec. 9 item 6 |
+| Statutory page for Section 71116's rural rule and rural definition | Sec. 8; App. B |
+| A source for "most freestanding psychiatric hospitals are IMDs" and the demonstration exception | Sec. 8; App. B |
+
+Still on the earlier citation-to-add list and not resolved here: 91 FR 46594 (F-011 repeated for the low-savings estimate); CRS R48633, if wanted.
