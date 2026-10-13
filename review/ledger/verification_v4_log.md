@@ -8,11 +8,11 @@
 
 | Result | Rows |
 |---|---|
-| match | 13 |
-| corrected | 4 |
+| match | 27 |
+| corrected | 6 |
 | blocked | 0 |
 | not found | 0 |
-| not yet checked | 74 |
+| not yet checked | 58 |
 | **total flagged on October 11** | 91 |
 
 Rows with two tags whose result covers one tag only (the other tag's flag stays and is reported separately below): RM-18, RM-28.
@@ -39,8 +39,8 @@ Ledger order. "Result" is for the row as a whole after every tag it carries was 
 | RM-30 | DL3 | not yet checked | | |
 | RM-31 | CM | match (upgraded) | 91 FR 30453 (CMS-2449-P) | None. |
 | RM-32 | DL3 | not yet checked | | |
-| RM-34 | DL4 | not yet checked | | |
-| RM-36 | DL4 | not yet checked | | |
+| RM-34 | DL4 | match (upgraded) | regulations.gov API (meta.totalElements, October 13, 2026); full comment download | None. |
+| RM-36 | DL4 | match (upgraded) | Comments CMS-2026-2476-0199, CMS-2026-1916-0958; search of both dockets | None required. |
 | RM-42 | CM | match | 91 FR 46572, 46598 (CMS-2452-P) | None. |
 | RM-45 | DL3 | not yet checked | | |
 | RM-46 | CM | **corrected**. Source: “in some cases, these taxes would be ineligible to remain in place beyond October 1, 2026 under the provisions of this proposed rule” | 91 FR 46589 (CMS-2452-P) | Sec. 7, step 2: replace 'since CMS says taxes not in place on that date could not continue past October 1, 2026 (91 FR 46589) [E]' with 'since CMS says such taxes would in some cases be ineligible to remain in place beyond October 1, 2026 (91 FR 46589) [E]', and soften the [I] 'It is zero in non-expansion states unless …' to match (for example 'usually zero'). |
@@ -55,10 +55,10 @@ Ledger order. "Result" is for the row as a whole after every tag it carries was 
 | SB-01 | DL3 | not yet checked | | |
 | SB-02 | DL3 | not yet checked | | |
 | SB-03 | DL3 | not yet checked | | |
-| SB-12 | DL4 | not yet checked | | |
+| SB-12 | DL4 | match | Comment CMS-2026-2476-0079 (comment text); full-docket search | None. |
 | SB-18 | DL3 | not yet checked | | |
-| SB-32 | DL4 | not yet checked | | |
-| SB-33 | DL4 | not yet checked | | |
+| SB-32 | DL4 | match (upgraded) | Comments CMS-2026-2476-0201 p. 1; -0029 p. 1; -0097 p. 17, -0187 p. 18, -0195 p. 21; -0126 p. 1; -0089 p. 1 | None. |
+| SB-33 | DL4 | match (upgraded) | Full CMS-2026-1916 docket; comments -0902 p. 1, -0128 p. 5, -0756 p. 2 | None. |
 | TP-01 | DL3 | not yet checked | | |
 | TP-04 | DL3 | not yet checked | | |
 | TP-08 | DL3 | not yet checked | | |
@@ -69,21 +69,21 @@ Ledger order. "Result" is for the row as a whole after every tag it carries was 
 | TP-14 | DL3 | not yet checked | | |
 | TP-15 | DL3 | not yet checked | | |
 | TP-17 | DL3 | not yet checked | | |
-| TP-21 | DL4 | not yet checked | | |
+| TP-21 | DL4 | match (upgraded) | Comment CMS-2026-1916-0676, p. 2 of 45 (also pp. 8–9) | None. |
 | TP-23 | DL3 | not yet checked | | |
 | TP-24 | DL3 | not yet checked | | |
 | TP-26 | DL3 | not yet checked | | |
-| TP-29 | DL4 | not yet checked | | |
+| TP-29 | DL4 | match (upgraded) | Full CMS-2026-2476 docket; comments -0049 p. 2, -0085 p. 1, -0190 p. 2, -0201 p. 1, -0212 p. 6 | None. |
 | TP-30 | DL3 | not yet checked | | |
-| TP-31 | DL4 | not yet checked | | |
-| TP-32 | DL4 | not yet checked | | |
-| TP-33 | DL4 | not yet checked | | |
-| TP-34 | DL4 | not yet checked | | |
-| TP-35 | DL4 | not yet checked | | |
-| TP-36 | DL4 | not yet checked | | |
-| TP-37 | DL4 | not yet checked | | |
+| TP-31 | DL4 | match | Comment CMS-2026-2476-0114, pp. 13–14 of 14 | None. |
+| TP-32 | DL4 | match (upgraded) | Comment CMS-2026-2476-0204, p. 10; 91 FR 46592 | None. |
+| TP-33 | DL4 | match (upgraded) | Comments CMS-2026-1916-0417, p. 6; -0509, p. 38; -0648, p. 3 | None. |
+| TP-34 | DL4 | match (upgraded) | Comments CMS-2026-2476-0145, pp. 3–4; -0093, p. 8; -0101, p. 1; -0091, p. 27 | None. |
+| TP-35 | DL4 | match (upgraded) | Comment CMS-2026-1916-0755, p. 3 of 5 | None. |
+| TP-36 | DL4 | match (upgraded) | Comment CMS-2026-2476-0130, pp. 1–2 | None. |
+| TP-37 | DL4 | match (upgraded) | Comments CMS-2026-1916-0928 p. 11; -0923 p. 3; -0369, -0476, -0808, -0437, -0424, -0787; full-docket keyword count | None. |
 | TP-38 | DL3 | not yet checked | | |
-| TP-40 | DL4 | not yet checked | | |
+| TP-40 | DL4 | **corrected**. Source: “We believe CMS has far exceeded its statutory authority to interpret and implement Public Law 119-21 (H.R. 1) and the Social Security Act” | Comment CMS-2026-1916-0407, p. 1 of 7; full-docket count; CMS-2026-1916-0288, p. 2 | App. I, 'Draft note, the legal record': the example '(… for example, comment CMS-2026-1916-0407, p. 1)' sits with the Loper Bright count but that comment does not cite Loper Bright. Either attach -0407 to 'arguments a legal challenge could use' or replace it with a comment that cites Loper Bright, for example CMS-2026-1916-0288, p. 2. |
 | SE-01 | DL3 | not yet checked | | |
 | SE-02 | DL3 | not yet checked | | |
 | SE-03 | DL3 | not yet checked | | |
@@ -110,7 +110,7 @@ Ledger order. "Result" is for the row as a whole after every tag it carries was 
 | AC-15 | DL3 | not yet checked | | |
 | NC-06 | DL3 | not yet checked | | |
 | NC-15 | DL3 | not yet checked | | |
-| NC-17 | DL4 | not yet checked | | |
+| NC-17 | DL4 | **corrected**. Source: “The Medicaid and CHIP Payment and Access Commission (MACPAC) appreciates the opportunity to comment on the notice of proposed rulemaking” | Comments CMS-2026-2476-0173 (p. 1), -0148, -0116, -0109, -0057, -0079; full-docket search | App. G, 'Draft note, comment records': change 'Of six September 21, 2026 letters earlier not located, four are now posted (… -0148, -0116, -0109 and -0057)' to five, adding MACPAC (comment CMS-2026-2476-0173), and remove MACPAC from 'found no letters from MACPAC, the Illinois Health and Hospital Association or the Illinois Attorney General'. Optional: California's letter is dated September 18, 2026, so 'letters sent for the September 21, 2026 deadline' is more exact. |
 | FG-06 | DL3 | not yet checked | | |
 | FG-07 | DL3 | not yet checked | | |
 | FG-08 | DL3 | not yet checked | | |
@@ -140,6 +140,15 @@ Required changes come from corrected rows. Optional ones are improvements a matc
 
 - **RM-19** (required). Sec. 9 item 8: replace 'Interim provider tax data states would file with CMS under the proposed rule for the quarter ending December 31, 2026, the first basis for calculating a state's lower threshold (91 FR 46583) [I]' with: interim provider tax data for the state fiscal year that contains July 4, 2025, which states would file by December 31, 2026 and from which CMS would calculate an interim threshold for state planning (91 FR 46583) [E]. Rest of the item unchanged.
 
+### App. G
+
+- **NC-17** (required). App. G, 'Draft note, comment records': change 'Of six September 21, 2026 letters earlier not located, four are now posted (… -0148, -0116, -0109 and -0057)' to five, adding MACPAC (comment CMS-2026-2476-0173), and remove MACPAC from 'found no letters from MACPAC, the Illinois Health and Hospital Association or the Illinois Attorney General'. Optional: California's letter is dated September 18, 2026, so 'letters sent for the September 21, 2026 deadline' is more exact.
+
+### App. I
+
+- **TP-40** (required). App. I, 'Draft note, the legal record': the example '(… for example, comment CMS-2026-1916-0407, p. 1)' sits with the Loper Bright count but that comment does not cite Loper Bright. Either attach -0407 to 'arguments a legal challenge could use' or replace it with a comment that cites Loper Bright, for example CMS-2026-1916-0288, p. 2.
+- **RM-36** (optional). Methods note: name the moved letter (comment CMS-2026-2476-0199, the same text as CMS-2026-1916-0958).
+
 ## 3. Rows still flagged
 
 None so far.
@@ -147,6 +156,7 @@ None so far.
 ## 4. Method and sources
 
 - **Federal Register.** govinfo.gov PDFs: CMS-2449-P, FR Doc. 2026-10292 (`FR-2026-05-22/pdf/2026-10292.pdf`, 91 FR 30400–30466, 67 pages) and CMS-2452-P, FR Doc. 2026-14897 (`FR-2026-07-23/pdf/2026-14897.pdf`, 91 FR 46562–46599, 38 pages). Text by `pdftotext`, page by page; each page's printed number was checked against its header. Tables printed as images (Tables 17–23 and 27–28 of CMS-2449-P; Table 1 of CMS-2452-P at 46578) were read from 200-dpi page images with Tesseract OCR and by eye.
+- **Public comments.** Every comment on both dockets was downloaded on October 13, 2026 with the repository's `collect_comments.py` (regulations.gov v4 API with the key in REGULATIONS_GOV_API_KEY; attachments from downloads.regulations.gov with its browser User-Agent). The collector's report showed no gaps: CMS-2026-1916, 960 comments and 892 attachment files; CMS-2026-2476, 214 and 202. Text came from `pdftotext` page by page, with Tesseract OCR for pages without a text layer, so page pinpoints are PDF pages. Whole-docket counts reuse the analyst's own `extract_comment_text.py`, `comment_text_utils.cluster` (shingle Jaccard 0.5) and `count_themes.py` patterns, so 'distinct texts' means what it meant in the analyst's files.
 - **Statute.** P.L. 119-21 from govinfo (`PLAW-119publ21`, HTML), paged by its `[[Page 139 Stat. n]]` markers.
 - **Matching.** A Python script normalises case, curly quotes, dashes, line-break hyphens and white space, then requires each phrase (each segment, in order, where a quotation has an ellipsis) to appear on the page cited. Negative findings (for example, that no form of “nation” appears on 91 FR 30453–30454 or 46591–46594) are the same search returning nothing. The script was tested against v17's own wording for the corrected rows and rejects it.
 - **Departure from CONVENTIONS.md, section 5.** The corrected rows quote CMS-2449-P and CMS-2452-P more than once in the ledger and in this log, because the request asks for the source's wording in each corrected row. Each quotation is verbatim and 24 words or fewer.
