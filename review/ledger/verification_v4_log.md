@@ -1,20 +1,20 @@
 # Verification log: evidence ledger v4 flagged rows
 
-*Verifier's file, October 13, 2026. Covers the 91 rows of `261011_Evidence_Ledger_v4.md` and `261011_Evidence_Ledger_SectionA_v4.xlsx` whose Status ended in NEEDS VERIFICATION. The draft checked against is `review/drafts/Exposure-Not-Loss-v17-draft.docx` (its text is word for word `review/article_v4.md`).*
+*Verifier's file, October 13, 2026; third pass October 14, 2026. Covers the 91 rows of `261011_Evidence_Ledger_v4.md` and `261011_Evidence_Ledger_SectionA_v4.xlsx` whose Status ended in NEEDS VERIFICATION. The draft checked against is `review/drafts/Exposure-Not-Loss-v17-draft.docx` (its text is word for word `review/article_v4.md`).*
 
-**What was done.** Each flagged row was checked against the primary source it names, in the order requested: [CM] Federal Register pinpoints, [DL4] comment IDs, [DL3] re-check items (rows cited in the Executive summary and secs. 3–5 first), then AC-14. A row **matches** when the source says what the row claims at the pinpoint given; the flag is removed and the base status kept or upgraded. A row is **corrected** when the source says something different; the ledger's Status records the source's wording (24 words or fewer), the pinpoint and what v17 must change. A row stays flagged with “blocked: <host>” when the source's host refused the connection from this session, or “not found” when the source was reachable but the item was not in it. For [DL3], the rows cited in the Executive summary and secs. 3–5 (POLITICO, HFMA, Georgetown CCF, ASPE, KFF and CBO items: SB-01 to SB-03, SB-18, TP-01, TP-04, TP-08, TP-10 to TP-15, TP-23, TP-24, TP-26) were attempted first; every one of those sources sits on a host this session's network policy refused, so they stay flagged. The rest followed. No match was inferred: every matched phrase and every quotation was found by script in the downloaded text, except for the four rows on Lindenfeld et al., which were read through the PubMed connector (section 7). Only the Cross-check and Status columns of flagged rows were edited, plus the Legend, the title line ([FIRM] → THEIA Services) and the coverage and vocabulary notes, mirrored in both files.
+**What was done.** Each flagged row was checked against the primary source it names, in the order requested: [CM] Federal Register pinpoints, [DL4] comment IDs, [DL3] re-check items (rows cited in the Executive summary and secs. 3–5 first), then AC-14. A row **matches** when the source says what the row claims at the pinpoint given; the flag is removed and the base status kept or upgraded. A row is **corrected** when the source says something different; the ledger's Status records the source's wording (24 words or fewer), the pinpoint and what v17 must change. A row stays flagged with “blocked: <host>” when the source's host refused the connection from this session, or “not found” when the source was reachable but the item was not in it. For [DL3], the rows cited in the Executive summary and secs. 3–5 (POLITICO, HFMA, Georgetown CCF, ASPE, KFF and CBO items: SB-01 to SB-03, SB-18, TP-01, TP-04, TP-08, TP-10 to TP-15, TP-23, TP-24, TP-26) were attempted first; every one of those sources sits on a host this session's network policy refused, so they stay flagged. The rest followed. No match was inferred: every matched phrase and every quotation was found by script in the downloaded text, except for the four rows on Lindenfeld et al., which were read through the PubMed connector (section 8). Only the Cross-check and Status columns of flagged rows were edited, plus the Legend, the title line ([FIRM] → THEIA Services) and the coverage and vocabulary notes, mirrored in both files.
 
 ## Summary
 
 | Result | Rows |
 |---|---|
-| match | 70 |
+| match | 71 |
 | corrected | 18 |
-| blocked | 1 |
+| blocked | 0 |
 | not found | 2 |
 | **total flagged on October 11** | 91 |
 
-Rows checked in part only (the unchecked part keeps its flag and is reported in section 3): SB-18.
+The third pass, part 2, also checked the 7 rows that were not flagged but cite one of the two CBO files (CE-28, SB-09, SB-14, SB-15, SB-17, SB-24, SB-27): 1 corrected (SB-14), 1 kept as a match with a caveat added (SB-09) and 5 matched. They are not counted in the table above; see section 6.
 
 ## 1. Row results
 
@@ -55,7 +55,7 @@ Ledger order. "Result" is for the row as a whole after every tag it carries was 
 | SB-02 | DL3 | match [3rd pass, part 1; 2nd pass: blocked; 1st pass: blocked] | POLITICO, Sept 2, 2026 (user-supplied copy: c0ecf7f8-260902_POLITICO_Report.docx) | None. |
 | SB-03 | DL3 | match [3rd pass, part 1; 2nd pass: blocked; 1st pass: blocked] | POLITICO, Sept 2, 2026 (user-supplied copy: c0ecf7f8-260902_POLITICO_Report.docx) | None. |
 | SB-12 | DL4 | match | Comment CMS-2026-2476-0079 (comment text); full-docket search | None. |
-| SB-18 | DL3 | blocked: www.cbo.gov (site refused) [3rd pass, part 1; 2nd pass: blocked; 1st pass: blocked]; partly checked, CBO limb pending part 2 | POLITICO limb: user-supplied copy: c0ecf7f8-260902_POLITICO_Report.docx; CBO limb not read (part 2) | None for the POLITICO limb; CBO limb pending part 2. |
+| SB-18 | DL3 | match [3rd pass, part 2 (CBO); part 1: partly checked; 2nd pass: blocked; 1st pass: blocked] | POLITICO limb: user-supplied copy: c0ecf7f8-260902_POLITICO_Report.docx; CBO limb: CBO, July 21, 2025, Table 7 (sheet 'Title VII'; user-supplied copy: 128e9e8c-CBO_61570.xlsx) | None. |
 | SB-32 | DL4 | match (upgraded) | Comments CMS-2026-2476-0201 p. 1; -0029 p. 1; -0097 p. 17, -0187 p. 18, -0195 p. 21; -0126 p. 1; -0089 p. 1 | None. |
 | SB-33 | DL4 | match (upgraded) | Full CMS-2026-1916 docket; comments -0902 p. 1, -0128 p. 5, -0756 p. 2 | None. |
 | TP-01 | DL3 | match [2nd pass; 1st pass: blocked] | HFMA, 'Medicaid provider tax proposed rule could cut payments by $220 billion over 10 years', published July 22, 2026, updated July 23, 2026 (https://www.hfma.org/payment-reimbursement-and-managed-care/medicaid-provider-tax-proposed-rule/) | None. |
@@ -132,6 +132,10 @@ Required changes come from corrected rows, and for RM-25 from the edit made as i
 
 - **CE-61** (required). Sec. 3 ¶3: replace 'CMS applies each set of assumptions nationally (91 FR 30453–30454, 46591–46594) [E], so …' with: 'CMS states each scenario's assumptions as single values, not by state (91 FR 30453–30454, 46593–46594) [E]; THEIA Services reads them as applying nationally, so …' and tag the reading [I].
 
+### Sec. 5
+
+- **SB-14** (required). CBO sentence: cite Table 7 for both outlay figures and October 28, 2025, p. 5 for Section 71116 only (that estimate gives Section 71115 as $182.7 billion in deficits, not $191.1 billion in outlays). 'In dollars not adjusted for inflation' is in neither CBO file: source it elsewhere or drop it.
+
 ### Sec. 6
 
 - **SE-09** (required). group table, Group E paragraph and [Figure 6] caption: Group E's $0 leaves out Colorado's SDP above the new limits (KFF Figure 1 note); add the qualifier or move Colorado.
@@ -171,6 +175,12 @@ Required changes come from corrected rows, and for RM-25 from the edit made as i
 
 - **TP-30** (required). the planned mention of 'GAO-24-106202 Table 4' should carry the same qualifier (combined provider-tax and IGT amount, undercounted, 2022).
 
+### App. F
+
+- **SB-14** (required). 'Draft note, CBO's two measures': '(fiscal years 2025–2034, nominal)': 'nominal' is in neither CBO file; source it or drop it.
+- **SB-09** (optional). 'Draft note, CBO's two measures': after 'On that measure the two sections sum to $332.1 billion [I]', add that CBO prints Section 71116 only as an outlay figure and Table 7 lists no revenue effect for it.
+- **SB-29** (optional). 'Draft note, the federal reconciliation on CMS's tables': '… against CBO's $340.5 billion for 2025–2034' reads as a CBO figure; CBO prints only the two section figures (Table 7, O253 and O257). Write 'the $340.5 billion sum of CBO's two section figures'.
+
 ### App. G
 
 - **NC-17** (required). App. G, 'Draft note, comment records': change 'Of six September 21, 2026 letters earlier not located, four are now posted (… -0148, -0116, -0109 and -0057)' to five, adding MACPAC (comment CMS-2026-2476-0173), and remove MACPAC from 'found no letters from MACPAC, the Illinois Health and Hospital Association or the Illinois Attorney General'. Optional: California's letter is dated September 18, 2026, so 'letters sent for the September 21, 2026 deadline' is more exact.
@@ -196,10 +206,9 @@ Required changes come from corrected rows, and for RM-25 from the edit made as i
 | ID | Tag still flagged | Result | Host or search | What was tried | URL to open |
 |---|---|---|---|---|---|
 | RM-26 | DL3 | not found | PACER (docket); courtlistener.com | Fifth Circuit opinion search (reachable): 0 results for 25-40766. Docket sheet needs PACER; courtlistener.com refused. | - |
-| SB-18 | DL3 | partly checked, CBO limb pending part 2 | www.cbo.gov (site refused) | POLITICO limb checked against the user-supplied copy. CBO limb (CBO, July 21, 2025, Table 7) left for part 2 as instructed; cbo.gov refused the second pass (bot check). | https://www.cbo.gov/publication/61570 |
 | AC-14 | DL3 | not found | www.macpac.gov; www.kff.org | federalregister.gov full-text API (6 queries); 4 FR documents read on govinfo; PubMed (4 hits, no full text); Lindenfeld et al. 2025. | - |
 
-**By host.** PACER (docket): RM-26; courtlistener.com: RM-26; www.cbo.gov: SB-18; www.kff.org: AC-14; www.macpac.gov: AC-14.
+**By host.** PACER (docket): RM-26; courtlistener.com: RM-26; www.kff.org: AC-14; www.macpac.gov: AC-14.
 
 ## 4. Blocked rows, second pass
 
@@ -310,7 +319,55 @@ Results as they stood after the second pass; rows re-run in the third pass are r
 - **GAO's 2022 figures are not by source.** Table 4 of GAO-24-106202 combines provider taxes and IGTs in one column, and GAO says the amount is undercounted (TP-30).
 - **The JAMA paper reports adult beds.** The paper gives adult beds falling 3.0 percent, so FG-07's '(no adult bed series in source)' is wrong. The v17 caption compares units only and needs no change.
 
-## 6. Comments with a blank organization field
+## 6. Blocked rows, third pass (part 2, CBO)
+
+*Third pass, part 2, October 14, 2026. Same rules: every figure and quotation was matched by script against text taken from the two files, nothing was matched by inference or reconstructed, and the files' contents were treated as data. Both files the user saved from their own browser were attached, and both opened:*
+
+- `128e9e8c-CBO_61570.xlsx`, user-supplied copy of CBO's July 21, 2025 estimate for P.L. 119-21 (cbo.gov/publication/61570): 12 sheets. Sheet 'Title VII' is Table 7, 'Estimated Budgetary Effects of Public Law 119-21 … Relative to CBO’s January 2025 Baseline, Title VII, Committee on Finance', in millions of dollars by fiscal year. Every non-empty cell of every sheet was written to text as `[sheet row n] A1=value | …`, so a matched figure carries its cell address.
+- `48458f96-CBO_61837.pdf`, user-supplied copy of CBO's October 28, 2025 Supplemental Cost Estimate, 'Public Law 119-21 … Title VII, Finance, Subtitle B, Health, Chapter 1, Medicaid': 8 pages, converted with `pdftotext` page by page, so page pinpoints are the PDF's printed page numbers.
+
+Neither file was committed to the repository; only the file names and the extracted figures and quotations appear here and in the ledger.
+
+**The figures asked about (step 3).** Dollar amounts are 2025-2034 totals; the spreadsheet is in millions of dollars and its column O is 2025-2034.
+
+| Figure | Printed by CBO? | Where |
+|---|---|---|
+| $191.1B, Sec. 71115 outlays | **Yes**, spreadsheet only | `CBO_61570.xlsx`, sheet 'Title VII' (Table 7), Sec. 71115 'Provider Taxes' (row 251), row 253 'Estimated Outlays', cell O253 = -191,118 (Budget Authority, O252, also -191,118). Not in the October 28 PDF, which gives Sec. 71115 only on the deficit measure. |
+| $149.4B, Sec. 71116 outlays | **Yes**, both files | `CBO_61570.xlsx`, sheet 'Title VII', Sec. 71116 'State Directed Payments' (row 255), row 257 'Estimated Outlays', cell O257 = -149,424 (Budget Authority, O256, -149,415). `CBO_61837.pdf`, p. 5: “CBO estimates that implementing section 71116 will decrease federal outlays for Medicaid by $149.4 billion over the 2025-2034 period”. |
+| $182.7B, Sec. 71115 deficit effect | **Yes**, PDF only | `CBO_61837.pdf`, pp. 4-5: “CBO and JCT estimate that implementing section 71115 will decrease deficits by $182.7 billion over the 2025-2034 period” (the figure is on p. 5). The spreadsheet prints the parts, outlays O253 = -191,118 and revenues O850 = -8,424 (row 850, under Sec. 71115 at row 849), but not -182,694 or any deficit line for the section. |
+| Sec. 71116 deficit effect | **No** | Not printed in either file. The PDF states Sec. 71116 only as outlays. In the spreadsheet, Sec. 71116 appears once (row 255, in the outlay block); it has no revenue row and no deficit row. |
+| $332.1B, the two sections on the deficit measure | **No** | Not printed in either file (no cell 332,118 or 332.1; no '332.1' in the PDF). Not reconstructed here. |
+| $340.5B, the two outlay figures combined | **No** | Not printed in either file (no cell 340,542 or 340.5; no '340.5' or '191.1' in the PDF). CBO prints only the two section figures. |
+| 'not adjusted for inflation' / 'nominal' | **No** | Neither file uses these words of its figures. The spreadsheet's only mention of inflation is in its unfunded-mandates note; Table 7 says 'By Fiscal Year, Millions of Dollars'. |
+
+**SB-18, final status.** POLITICO limb (part 1): the article gives the $340 billion with no source and does not name CBO. CBO limb (part 2): Table 7's two outlay figures are -191,118 and -149,424; their sum, 340,542, rounds to POLITICO's $340 billion, and CBO does not print it. Both limbs match the row as scoped, so the flag is removed and the status is the row's own: 'verified as scoped - the match is arithmetic; 'names no source' is a reading of one article'.
+
+**Rows that cite either CBO file.** SB-18 was flagged; the other seven were not flagged on October 11 but cite one of the files, so they were checked too. All figures and quotations were matched by script against the text of the two copies.
+
+| ID | Status before | Result | Source used | Change needed in v17 |
+|---|---|---|---|---|
+| SB-18 | partly checked, CBO limb pending part 2 (flag kept) | match (flag removed); final status: verified as scoped - the match is arithmetic; 'names no source' is a reading of one article | POLITICO limb: user-supplied copy: c0ecf7f8-260902_POLITICO_Report.docx; CBO limb: CBO, July 21, 2025, Table 7 (sheet 'Title VII'; user-supplied copy: 128e9e8c-CBO_61570.xlsx) | None. |
+| CE-28 | verified | match. CBO limb matched by script: CBO, October 28, 2025, Supplemental Cost Estimate (user-supplied copy: 48458f96-CBO_61837.pdf), p. 5: 'section 71115 will decrease deficits by $182.7 billion over the 2025-2034 period'. The CMS limb (Table 9) was verified earlier. | CBO, October 28, 2025, Supplemental Cost Estimate (user-supplied copy: 48458f96-CBO_61837.pdf), p. 5 | None. |
+| SB-09 | verified | match with caveat (status now: verified with caveat). Matched by script. CBO, October 28, 2025, Supplemental Cost Estimate (user-supplied copy: 48458f96-CBO_61837.pdf), p. 5: 'section 71115 will decrease deficits by $182.7 billion over the 2025-2034 period'. CBO, July 21, 2025, Table 7 (sheet 'Title VII'; user-supplied copy: 128e9e8c-CBO_61570.xlsx): O253 = -191,118 (outlays) and O850 = -8,424 (revenues); 191,118 - 8,424 = 182,694, so $182.7B is the outlay figure less the revenue loss, as the row says. But neither file prints a deficit figure for Sec. 71116: the PDF gives it only as outlays ('will decrease federal outlays for Medicaid by $149.4 billion', p. 5), and Sec. 71116 appears once in Table 7, in the outlay block (row 255), with no revenue line. So the $332.1B (printed in neither file) adds a deficit figure to an outlay figure; that is consistent with Table 7 showing no revenue effect for Sec. 71116, but CBO does not say so. | CBO, October 28, 2025, Supplemental Cost Estimate (user-supplied copy: 48458f96-CBO_61837.pdf), p. 5; CBO, July 21, 2025, Table 7 (sheet 'Title VII'; user-supplied copy: 128e9e8c-CBO_61570.xlsx) | SB-09: 'Draft note, CBO's two measures': after 'On that measure the two sections sum to $332.1 billion [I]', add that CBO prints Section 71116 only as an outlay figure and Table 7 lists no revenue effect for it. (optional) |
+| SB-14 | verified — Round 2 (CBO cells) | **corrected**. Source: “section 71115 will decrease deficits by $182.7 billion over the 2025-2034 period”. Figures matched by script against CBO, July 21, 2025, Table 7 (sheet 'Title VII'; user-supplied copy: 128e9e8c-CBO_61570.xlsx): O253 = -191,118 and O257 = -149,424, 2025-2034. But the row (and v17 sec. 5) also cites the October 28, 2025 estimate, pp. 4-5, for both outlay figures; that document prints Sec. 71116's $149.4B as outlays (p. 5) and Sec. 71115 only as '$182.7 billion' in deficits (p. 5); it does not print $191.1B. Neither file states that the dollars are not adjusted for inflation or are nominal (searched by script: no 'nominal' and no 'not adjusted for inflation'; the spreadsheet's only mention of inflation is in its unfunded-mandates note); Table 7 says only 'By Fiscal Year, Millions of Dollars'. | CBO, July 21, 2025, Table 7 (sheet 'Title VII'; user-supplied copy: 128e9e8c-CBO_61570.xlsx); CBO, October 28, 2025, Supplemental Cost Estimate (user-supplied copy: 48458f96-CBO_61837.pdf), p. 5 | Sec. 5, CBO sentence: cite 'CBO, July 21, 2025, Table 7' for both outlay figures and the October 28, 2025 estimate (p. 5) for Section 71116 only, since it gives Section 71115 as $182.7 billion in deficits, not outlays. 'In dollars not adjusted for inflation' is not stated in either CBO file: source it elsewhere or drop it; the same applies to 'nominal' in App. F's 'Draft note, CBO's two measures'. |
+| SB-15 | verified — Round 2 (CBO cells) | match. Matched by script. CBO, July 21, 2025, Table 7 (sheet 'Title VII'; user-supplied copy: 128e9e8c-CBO_61570.xlsx): O850 = -8,424 (Sec. 71115 'Estimated Revenues'); O253 = -191,118 (outlays); CBO, October 28, 2025, Supplemental Cost Estimate (user-supplied copy: 48458f96-CBO_61837.pdf), p. 5: $182.7B in deficits. 191,118 - 182,694 = 8,424, so $8.4B is the gap between the two measures, as the row says. | CBO, July 21, 2025, Table 7 (sheet 'Title VII'; user-supplied copy: 128e9e8c-CBO_61570.xlsx); CBO, October 28, 2025, Supplemental Cost Estimate (user-supplied copy: 48458f96-CBO_61837.pdf), p. 5 | None. |
+| SB-17 | verified — Round 2 | match. Matched by script. Table 7 (sheet 'Title VII'), millions of dollars, 2025-2034 column O: Sec. 71115 'Estimated Outlays' O253 = -191,118; Sec. 71116 'Estimated Outlays' O257 = -149,424; Sec. 71115 'Estimated Revenues' O850 = -8,424. 191,118 + 149,424 = 340,542, which CBO prints nowhere in either file. Of the row's two citations, Table 7 carries both outlay figures; the October 28, 2025 estimate prints only Sec. 71116's ($149.4B, p. 5) and gives Sec. 71115 as $182.7B in deficits (see SB-14). | CBO, July 21, 2025, Table 7 (sheet 'Title VII'; user-supplied copy: 128e9e8c-CBO_61570.xlsx) | None. |
+| SB-24 | verified — F-005 (CMS and CBO limbs) | match. CBO limb matched by script, CBO, October 28, 2025, Supplemental Cost Estimate (user-supplied copy: 48458f96-CBO_61837.pdf), p. 5: Sec. 71115 'the number of people without health insurance will increase by 1.1 million in 2034'; Sec. 71116 'will not affect the number of people without health insurance'. | CBO, October 28, 2025, Supplemental Cost Estimate (user-supplied copy: 48458f96-CBO_61837.pdf), p. 5 | None. |
+| SB-27 | verified — Round 3 item 2 | match. Matched by script. CBO, October 28, 2025, Supplemental Cost Estimate (user-supplied copy: 48458f96-CBO_61837.pdf): Sec. 71115 (pp. 4-5) and Sec. 71116 (p. 5) one at a time; p. 6, 'Other Medicaid-Related Effects and Interactions Among Policies … accounting for interactions among all of the related policies, will, on net, decrease deficits by $60.1 billion'. CBO, July 21, 2025, Table 7 (sheet 'Title VII'; user-supplied copy: 128e9e8c-CBO_61570.xlsx): row 339 'Interactions of Health Policies in Subtitle B', O341 = 95,448 (outlays) and, in the revenue block, row 928, O929 = -3,993; no row for an interaction between Sec. 71115 and Sec. 71116. | CBO, October 28, 2025, Supplemental Cost Estimate (user-supplied copy: 48458f96-CBO_61837.pdf), pp. 4-6; CBO, July 21, 2025, Table 7 (sheet 'Title VII'; user-supplied copy: 128e9e8c-CBO_61570.xlsx) | None. |
+
+**Where the ledger and v17 describe how $340.5B is derived (step 3).**
+
+| Place | What it says | Against the files |
+|---|---|---|
+| v17 sec. 5, CBO sentence (SB-14, SB-17) | $191.1B and $149.4B outlays, 'in dollars not adjusted for inflation (CBO, July 21, 2025, Table 7; October 28, 2025, pp. 4–5)'; POLITICO's $340 billion 'matches the sum of the two section figures, $340.5 billion, which CBO does not print' | **Derivation matches**: O253 + O257 = 191,118 + 149,424 = 340,542, printed nowhere. **Citation does not**: the October 28 PDF does not print $191.1B; it gives Sec. 71115 as $182.7B in deficits (p. 5). 'Not adjusted for inflation' is in neither file. See SB-14 (corrected). |
+| v17 App. F, 'Draft note, CBO's two measures' (SB-09, SB-14) | Outlay figures in Table 7 '(fiscal years 2025–2034, nominal)'; $182.7B is 'its outlay reduction less an $8.4 billion revenue loss'; 'On that measure the two sections sum to $332.1 billion. [I]' | $182.7B derivation matches (191,118 - 8,424 = 182,694; PDF p. 5 prints $182.7B). 'Nominal' is in neither file. The $332.1B adds Sec. 71115's deficit figure to Sec. 71116's outlay figure: CBO prints no deficit figure for Sec. 71116, though Table 7 lists no revenue effect for it. v17 tags the sum [I]; SB-09 now carries that caveat. |
+| v17 App. F, 'the federal reconciliation on CMS's tables' (SB-29) | '… against CBO's $340.5 billion for 2025–2034' | The sum is right, but 'CBO's $340.5 billion' reads as a CBO figure, which the sec. 5 sentence says it is not. Optional: 'the $340.5 billion sum of CBO's two section figures'. |
+| Ledger SB-17, SB-18 | $340.5B is the sum of CBO's two outlay figures and CBO does not print it | Match. SB-17's Primary source still reads 'CBO, as reported by CRS' although its citation is now CBO directly (not changed; outside the Status column). |
+| Ledger SB-29 | 'compares with CBO's $340.5B for 2025–2034' | As v17 App. F above; status unchanged. |
+| Ledger SB-08, SB-16, SB-23 (superseded) and decision-log entry D-13 | $191.1B + $149.4B = $340.5B, 'CBO, as reported by CRS' (CRS R48633); SB-08 calls the $340B 'CBO's estimate' | Arithmetic matches the spreadsheet; these rows are superseded and D-13 is a dated record, so nothing was changed. CRS R48633 was not read. |
+| Ledger SB-31 (CBPP) | CBPP's $341 billion is its rounding of the sum of CBO's two section figures | Consistent: 340,542 rounds to 341 billion. |
+
+## 7. Comments with a blank organization field
 
 *Request: list every comment, other than MACPAC's CMS-2026-2476-0173 (NC-17), whose regulations.gov organization field is blank but whose letter comes from an organization, and say whether any commenter-type or position count in `article_v4.md` would change.*
 
@@ -359,7 +416,7 @@ Plus CMS-2026-2476-0173 (MACPAC, tagged individual; NC-17). **Unclear (not count
 
 **Effect outside v17 (not edited; the analyst's files).** In `output/comments_tagged.csv`, 26 of these letters are typed 'individual' and 5 'other' (one is correctly typed hospital), plus MACPAC's 2476-0173: so the analyst's 'individual' count (227) is overstated by 27 (21 in CMS-2449-P, 6 in CMS-2452-P), and the type tables in `output/comment_analysis.md` would change. MACPAC also commented on the SDP rule (1916-0376), which the analyst's file tags individual.
 
-## 7. Method and sources
+## 8. Method and sources
 
 - **Federal Register.** govinfo.gov PDFs: CMS-2449-P, FR Doc. 2026-10292 (`FR-2026-05-22/pdf/2026-10292.pdf`, 91 FR 30400–30466, 67 pages) and CMS-2452-P, FR Doc. 2026-14897 (`FR-2026-07-23/pdf/2026-14897.pdf`, 91 FR 46562–46599, 38 pages). Text by `pdftotext`, page by page; each page's printed number was checked against its header. Tables printed as images (Tables 17–23 and 27–28 of CMS-2449-P; Table 1 of CMS-2452-P at 46578) were read from 200-dpi page images with Tesseract OCR and by eye.
 - **Public comments.** Every comment on both dockets was downloaded on October 13, 2026 with the repository's `collect_comments.py` (regulations.gov v4 API with the key in REGULATIONS_GOV_API_KEY; attachments from downloads.regulations.gov with its browser User-Agent). The collector's report showed no gaps: CMS-2026-1916, 960 comments and 892 attachment files; CMS-2026-2476, 214 and 202. Text came from `pdftotext` page by page, with Tesseract OCR for pages without a text layer, so page pinpoints are PDF pages. Whole-docket counts reuse the analyst's own `extract_comment_text.py`, `comment_text_utils.cluster` (shingle Jaccard 0.5) and `count_themes.py` patterns, so 'distinct texts' means what it meant in the analyst's files.
