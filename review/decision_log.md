@@ -396,3 +396,85 @@ The cap is 6,284 words. To stay under it while adding the required bases, hedges
 | Issue | Fixed? | Where, or why not |
 |---|---|---|
 | 8-1 CMS's 2026–2035: fiscal or calendar years | Fixed as a stated limit | Your decision 2: sec. 3 sentence, sec. 5 clause, App. F "year basis" note (replacing App. F's "Open:" line). The App. F note gives NTC3's freeze evidence as THEIA's inference [I]: a freeze that starts October 1, 2026 cannot reduce revenue in federal fiscal year 2026. |
+
+---
+
+# Verification v4 decisions
+
+*Writer, October 14, 2026. Inputs: `review/ledger/verification_v4_log.md` (all sections, including the second pass and both parts of the third pass), `review/ledger/261011_Evidence_Ledger_v4.md`, `review/ledger/261011_Ledger_change_log.md` and `review/article_v4.md`. Output: `review/article_v5.md`; v4 is unchanged. The log calls the draft it checked "v17"; its text is word for word v4 (log, header). Where the log and your list differ, the log's wording is followed and the difference is noted.*
+
+**Word counts** (same method as before: tokens containing a letter or digit; body is title through sec. 9, table cells and figure captions included):
+
+| Version | Body | Against v16's 5,465 | Appendix |
+|---|---:|---:|---:|
+| v4 | 6,278 | +14.9% | 2,722 (outline and draft notes) |
+| v5 | 6,270 | +14.7% | 4,425 (finished text) |
+
+The body stays under the 6,284-word cap. To absorb the log's required wording, v5 removed the sec. 6 opening sentence (Figure 6's caption says the same), the sec. 7 range sentence (the Executive summary carries it), sec. 9's lead-in sentence (the two subheadings say the same), the ASPE subsection's pointer sentence, the duplicate "no current public source" clause in sec. 2 (the Executive summary and App. C, gap 3 carry it), and the HFMA, KFF and POLITICO figures in sec. 5 ¶1 (each subsection heading gives them). Sec. 2's sentence on how the scenarios move the overlap assumptions moved to App. D. No correction, qualifier or verified fact was cut except where the log required it.
+
+## Changes the log lists (section 1 corrected rows, section 2 by section, section 3 still-flagged rows)
+
+| Row | Required or optional | Done? | Where, or why not |
+|---|---|---|---|
+| RM-18 | required | Done | Sec. 8, rural ¶2: for critical access, freestanding children's and certain cancer hospitals, CMS proposes to set the SDP limit from each hospital's most recent Medicare cost report; a default to the state plan rate was an alternative it did not propose (91 FR 30414) [E]. The [I] "little or no room" clause is dropped (AC-16 knock-on). The Virginia sentence stays, as the log allows. |
+| AC-16 (knock-on, not flagged) | follows RM-18 | Done | The default-to-plan-rate limb is gone with RM-18; App. B's rural note no longer mentions a default. |
+| RM-19 | required | Done | Sec. 9, item 8, in the log's words, now tagged [E] (91 FR 46583); rest of the item unchanged. App. C, gap 4 uses the same facts. |
+| RM-25 | required | Done | Sec. 9, item 5: "about two weeks later (Texas Tribune, September 17, 2026)"; Fierce Healthcare dropped. Also your list item. |
+| RM-26 | not found | Done (cut) | Your item 2: the log found no Fifth Circuit decision or docket and does not support "pending" with a checked date, so the appeal sentence is cut. Item 6 now reads "Further rulings in Texas v. CMS, …", keeping only what CHAT's letter says, with its comment ID. |
+| RM-46 | required | Done | Sec. 7, step 2: CMS says such taxes "would in some cases be ineligible …" (paraphrased: "would in some cases be ineligible to remain in place beyond October 1, 2026", 91 FR 46589) [E]; the [I] clause now says "usually zero", "though a tax enacted or raised after July 4, 2025 may fall". |
+| CE-61 | required | Done | Sec. 3: "CMS states each scenario's assumptions as single values, not by state (91 FR 30453–30454, 46593–46594) [E]; THEIA Services reads them as applying nationally …" [I]. |
+| TP-30 | required | Done | Sec. 2: GAO's state figures for SDPs approved as of August 26, 2022 combine provider taxes and IGTs in one amount, not dollars by source, and GAO says that amount is undercounted (GAO-24-106202, Table 4). App. C, gap 3 carries the same qualifier with GAO's reason and pinpoint (app. III, Table 4, pp. 44–46). Your list item. |
+| SE-09 | required | Done | Group table row E: "$0 (Colorado excepted; see text)" and Arkansas added to the states the lower threshold reaches; Group E paragraph: KFF's figures leave out a Colorado SDP above the new limits whose preprint CMS posted after July 20, 2026; [Figure 6] caption: same two points; App. H. |
+| SE-10 | required | Done | Group E paragraph: the lower threshold reaches Arkansas (an ambulance tax) and Colorado, Connecticut, Indiana and Vermont (hospital taxes): five states, four through a hospital tax. Your list item. |
+| SE-11 | required | Done | Sec. 6, Group D paragraph, in the log's words; the [I] follow-up is now "neither shows that no Group D tax exceeds 3.5 percent". |
+| SE-13 | required | Done | Sec. 6: "all eight states carry KFF data-quality flags" is gone; KFF imputed missing payment rates for only three Group D states (Georgia, Texas, Wisconsin) [E], so their figures rest partly on imputation [I]; "least reliable" is cut. App. H: flags removed; imputation (15 states, three in Group D) and survey non-response stated; App. H retitled "State group definitions and KFF data". Your list item. |
+| SE-16 / SE-24 | required | Done | Sec. 6: "KFF cautions that dollars above the caps may not show which states could face the largest proportional effects". |
+| SE-20 | required | Done | Sec. 6 and App. H: the Alabama/Wyoming flag statement is replaced by "Alabama and Wyoming have no Medicaid managed care (KFF, August 14, 2026) [E], so they have no SDPs [I]". Your list item. |
+| AC-08 | required | Done | Sec. 8, psychiatry bullet, in the log's words. |
+| FG-08 | required | Done | [Figure 8] caption: "the average annual percent change was not significant for any type of bed". |
+| FG-06 | required | Done | [Figure 6] caption names Arkansas, Colorado, Connecticut, Indiana and Vermont, and says Group E's $0 omits a Colorado SDP above the limits. The map artwork is not in the repository; whoever draws it should apply the same. |
+| SB-14 | required | Done | Sec. 5: the outlay figures cite "CBO, July 21, 2025, Table 7, Title VII sheet", with "for Section 71116 also October 28, 2025, p. 5"; "in dollars not adjusted for inflation" removed. App. F: "nominal" removed. Your list item. |
+| NC-17 | required | Done, worded to match the ledger | App. G: five letters for the September 21 deadline are now posted, including MACPAC's (comment CMS-2026-2476-0173), and MACPAC is removed from the "found no letters" list. Ledger C-4 records that MACPAC's letter was read on MACPAC's own site, not "not located", so v5 says so rather than counting MACPAC among letters not located. The optional "letters for the September 21, 2026 deadline" wording is used. |
+| TP-40 | required | Done | App. I: comment -0407 is attached to "arguments a legal challenge could use"; the Loper Bright example is now comment CMS-2026-1916-0288, p. 2. |
+| AC-14 | not found | Done (rephrased) | Your item 2: no source was found for "most freestanding psychiatric hospitals are IMDs". Sec. 8 now says only what the definition supports: a freestanding psychiatric hospital with more than 16 beds meets the IMD definition [I]. App. B says THEIA found no source for the share of freestanding psychiatric hospitals that are IMDs. |
+| AC-15 | optional | Done | Sec. 8 and App. B: section 1115 demonstrations cited to 81 FR 27562 and tagged [E]; the "not yet sourced" remark on demonstrations is dropped. |
+| AC-11 | optional | Not done | The abstract's 11.3 and 9.06 are kept, unchanged from v16; switching to the Results' 11.2 and 8.9 would also change Figure 8. Left for you. |
+| CE-05, CE-06 | optional | Done | Sec. 1 SDP table note: both figures are federal plus state spending in 2026 dollars (91 FR 30453, 30456). This also shortened the note. |
+| RM-28 | optional | Done in App. B only | App. B cites P.L. 119-21, § 71115(a)(2), 139 Stat. 302 for the exemption. The sec. 1 threshold note is unchanged to stay under the body cap. |
+| RM-16 | optional | Not done | Body cap; sec. 8 already names Section 71116. |
+| RM-17 | optional | Done | App. B rural note: P.L. 119-21, § 71116(d)(2), 139 Stat. 304. |
+| NC-15 | optional | Done in App. I | App. I gives the bills' status as of October 13, 2026 (govinfo bill status). Sec. 9 item 7 keeps "as of September 22, 2026", which the log keeps for the litigation limb. |
+| RM-10 | optional | Done | App. I: neither rule was under White House review as of October 13, 2026; CMS-2450 still was. |
+| RM-36 | optional | Done | App. I names the moved letter (CMS-2026-2476-0199, the same text as CMS-2026-1916-0958). |
+| SB-09 | optional | Done | App. F: $332.1 billion is described as Section 71115's $182.7 billion deficit figure plus Section 71116's $149.4 billion outlay figure, a total CBO does not print; CBO prints Section 71116 only as outlays and Table 7 lists no revenue effect for it. Your list item. |
+| SB-29 | optional | Done | App. F: "the $340.5 billion sum of CBO's two section figures"; no "CBO's $340.5 billion" anywhere in v5. Your list item. |
+| FG-07 | optional | No change | The log asks for none to the caption; the artwork may add an adult bed series. |
+| Section 7 of the log (blank organization fields) | — | No change needed | The log finds no v4 count or type statement changes except MACPAC (NC-17, done). App. G's limits now note that a letter filed with a blank organization field could be missed. |
+| Rows matched with "None" (RM-10, RM-13, RM-14, RM-23, RM-24, RM-29, RM-31, RM-32, RM-42, RM-45, CE-56 to CE-58, CE-64, CE-71, SB-01 to SB-03, SB-12, SB-18, SB-32, SB-33, TP-01, TP-04, TP-08, TP-10 to TP-15, TP-17, TP-21, TP-23, TP-24, TP-26, TP-29, TP-31 to TP-38, SE-01 to SE-08, SE-12, SE-14, AC-07, AC-09, AC-10, NC-06, CE-28, SB-15, SB-17, SB-24, SB-27) | none | No change | Kept as in v4. Several of these were on v4's re-check list and are now matched (see `article_changes.md`, "v4 → v5"). |
+
+## Your instructions 3 to 6
+
+| Item | Done? | Where |
+|---|---|---|
+| 3. Executive summary, first sentence | Done | "… and, at the lower end, of the most that providers could stop paying to fund the cut payments." |
+| 4. Write the appendix | Done | "Appendix (to be written)" → "Appendix". Items A–J are now subheadings ("## A. …"); this adds ten subheadings under the appendix, which I judged the cleanest way to turn the outline into text. Every "Draft note" label is gone. App. C lists the five data gaps (facility link; per-facility taxes and IGTs; SDP financing in dollars by source; each state's binding threshold; CMS's price ratios), taken from ledger NC-19's candidates (NC-01, NC-02, NC-18, RM-19/D-1, NC-03). The outline's "MACPAC's 2024 program counts" is left out: neither v4, the ledger nor the verification files give any figure for it. App. E now states the docket misprint (RM-20), the Table 5 caption error, and the four-party Tables 12 and 14 (CE-37, FG-02). The outline's "v13 footnotes 1–3" label is dropped as an internal reference. App. D adds the 38 and 37 percent preprint figures (CE-49) and the timing of the +$21.7 billion (CE-45). App. F adds ASPE's remark on CMS's actuaries (TP-11). App. G states the pre-September 22 search scope (C-4). App. J is two short paragraphs drawn from v4 (no-position line; hospital-specific estimates). Appendix notes that repeated body text were cut. |
+| 5. Figure 5 | Done (removed) | The body has no place that needs a Figure 5: the scenario detail is in App. D as a table. The reference ("with Figure 5") is removed. |
+| 6. Consistency pass | Done | See the next table. |
+
+## Consistency pass
+
+| What was checked | Places | Result |
+|---|---|---|
+| States the lower threshold reaches in Group E | Sec. 6 group table row E, Group E paragraph, [Figure 6] caption, App. H group E | All name five: Arkansas (ambulance tax), Colorado, Connecticut, Indiana and Vermont (hospital taxes). |
+| Counts of expansion states with a tax above 3.5 percent | Sec. 6 bullet ("31 … 28 with hospital taxes"), group table, App. H | Now consistent: 24 (A) + 2 (B) + 5 (E) = 31; 24 + 4 = 28 with hospital taxes. In v4 Group E's four states gave 30. |
+| Group sizes and dollars | Group table, App. H | A 24, B 2, C 3, D 8, E 14 = 51; about $45.4B, $2.0B, $0.8B, $11.9B, $0 (log section 5 rebuild: $45.43B, $1.96B, $0.80B, $11.91B, $0; $60.1B). Group E's $0 carries the Colorado qualifier everywhere it appears. |
+| KFF data-quality flags | Sec. 6, App. H, App. A | None remain. App. A's "flagged rows" refers to the evidence ledger, not KFF. |
+| Alabama and Wyoming | Sec. 6, App. H | Both say no Medicaid managed care, so no SDPs. |
+| CBO figures | Sec. 5 ¶2–4, App. F (measures, reconciliation, CBPP, commenters) | $340.5B is always "the sum of CBO's two section figures"; $332.1B is described as a deficit figure plus an outlay figure; no "nominal", "not adjusted for inflation" or "unadjusted" remains. The dollar-basis direction, which v4 said would raise CMS's figure, is now "unknown" in sec. 5 ¶4 and "not established" in App. F, because neither CBO file states a dollar year. Sec. 5 ¶3 says the $756 billion "may differ in dollar basis" rather than "differs … in dollars". CBPP's own reasoning about the dollar basis stays, attributed to CBPP. |
+| "By source" financing | Sec. 2, App. C gap 3, Executive summary | GAO's figures are described as combined; CMS's 402-SDP shares as shares that CMS does not say are by count or by dollars; the Executive summary's "no current public source … from each source" stands, supported by App. C. |
+| Facility-link negative | Sec. 9 item 9, App. C gap 1 | Both now use the scoped form from ledger C-1/NC-01: "no nationally standardized public dataset". |
+| Thresholds timing | Sec. 7 step 2, sec. 9 item 8, App. B, App. C gap 4 | Same facts throughout: interim data by December 31, 2026 (91 FR 46583); per-class thresholds no later than September 30, 2028 (91 FR 46574). |
+| Cost-paid hospitals' cap | Sec. 8, App. B | No remaining reference to a default to the state plan rate for these hospitals. |
+| Appeal status | Sec. 9 item 6, App. I | No appeal number or "pending" remains. |
+| Placeholders and headings | Whole file | [Figure 1], [Figure 2], [Figure 3], [Figure 6], [Figure 7], [Figure 8], [DATE] (3), [DATE SENT], [proposed title] unchanged; section numbers and headings unchanged except the appendix heading and its new A–J subheadings. Captions of Figures 6 and 8 changed as the log requires. |
+| Quotes | Whole file | Same four quotes as v4 (CMS-2449-P, 91 FR 30453; CMS-2452-P Table 12 title; HFMA; POLITICO); none added from either rule. App. E describes the Table 5 caption error without quoting it. |

@@ -374,3 +374,51 @@ Existing v16 citations with no verification row. v4 keeps each unchanged.
 | A source for "most freestanding psychiatric hospitals are IMDs" and the demonstration exception | Sec. 8; App. B |
 
 Still on the earlier citation-to-add list and not resolved here: 91 FR 46594 (F-011 repeated for the low-savings estimate); CRS R48633, if wanted.
+
+---
+
+# v4 → v5
+
+*Writer's file, October 14, 2026. Maps every change in `review/article_v5.md` against `review/article_v4.md`. Source keys: ledger row IDs as in `review/ledger/verification_v4_log.md` ("VL"); **Instr. 5** = your instructions for this round (item numbers 1–6); **Len** = removed as a repeat or moved to the appendix to stay under the body cap. Decisions are in `decision_log.md`, "Verification v4 decisions".*
+
+## Body
+
+| # | v5 location | Change | Source |
+|---|---|---|---|
+| V1 | Exec ¶1 | "of the most that providers could stop paying" | Instr. 5, item 3 |
+| V2 | Sec. 1, SDP table note | Both figures federal plus state, 2026 dollars (91 FR 30453, 30456) | VL CE-05, CE-06 (optional) |
+| V3 | Sec. 2 ¶2 | GAO's 2022 figures: combined provider taxes and IGTs, not by source, undercounted; duplicate "no current public source" clause removed | VL TP-30; Instr. 5, item 1; Len |
+| V4 | Sec. 2, overlap ¶ | Scenario interplay shortened to one sentence; detail to App. D | Len |
+| V5 | Sec. 3, scenarios | "single values, not by state" [E]; national reading [I] | VL CE-61 |
+| V6 | Sec. 5 ¶1 | Figures dropped from the opening sentence (each subsection heading carries them) | Len |
+| V7 | Sec. 5, POLITICO ¶2 | Outlays cited to Table 7 (Title VII sheet), October 28 p. 5 for Section 71116 only; "in dollars not adjusted for inflation" removed | VL SB-14; Instr. 5, item 1 |
+| V8 | Sec. 5, POLITICO ¶3–4 | "differs … in dollars" → "may differ in dollar basis"; dollar conversion moved from "raises it" to the unknown-direction list; layout hedge shortened | VL SB-14 (consequence); Instr. 5, item 6 |
+| V9 | Sec. 5, ASPE ¶2 | Pointer sentence to App. F removed | Len |
+| V10 | Sec. 6 | Opening sentence removed; KFF caution softened to "may not show … could face"; group table row E: Colorado qualifier and Arkansas; Group E paragraph rewritten (Arkansas, Colorado's omitted SDP, Alabama and Wyoming without managed care); Group D paragraph rewritten (imputation in three states, survey non-response, no flags); [Figure 6] caption extended | VL SE-09, SE-10, SE-11, SE-13, SE-16, SE-20, SE-24, FG-06; Instr. 5, items 1 and 6; Len |
+| V11 | Sec. 7, intro | Range sentence removed (Executive summary ¶5 carries it) | Len |
+| V12 | Sec. 7, step 2 | "usually zero …"; "would in some cases be ineligible to remain in place beyond October 1, 2026" | VL RM-46 |
+| V13 | Sec. 7, step 3 | Preprint gloss shortened | Len |
+| V14 | Sec. 8, psychiatry bullet and [Figure 8] caption | AC-08 and FG-08 wording | VL AC-08, FG-08 |
+| V15 | Sec. 8, IMD ¶ | "most … are IMDs" replaced by the definition-based reading [I]; section 1115 demonstrations cited (81 FR 27562) | VL AC-14 (not found), AC-15 (optional); Instr. 5, item 2 |
+| V16 | Sec. 8, rural ¶2 | Cost-report limit (91 FR 30414) replaces the default-to-plan-rate sentence; "little or no room" dropped | VL RM-18, AC-16 |
+| V17 | Sec. 9 | Lead-in sentence removed; item 5 "about two weeks", Texas Tribune only; item 6 appeal sentence cut, "Further rulings in …"; item 8 RM-19 wording [E]; item 9 scoped to "no nationally standardized public dataset" with pointer to App. C | VL RM-25, RM-26, RM-19, NC-01 (ledger); Instr. 5, items 1, 2 and 6; Len |
+
+## Appendix
+
+| # | v5 location | Change | Source |
+|---|---|---|---|
+| V18 | Heading | "Appendix (to be written)" → "Appendix"; outline bullets A–J → subheadings with finished text; all "Draft note" labels removed | Instr. 5, item 4 |
+| V19 | A | New text: tags, citation conventions, evidence ledger and its October 13–14, 2026 checks | Instr. 5, item 4; VL header |
+| V20 | B | Glossary written from the draft notes and body terms; rural pinpoint § 71116(d)(2), 139 Stat. 304; exemption pinpoint § 71115(a)(2), 139 Stat. 302; IMD note: demonstrations cited, AC-14 result stated | VL RM-17, RM-28, AC-14, AC-15 |
+| V21 | C | Five data gaps listed (facility link; per-facility taxes and IGTs; SDP financing by source, with GAO's qualifier, CMS's 402-SDP shares and the preprint's Section VI; state thresholds; price ratios); other limits; Section 71117; inputs for sec. 7. "MACPAC's 2024 program counts" dropped (no source content) | Ledger NC-19, NC-01, NC-02, NC-03, NC-18, D-1; VL TP-30, RM-45, RM-19; Instr. 5, item 4 |
+| V22 | D | Parameters (with the interplay sentence moved from sec. 2); 38 and 37 percent preprint figures; net provider series under three estimates; derived overlaps; timing of the +$21.7 billion; range table; pairing; 65 percent restatement. "with Figure 5" removed | Ledger CE-31, CE-33, CE-45, CE-49; Instr. 5, items 4 and 5 |
+| V23 | E | Text vs tables; rounding; two Tables 19; docket misprint (footnote 27) and Table 5 caption error; four-party Tables 12 and 14; commenters' readings | Ledger RM-20, CE-37, FG-02; Instr. 5, item 4 |
+| V24 | F | CBO measures rewritten ($332.1 billion as a deficit figure plus an outlay figure; no "nominal"; no stated dollar year); interaction note; reconciliation as a table, $630.9 billion labelled, "the $340.5 billion sum of CBO's two section figures", dollar-basis direction not established; year basis; coverage cited to p. 5; CBPP; commenters on CBO; ASPE's remark on CMS's actuaries; netting note | VL SB-09, SB-14, SB-29, SB-24, SB-27; ledger TP-11; Instr. 5, items 1 and 6 |
+| V25 | G | Pre-September 22 search scope; comment-record result with MACPAC added (comment -0173) and removed from the not-found list; blank-organization caveat | Ledger C-4; VL NC-17, section 7 |
+| V26 | H | Retitled "State group definitions and KFF data"; group definitions A–E with Arkansas and Colorado; rebuilt totals; KFF imputation (15 states, three in Group D), survey non-response, Alabama and Wyoming; share above caps and state dollars | VL SE-09, SE-10, SE-13, SE-20, section 5 (rebuild); Instr. 5, items 1 and 6 |
+| V27 | I | White House review as of October 13, 2026; dates and bills (status as of October 13, 2026); comment counts with the moved letter named; legal record with -0407 and -0288 separated; Texas preprint note | VL RM-10, NC-15, RM-36, TP-40 |
+| V28 | J | Disclaimer and About THEIA Services written from v4's no-position line and outline | Instr. 5, item 4 |
+
+## Re-check list after this round
+
+Now matched in the verification log and no longer on the list: GAO-24-106202 (corrected, TP-30), GAO-23-105515 (AC-09), Michelson et al. (AC-10), Lindenfeld et al. (AC-07, AC-08, AC-11), the Texas Tribune (RM-25), CMS-2450 and reginfo.gov (RM-23, RM-24, NC-06), the bills (NC-15), Georgetown CCF (TP-08), the Texas Hospital Association (TP-17, TP-38), KFF (SE-01 to SE-14), HFMA (TP-01, TP-04, TP-23, TP-24), POLITICO (SB-01 to SB-03), ASPE (TP-10 to TP-14, TP-26), the SDP preprint's Section VI (RM-45), and every Federal Register pinpoint taken from the new-text check (CM rows). Fierce Healthcare is dropped. Still open: the share of freestanding psychiatric hospitals that are IMDs (AC-14, not found); the Texas v. CMS appeal (RM-26, not found; removed from v5); CRS R48633 (not used); 91 FR 46594 for F-011's low-savings repeat (not used).
