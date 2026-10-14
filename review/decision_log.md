@@ -478,3 +478,122 @@ The body stays under the 6,284-word cap. To absorb the log's required wording, v
 | Appeal status | Sec. 9 item 6, App. I | No appeal number or "pending" remains. |
 | Placeholders and headings | Whole file | [Figure 1], [Figure 2], [Figure 3], [Figure 6], [Figure 7], [Figure 8], [DATE] (3), [DATE SENT], [proposed title] unchanged; section numbers and headings unchanged except the appendix heading and its new A–J subheadings. Captions of Figures 6 and 8 changed as the log requires. |
 | Quotes | Whole file | Same four quotes as v4 (CMS-2449-P, 91 FR 30453; CMS-2452-P Table 12 title; HFMA; POLITICO); none added from either rule. App. E describes the Table 5 caption error without quoting it. |
+
+# New-text check v5 decisions
+
+*Writer, October 14, 2026. Inputs: `review/new_text_check_v5.md`, `review/article_v5.md`, `review/ledger/261011_Evidence_Ledger_v4.md` and `review/ledger/verification_v4_log.md`. Output: `review/article_v6.md`. v5 and the ledger files are unchanged. Every replacement was applied by script, and each "v5 text" string was asserted to occur exactly once before it was replaced.*
+
+**Word counts** (same method as before: tokens containing a letter or digit; body is title through sec. 9, table cells and figure captions included; "[E]" and "[I]" count as words):
+
+| Version | Body | Against the 6,284 cap | Appendix |
+|---|---:|---:|---:|
+| v5 | 6,270 | −14 | 4,425 |
+| v6 | 6,239 | −45 | 4,530 |
+
+## One row per finding
+
+| Finding | Rating | Outcome | Where, and why |
+|---|---|---|---|
+| NT5-01 | must fix | Applied | App. F, "Who nets provider taxes": "about 12 comments, about 9 distinct texts" (ledger TP-37). The NT5-40 rewrite, which carries the same fix, was not used (see NT5-40). |
+| NT5-02 | must fix | Applied | App. I, "The legal record": "about 11 (about 9 distinct texts)" (ledger TP-40). |
+| NT5-03 | must fix | Applied, modified (your decisions a and c) | Sec. 8, IMD ¶. The section 1115 exception is removed, as you decided, so the reviewer's substance use disorder qualifier is not used. The sentence is split as the reviewer proposed: "(IMD; Appendix B). [I] Federal Medicaid payment for IMD patients aged 21 to 64 is restricted by Social Security Act § 1905(a), with an exception for managed care (42 CFR 438.6(e)); the restriction long predates both rules. [E]" With 81 FR 27562 gone, the managed care exception is cited to 42 CFR 438.6(e), the citation App. B already gives it (ledger AC-15; verification summary, citation check). No new source. |
+| NT5-04 | must fix | Applied (your decision a: describe, not cut) | App. B, IMDs: "section 1115 demonstrations for substance use disorder treatment provide a further exception (81 FR 27562). [E]", the reviewer's wording. The sentence is split after the § 1905(a)(16) clause (see NT5-05), so the managed care and demonstration exceptions form their own [E] sentence. |
+| NT5-05 | should fix | Applied (your decision c) | App. B, IMDs: the reviewer's wording, "Federal Medicaid payment for IMD patients aged 21 to 64 is restricted by § 1905(a), which reaches patients under 65 but excepts inpatient psychiatric care for those under 21 (§ 1905(a)(16))". Sec. 8 now opens with the same words, "Federal Medicaid payment for IMD patients aged 21 to 64 is restricted by …" (found twice in v6 by script). The under-65 and § 1905(a)(16) explanation is in App. B only; sec. 8 points there through "(IMD; Appendix B)". Repeating it in sec. 8 would cost about 15 body words and adds nothing sec. 8's argument needs. |
+| NT5-06 | should fix | Applied as your decision b, not as the reviewer's wording | Sec. 9, item 7: "as of September 22, 2026" → "as of [DATE]". App. I: White House review "as of October 13, 2026" → "as of [DATE]"; bill status "as of October 13, 2026" → "as of [DATE]". All three now carry the one placeholder that App. I's heading already uses ("Status as of [DATE]"). **Before publication, all three checks must be re-run on that date: the lawsuit search (last run September 22, 2026; ledger NC-15 and C-5), the OIRA review status (reginfo.gov; last checked October 13, 2026, RM-10) and the bill status of S. 2279 and H.R. 4807 (govinfo; last checked October 13, 2026, NC-15). The [DATE] filled in must be the date of those re-runs, and any changed result must change the text.** |
+| NT5-07 | should fix | Applied | Sec. 6 group table, row E: "$0 (excludes Colorado’s SDP; see text)". |
+| NT5-08 | should fix | Applied | Sec. 5, POLITICO ¶4: the reviewer's two sentences ("Of the known differences, only …"). |
+| NT5-09 | should fix | Applied | Sec. 5, POLITICO ¶3: the reviewer's four [I] sentences ("Its $756 billion equals …"). |
+| NT5-10 | should fix | Applied | Sec. 7, step 2: "may fall [I]: CMS says new taxes would in some cases be ineligible … (91 FR 46589). [E] Step 2 is zero for a tax already at or below the threshold. [I]" |
+| NT5-11 | should fix | Applied | App. C, gap 3: "THEIA Services located no current public source giving SDP financing in dollars by source and by state. [I]" (ledger NC-18). |
+| NT5-12 | should fix | Applied: phrase cut (your decision e) | App. B, 75/75 test: "in enhanced Medicaid payments or other state payments" is cut. The Federal Register text is not in the repository, so the phrase could not be script-matched (see "Federal Register text" below). |
+| NT5-13 | should fix | Applied as a scoping change; signatories not determined (your decision d) | See "Comment CMS-2026-2476-0140" below. The reviewer gave wording for two outcomes, "Illinois signed" and "Illinois did not sign"; the check could establish neither. Leaving the sentence unchanged would keep an unqualified negative that -0140 might falsify, so App. G now reads: "…and, matching by organization name, found no letter from the Illinois Health and Hospital Association or the Illinois Attorney General in the posted docket. [I] It has not checked whether the Illinois Attorney General signed a multistate attorneys general letter filed with a blank organization field (comment CMS-2026-2476-0140). [I]" The -0140 description comes from log § 7 ("Attorneys General of Maryland and other states", organization field blank). App. G's Limits paragraph already says that matching was by organization name. |
+| NT5-14 | should fix | Applied, with a hedge (your decision e) | App. D, Parameters: split as the reviewer proposed, with a pinpoint per scenario (low-savings 91 FR 46594, high-savings 91 FR 46593; ledger CE-32 "Exact citation"). The Medicaid-share sentence now carries its own [E]. A hedge sentence follows: "THEIA Services’ October checks matched the 75, 55, 40 and 20 percent values against the Federal Register text but not the 90 and 70 percent values or the Medicaid-share point. [I]" Support for each part: the 40 and 20 percent offsets were confirmed in the F-007 check (verification summary, F-007: "High scenario: 20 percent offset (46593). Low scenario: 40 percent (46594)"); the 75 and 55 percent endpoints match the range CMS states at 91 FR 46592 (ledger CE-31, "verified - quoted from the Federal Register page"); the 90 and 70 percent values and the Medicaid-share clause "have no worksheet or verification row" (ledger CE-32 status). I hedged rather than cut because sec. 2's sentence "CMS’s other estimates move these assumptions together" covers the SDP-share assumption, and App. D's 90 and 70 percent are its only support in the note. If the values are cut later, that sentence needs revisiting too. |
+| NT5-15 | should fix | Applied (your decision g) | All 14 sentences tagged as the reviewer listed: App. C gaps 1 and 2 and "Inputs" [I]; App. D price ratios and SDP totals [E]; App. E four-party sentences 1 and 2 [E]; App. F after the table: $630.9 billion [I], "no CBO counterpart" [I], $245.9 against $245.8 billion [I], and the dollar-basis sentence split into a CMS fact "(91 FR 30451, 46591). [E]" and an inference [I]; App. G Limits sentences 1 and 2 [I]; App. H, A and E [I]. A script scan of App. B–I found no other untagged claim sentence (App. A's description of the note and B's one-line glossary definitions are untagged, as in v5). The 91 FR 30451 and 46591 pinpoints for the 2026-dollar statement are the reviewer's, quoted from `new_text_check_v4.md`, section 1. |
+| NT5-16 | should fix | Applied | App. F, CBPP: the reviewer's three sentences; the $341 billion inference now has its own [I]. |
+| NT5-17 | optional | Not applied | Adds 1 body word. |
+| NT5-18 | optional | Applied | Sec. 3, scenarios ¶2 (−1). Log CE-61's required wording is kept. |
+| NT5-19 | optional | Applied | Sec. 5, POLITICO ¶2 (−2): the repeated "CBO," is dropped; "on separate lines" → "separately", which matches App. F's "one separate line". |
+| NT5-20 | optional | Applied | Sec. 5, POLITICO ¶4: split at the semicolon (0). |
+| NT5-21 | optional | Applied | Sec. 5, POLITICO ¶4: list of unknown-direction differences in its own sentence (0). |
+| NT5-22 | optional | Not applied | Adds 1 body word. |
+| NT5-23 | optional | Not applied | Adds 1 body word. |
+| NT5-24 | optional | Applied | Sec. 6, Group D ¶ (0): "Of the Group D states, KFF imputed missing payment rates for three". |
+| NT5-25 | optional | Applied | Sec. 7, step 3 (−1): [E] and [I] parts split. |
+| NT5-26 | optional | Applied | Sec. 8, psychiatry bullet (−1): split; log AC-08's required wording kept verbatim. |
+| NT5-27 | optional | Not applied | Adds 1 body word. |
+| NT5-28 | optional | Applied | Sec. 9, item 8 (−7). RM-19's required first clause is unchanged; "intends" is kept. |
+| NT5-29 | optional | Not applied | Adds 1 body word. |
+| NT5-30 | optional | Not applied | Verification only. CMS-2448-F's text is not in the repository, so "uniform" and "waiver" could not be script-matched at 91 FR 4794. RM-33 stays "read in full", unquoted. Re-check before publication. |
+| NT5-31 | optional | Not applied | Adds 2 words. It also takes a side on D5 (the tag for counts and searches), which is open. |
+| NT5-32 | optional | Not applied | Adds 4 words. Its [E] would rest on 91 FR 30450 wording quoted only in `new_text_check_v4.md`, not in the ledger. |
+| NT5-33 | optional | Not applied | Adds 7 words. |
+| NT5-34 | optional | Not applied | Adds 2 words. |
+| NT5-35 | optional | Not applied | Adds 2 words. |
+| NT5-36 | optional | Not applied | Adds 1 word. |
+| NT5-37 | optional | Not applied | Adds 1 word. |
+| NT5-38 | optional | Not applied | Adds 1 word. |
+| NT5-39 | optional | Not applied | Adds 1 word. |
+| NT5-40 | optional | Not applied | Adds 2 words. NT5-01 makes the same count fix on its own. |
+| NT5-41 | optional | Not applied | Adds 4 words. |
+| NT5-42 | optional | Applied | App. G, five letters (0): split; the search history ("had not located", "had read") is now its own [I] sentence. |
+| NT5-43 | optional | Not applied | Adds 3 words. |
+| NT5-44 | optional | No text change (record only) | Recorded in `article_changes.md`, "v5 → v6", as a v4 → v5 change the earlier map missed: sec. 9 item 4 changed "rescind or revise" to "revise or rescind". |
+| CUT-1 | cut | Applied (your instruction 1) | Sec. 5 ¶1 (−15): "Each figure examined below measures something narrower than the combined net loss to providers or uses a different basis. [I]" This also removes "ASPE" before the acronym is spelled out (NTC4 2d). |
+| CUT-2 | cut, optional | Applied | Sec. 7, step 2 (−8): "Until CMS provides each class’s new threshold, which it intends to do by September 30, 2028 (91 FR 46574) [E], the state’s current tax is the starting point. [I]" It shortens the text and keeps CMS's "intends". |
+| NTC4 2a-1 | optional (carried) | Not applied | Adds 5 body words. |
+| NTC4 2a-2 | optional (carried) | Not applied | Adds 6 body words. |
+| NTC4 2a-4 | optional (carried) | Not applied | Adds 1 body word. |
+| NTC4 2c-1 | optional (carried) | Not applied | Adds 2 body words. |
+| NTC4 2d-3 | optional (carried) | Not applied | Adds 1 body word. |
+| NTC4 2e-2/3 pointer | optional (carried) | Not applied | Adds 2 body words. |
+| NTC4 2g-3 | optional (carried) | Not applied | It would add a THA publication title, and no title is recorded in the ledger (TP-17, TP-38). |
+| Other NTC4 carry-overs | — | No action | The v5 check rates none of the rest must or should fix. Those it does rate are covered above: 2d-5 is NT5-09, 2e-1 is NT5-10, 2g-1 is NT5-16, 2d-1 is CUT-1 and 2g-2 is NT5-32. |
+
+## Comment CMS-2026-2476-0140 (your decision d)
+
+Searched by script for "Illinois", "Raoul" and any signatory list. Result: **the signatories cannot be determined from the repository.**
+- `output/comments_tagged.csv` has a row for -0140 with a blank organization field, commenter type "individual", position "oppose", posted 2026-09-22, and one attachment. Its summary is generic and names no state. Neither "Illinois" nor "Raoul" appears.
+- `output/evidence_ledger_delta.csv` holds one quoted line from `data/CMS-2026-2476/attachments/CMS-2026-2476-0140_attachment_1.pdf`, a passage on provider taxes, with no signatory. The `data/` directory is not in the repository, so the attachment's full text is not available.
+- `comment_tag_overrides.csv` records only the position override.
+- The verification log, § 7, names the letter "Attorneys General of Maryland and other states" but does not list the states.
+
+So App. G is scoped rather than corrected (NT5-13 row). Before publication, read -0140's signature page. If Illinois's Attorney General signed, use the reviewer's wording: "…from the Illinois Health and Hospital Association in the posted docket; the Illinois Attorney General joined a multistate letter (comment CMS-2026-2476-0140)". If not, restore the v5 sentence and drop the scoping sentence.
+
+## Federal Register text (your decision e)
+
+Neither rule's Federal Register text, PDF or extract, is in the repository (script search for 91 FR text, the rules' PDFs and the docket's `data/` directory). Neither the 75/75 phrase nor the 90 and 70 percent parameters could be script-matched, so no quote or page is recorded.
+- **75/75 phrase (App. B): cut.** "in enhanced Medicaid payments or other state payments" is removed (NT5-12). The sentence keeps ledger RM-39's wording.
+- **90 and 70 percent parameters and the Medicaid-share clause (App. D): hedged.** They are kept with per-scenario pinpoints, and a tagged sentence states that they were not matched against the Federal Register text (NT5-14 row, which gives the reason for hedging rather than cutting). Before publication, script-match "90 percent" at 91 FR 46594, "70 percent" at 91 FR 46593 and the Medicaid-share wording, then remove the hedge sentence. If they do not match, cut them and revisit sec. 2's "CMS’s other estimates move these assumptions together".
+
+## AC-11 and Figure 8 (your decision f)
+
+The abstract's figures are kept, with no body change (D1 settled). **For the Figure 8 build:** the abstract's 2023 components do not sum to its stated 2023 total. Short-term acute care psychiatric beds of 9.06 plus freestanding psychiatric hospital beds of 19.5 make 28.56 per 100,000, while the source states 28.4 (Lindenfeld et al., PLoS Medicine, July 2025; ledger AC-11; new-text check v5, arithmetic). The 2011 components sum correctly (11.3 + 16.8 = 28.1). The figure should plot the source's numbers as published. Its stacked 2023 bar will then stand 0.16 above the stated total line, so either label the total as the source's, or plot components only and footnote the gap. The Results section's 8.9 + 19.5 = 28.4 is not used, per your decision.
+
+## Decisions for Eric: settled this round
+
+| Item | Settled by |
+|---|---|
+| D1. AC-11 | Your decision f: abstract figures kept; Figure 8 note above. |
+| D2. Mental-illness section 1115 demonstrations | Your decision a: the exception is removed from sec. 8 and limited to substance use disorder in App. B. No new source added. |
+| D3. Lawsuit search date | Your decision b: [DATE], with a re-run before publication. |
+| D7. Which cut | Your instruction 1 (CUT-1). CUT-2 was also applied, as an optional finding that shortens the text. |
+
+## Open for Eric
+
+Not applied. The options are the reviewer's.
+
+| Item | Question | Reviewer's options |
+|---|---|---|
+| D4. CBO's dollar basis | v6 keeps "direction unknown", because neither CBO file states a dollar year. | Keep as is; or restore a direction, which needs a CBO source that states its dollar convention (none is in the ledger). |
+| D5. Tags for counts and searches | App. A defines THEIA's own search results as [I], but keyword counts and the full-record $681 billion search are tagged [E] in App. F, G and I. | Decide one rule. NT5-31 (not applied) would apply App. A's rule to App. G's "holds one use" only. |
+| D6. Texas v. CMS appeal | v5 and v6 do not mention the appeal. | Leave it out; or add "which CHAT says CMS has appealed (p. 14)" to sec. 9 item 6 (+8 body words; ledger TP-31: CHAT's letter at p. 14 refers to CMS's Fifth Circuit appeal). The body has 45 words of headroom. |
+| D8. Ledger sync | SB-26 and SB-30 still record v4 wording; TP-37 and TP-40's claim columns still carry the v4 counts. | For the ledger owner: update those rows to v6's wording and counts. The ledger was not edited, as instructed. |
+| D9. Rural heading | The cost-report sentence (critical access, freestanding children's and cancer hospitals) sits under "Rural hospitals have more time, not immunity", though two of the three types are not rural. | Leave it there; or move it to its own paragraph or heading. |
+| D10. Group D imputation | The body names imputation for Group D's three states; App. H says KFF imputed in 15 states, so 12 sit in other groups and the body does not mention them. | Leave the body as is (App. H carries the 15); or add a body clause saying KFF imputed in other groups too. |
+
+## Re-check list before publication
+
+1. The three [DATE] checks: lawsuit search, OIRA review status, bill status (NT5-06).
+2. -0140's signatories (NT5-13).
+3. App. D's 90 and 70 percent values and the Medicaid-share clause at 91 FR 46593–46594 (NT5-14).
+4. CMS-2448-F at 91 FR 4794 (NT5-30).

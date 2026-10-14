@@ -422,3 +422,53 @@ Still on the earlier citation-to-add list and not resolved here: 91 FR 46594 (F-
 ## Re-check list after this round
 
 Now matched in the verification log and no longer on the list: GAO-24-106202 (corrected, TP-30), GAO-23-105515 (AC-09), Michelson et al. (AC-10), Lindenfeld et al. (AC-07, AC-08, AC-11), the Texas Tribune (RM-25), CMS-2450 and reginfo.gov (RM-23, RM-24, NC-06), the bills (NC-15), Georgetown CCF (TP-08), the Texas Hospital Association (TP-17, TP-38), KFF (SE-01 to SE-14), HFMA (TP-01, TP-04, TP-23, TP-24), POLITICO (SB-01 to SB-03), ASPE (TP-10 to TP-14, TP-26), the SDP preprint's Section VI (RM-45), and every Federal Register pinpoint taken from the new-text check (CM rows). Fierce Healthcare is dropped. Still open: the share of freestanding psychiatric hospitals that are IMDs (AC-14, not found); the Texas v. CMS appeal (RM-26, not found; removed from v5); CRS R48633 (not used); 91 FR 46594 for F-011's low-savings repeat (not used).
+
+# v5 → v6
+
+*Writer's file, October 14, 2026. Maps every change in `review/article_v6.md` against `review/article_v5.md`. Source keys: **NT5-nn** and **CUT-n** are findings in `review/new_text_check_v5.md`; **Dec. a–g** are your decisions for this round (instruction 2). Decisions and reasons are in `decision_log.md`, "New-text check v5 decisions". Body 6,270 → 6,239 words; appendix 4,425 → 4,530.*
+
+## Body
+
+| # | v6 location | Change | Source |
+|---|---|---|---|
+| W1 | Sec. 3, scenarios ¶2 | [E] and [I] parts split; "applying nationally" → "national" | NT5-18 |
+| W2 | Sec. 5 ¶1 | Sentence shortened; ASPE no longer named before it is spelled out | CUT-1 |
+| W3 | Sec. 5, POLITICO ¶2 | CBO sentence split; repeated "CBO," dropped; "on separate lines" → "separately" | NT5-19 |
+| W4 | Sec. 5, POLITICO ¶3 | "$756 billion" sentence → four [I] sentences; "equals" in place of the asserted composition | NT5-09 |
+| W5 | Sec. 5, POLITICO ¶4 | Sentence 1 split at the semicolon; "Only" → "Of the known differences, only …", split; unknown-direction list in its own sentence | NT5-20, NT5-08, NT5-21 |
+| W6 | Sec. 6, group table, row E | "$0 (Colorado excepted; see text)" → "$0 (excludes Colorado’s SDP; see text)" | NT5-07 |
+| W7 | Sec. 6, Group D ¶ | "In Group D, KFF imputed … for only three states" → "Of the Group D states, KFF imputed … for three" | NT5-24 |
+| W8 | Sec. 7, step 2 | "since CMS says such taxes" → "CMS says new taxes", split; "Step 2 is zero …"; September 30, 2028 sentence shortened | NT5-10, CUT-2 |
+| W9 | Sec. 7, step 3 | Preprint [E] and hospital-association [I] split | NT5-25 |
+| W10 | Sec. 8, psychiatry bullet | Significance result split into its own sentence | NT5-26 |
+| W11 | Sec. 8, IMD ¶ | Section 1115 exception and 81 FR 27562 removed; sentence split; "Federal Medicaid payment for IMD patients aged 21 to 64 is restricted by Social Security Act § 1905(a), with an exception for managed care (42 CFR 438.6(e))" | NT5-03; Dec. a, c |
+| W12 | Sec. 9, item 7 | "as of September 22, 2026" → "as of [DATE]" | NT5-06; Dec. b |
+| W13 | Sec. 9, item 8 | Second clause shortened and split ("Final data are due June 30, 2028, and CMS intends …") | NT5-28 |
+
+## Appendix
+
+| # | v6 location | Change | Source |
+|---|---|---|---|
+| W14 | B, 75/75 test | "in enhanced Medicaid payments or other state payments" cut | NT5-12; Dec. e |
+| W15 | B, IMDs | "under 65" → "aged 21 to 64 … which reaches patients under 65 but excepts inpatient psychiatric care for those under 21 (§ 1905(a)(16))"; section 1115 demonstrations limited to substance use disorder treatment; sentence split | NT5-04, NT5-05; Dec. a, c |
+| W16 | C, gaps 1–3 and Inputs | Gap 3 negative scoped ("THEIA Services located no …"); [I] added to gaps 1 and 2 and to "Inputs" | NT5-11, NT5-15; Dec. g |
+| W17 | D, Parameters | Split with per-scenario pinpoints (46594, 46593); Medicaid-share sentence tagged [E]; hedge sentence on the 90 and 70 percent values and the Medicaid-share point [I]; [E] on the price-ratio and SDP-total sentences | NT5-14, NT5-15; Dec. e, g |
+| W18 | E, four-party Tables 12 and 14 | [E] added to sentences 1 and 2 | NT5-15; Dec. g |
+| W19 | F, reconciliation | Tags added after the table; dollar-basis sentence split into CMS fact "(91 FR 30451, 46591). [E]" and inference [I] | NT5-15; Dec. g |
+| W20 | F, CBPP | Split into three sentences; the $341 billion inference tagged [I] | NT5-16 |
+| W21 | F, who nets provider taxes | "about 11 comments, about 8 distinct texts" → "about 12 comments, about 9 distinct texts" | NT5-01 |
+| W22 | G, comment records | Five-letter sentence split, search history [I]; Illinois negative scoped to organization-name matching, plus a sentence that -0140's signatories were not checked | NT5-42, NT5-13; Dec. d |
+| W23 | G, Limits | [I] added to sentences 1 and 2 | NT5-15; Dec. g |
+| W24 | H, groups A and E | [I] added | NT5-15; Dec. g |
+| W25 | I, White House review and bills | "as of October 13, 2026" → "as of [DATE]" (twice) | NT5-06; Dec. b |
+| W26 | I, legal record | Loper Bright, provider tax rule: "about 8 distinct texts" → "about 9 distinct texts" | NT5-02 |
+
+## Placeholders, headings, quotes
+
+- Section numbers, headings and figure placeholders are unchanged.
+- "[DATE]" now occurs 6 times (v5: 3). The three new ones are sec. 9 item 7 and App. I's two status sentences (W12, W25).
+- No quote was added from either Federal Register rule.
+
+## Missed in the v4 → v5 map (record only)
+
+- **NT5-44.** v5 changed sec. 9 item 4's "rescind or revise" (v4) to "revise or rescind". The v4 → v5 map (V17) did not record this. v6 leaves the wording as in v5.
