@@ -597,3 +597,33 @@ Not applied. The options are the reviewer's.
 2. -0140's signatories (NT5-13).
 3. App. D's 90 and 70 percent values and the Medicaid-share clause at 91 FR 46593–46594 (NT5-14).
 4. CMS-2448-F at 91 FR 4794 (NT5-30).
+
+# New-text check v6 decisions
+
+*Writer, October 15, 2026. Inputs: `review/new_text_check_v6.md`, `review/article_v6.md` and this log, including "Open for Eric". Output: `review/article_v7.md`. v6 and the ledger are unchanged. Every replacement was applied by script, and each v6 string was asserted to occur exactly once before it was replaced. Nothing was changed beyond the rows below.*
+
+**Word counts** (same method as before):
+
+| Version | Body | Against the 6,284 cap | Appendix |
+|---|---:|---:|---:|
+| v6 | 6,239 | −45 | 4,530 |
+| v7 | 6,246 | −38 | 4,531 |
+
+Body +7: D6 adds 8 words and D9 removes 1. Appendix +1: NT6-01 +9, NT6-02 −28, NT6-03 +12 and NT6-04 +8. D5 changes tags only.
+
+| Finding or decision | Outcome | Where, and why |
+|---|---|---|
+| NT6-01 (must fix) | Applied, reviewer's wording | App. G, "The comment records". The two sentences become three. The Illinois Attorney General's co-signature of -0140 is stated as fact, "(comment CMS-2026-2476-0140, p. 10) [E]", and "does not contain the figure either" is tagged [I]. The Illinois Health and Hospital Association negative stays, scoped to matching by organization name. This supersedes the v6 scoping (NT5-13) and closes item 2 of the v6 re-check list. |
+| NT6-02 (should fix) | Applied, reviewer's wording | App. D, Parameters. The hedge sentence on the 90 and 70 percent values and the Medicaid-share point is deleted, because all three now match at 91 FR 46593–46594 (check 2a). The Medicaid-share sentence gains the pinpoint "(91 FR 46593–46594)". Sec. 2's "CMS’s other estimates move these assumptions together" is now fully supported, which answers the NT5-14 concern. This closes item 3 of the re-check list. |
+| NT6-03 (should fix) | Applied, reviewer's wording | App. C, "Section 71117", sentence 1. The section now "adds a statutory test of when a tax that a waiver exempts from the uniformity or broad-based requirement is not generally redistributive, and the final rule CMS-2448-F implements it (91 FR 4794, 4800, 4808). [E]" This closes NT5-30 and item 4 of the re-check list. |
+| NT6-04 (optional; your instruction 1) | Applied: phrase restored | App. B, 75/75 test: "in enhanced Medicaid payments or other state payments (91 FR 46564). [E]" Check 2a(3) matched the phrase verbatim at that page. The v6 cut (NT5-12) is reversed. |
+| D4. CBO's dollar basis | No change (Eric) | "Not established" (App. F) and "no known direction" (sec. 5) stay as in v6. |
+| D5. Tags for counts and searches | Applied: tags only, no words changed (Eric) | Five sentences that report THEIA Services' keyword counts or search results go from [E] to [I]. **Sec. 5, HFMA ¶:** "Of the five comments … none arrives at $56.6 billion." **App. F, "How commenters cite CBO":** "about 120 comments … (keyword counts; …)". **App. F, "Who nets provider taxes":** "about 12 comments … keyword count; …". **App. G:** the full-record "holds one use of $681 billion …". **App. I:** the Loper Bright counts. Left as [E], because they report what a cited document or the docket itself shows rather than a keyword count or search result: App. I's docket totals, since the regulations.gov totals are counts of the posted records; App. G's statement that five named letters "are now posted", with IDs; and sentences citing what named comments say. App. A's tag definitions already state this rule, so App. A needs no change. |
+| D6. Texas v. CMS appeal | Added (Eric: source already in the ledger) | Sec. 9, item 6: "…(comment CMS-2026-2476-0114, pp. 13–14); the association says CMS has appealed (p. 14). [E]" (+8 body). The source is comment -0114, already cited in this item and in ledger TP-31, whose October 13 re-check records that CHAT "at p. 14 refers to CMS's Fifth Circuit appeal on Texas LPPFs". The reviewer's wording, "which CHAT says CMS has appealed (p. 14)", was adapted for two reasons. The body never introduces the acronym "CHAT". And a "which" placed after "funds" would attach to the funds, not the case. The word count is the same, and no appeal number or status is given (RM-26's research note remains unverified). |
+| D8. Ledger sync | No action (Eric) | The sync runs separately. For it, the v6 check lists quotes that CE-32, RM-39, RM-33 and NC-17 can now record, and SB-26, SB-30, TP-37 and TP-40 are still open from D8. |
+| D9. Rural heading | Applied (Eric; overrides the rule that headings stay unchanged) | Sec. 8 heading "Rural hospitals have more time, not immunity" → "Rural hospitals: a later grandfathering date" (−1 body). No other text refers to the old heading (checked by script). |
+| D10. Group D imputation | No change (Eric) | Sec. 6's Group D imputation sentence stays as in v6. |
+
+**Re-check list before publication.** Items 2, 3 and 4 are closed by the v6 check and applied above. Item 1 stays open: re-run the lawsuit search, the OIRA review status and the bill status on the publication date, fill in [DATE], and change the text if any result changed. The [DATE SENT] placeholder in sec. 5, for the HFMA request, is also still to be filled.
+
+v7 is final text for ledger sync and Word: yes

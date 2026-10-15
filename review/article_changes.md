@@ -472,3 +472,28 @@ Now matched in the verification log and no longer on the list: GAO-24-106202 (co
 ## Missed in the v4 → v5 map (record only)
 
 - **NT5-44.** v5 changed sec. 9 item 4's "rescind or revise" (v4) to "revise or rescind". The v4 → v5 map (V17) did not record this. v6 leaves the wording as in v5.
+
+# v6 → v7
+
+*Writer's file, October 15, 2026. Maps every change in `review/article_v7.md` against `review/article_v6.md`. Source keys: **NT6-nn** are findings in `review/new_text_check_v6.md`; **D4–D10** are Eric's decisions on the open items. Reasons are in `decision_log.md`, "New-text check v6 decisions". Body 6,239 → 6,246 words; appendix 4,530 → 4,531.*
+
+## Body
+
+| # | v7 location | Change | Source |
+|---|---|---|---|
+| X1 | Sec. 5, HFMA ¶ | "…none arrives at $56.6 billion." tag [E] → [I]; no words changed | D5 |
+| X2 | Sec. 8 heading | "Rural hospitals have more time, not immunity" → "Rural hospitals: a later grandfathering date" | D9 |
+| X3 | Sec. 9, item 6 | "; the association says CMS has appealed (p. 14)" added (comment -0114, ledger TP-31) | D6 |
+
+## Appendix
+
+| # | v7 location | Change | Source |
+|---|---|---|---|
+| X4 | B, 75/75 test | "in enhanced Medicaid payments or other state payments" restored (91 FR 46564) | NT6-04 |
+| X5 | C, Section 71117 | Sentence 1 rewritten: Section 71117's generally-redistributive test for uniformity and broad-based waivers; CMS-2448-F implements it (91 FR 4794, 4800, 4808) | NT6-03 |
+| X6 | D, Parameters | Hedge sentence deleted; "(91 FR 46593–46594)" added to the Medicaid-share sentence | NT6-02 |
+| X7 | F, "How commenters cite CBO" and "Who nets provider taxes" | Keyword-count sentences: tag [E] → [I] | D5 |
+| X8 | G, comment records | "holds one use of $681 billion" sentence: tag [E] → [I]. Illinois sentences replaced: the Illinois Attorney General co-signed -0140 (p. 10) [E], which lacks the figure [I]; Illinois Health and Hospital Association negative kept, by organization name [I] | D5, NT6-01 |
+| X9 | I, legal record | Loper Bright counts: tag [E] → [I] | D5 |
+
+No other change. Section numbers and figure placeholders are unchanged. "[DATE]" still occurs 6 times, and "[DATE SENT]" once. No quote was added from either Federal Register rule.
