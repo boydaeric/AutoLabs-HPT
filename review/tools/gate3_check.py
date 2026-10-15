@@ -61,6 +61,11 @@ for m in meta:
             n = sum(1 for r in rows if r["group"] == g)
             check(f"({n})" in alltext and re.search(rf"\b{g}\. [^<]*\({n}\)", alltext) is not None,
                   f"fig3: legend count for {g} = {n}")
+        legend = re.findall(r'<g id="legend">\s*<text[^>]*>([^<]*)</text>', svg)
+        for g in "ABCDE":
+            v = next(r["group_above_caps_billion"] for r in rows if r["group"] == g)
+            shown = f"${v}B" if g != "E" else "$0"
+            check(any(l.startswith(f"{g}. ") and shown in l for l in legend), f"fig3: legend {g} shows {shown} (CSV {v})")
         low = sorted(r["abbrev"] for r in rows if "lower threshold" in r["flag"])
         check("(" + ", ".join(low) + ")" in alltext, f"fig3: outline legend names {low}")
         n_outline = svg.count("stroke: #a10400")

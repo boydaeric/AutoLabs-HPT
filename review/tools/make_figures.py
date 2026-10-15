@@ -258,10 +258,13 @@ def fig3():
     st = rows("fig3_state_groups.csv")
     assert sorted(TILES) == sorted(r["abbrev"] for r in st), "tile grid must hold exactly the 51 jurisdictions"
     counts = {g: sum(1 for r in st if r["group"] == g) for g in "ABCDE"}
-    h = 6.25
+    h = 6.35
     fig = plt.figure(figsize=(W_IN, h))
     y_top = header(fig, "Parts of the two proposed rules that reach each state",
                    "THEIA Services’ state groups A–E, 50 states and DC; groups show where the rules apply, not loss size", h)
+    fig.text(0.0, y_top + 0.07 / h, "Legend dollars: each group’s federal hospital SDP spending above the caps in one year (KFF)",
+             fontsize=S_SIZE, color=MUTED, va="top", ha="left")
+    y_top -= 0.14 / h
     grid_h_in = 3.25
     ax = fig.add_axes([0.0, y_top - (grid_h_in + 0.05) / h, 1.0, grid_h_in / h])
     ax.set_xlim(-0.1, 12.0)
@@ -294,8 +297,11 @@ def fig3():
                                      facecolor=GROUP_FILL[g], edgecolor="none"))
         fig.text(0.08 / W_IN, y + 0.005 / h, g, fontsize=7, color=GROUP_TEXT[g], ha="center", va="center",
                  fontweight="bold")
-        fig.text(0.26 / W_IN, y, f"{g}. {GROUP_NAME[g]} ({counts[g]})", fontsize=L_SIZE, color=INK,
-                 va="center", ha="left")
+        usd = next(r["group_above_caps_billion"] for r in st if r["group"] == g)
+        usd = f"about ${usd}B" if g != "E" else "$0 (excludes Colorado’s SDP)"
+        t = fig.text(0.26 / W_IN, y, f"{g}. {GROUP_NAME[g]} ({counts[g]}): {usd}", fontsize=L_SIZE, color=INK,
+                     va="center", ha="left")
+        t.set_gid("legend")
     y = leg_top - 5 * line_h
     fig.patches.append(Rectangle((0.01 / W_IN, y - 0.07 / h), 0.14 / W_IN, 0.14 / h, transform=fig.transFigure,
                                  facecolor=RULE, edgecolor=RED, linewidth=1.6))
@@ -339,7 +345,7 @@ def fig4():
     ax.set_ylim(-0.5, 1.5)
     ax.set_xticks([-35, -30, -25, -20, -15, -10, -5, 0], ["−35%", "−30%", "−25%", "−20%", "−15%", "−10%", "−5%", "0%"])
     ax.tick_params(axis="x", labelsize=L_SIZE - 0.5, colors=MUTED)
-    source(fig, ["Source: Michelson et al., JAMA Pediatrics, December 2024."], h)
+    source(fig, ["Source: Michelson et al., December 2024."], h)
     LAYOUT["fig4"] = save(fig, "fig4_pediatric")
     META.append({
         "number": 4, "stem": "fig4_pediatric", "csv": "fig4_pediatric.csv",

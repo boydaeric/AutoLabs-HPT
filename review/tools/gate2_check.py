@@ -108,6 +108,12 @@ check("$45.43 billion, $1.96 billion, $0.80 billion, $11.91 billion and $0" in a
 check(f"{sum(sums.values()):.1f}" == "60.1" and "about $60.1 billion" in article,
       f"fig3: all groups ${sum(sums.values()):.2f}B vs text 'about $60.1 billion'")
 check(set(dollars) <= {r["state"] for r in rows if r["group"] != "E"}, "fig3: every KFF dollar state is in A–D")
+table = {"A": "About $45.4B", "B": "About $2.0B", "C": "About $0.8B", "D": "About $11.9B", "E": "$0 (excludes"}
+for g in "ABCDE":
+    col = {r["group_above_caps_billion"] for r in rows if r["group"] == g}
+    shown = ("About $" + next(iter(col)) + "B") if g != "E" else "$0 (excludes"
+    check(len(col) == 1 and shown == table[g] and f"| {table[g]}" in article,
+          f"fig3: legend dollars for {g} = {col} match the sec. 6 table '{table[g]}'")
 above = sum(1 for r in rows if r["kff_sdp_status"] == "Hospital SDPs likely affected")
 check(above == 37 and "Hospital SDPs in 37 states" in article, f"fig3: {above} states with SDPs above the caps (text 37)")
 

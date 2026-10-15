@@ -138,7 +138,15 @@ for state in sorted(tracker):
                  sdp[state]["Likelihood of impact"].strip() or sdp[state]["mco_status"].strip(),
                  tax_any, taxes, "; ".join(flags)])
 
+# each group's federal hospital SDPs above the caps, one year, summed from
+# KFF's UbS1f/14 and rounded as the sec. 6 table prints it ("About $45.4B")
+gsum = {g: 0.0 for g in "ABCDE"}
+for r in rows:
+    gsum[r[3]] += float(dollars[r[1]]["Federal SDP spending on hospitals above new limits"]) if r[1] in dollars else 0.0
+for r in rows:
+    r.append(f"{gsum[r[3]] / 1e9:.1f}" if r[3] != "E" else "0")
+
 write("fig3_state_groups.csv",
       ["figure", "state", "abbrev", "group", "expansion", "kff_sdp_status",
-       "kff_tax_above_3_5", "kff_affected_taxes", "flag"], rows)
+       "kff_tax_above_3_5", "kff_affected_taxes", "flag", "group_above_caps_billion"], rows)
 print("wrote", ", ".join(sorted(p.name for p in DATA.glob("*.csv"))))

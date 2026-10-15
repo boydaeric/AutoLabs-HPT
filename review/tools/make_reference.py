@@ -121,8 +121,8 @@ STYLES = f"""<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 
 HEADER = f"""<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <w:hdr {W}><w:p><w:pPr><w:pStyle w:val="Header"/><w:pBdr><w:bottom w:val="single" w:sz="6" w:space="4" w:color="{RED}"/></w:pBdr><w:spacing w:before="0" w:after="0" w:line="240" w:lineRule="auto"/><w:jc w:val="left"/></w:pPr>
-<w:r><w:rPr>{fonts(BODY_FONT)}<w:b/><w:color w:val="{RED}"/><w:sz w:val="20"/><w:szCs w:val="20"/></w:rPr><w:t>THEIA</w:t></w:r>
-<w:r><w:rPr>{fonts(BODY_FONT)}<w:color w:val="{RED}"/><w:sz w:val="20"/><w:szCs w:val="20"/></w:rPr><w:t xml:space="preserve"> Services</w:t></w:r></w:p></w:hdr>
+<w:r><w:rPr>{fonts(HEAD_FONT)}<w:b/><w:color w:val="{RED}"/><w:sz w:val="21"/><w:szCs w:val="21"/></w:rPr><w:t>THEIA</w:t></w:r>
+<w:r><w:rPr>{fonts(HEAD_FONT)}<w:color w:val="{RED}"/><w:sz w:val="21"/><w:szCs w:val="21"/></w:rPr><w:t xml:space="preserve"> Services</w:t></w:r></w:p></w:hdr>
 """
 
 

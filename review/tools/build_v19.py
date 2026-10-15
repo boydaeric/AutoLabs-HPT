@@ -191,10 +191,12 @@ def postprocess(docx, figures):
 
 
 def render_pdf(docx):
-    # lossless images at full resolution; fonts embedded (standard fonts too)
+    # lossless images at full resolution; fonts embedded (standard fonts too);
+    # tagged, so each image's alt text reaches the PDF
     opts = ('pdf:writer_pdf_Export:{"UseLosslessCompression":{"type":"boolean","value":"true"},'
             '"ReduceImageResolution":{"type":"boolean","value":"false"},'
-            '"EmbedStandardFonts":{"type":"boolean","value":"true"}}')
+            '"EmbedStandardFonts":{"type":"boolean","value":"true"},'
+            '"UseTaggedPDF":{"type":"boolean","value":"true"}}')
     subprocess.run(["soffice", "--headless", "--convert-to", opts, "--outdir", str(Path(docx).parent), str(docx)],
                    check=True, capture_output=True)
     return Path(docx).with_suffix(".pdf")

@@ -138,6 +138,8 @@ fonts = subprocess.run(["pdffonts", str(PDF)], capture_output=True, text=True).s
 not_emb = [l.split()[0] for l in fonts if " no " in f" {l} ".replace("  ", " ") and l.split()[-5] == "no"]
 check(fonts and not not_emb, f"PDF fonts embedded: {sorted({l.split()[0].split('+')[-1] for l in fonts})}")
 check(not any("Confidential" in p for p in pages), "PDF: no 'Confidential'")
+n_alt = len(re.findall(rb"/Alt\s*[(<]", PDF.read_bytes()))
+check("Tagged:          yes" in info and n_alt == 5, f"PDF: tagged, {n_alt} images with alt text")
 
 
 def key(s):
