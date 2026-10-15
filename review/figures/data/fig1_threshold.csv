@@ -1,0 +1,16 @@
+figure,kind,row,column,cell_text,numbers
+1,header,,Federal fiscal year (begins October 1 of the prior year),Federal fiscal year (begins October 1 of the prior year),1
+1,header,,Threshold in expansion states,Threshold in expansion states,
+1,cell,2027,Federal fiscal year (begins October 1 of the prior year),2027,2027
+1,cell,2027,Threshold in expansion states,"The state’s July 4, 2025 level, at most 6.0%",4;2025;6.0
+1,cell,2028,Federal fiscal year (begins October 1 of the prior year),2028,2028
+1,cell,2028,Threshold in expansion states,5.5%,5.5
+1,cell,2029,Federal fiscal year (begins October 1 of the prior year),2029,2029
+1,cell,2029,Threshold in expansion states,5.0%,5.0
+1,cell,2030,Federal fiscal year (begins October 1 of the prior year),2030,2030
+1,cell,2030,Threshold in expansion states,4.5%,4.5
+1,cell,2031,Federal fiscal year (begins October 1 of the prior year),2031,2031
+1,cell,2031,Threshold in expansion states,4.0%,4.0
+1,cell,2032 and after,Federal fiscal year (begins October 1 of the prior year),2032 and after,2032
+1,cell,2032 and after,Threshold in expansion states,3.5%,3.5
+1,note,,source note,"Source: 91 FR 46565, 46576, 46598. The 6 percent cap is CMS’s proposal, with an exception for a tax that met the 75/75 test on July 4, 2025, which CMS expects no state to use (91 FR 46572, 46598). Federal fiscal year: 31 U.S.C. 1102.",91;46565;46576;46598;6;75;75;4;2025;91;46572;46598;31;1102

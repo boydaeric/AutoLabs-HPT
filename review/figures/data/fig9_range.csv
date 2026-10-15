@@ -1,0 +1,18 @@
+figure,kind,row,column,cell_text,numbers
+9,header,,"Loss to providers, billions of 2026 dollars, 2026–2035","Loss to providers, billions of 2026 dollars, 2026–2035",2026;2026;2035
+9,header,,Low-savings estimates,Low-savings estimates,
+9,header,,Central estimates,Central estimates,
+9,header,,High-savings estimates,High-savings estimates,
+9,cell,After step 2 (lower provider taxes subtracted),"Loss to providers, billions of 2026 dollars, 2026–2035",After step 2 (lower provider taxes subtracted),2
+9,cell,After step 2 (lower provider taxes subtracted),Low-savings estimates,258.8,258.8
+9,cell,After step 2 (lower provider taxes subtracted),Central estimates,753.2,753.2
+9,cell,After step 2 (lower provider taxes subtracted),High-savings estimates,"1,125.8","1,125.8"
+9,cell,Step 3 ceiling: the state share of the SDP cut,"Loss to providers, billions of 2026 dollars, 2026–2035",Step 3 ceiling: the state share of the SDP cut,3
+9,cell,Step 3 ceiling: the state share of the SDP cut,Low-savings estimates,136.3,136.3
+9,cell,Step 3 ceiling: the state share of the SDP cut,Central estimates,264.7,264.7
+9,cell,Step 3 ceiling: the state share of the SDP cut,High-savings estimates,340.0,340.0
+9,cell,"After step 3, best case for providers","Loss to providers, billions of 2026 dollars, 2026–2035","After step 3, best case for providers",3
+9,cell,"After step 3, best case for providers",Low-savings estimates,122.5,122.5
+9,cell,"After step 3, best case for providers",Central estimates,488.5,488.5
+9,cell,"After step 3, best case for providers",High-savings estimates,785.8,785.8
+9,note,,source note,"Source: SDP rule, 91 FR 30451–30454 (low-savings state share $136.3 billion; high-savings state share $340.0 billion, the sum of Table 23’s cells, which CMS’s text gives as $339.6 billion); provider tax rule, Tables 14, 16 and 18, 91 FR 46593–46594. Sums are THEIA Services’.",91;30451;30454;136.3;340.0;23;339.6;14;16;18;91;46593;46594

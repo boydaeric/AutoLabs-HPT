@@ -1,0 +1,52 @@
+figure,state,abbrev,group,expansion,kff_sdp_status,kff_tax_above_3_5,kff_affected_taxes,flag,group_total_above_caps_billion
+6,Alabama,AL,E,no,No managed care,"N/A, non-expansion state",,,0
+6,Alaska,AK,E,yes,No managed care,No,,,0
+6,Arizona,AZ,A,yes,Hospital SDPs likely affected,Yes,Hospital (5.51%-6.0%),,45.4
+6,Arkansas,AR,E,yes,No SDPs,Yes,Ambulance (5.51%-6.0%),lower threshold reaches non-hospital tax,0
+6,California,CA,A,yes,Hospital SDPs likely affected,Yes,"Hospital (3.51%-5.5%), MCO (5.51%-6.0%), Ambulance (3.51%-5.5%)",,45.4
+6,Colorado,CO,E,yes,No hospital SDPs,Yes,Hospital (5.51%-6.0%),SDP above the new limits left out of KFF's figures; lower threshold reaches hospital tax,0
+6,Connecticut,CT,E,yes,No managed care,Yes,Hospital (5.51%-6.0%),lower threshold reaches hospital tax,0
+6,Delaware,DE,C,yes,Hospital SDPs likely affected,No,,,0.8
+6,District of Columbia,DC,C,yes,Hospital SDPs likely affected,No,,,0.8
+6,Florida,FL,D,no,Hospital SDPs likely affected,"N/A, non-expansion state",,,11.9
+6,Georgia,GA,D,no,Hospital SDPs likely affected,"N/A, non-expansion state",,,11.9
+6,Hawaii,HI,C,yes,Hospital SDPs likely affected,No,,,0.8
+6,Idaho,ID,E,yes,No managed care,No,,,0
+6,Illinois,IL,A,yes,Hospital SDPs likely affected,Yes,"Hospital (3.51%-5.5%), MCO (5.51%-6.0%)",,45.4
+6,Indiana,IN,E,yes,No hospital SDPs,Yes,Hospital (3.51%-5.5%),lower threshold reaches hospital tax,0
+6,Iowa,IA,A,yes,Hospital SDPs likely affected,Yes,Hospital (3.51%-5.5%),,45.4
+6,Kansas,KS,D,no,Hospital SDPs likely affected,"N/A, non-expansion state",,,11.9
+6,Kentucky,KY,A,yes,Hospital SDPs likely affected,Yes,"Hospital (3.51%-5.5%), Ambulance (3.51%-5.5%), Other- Community living supports (3.51%-5.5%)",,45.4
+6,Louisiana,LA,A,yes,Hospital SDPs likely affected,Yes,"Hospital (3.51%-5.5%), MCO (3.51%-5.5%), Ambulance (5.51%-6.0%)",,45.4
+6,Maine,ME,E,yes,No managed care,No,,,0
+6,Maryland,MD,E,yes,No hospital SDPs,No,,,0
+6,Massachusetts,MA,A,yes,Hospital SDPs likely affected,Yes,"Hospital (3.51%-5.5%), Ambulance (3.51%-5.5%)",,45.4
+6,Michigan,MI,A,yes,Hospital SDPs likely affected,Yes,Hospital (3.51%-5.5%),,45.4
+6,Minnesota,MN,A,yes,Hospital SDPs likely affected,Yes,Hospital (3.51%-5.5%),"Group A, no KFF estimate",45.4
+6,Mississippi,MS,D,no,Hospital SDPs likely affected,"N/A, non-expansion state",,,11.9
+6,Missouri,MO,A,yes,Hospital SDPs likely affected,Yes,Hospital (3.51%-5.5%),"Group A, no KFF estimate",45.4
+6,Montana,MT,E,yes,No managed care,No,,,0
+6,Nebraska,NE,A,yes,Hospital SDPs likely affected,Yes,Hospital (5.51%-6.0%),,45.4
+6,Nevada,NV,A,yes,Hospital SDPs likely affected,Yes,Hospital (5.51%-6.0%),,45.4
+6,New Hampshire,NH,A,yes,Hospital SDPs likely affected,Yes,Hospital (3.51%-5.5%),,45.4
+6,New Jersey,NJ,A,yes,Hospital SDPs likely affected,Yes,"Hospital (5.51%-6.0%), MCO (5.51%-6.0%)",,45.4
+6,New Mexico,NM,A,yes,Hospital SDPs likely affected,Yes,Hospital (5.51%-6.0%),,45.4
+6,New York,NY,A,yes,Hospital SDPs likely affected,Yes,Hospital (3.51%-5.5%),,45.4
+6,North Carolina,NC,A,yes,Hospital SDPs likely affected,Yes,Hospital (3.51%-5.5%),,45.4
+6,North Dakota,ND,E,yes,No SDPs,No,,,0
+6,Ohio,OH,A,yes,Hospital SDPs likely affected,Yes,Hospital (5.51%-6.0%),,45.4
+6,Oklahoma,OK,A,yes,Hospital SDPs likely affected,Yes,"Hospital (3.51%-5.5%), Ambulance (5.51%-6.0%)",,45.4
+6,Oregon,OR,A,yes,Hospital SDPs likely affected,Yes,"Hospital (5.51%-6.0%), Ambulance (3.51%-5.5%)",,45.4
+6,Pennsylvania,PA,A,yes,Hospital SDPs likely affected,Yes,"Hospital (3.51%-5.5%), MCO (3.51%-5.5%)",,45.4
+6,Rhode Island,RI,A,yes,Hospital SDPs likely affected,Yes,"Hospital (5.51%-6.0%), MCO (3.51%-5.5%)",,45.4
+6,South Carolina,SC,D,no,Hospital SDPs likely affected,"N/A, non-expansion state",,,11.9
+6,South Dakota,SD,E,yes,No managed care,No,,,0
+6,Tennessee,TN,D,no,Hospital SDPs likely affected,"N/A, non-expansion state",,,11.9
+6,Texas,TX,D,no,Hospital SDPs likely affected,"N/A, non-expansion state",,,11.9
+6,Utah,UT,A,yes,Hospital SDPs likely affected,Yes,"Hospital (3.51%-5.5%), Ambulance (3.51%-5.5%)",,45.4
+6,Vermont,VT,E,yes,No hospital SDPs,Yes,Hospital (5.51%-6.0%),lower threshold reaches hospital tax,0
+6,Virginia,VA,A,yes,Hospital SDPs likely affected,Yes,Hospital (5.51%-6.0%),,45.4
+6,Washington,WA,B,yes,Hospital SDPs likely affected,Yes,Ambulance (3.51%-5.5%),,2.0
+6,West Virginia,WV,B,yes,Hospital SDPs likely affected,Yes,"Ambulance (3.51%-5.5%), Other- Labs/X-Ray (3.51%-5.5%)",,2.0
+6,Wisconsin,WI,D,no,Hospital SDPs likely affected,"N/A, non-expansion state",,,11.9
+6,Wyoming,WY,E,no,No managed care,"N/A, non-expansion state",,,0

@@ -1,6 +1,0 @@
-figure,item,value,unit,role,source_text,found_in
-1,SDP rule,774.8,"billion 2026 dollars, 2026-2035",bar: SDP rule,SDP rule                                                                    | 510.1       | 264.7     | 774.8,article_v8.md
-1,"Provider tax rule, measured alone",384.0,"billion 2026 dollars, 2026-2035",bar total,would cut provider payments by $384.0 billion alone,article_v8.md
-1,Overlap: already counted in the SDP rule,241.9,"billion 2026 dollars, 2026-2035",segment of provider tax bar,attributes the $241.9 billion difference,article_v8.md
-1,"Provider tax rule, additional cut",142.1,"billion 2026 dollars, 2026-2035",segment of provider tax and combined bars,but by only $142.1 billion more once the SDP rule’s cuts are counted,article_v8.md
-1,Both rules combined,916.9,"billion 2026 dollars, 2026-2035",bar total,**Both rules combined**                                                     | **601.0**   | **315.9** | **916.9**,article_v8.md

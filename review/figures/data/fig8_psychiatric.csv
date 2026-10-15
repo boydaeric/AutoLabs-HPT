@@ -1,0 +1,8 @@
+figure,item,value,unit,role,source_text,found_in,year
+8,Short-term acute care hospitals,11.3,"beds per 100,000 people",line start,fell from 11.3 to 9.06 in short-term acute care hospitals,article_v9.md,2011
+8,Short-term acute care hospitals,9.06,"beds per 100,000 people",line end,fell from 11.3 to 9.06 in short-term acute care hospitals,article_v9.md,2023
+8,Freestanding psychiatric hospitals,16.8,"beds per 100,000 people",line start,rose from 16.8 to 19.5 in freestanding psychiatric hospitals,article_v9.md,2011
+8,Freestanding psychiatric hospitals,19.5,"beds per 100,000 people",line end,rose from 16.8 to 19.5 in freestanding psychiatric hospitals,article_v9.md,2023
+8,Total,28.1,"beds per 100,000 people",line start,the total stayed about flat at 28.1 and 28.4,article_v9.md,2011
+8,Total,28.4,"beds per 100,000 people",line end,the total stayed about flat at 28.1 and 28.4,article_v9.md,2023
+8,Total: the study's two 2023 parts sum to,28.56,"beds per 100,000 people",end label of the total line,9.06 + 19.5 = 28.56,ledger FG-08,2023

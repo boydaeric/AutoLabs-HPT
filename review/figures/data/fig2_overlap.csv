@@ -1,0 +1,6 @@
+figure,item,value,unit,role,source_text,found_in
+2,SDP rule,774.8,"billion 2026 dollars, 2026-2035",bar: SDP rule,because only the sum equals $774.8 billion less $510.1 billion,article_v9.md
+2,"Provider tax rule, measured alone",384.0,"billion 2026 dollars, 2026-2035",bar total,would cut provider payments by $384.0 billion alone,article_v9.md
+2,Overlap: already counted in the SDP rule,241.9,"billion 2026 dollars, 2026-2035",segment of provider tax bar,attributes the $241.9 billion difference,article_v9.md
+2,"Provider tax rule, additional cut",142.1,"billion 2026 dollars, 2026-2035",segment of provider tax and combined bars,but by only $142.1 billion more once the SDP rule’s cuts are counted,article_v9.md
+2,Both rules combined,916.9,"billion 2026 dollars, 2026-2035",bar total,a combined $916.9 billion reduction in Medicaid payments to providers,article_v9.md

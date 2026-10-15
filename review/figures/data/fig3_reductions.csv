@@ -1,0 +1,22 @@
+figure,kind,row,column,cell_text,numbers
+3,header,,"Reduction in Medicaid spending, central estimate, 2026–2035, billions of 2026 dollars","Reduction in Medicaid spending, central estimate, 2026–2035, billions of 2026 dollars",2026;2035;2026
+3,header,,Federal,Federal,
+3,header,,State,State,
+3,header,,Total,Total,
+3,cell,SDP rule,"Reduction in Medicaid spending, central estimate, 2026–2035, billions of 2026 dollars",SDP rule,
+3,cell,SDP rule,Federal,510.1,510.1
+3,cell,SDP rule,State,264.7,264.7
+3,cell,SDP rule,Total,774.8,774.8
+3,cell,"Provider tax rule, measured alone","Reduction in Medicaid spending, central estimate, 2026–2035, billions of 2026 dollars","Provider tax rule, measured alone",
+3,cell,"Provider tax rule, measured alone",Federal,245.8,245.8
+3,cell,"Provider tax rule, measured alone",State,138.2,138.2
+3,cell,"Provider tax rule, measured alone",Total,384.0,384.0
+3,cell,"Provider tax rule, additional cut after removing the $241.9 billion overlap","Reduction in Medicaid spending, central estimate, 2026–2035, billions of 2026 dollars","Provider tax rule, additional cut after removing the $241.9 billion overlap",241.9
+3,cell,"Provider tax rule, additional cut after removing the $241.9 billion overlap",Federal,90.9,90.9
+3,cell,"Provider tax rule, additional cut after removing the $241.9 billion overlap",State,51.2,51.2
+3,cell,"Provider tax rule, additional cut after removing the $241.9 billion overlap",Total,142.1,142.1
+3,cell,Both rules combined,"Reduction in Medicaid spending, central estimate, 2026–2035, billions of 2026 dollars",Both rules combined,
+3,cell,Both rules combined,Federal,601.0,601.0
+3,cell,Both rules combined,State,315.9,315.9
+3,cell,Both rules combined,Total,916.9,916.9
+3,note,,source note,"Source: SDP rule, Tables 18–20, 91 FR 30451–30452; provider tax rule, Table 11, 91 FR 46591, and 91 FR 46592. The state figure of $51.2 billion and the combined row are THEIA Services’ arithmetic. All rows score Sections 71116 and 71115 as the rules would implement them.",18;20;91;30451;30452;11;91;46591;91;46592;51.2;71116;71115

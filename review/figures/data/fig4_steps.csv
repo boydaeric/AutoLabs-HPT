@@ -1,0 +1,10 @@
+figure,kind,row,column,cell_text,numbers
+4,header,,"Central estimate, 2026–2035","Central estimate, 2026–2035",2026;2035
+4,header,,"Loss to providers, billions of 2026 dollars","Loss to providers, billions of 2026 dollars",2026
+4,cell,"1. Medicaid payments providers lose, both rules combined: $774.8 billion (SDP rule) plus $142.1 billion (provider tax rule after the $241.9 billion overlap)","Central estimate, 2026–2035","1. Medicaid payments providers lose, both rules combined: $774.8 billion (SDP rule) plus $142.1 billion (provider tax rule after the $241.9 billion overlap)",1;774.8;142.1;241.9
+4,cell,"1. Medicaid payments providers lose, both rules combined: $774.8 billion (SDP rule) plus $142.1 billion (provider tax rule after the $241.9 billion overlap)","Loss to providers, billions of 2026 dollars",916.9,916.9
+4,cell,2. Subtract the $163.7 billion less that providers pay in provider taxes,"Central estimate, 2026–2035",2. Subtract the $163.7 billion less that providers pay in provider taxes,2;163.7
+4,cell,2. Subtract the $163.7 billion less that providers pay in provider taxes,"Loss to providers, billions of 2026 dollars",753.2,753.2
+4,cell,"3. Subtract the most providers could save by paying less to fund the state share of SDPs, $264.7 billion","Central estimate, 2026–2035","3. Subtract the most providers could save by paying less to fund the state share of SDPs, $264.7 billion",3;264.7
+4,cell,"3. Subtract the most providers could save by paying less to fund the state share of SDPs, $264.7 billion","Loss to providers, billions of 2026 dollars",488.5,488.5
+4,note,,source note,"Source: SDP rule, Tables 18 and 20, 91 FR 30451–30452; provider tax rule, 91 FR 46592 and Table 8, 91 FR 46590. Sums are THEIA Services’. Step 1 scores Sections 71116 and 71115 as the rules would implement them; CMS says part of the SDP rule’s cut falls on other entities, such as local governments (sec. 3).",18;20;91;30451;30452;91;46592;8;91;46590;1;71116;71115;3
