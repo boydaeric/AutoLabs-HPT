@@ -1,0 +1,37 @@
+[
+  {
+    "number": 1,
+    "stem": "fig1_overlap",
+    "csv": "fig1_overlap.csv",
+    "title": "Provider payment cuts in CMS’s estimates",
+    "alt": "Horizontal bar chart of CMS’s central estimates for 2026–2035: the SDP rule cuts provider payments by $774.8 billion; the provider tax rule measured alone cuts $384.0 billion, of which $241.9 billion is already counted in the SDP rule and $142.1 billion is additional; both rules combined cut $916.9 billion."
+  },
+  {
+    "number": 2,
+    "stem": "fig2_waterfall",
+    "csv": "fig2_waterfall.csv",
+    "title": "The provider tax rule’s net effect on providers",
+    "alt": "Waterfall chart: measured alone, the provider tax rule leaves providers $220.3 billion worse off (CMS Table 12); adding back the $241.9 billion overlap already counted in the SDP rule gives CMS’s +$21.7 billion on top of the SDP rule (Table 14)."
+  },
+  {
+    "number": 3,
+    "stem": "fig3_state_map",
+    "csv": "fig3_state_groups.csv",
+    "title": "Parts of the two proposed rules that reach each state",
+    "alt": "Tile map of the 50 states and DC sorted into five groups: 24 states where both rules reach (A), 2 where the cap and a lower threshold on non-hospital taxes reach (B), 3 cap only (C), 8 non-expansion states with SDPs above the caps (D) and 14 with no identified hospital SDPs above the caps (E), five of which the lower threshold reaches; it shows where the rules apply, not where losses are largest."
+  },
+  {
+    "number": 4,
+    "stem": "fig4_pediatric",
+    "csv": "fig4_pediatric.csv",
+    "title": "Change in hospital inpatient units",
+    "alt": "Bar chart from one national study: from 2008 to 2022, pediatric inpatient units fell 29.9 percent and adult inpatient units fell 4.4 percent."
+  },
+  {
+    "number": 5,
+    "stem": "fig5_psychiatric",
+    "csv": "fig5_psychiatric.csv",
+    "title": "Psychiatric beds per 100,000 people, by hospital type",
+    "alt": "Slope chart of psychiatric beds per 100,000 people from 2011 to 2023: short-term acute care hospitals fell from 11.3 to 9.06, freestanding psychiatric hospitals rose from 16.8 to 19.5, and the total was about flat at 28.1 and 28.4."
+  }
+]
