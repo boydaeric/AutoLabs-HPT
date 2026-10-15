@@ -238,12 +238,12 @@
     "y1": 2.9115208333333324
    },
    {
-    "text": "Provider tax threshold in expansion states",
+    "text": "Threshold in expansion states",
     "gid": null,
     "size": 10.5,
     "x0": 0.0,
     "y0": 3.212083333333333,
-    "x1": 2.90984375,
+    "x1": 2.07390625,
     "y1": 3.39
    },
    {
@@ -691,12 +691,12 @@
     "y1": 1.3662345679012347
    },
    {
-    "text": "Reductions in Medicaid spending by rule",
+    "text": "Reduction in Medicaid spending by rule",
     "gid": null,
     "size": 10.5,
     "x0": 0.0,
     "y0": 4.262083333333333,
-    "x1": 2.78578125,
+    "x1": 2.71265625,
     "y1": 4.44
    },
    {
@@ -734,6 +734,15 @@
     "y0": 3.8422222222222224,
     "x1": 3.15328125,
     "y1": 3.977777777777778
+   },
+   {
+    "text": "Provider tax rule, measured alone: federal (left) and state (right) segments",
+    "gid": null,
+    "size": 8.0,
+    "x0": 0.19,
+    "y0": 3.6222222222222222,
+    "x1": 4.11125,
+    "y1": 3.7577777777777777
    },
    {
     "text": "Source: SDP rule, Tables 18–20, 91 FR 30451–30452; provider tax rule, Table 11, 91 FR 46591, and 91 FR 46592. The",
@@ -940,12 +949,12 @@
     "y1": 4.116920833333333
    },
    {
-    "text": "Loss to providers under CMS’s central estimates",
+    "text": "Loss to providers, central estimate",
     "gid": null,
     "size": 10.5,
     "x0": 0.0,
     "y0": 4.442083333333333,
-    "x1": 3.31171875,
+    "x1": 2.37703125,
     "y1": 4.62
    },
    {
@@ -2725,12 +2734,12 @@
     "y1": 1.4013434343434341
    },
    {
-    "text": "Loss to providers under CMS’s three estimates",
+    "text": "Loss to providers, by estimate",
     "gid": null,
     "size": 10.5,
     "x0": 0.0,
     "y0": 3.212083333333333,
-    "x1": 3.1978125,
+    "x1": 2.054375,
     "y1": 3.39
    },
    {

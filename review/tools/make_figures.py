@@ -187,7 +187,7 @@ def fig1():
     lines = wrap(note)
     h = 3.15 + 0.15 * len(lines)
     fig = plt.figure(figsize=(W_IN, h))
-    y_top = header(fig, "Provider tax threshold in expansion states",
+    y_top = header(fig, "Threshold in expansion states",
                    f"{head[1]}, by {head[0][0].lower()}{head[0][1:]}", h)
     bottom = (0.62 + 0.15 * len(lines)) / h
     ax = fig.add_axes([0.08, bottom, 0.80, y_top - bottom - 0.02])
@@ -227,9 +227,9 @@ def fig1():
     steps = "; ".join(f"{y}, {t}" for y, t in zip(years, vals))
     META.append({
         "number": 1, "stem": "fig1_threshold", "csv": "fig1_threshold.csv",
-        "title": "Provider tax threshold in expansion states",
+        "title": "Threshold in expansion states",
         "alt": (f"Step chart of the threshold in expansion states by federal fiscal year (begins October 1 of the prior year): "
-                f"{steps}. The 3.5% floor is marked from 2032. {note}"),
+                f"{steps}. A dark-red reference line, labelled 3.5% floor, marks the 3.5% level that applies from 2032 on. {note}"),
     })
 
 
@@ -289,7 +289,7 @@ def fig3():
     lines = wrap(note)
     h = 4.05 + 0.15 * len(lines)
     fig = plt.figure(figsize=(W_IN, h))
-    y_top = header(fig, "Reductions in Medicaid spending by rule", head[0], h)
+    y_top = header(fig, "Reduction in Medicaid spending by rule", head[0], h)
     # legend row: Federal, State, Total (the table's column headers)
     ly = y_top - 0.07 / h
     for k, (name, col) in enumerate(((head[1], INK), (head[2], GREY))):
@@ -298,6 +298,11 @@ def fig3():
                                      facecolor=col, edgecolor="none"))
         fig.text(x0 + 0.19 / W_IN, ly, name, fontsize=L_SIZE, va="center", ha="left", fontweight="bold")
     fig.text(1.70 / W_IN, ly, f"{head[3]}: at the end of each bar", fontsize=L_SIZE, va="center", ha="left", fontweight="bold")
+    ly2 = ly - 0.22 / h
+    fig.patches.append(Rectangle((0.0, ly2 - 0.065 / h), 0.13 / W_IN, 0.13 / h, transform=fig.transFigure,
+                                 facecolor=PALE, edgecolor=GOLD, linewidth=1.0))
+    fig.text(0.19 / W_IN, ly2, "Provider tax rule, measured alone: federal (left) and state (right) segments",
+             fontsize=L_SIZE, va="center", ha="left", fontweight="bold")
     bottom = (0.55 + 0.15 * len(lines)) / h
     ax = fig.add_axes([0.335, bottom, 0.60, y_top - bottom - 0.10])
     clean(ax)
@@ -340,7 +345,7 @@ def fig3():
                          for l, f, s_, t in zip(labels, fed, st, tot))
     META.append({
         "number": 3, "stem": "fig3_reductions", "csv": "fig3_reductions.csv",
-        "title": "Reductions in Medicaid spending by rule",
+        "title": "Reduction in Medicaid spending by rule",
         "alt": (f"Stacked bar chart, {head[0]}, federal and state: {rows_txt}. The provider tax rule measured alone includes "
                 f"the $241.9 billion overlap and is not added to the combined total. {note}"),
     })
@@ -362,7 +367,7 @@ def fig4():
     axes_bottom_in = key_top_in + 0.48
     h = axes_bottom_in + 2.45 + 0.52
     fig = plt.figure(figsize=(W_IN, h))
-    y_top = header(fig, "Loss to providers under CMS’s central estimates", f"{head[0]} · {head[1]}", h)
+    y_top = header(fig, "Loss to providers, central estimate", f"{head[0]} · {head[1]}", h)
     bottom = axes_bottom_in / h
     ax = fig.add_axes([0.10, bottom, 0.62, y_top - bottom - 0.02])
     clean(ax, grid_axis="y")
@@ -408,7 +413,7 @@ def fig4():
     LAYOUT["fig4"] = save(fig, "fig4_steps")
     META.append({
         "number": 4, "stem": "fig4_steps", "csv": "fig4_steps.csv",
-        "title": "Loss to providers under CMS’s central estimates",
+        "title": "Loss to providers, central estimate",
         "alt": (f"Waterfall chart, {head[0]}, {head[1]}. {steps[0]}: {res[0]}. {steps[1]}: {res[1]}. {steps[2]}: {res[2]}. "
                 f"A bracket marks the range under CMS’s central estimates, about $488 billion to $753 billion. {note}"),
     })
@@ -648,7 +653,7 @@ def fig9():
     lines = wrap(note)
     h = 3.0 + 0.15 * len(lines)
     fig = plt.figure(figsize=(W_IN, h))
-    y_top = header(fig, "Loss to providers under CMS’s three estimates", head[0], h)
+    y_top = header(fig, "Loss to providers, by estimate", head[0], h)
     bottom = (0.62 + 0.15 * len(lines)) / h
     ax = fig.add_axes([0.20, bottom, 0.76, y_top - bottom - 0.16])
     clean(ax)
@@ -679,7 +684,7 @@ def fig9():
                          for e, a3, a2, c in zip(est, after3, after2, ceil))
     META.append({
         "number": 9, "stem": "fig9_range", "csv": "fig9_range.csv",
-        "title": "Loss to providers under CMS’s three estimates",
+        "title": "Loss to providers, by estimate",
         "alt": f"Range chart, {head[0]}, one row per estimate. {rows_txt}. {note}",
     })
 

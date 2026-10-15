@@ -3,8 +3,8 @@
     "number": 1,
     "stem": "fig1_threshold",
     "csv": "fig1_threshold.csv",
-    "title": "Provider tax threshold in expansion states",
-    "alt": "Step chart of the threshold in expansion states by federal fiscal year (begins October 1 of the prior year): 2027, The state’s July 4, 2025 level, at most 6.0%; 2028, 5.5%; 2029, 5.0%; 2030, 4.5%; 2031, 4.0%; 2032 and after, 3.5%. The 3.5% floor is marked from 2032. Source: 91 FR 46565, 46576, 46598. The 6 percent cap is CMS’s proposal, with an exception for a tax that met the 75/75 test on July 4, 2025, which CMS expects no state to use (91 FR 46572, 46598). Federal fiscal year: 31 U.S.C. 1102."
+    "title": "Threshold in expansion states",
+    "alt": "Step chart of the threshold in expansion states by federal fiscal year (begins October 1 of the prior year): 2027, The state’s July 4, 2025 level, at most 6.0%; 2028, 5.5%; 2029, 5.0%; 2030, 4.5%; 2031, 4.0%; 2032 and after, 3.5%. A dark-red reference line, labelled 3.5% floor, marks the 3.5% level that applies from 2032 on. Source: 91 FR 46565, 46576, 46598. The 6 percent cap is CMS’s proposal, with an exception for a tax that met the 75/75 test on July 4, 2025, which CMS expects no state to use (91 FR 46572, 46598). Federal fiscal year: 31 U.S.C. 1102."
   },
   {
     "number": 2,
@@ -17,14 +17,14 @@
     "number": 3,
     "stem": "fig3_reductions",
     "csv": "fig3_reductions.csv",
-    "title": "Reductions in Medicaid spending by rule",
+    "title": "Reduction in Medicaid spending by rule",
     "alt": "Stacked bar chart, Reduction in Medicaid spending, central estimate, 2026–2035, billions of 2026 dollars, federal and state: SDP rule: federal $510.1B, state $264.7B, total $774.8B; Provider tax rule, measured alone: federal $245.8B, state $138.2B, total $384.0B; Provider tax rule, additional cut after removing the $241.9 billion overlap: federal $90.9B, state $51.2B, total $142.1B; Both rules combined: federal $601.0B, state $315.9B, total $916.9B. The provider tax rule measured alone includes the $241.9 billion overlap and is not added to the combined total. Source: SDP rule, Tables 18–20, 91 FR 30451–30452; provider tax rule, Table 11, 91 FR 46591, and 91 FR 46592. The state figure of $51.2 billion and the combined row are THEIA Services’ arithmetic. All rows score Sections 71116 and 71115 as the rules would implement them."
   },
   {
     "number": 4,
     "stem": "fig4_steps",
     "csv": "fig4_steps.csv",
-    "title": "Loss to providers under CMS’s central estimates",
+    "title": "Loss to providers, central estimate",
     "alt": "Waterfall chart, Central estimate, 2026–2035, Loss to providers, billions of 2026 dollars. 1. Medicaid payments providers lose, both rules combined: $774.8 billion (SDP rule) plus $142.1 billion (provider tax rule after the $241.9 billion overlap): 916.9. 2. Subtract the $163.7 billion less that providers pay in provider taxes: 753.2. 3. Subtract the most providers could save by paying less to fund the state share of SDPs, $264.7 billion: 488.5. A bracket marks the range under CMS’s central estimates, about $488 billion to $753 billion. Source: SDP rule, Tables 18 and 20, 91 FR 30451–30452; provider tax rule, 91 FR 46592 and Table 8, 91 FR 46590. Sums are THEIA Services’. Step 1 scores Sections 71116 and 71115 as the rules would implement them; CMS says part of the SDP rule’s cut falls on other entities, such as local governments (sec. 3)."
   },
   {
@@ -59,7 +59,7 @@
     "number": 9,
     "stem": "fig9_range",
     "csv": "fig9_range.csv",
-    "title": "Loss to providers under CMS’s three estimates",
+    "title": "Loss to providers, by estimate",
     "alt": "Range chart, Loss to providers, billions of 2026 dollars, 2026–2035, one row per estimate. Low-savings estimates: After step 3, best case for providers $122.5B, After step 2 (lower provider taxes subtracted) $258.8B, Step 3 ceiling: the state share of the SDP cut $136.3B; Central estimates: After step 3, best case for providers $488.5B, After step 2 (lower provider taxes subtracted) $753.2B, Step 3 ceiling: the state share of the SDP cut $264.7B; High-savings estimates: After step 3, best case for providers $785.8B, After step 2 (lower provider taxes subtracted) $1,125.8B, Step 3 ceiling: the state share of the SDP cut $340.0B. Source: SDP rule, 91 FR 30451–30454 (low-savings state share $136.3 billion; high-savings state share $340.0 billion, the sum of Table 23’s cells, which CMS’s text gives as $339.6 billion); provider tax rule, Tables 14, 16 and 18, 91 FR 46593–46594. Sums are THEIA Services’."
   }
 ]
