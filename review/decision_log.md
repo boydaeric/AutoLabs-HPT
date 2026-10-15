@@ -627,3 +627,29 @@ Body +7: D6 adds 8 words and D9 removes 1. Appendix +1: NT6-01 +9, NT6-02 −28,
 **Re-check list before publication.** Items 2, 3 and 4 are closed by the v6 check and applied above. Item 1 stays open: re-run the lawsuit search, the OIRA review status and the bill status on the publication date, fill in [DATE], and change the text if any result changed. The [DATE SENT] placeholder in sec. 5, for the HFMA request, is also still to be filled.
 
 v7 is final text for ledger sync and Word: yes
+
+# v8 decisions
+
+*Writer, October 15, 2026. Inputs: Eric's copy of `Exposure-Not-Loss-v18-draft.docx`, his figure plan and his instruction on App. I. Output: `review/article_v8.md`, built from v7 by `review/tools/make_v8.py`, which asserts that each v7 string occurs exactly once before replacing it. `review/tools/gate1_check.py` diffs v7 against v8 character by character and finds 9 hunks, each inside one listed edit (Y4 and Y5 are adjacent and form one hunk); it finds no other difference.*
+
+**Word counts** (same method as before, `review/tools/word_count.py`):
+
+| Version | Body | Against the 6,284 cap | Appendix |
+|---|---:|---:|---:|
+| v7 | 6,246 | −38 | 4,531 |
+| v8 | 6,226 | −58 | 4,531 |
+
+Body −20: Y1 −2, Y2 +1, Y3 +4, Y4 −23. The appendix changes a tag only.
+
+| Change | Outcome | Where, and why |
+|---|---|---|
+| Y1. Title | Applied (Eric's v18 edit) | "[proposed title]" removed; the title words are unchanged. |
+| Y2. HFMA request date | Applied, with date style changed (Eric's v18 edit) | Eric's copy reads "sent September 28th,". v8 writes "sent September 28, 2026,", because every other date in the note is month, day, year with no ordinal. The year is 2026: the request followed HFMA's July 22, 2026 article, and the note is revised in October 2026. |
+| Y3. Author line | Applied (AUTHOR_LINE = yes) | "Prepared by: Eric Boyda" on its own line under the byline, italic like the byline. |
+| Y4. Figure 2 | Deleted (MERGE_FIG_2_INTO_3 = yes) | The old Figure 2 showed the two values the old Figure 3's waterfall already starts and ends on (−$220.3 billion and +$21.7 billion), so the waterfall now carries both. |
+| Y5–Y8. Renumbering | Applied (RENUMBER = yes) | Old Figures 3, 6, 7 and 8 become 2, 3, 4 and 5, in order of appearance. A script search for "Figure", "Fig." and "Figs" found no other reference to a figure number in the note; App. H's "Figure 1 note" is KFF's figure. |
+| Y9. App. I comment counts | Applied: tag only, no words changed (Eric) | The sentence giving both dockets' totals goes from [E] to [I], because the corrected counts and the distinct-text counts are THEIA Services' own tallies. This revises D5 (v7), which left the docket totals as [E] on the ground that they count posted records. The next sentence, on the one moved letter, stays [E]. |
+
+**Other edits found in Eric's copy:** none. The two copies have 330 paragraphs each; only the title and the HFMA paragraph differ, and Eric's copy has no tracked changes or comments.
+
+**Still open:** the [DATE] checks (re-check list item 1) remain to be run on the publication date.

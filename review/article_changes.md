@@ -497,3 +497,21 @@ Now matched in the verification log and no longer on the list: GAO-24-106202 (co
 | X9 | I, legal record | Loper Bright counts: tag [E] → [I] | D5 |
 
 No other change. Section numbers and figure placeholders are unchanged. "[DATE]" still occurs 6 times, and "[DATE SENT]" once. No quote was added from either Federal Register rule.
+
+# v7 → v8
+
+*Writer's file, October 15, 2026. Maps every change in `review/article_v8.md` against `review/article_v7.md`. Source keys: **E18** is Eric's copy of `Exposure-Not-Loss-v18-draft.docx`, compared with the repository copy paragraph by paragraph by `review/tools/compare_v18.py` (two paragraphs differ, no tracked changes, no comments); **FP** is Eric's figure plan (MERGE_FIG_2_INTO_3, RENUMBER, AUTHOR_LINE); **TAG** is Eric's instruction on App. I's comment counts. Edits were applied by `review/tools/make_v8.py` and checked by `review/tools/gate1_check.py`. Body 6,246 → 6,226 words; appendix 4,531 → 4,531.*
+
+| # | v8 location | Change | Source |
+|---|---|---|---|
+| Y1 | Title | " [proposed title]" removed | E18 |
+| Y2 | Sec. 5, HFMA ¶ | "sent [DATE SENT]," → "sent September 28, 2026,". Eric wrote "September 28th"; written in the note's date style | E18 |
+| Y3 | Under the byline | New line: "*Prepared by: Eric Boyda*" | FP (AUTHOR_LINE) |
+| Y4 | Sec. 5, after "The provider tax rule’s two figures for providers" | Figure 2 placeholder and caption deleted ("The provider tax rule’s net effect on providers: −$220.3 billion measured alone, +$21.7 billion after counting the SDP rule’s cuts first.") | FP (MERGE_FIG_2_INTO_3) |
+| Y5 | Sec. 5 | [Figure 3] → [Figure 2]; caption unchanged | FP (RENUMBER) |
+| Y6 | Sec. 6 | [Figure 6] → [Figure 3]; caption unchanged | FP (RENUMBER) |
+| Y7 | Sec. 8, pediatrics | [Figure 7] → [Figure 4]; caption unchanged | FP (RENUMBER) |
+| Y8 | Sec. 8, psychiatry | [Figure 8] → [Figure 5]; caption unchanged | FP (RENUMBER) |
+| Y9 | App. I, "Comment counts", sentence 1 | Tag [E] → [I]; no words changed | TAG |
+
+No other change. The text has no cross-reference to a figure number outside the placeholders; "Figure 1 note" in App. H cites KFF's own figure and is unchanged. "[DATE]" still occurs 6 times; "[DATE SENT]" no longer occurs. Section numbers and headings are unchanged.
