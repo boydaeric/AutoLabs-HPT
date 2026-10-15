@@ -1,0 +1,5 @@
+figure,item,value,unit,role,source_text,found_in
+2,Provider tax rule measured alone (CMS Table 12),-220.3,"billion 2026 dollars, 2026-2035",start,the $384.0 billion cut alone leaves providers $220.3 billion worse off (Table 12),article_v8.md
+2,Add back the overlap already counted in the SDP rule,241.9,"billion 2026 dollars, 2026-2035",step,the difference is the $241.9 billion overlap,article_v8.md
+2,On top of the SDP rule (CMS Table 14),21.7,"billion 2026 dollars, 2026-2035",end,"CMS reports +$21.7 billion for the provider tax rule after the SDP rule’s cuts (Table 14, 91 FR 46593)",article_v8.md
+2,Note: components give,21.6,"billion 2026 dollars, 2026-2035",note: difference is CMS's rounding (Appendix E),$163.7 billion less $142.1 billion is $21.6 billion; the difference is rounding in CMS’s components,article_v8.md
