@@ -427,3 +427,138 @@ Plus CMS-2026-2476-0173 (MACPAC, tagged individual; NC-17). **Unclear (not count
 - **Departure from CONVENTIONS.md, section 5.** The corrected rows quote CMS-2449-P and CMS-2452-P more than once in the ledger and in this log, because the request asks for the source's wording in each corrected row. Each quotation is verbatim and 24 words or fewer.
 - **The two unresolved rows.** AC-14 is reported above (not found). NC-19 was left unchanged, as instructed: it closes when Appendix C is written.
 - **Knock-on rows not flagged.** A correction can affect a row that was not flagged; these are named in the change list and were not edited: AC-16, which builds on RM-18's cost-paid default; and the comment analyst's `output/comments_tagged.csv`, which tags CMS-2026-2476-0173 (MACPAC) as an individual (NC-17).
+
+## 9. Ledger sync v7
+
+*Ledger owner, October 15, 2026. Syncs both ledger files to `review/article_v7.md`. No article file was edited. Same rules as the verification passes: every quote and anchor phrase was matched by script, nothing was matched by inference, and the two ledger files and the Legend were kept consistent.*
+
+**Go-ahead.** Before step 3 the branch was pulled again: `review/article_v7.md` exists, and the decision log's 'New-text check v6 decisions' ends with 'v7 is final text for ledger sync and Word: yes'. Both conditions held on the first check, so no waiting was needed.
+
+**Scope.** The ledger last mirrored v17, whose text is word for word v4 (this log's header). So 'claim text changed in v5 to v7' was read as every change v5, v6 and v7 made to v4. A script split v4 and v7 into claim units (sentences ending in a tag, table cells and captions) and compared them: 201 v7 units are new or changed since v4 (47 body, 154 appendix; 75 since v5, 12 since v6). Each unit was mapped to the ledger rows that carry it; every one of the 201 is accounted for below.
+
+**Matching.** A row's new wording counts as checked only where its anchor phrases (figures, pinpoints, quoted words) were found by script in one of these:
+- (a) the committed Federal Register text in `review/sources/fr/` (CMS-2449-P, CMS-2452-P and CMS-2448-F, one block per printed page);
+- (b) a quote, cell or figure already recorded in this ledger or this log by the October 13–14 checks.
+
+Where neither held, the row is marked 'not re-read' and is not marked verified. When v7 adopts a correction recorded on October 13–14, the row takes v7's wording and becomes 'verified', because the source wording it now follows is the one already quoted in the row. Every anchor also had to occur in v7 where it quotes v7. Result: 148 anchors, 0 unmatched.
+
+### Step 1. Quotes recorded
+
+| Row | Source and pinpoint | Quote recorded (matched by script) | Result |
+|---|---|---|---|
+| CE-32 | CMS-2452-P, 91 FR 46593–46594 (committed text) | Low-savings (46594): “we assumed that 75 percent of SDPs are financed by provider taxes and that up to 90 percent of provider payment reductions”; offsets “States offset 40 percent of payment reductions through other revenue sources” (46594) and “20 percent” (46593); Medicaid share at 46593 and 46594 | All six values and the Medicaid-share clause match; caveat removed, status 'verified' |
+| RM-39 | CMS-2452-P, 91 FR 46564 | “75 percent of taxpayers receive 75 percent or more of their total tax costs back in enhanced Medicaid payments or other State payments” | Matches; v7 App. B restores the phrase. The caveat on sec. 1's 'under current rules … at most 6 percent' stays (sec. 1 unchanged) |
+| RM-33 | CMS-2448-F, 91 FR 4794, 4800, 4808 (committed text) | 4800: “Section 71117 of the WFTC legislation enacted changes to section 1903(w) of the Act to add a new clause detailing when a tax would not be considered generally redistributive”; 4794 (RIN 0938-AV58, “generally redistributive”); 4808 (B1/B2 uniform and P1/P2 broad-based waivers) | Matches; claim widened to v7's wording (uniformity or broad-based waivers) |
+| NC-17 | Comment CMS-2026-2476-0140, as found in `review/new_text_check_v6.md` (source check 2c) | “KWAME RAOUL / Attorney General of Illinois” (p. 10). The attachment was downloaded again through the regulations.gov API (`/v4/comments/CMS-2026-2476-0140?include=attachments`; `attachment_1.pdf`, 12 pages) for the quote and is not committed. Script: 24 'Attorney General of' lines on pp. 10–12; p. 1 names the same 24 states; no '681' and no 'Illinois Health' | Matches; v7 App. G wording recorded; the MACPAC correction is adopted, so the status is 'verified as scoped' |
+
+### Step 2. SB-26 and SB-30
+
+Both claims now carry v7 sec. 5's POLITICO ¶3–4 wording, as rewritten in v6 (new_text_check_v5.md NT5-08, -09, -20, -21; decision log D8). The dollar conversion no longer 'raises' CMS's figure. It is one of the differences with no known direction, because neither CBO file states a dollar year (SB-14; new row SB-34). SB-26 stays 'verified as inference'. SB-30 is now 'verified as derived', without its former caveat on the direction of the dollar basis.
+
+### Step 3. Rows updated
+
+| Row | v7 units (section, line) | Changed | Status before → after | Matched against |
+|---|---|---|---|---|
+| RM-10 | App. I | claim, citation, status | verified as scoped — see C-6; perishable — re-checked October 13, … → verified as scoped — see C-6; perishable: re-checked October 13, 2026; to be re-run on … | article_v7.md wording |
+| RM-17 | App. B | citation | unchanged | quotes and cells already in the ledger |
+| RM-18 | Rural hospitals: a later grandfathering date | claim, citation, status | corrected — source says CMS proposes, for hospitals Medicare pays on … → verified — v7 adopts the October 13, 2026 correction; re-checked October 15, 2026 against … | Federal Register text (review/sources/fr) |
+| RM-19 | Step 2. Lower provider taxes; Events that would show who bears the cuts; App. C | claim, tag/type, citation, status | corrected — source says: “We are proposing that this information be … → verified — v7 adopts the October 13, 2026 correction; re-checked October 15, 2026 against … | Federal Register text (review/sources/fr) |
+| RM-24 | Events that would change CMS’s estimates or the rules | claim | unchanged | article_v7.md wording |
+| RM-26 | Events that would change CMS’s estimates or the rules | claim, tag/type, status | single-source — CHAT's description (comment 2476-0114); case caption … → single-source — CHAT's description (comment CMS-2026-2476-0114, pp. 13–14, re-read … | quotes and cells already in the ledger |
+| RM-33 | App. C | claim, citation, quote, status | verified → verified — re-checked October 15, 2026 against the committed Federal Register text of … | Federal Register text (review/sources/fr) |
+| RM-36 | App. I | claim, citation | unchanged | quotes and cells already in the ledger |
+| RM-39 | App. B | claim, citation, quote | unchanged | Federal Register text (review/sources/fr) |
+| RM-45 | Step 3. Less money paid to fund SDPs; App. C | claim, citation | unchanged | quotes and cells already in the ledger |
+| RM-46 | Step 2. Lower provider taxes | claim, quote, status | corrected — source says such taxes are included in CMS's revenue … → verified — v7 adopts the October 13, 2026 correction; re-checked October 15, 2026 against … | Federal Register text (review/sources/fr) |
+| RM-48 | App. C | claim, citation | unchanged | article_v7.md wording |
+| CE-05 | The SDP rule (CMS-2449-P) | claim | unchanged | quotes and cells already in the ledger |
+| CE-06 | The SDP rule (CMS-2449-P) | claim | unchanged | quotes and cells already in the ledger |
+| CE-32 | App. D | citation, quote, status | verified with caveat — the central 30 and 80 percent and the 65 … → verified — re-checked October 15, 2026 against the committed Federal Register text: all … | Federal Register text (review/sources/fr) |
+| CE-34 | Sec. 2; App. D | claim, citation | unchanged | article_v7.md wording |
+| CE-61 | Sec. 3 | claim, tag/type, citation, status | corrected — none of 91 FR 30453–30454 or 46591–46594 says the … → verified — v7 adopts the October 13, 2026 correction: single values, not by state, as … | quotes and cells already in the ledger |
+| CE-80 | App. C | claim, citation | unchanged | Federal Register text (review/sources/fr); quotes and cells already in the ledger |
+| SB-09 | App. F | claim, citation, status | verified with caveat — CBO prints no deficit figure for Sec. 71116; … → verified — v7 states the caveat this row recorded on October 14, 2026 (CBO prints no … | quotes and cells already in the ledger |
+| SB-14 | POLITICO’s $681 billion and the Congressional Budget Office’s estimates | claim, citation, status | corrected — source says: “section 71115 will decrease deficits by … → verified — v7 adopts the October 14, 2026 correction; matched against the cells and page … | quotes and cells already in the ledger |
+| SB-22 | POLITICO’s $681 billion and the Congressional Budget Office’s estimates | claim | unchanged | Federal Register text (review/sources/fr) |
+| SB-24 | App. F | claim, citation | unchanged | quotes and cells already in the ledger |
+| SB-26 | POLITICO’s $681 billion and the Congressional Budget Office’s estimates | claim | unchanged | quotes and cells already in the ledger |
+| SB-29 | POLITICO’s $681 billion and the Congressional Budget Office’s estimates; App. F | claim, citation | unchanged | Federal Register text (review/sources/fr) |
+| SB-30 | POLITICO’s $681 billion and the Congressional Budget Office’s estimates; App. F | claim, status | verified as derived — direction only for the dollar-basis adjustment → verified as derived | Federal Register text (review/sources/fr) |
+| SB-33 | App. F | tag/type | unchanged | article_v7.md wording |
+| TP-11 | App. F | claim, citation | unchanged | quotes and cells already in the ledger |
+| TP-29 | HFMA’s $56.6 billion | tag/type | unchanged | article_v7.md wording |
+| TP-30 | Sec. 2; App. C | claim, citation, status | corrected — source says: “since states do not provide information on … → verified — v7 adopts the October 14, 2026 correction; matched against the GAO wording … | quotes and cells already in the ledger |
+| TP-31 | Events that would change CMS’s estimates or the rules | claim | unchanged | quotes and cells already in the ledger |
+| TP-37 | App. F | claim, tag/type, citation | unchanged | quotes and cells already in the ledger |
+| TP-40 | App. I | claim, tag/type, citation, status | corrected — the example comment CMS-2026-1916-0407 does not cite … → verified with caveat — v7 adopts the October 13, 2026 correction; keyword counts stay … | quotes and cells already in the ledger |
+| SE-09 | Sec. 6; App. H | claim, citation, status | corrected — source says: “Colorado also has an SDP that is above new … → verified — v7 adopts the October 14, 2026 correction; matched against the KFF wording and … | quotes and cells already in the ledger |
+| SE-10 | Sec. 6; App. H | claim, tag/type, citation, status | corrected — source says: “Arkansas Yes Ambulance (5.51%-6.0%)” (KFF, … → verified — v7 adopts the October 14, 2026 correction; matched against the KFF chart cells … | quotes and cells already in the ledger |
+| SE-11 | Sec. 6; App. H | claim, citation, status | corrected — source says: “FL, KS, and MS did not respond to the 2025 … → verified — v7 adopts the October 13, 2026 correction; matched against the KFF wording … | quotes and cells already in the ledger |
+| SE-13 | Sec. 6; App. H | claim, tag/type, citation, status | corrected — source says: “For the remaining states, KFF had complete … → verified — v7 adopts the October 14, 2026 correction; matched against the KFF wording … | quotes and cells already in the ledger; verification log |
+| SE-16 | Sec. 6 | claim, status | corrected — source says: “The dollar amount of SDP spending above new … → verified — v7 adopts the October 13, 2026 correction; matched against the KFF wording … | quotes and cells already in the ledger |
+| SE-20 | Sec. 6; App. H | claim, tag/type, citation, status | corrected — source says: “states can implement SDPs that require MCOs … → verified — v7 adopts the October 14, 2026 correction; matched against the KFF chart cells … | quotes and cells already in the ledger |
+| SE-24 | Sec. 6 | claim, status | corrected — source says: “The dollar amount of SDP spending above new … → verified — v7 adopts the October 13, 2026 correction; matched against the KFF wording … | quotes and cells already in the ledger |
+| AC-08 | Sec. 8 | claim, status | corrected — source says: “For all types of IPBs, the average annual … → verified with caveat — v7 adopts the October 13, 2026 correction; the source was read … | quotes and cells already in the ledger |
+| AC-14 | Sec. 8; App. B | claim, tag/type, citation, status | unresolved — 'most freestanding psychiatric hospitals are IMDs' is … → verified as inference — rests on the § 1905(i) definition at AC-17; the share of … | quotes and cells already in the ledger |
+| AC-15 | Sec. 8; App. B | claim, citation, status | verified — upgraded from verified with caveat: re-checked October 13, … → not re-read — the 'substance use disorder' scope added in v6 has no quote in the ledger; … | quotes and cells already in the ledger |
+| AC-16 | Rural hospitals: a later grandfathering date | claim, citation | unchanged | article_v7.md wording |
+| NC-01 | Events that would show who bears the cuts; App. C | claim, citation, status | verified as scoped (C-1) — v17 wording is broader than C-1's scope → verified as scoped (C-1) | article_v7.md wording |
+| NC-02 | App. C | claim, citation | unchanged | quotes and cells already in the ledger |
+| NC-03 | App. C | claim, tag/type, citation | unchanged | quotes and cells already in the ledger |
+| NC-04 | App. G | claim, citation, status | verified as scoped (C-4) — scope extended to the full posted record … → verified as scoped (C-4) — the posted-record extension is at NC-17 | quotes and cells already in the ledger |
+| NC-15 | Events that would change CMS’s estimates or the rules; App. I | claim, citation, status | verified as scoped (C-5) — perishable; re-checked October 13, 2026: … → verified as scoped (C-5) — perishable; last run September 22, 2026 (lawsuits) and October … | article_v7.md wording |
+| NC-17 | App. G | claim, tag/type, citation, quote, status | corrected — MACPAC's September 21, 2026 letter is posted, as comment … → verified as scoped — re-checked October 13, 2026 ($681 billion; MACPAC -0173) and October … | quotes and cells already in the ledger; comment -0140 downloaded again (not committed) |
+| NC-18 | App. C | claim, citation, status | single-source — THEIA Services' search result; GAO-24-106202 Table 4 … → single-source — THEIA Services' search result; the GAO limb was read on October 14, 2026 … | article_v7.md wording |
+| NC-19 | App. C | claim, tag/type, primary source, citation, quote, status | unresolved — outline only; the five gaps are not listed in v17 → verified — closed October 15, 2026: Appendix C now lists the five data gaps; each has its … | article_v7.md wording |
+| FG-05 | App. D | status | verified — values match the App. D outline; artwork and caption not … → SUPERSEDED — Figure 5 removed in v5; values now in App. D text; replaced by CE-18 and … | quotes and cells already in the ledger |
+| FG-06 | Sec. 6 | claim, status | corrected — source says: “Arkansas Yes Ambulance (5.51%-6.0%)” (KFF, … → verified with caveat — v7 caption adopts the October 14, 2026 correction; artwork not … | quotes and cells already in the ledger |
+| FG-08 | Sec. 8 | claim, status | corrected — source says: “For all types of IPBs, the average annual … → verified with caveat — v7 caption adopts the October 13, 2026 correction; source read … | quotes and cells already in the ledger |
+
+### Step 3. Rows added
+
+| Row | Claim (v7) | Tag | Source and pinpoint | Status |
+|---|---|---|---|---|
+| RM-51 | The SDP rule, CMS-2449-P, runs from 91 FR 30400 to 30466 and the provider tax rule, CMS-2452-P, from 91 FR 46562 to 46599; comment IDs beginning CMS-2026-1916 are comments on the SDP rule and those beginning CMS-2026-2476 on the … | contextual [E] | CMS-2449-P; CMS-2452-P; regulations.gov; 91 FR 30400–30466; 91 FR 46562–46599; dockets CMS-2026-1916 and CMS-2026-2476; note App. A ('Citations') | verified — matched October 15, 2026 against the committed Federal Register text and RM-34 |
+| RM-52 | THEIA Services keeps an evidence ledger that records each claim, its source and pinpoint, and whether the source was re-read; its flagged rows were checked against their primary sources on October 13 and 14, 2026 | contextual [I] | This ledger; verification_v4_log.md; Note App. A ('Evidence ledger') | verified — the verification log records the October 13 and 14, 2026 checks |
+| RM-53 | A state asks CMS to approve an SDP on a form called a preprint, and a rating period is the period for which a state sets its plans' payment rates | definition [I] | none cited; Note App. B ('State directed payments (SDPs)') | not re-read — the rating-period definition has no cited source; the preprint limb is at RM-45 |
+| RM-54 | A state hospital association that works with the state on its provider tax program may hold member-level models of the tax and its payment pool | contextual [I] | none cited; Note sec. 7, step 3 | not re-read — THEIA Services' statement; no source cited or in the ledger |
+| CE-81 | The provider tax rule's Table 5 caption transposes two letters of the WFTC acronym (91 FR 46589) | CMS printing error [E] | CMS-2452-P; Table 5, 91 FR 46589; note App. E ('Other printing errors') | verified — matched October 15, 2026 against the committed Federal Register text (91 FR 46589) |
+| CE-82 | Tables 12 and 14 each show the provider tax rule's effect on four parties, the federal government, states, providers and private payers, and each table's rows sum to about zero, because the effects are transfers among the four … | CMS estimate [E]; derived arithmetic [I] | CMS-2452-P; Tables 12 and 14, 91 FR 46592–46593; note App. E ('The four-party Tables 12 and 14') | verified as derived — arithmetic on CE-10 and CE-11 |
+| SB-34 | Neither CBO file states a dollar year for its figures; CMS states its figures in 2026 dollars and gives no conversion (91 FR 30451, 46591), so the direction of the dollar-basis difference is not established | CMS estimate (wording) [E]; negative [I] | CBO; CMS-2449-P; CMS-2452-P; CBO, July 21, 2025, Table 7 and October 28, 2025 (user-supplied copies); 91 FR 30451, 46591; note App. F ('CBO's two measures'; reconciliation) | verified — CBO limb from the October 14, 2026 check (SB-14); CMS limb matched October 15, 2026 against the committed Federal Register text |
+| SE-25 | The five groups cover 51 jurisdictions and about $60.1 billion, and KFF does not use them; rebuilt from KFF's chart data, the group totals are $45.43 billion, $1.96 billion, $0.80 billion, $11.91 billion and $0 | state classification [I] | KFF chart data (August 14 and 20, 2026), as grouped by THEIA Services; Note App. H ('The groups'); SE-05 to SE-09 | verified — matches the October 14, 2026 rebuild recorded at SE-05 to SE-09 |
+| AC-18 | Federal Medicaid payment for IMD patients aged 21 to 64 is restricted by § 1905(a), which reaches patients under 65 but excepts inpatient psychiatric care for those under 21 (§ 1905(a)(16)) | rule mechanic [E] | SSA § 1905(a), (a)(16); Note App. B ('Institutions for mental diseases') | not re-read — § 1905(a)(16) was not re-read; the under-65 limb matches the Citation check at AC-17 |
+| NC-22 | The provider tax rule's full posted comment record was read for the figures and claims in sec. 5 (Appendix I) | contextual [I] | regulations.gov comment texts; Note App. C ('Other limits'); App. I | verified as scoped — the October 13, 2026 re-checks of the sec. 5 comment rows ran on the full posted record |
+
+**NC-19 closed.** Appendix C now lists the five data gaps, and each has its own row: NC-01, NC-02, NC-18 (with TP-30, CE-80, RM-45), RM-19 and NC-03.
+
+**Flags removed with the claims they concerned.** These are not new verifications; the limbs that were flagged are no longer in the text.
+- **AC-14** ('not found') flagged 'most freestanding psychiatric hospitals are IMDs'. v5 dropped that limb, and v7 says only what the § 1905(i) definition supports (AC-17), stating in App. B that no source was found for the share.
+- **RM-26** ('not found') flagged the Fifth Circuit appeal number and 'pending'. v5 cut both. v7 adds only that the Children's Hospital Association of Texas says CMS has appealed (p. 14), which TP-31's October 13 re-check records.
+After the sync no row carries NEEDS VERIFICATION.
+
+**Still 'corrected'.** FG-07 keeps the ledger's '(no adult bed series in source)', which the paper contradicts (October 14). v7's caption needs no change, so the claim text did not change in v5–v7 and the row was not touched.
+
+**FG-05 superseded.** v5 removed Figure 5. Its values are App. D text, ledgered at CE-18 (with the interaction) and CE-19 (measured alone).
+
+### v7 units covered by existing rows as worded, or not claims of fact
+
+Covered without change: L9 → CE-41/CE-77 (wording only: "the most that providers"); L117 → NC-21, SB-20 and the sec. 5 subsection rows (summary sentence); L152 → SB-27; L156 → SB-28; L242 → AC-07, AC-11 (split only); L266 → RM-25 (synced October 14, 2026); L294 → RM-38; L294 → RM-03, RM-16; L296 → RM-43; L298 → RM-43; L300 → RM-14, RM-15; L300 → CE-08; L300 → RM-47, RM-19; L302 → RM-40; L304 → RM-28, RM-27; L304 → RM-29; L306 → CE-61; L306 → CE-70, TP-15, FG-01; L308 → RM-42; L310 → AC-17; L320 → CE-77; L324 → CE-63; L332 → CE-49; L332 → CE-49; L334 → CE-26; L334 → CE-04; L334 → CE-71; L334 → CE-71; L336 → CE-33; L336 → CE-45; L346 → CE-25, CE-42; L348 → CE-42; L350 → TP-32; L350 → TP-32; L354 → CE-25; L356 → CE-17; L356 → CE-17; L358 → CE-72; L364 → TP-34; L364 → TP-34; L368 → SB-17; L370 → SB-27; L370 → SB-28; L379 → CE-73; L381 → CE-59; L381 → CE-57, CE-58; L385 → SB-31; L385 → SB-31; L385 → SB-31; L387 → SB-32; L387 → SB-32; L391 → NC-09, TP-17; L403 → SE-17; L405 → SE-05; L405 → SE-14; L406 → SE-06; L407 → SE-07; L408 → SE-08; L415 → SE-03; L415 → SE-12; L419 → RM-23; L421 → RM-01, RM-05, RM-04, RM-21; L423 → RM-34; L423 → RM-34; L427 → TP-39.
+
+Not claims of fact, so not ledgered: L286 (App. A tag definition); L286 (App. A tag definition); L286 (App. A tag definition); L306 (App. B naming convention ("this note calls … the interaction")); L338 (App. D table heading); L372 (App. F table heading); L374 (App. F table header cell); L374 (App. F table header cell); L374 (App. F table header cell); L431 (App. J disclaimer (statement about THEIA Services)); L433 (App. J (statement about THEIA Services)).
+
+### v7 claims with no ledger source
+
+These v7 claims cite no source, and no source for them is in the ledger. Each now has a row marked 'not re-read':
+- **App. B, 'State directed payments (SDPs)'** (RM-53): “a **rating period** is the period for which a state sets its plans’ payment rates” [I]. No source is cited; the preprint limb of the same sentence is at RM-45.
+- **Sec. 7, step 3** (RM-54): “A state hospital association that works with the state on its provider tax program may hold member-level models of the tax and its payment pool.” [I] No source is cited, and no earlier row covered it.
+
+These claims have a ledger source, but the limb v5–v7 added could not be re-read (also 'not re-read'):
+- **App. B, IMDs, 'section 1115 demonstrations for substance use disorder treatment'** (AC-15). 81 FR 27562 and SMDL #15-003 are in the ledger, but no quote on substance use disorder is.
+- **App. B, IMDs, '§ 1905(a)(16)' under-21 exception** (AC-18). The under-65 limb matches the Citation check at AC-17; (a)(16) has no quote in the ledger.
+
+Not ledgered, and not claims of fact: App. A's tag definitions, App. B's naming of the 'interaction', table headings, and App. J's disclaimer and description of THEIA Services.
+
+### Legend after the sync
+
+Rows 284 (274 + 10 added); unresolved 0; single-source 16; superseded 47; corrected 1 (FG-07); not re-read 4 (RM-53, RM-54, AC-15, AC-18); needs verification 0 (blocked 0, not found 0). The counts were recalculated in LibreOffice and match a recount from the markdown file, and the two files agree cell for cell and in row order.
+
