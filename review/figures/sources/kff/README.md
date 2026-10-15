@@ -1,4 +1,4 @@
-# KFF chart data used for Figure 3
+# KFF chart data used for Figure 6 (the state map; Figure 3 in v8)
 
 Downloaded October 15, 2026 with curl from Datawrapper, which serves KFF's chart data. Unchanged copies; `review/tools/build_figure_data.py` reads them.
 

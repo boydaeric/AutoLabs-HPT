@@ -371,7 +371,7 @@ def fig4():
     bottom = axes_bottom_in / h
     ax = fig.add_axes([0.10, bottom, 0.62, y_top - bottom - 0.02])
     clean(ax, grid_axis="y")
-    bw = 0.56
+    bw = 0.72
     ax.bar(0, sdp, width=bw, color=INK, linewidth=0)
     ax.bar(0, add - 4, bottom=sdp + 4, width=bw, color=GREY, linewidth=0)
     ax.bar(1, cut2, bottom=res[1], width=bw, color=GREY, linewidth=0)
@@ -384,10 +384,10 @@ def fig4():
     label(ax, 0, sdp / 2, money(sdp), gid="datalabel", ha="center", va="center", fontweight="bold", color=text_on(INK))
     label(ax, 0, sdp + add / 2, money(add), gid="datalabel", ha="center", va="center", fontweight="bold", color=text_on(GREY))
     label(ax, 1, res[1] + cut2 / 2, "−" + money(cut2), gid="datalabel", ha="center", va="center", fontweight="bold",
-          color=text_on(GREY))
+          color=text_on(GREY), fontsize=7.5)
     label(ax, 2, res[1] + 12, money(res[1]), gid="datalabel", ha="center", va="bottom", fontweight="bold")
     label(ax, 3, res[2] + cut3 / 2, "up to\n−" + money(cut3), gid="datalabel", ha="center", va="center",
-          fontweight="bold")
+          fontweight="bold", fontsize=7.5)
     label(ax, 4, res[2] + 12, money(res[2]), gid="datalabel", ha="center", va="bottom", fontweight="bold")
     # the range bracket: the chart's one dark-red element
     bx = 4.55
