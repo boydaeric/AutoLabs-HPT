@@ -1,10 +1,11 @@
 """Build the Word and PDF versions of the note from a markdown file.
 
-  python review/tools/build_v19.py                     # article_v8.md -> v19 docx + pdf
-  python review/tools/build_v19.py --md X.md --out Y.docx [--pdf]
+  python review/tools/build_v19.py                     # article_v9.md -> v20 docx + pdf
+  python review/tools/build_v19.py --md X.md --out Y.docx [--no-pdf]
+  (v19 was built with --md review/article_v8.md --out review/Exposure-Not-Loss-v19-draft.docx)
 
 Steps
-1. Pre-process the markdown (a copy; article_v8.md is never changed):
+1. Pre-process the markdown (a copy; the article file is never changed):
    - title, byline and author line -> custom styles Title and Byline;
    - each "*[Figure N] caption*" placeholder -> the figure's PNG, 6.5 in
      wide, as a pandoc figure whose caption reads "Figure N. caption".
@@ -16,7 +17,9 @@ Steps
    - tight-list paragraphs outside tables -> "Compact List" (Compact is
      the table cell style);
    - a paragraph that is wholly italic and starts "Source:" -> Caption;
-   - each image's alt text (docPr descr) from review/figures/figures.json.
+   - each image's alt text (docPr descr) from review/figures/figures.json;
+   - document properties: title (the Title paragraph) and author (the
+     "Prepared by:" line), which LibreOffice carries into the PDF.
 4. LibreOffice renders the PDF; fonts are embedded (PDF export default),
    checked by gate5_check.py with pdffonts.
 """
@@ -69,6 +72,10 @@ def preprocess(md, figures):
             continue
         out.append(line)
     return "\n".join(out)
+
+
+def ptext(el):
+    return "".join(t.text or "" for t in el.iter(w("t")))
 
 
 def words(el):
@@ -181,6 +188,25 @@ def postprocess(docx, figures):
         dp.set("name", f"Figure {f['number']}")
     tree.write(str(doc_path), xml_declaration=True, encoding="UTF-8", standalone=True)
 
+    paras = list(root.iter(w("p")))
+    sty = lambda p: (p.find(f"{w('pPr')}/{w('pStyle')}").get(w("val"))
+                     if p.find(f"{w('pPr')}/{w('pStyle')}") is not None else "")
+    title = next((ptext(p) for p in paras if sty(p) == "Title"), "")
+    author = next((ptext(p).split("Prepared by:", 1)[1].strip() for p in paras
+                   if sty(p) == "Byline" and "Prepared by:" in ptext(p)), "")
+    core = tmp / "docProps" / "core.xml"
+    if core.exists() and title:
+        c = core.read_text(encoding="utf-8")
+        esc = lambda t: t.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+        for tag, val in (("dc:title", title), ("dc:creator", author)):
+            if not val:
+                continue
+            if re.search(rf"<{tag}>.*?</{tag}>|<{tag}\s*/>", c, re.S):
+                c = re.sub(rf"<{tag}>.*?</{tag}>|<{tag}\s*/>", f"<{tag}>{esc(val)}</{tag}>", c, flags=re.S)
+            else:
+                c = c.replace("</cp:coreProperties>", f"<{tag}>{esc(val)}</{tag}></cp:coreProperties>")
+        core.write_text(c, encoding="utf-8")
+
     out = Path(str(docx) + ".tmp")
     with zipfile.ZipFile(docx) as zin, zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as zout:
         for item in zin.infolist():
@@ -221,8 +247,8 @@ def build(md_path, out_docx, pdf=True):
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("--md", default=str(REVIEW / "article_v8.md"))
-    ap.add_argument("--out", default=str(REVIEW / "Exposure-Not-Loss-v19-draft.docx"))
+    ap.add_argument("--md", default=str(REVIEW / "article_v9.md"))
+    ap.add_argument("--out", default=str(REVIEW / "Exposure-Not-Loss-v20-draft.docx"))
     ap.add_argument("--no-pdf", action="store_true")
     a = ap.parse_args()
     build(a.md, a.out, pdf=not a.no_pdf)

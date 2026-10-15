@@ -1,4 +1,6 @@
-"""Gate 5: check Exposure-Not-Loss-v19-draft.docx and .pdf against article_v8.md.
+"""Gate 5 (v20: Stage 4 gate): check Exposure-Not-Loss-v20-draft.docx and .pdf
+against article_v9.md. Paths and the expected figure count are set below; for
+v19 they were article_v8.md, v19 and 5 figures.
 
 1. Text: the docx body's words, in order, equal article_v8.md's words
    (markdown syntax ignored; the placeholder "[Figure N]" reads
@@ -25,9 +27,10 @@ from pathlib import Path
 from lxml import etree
 
 REVIEW = Path(__file__).resolve().parents[1]
-MD = REVIEW / "article_v8.md"
-DOCX = REVIEW / "Exposure-Not-Loss-v19-draft.docx"
-PDF = REVIEW / "Exposure-Not-Loss-v19-draft.pdf"
+MD = REVIEW / "article_v9.md"
+DOCX = REVIEW / "Exposure-Not-Loss-v20-draft.docx"
+PDF = REVIEW / "Exposure-Not-Loss-v20-draft.pdf"
+N_FIG, N_TABLES = 9, 5
 W = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
 WP = "{http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing}"
 fails = []
@@ -98,27 +101,27 @@ sm = difflib.SequenceMatcher(a=md_words, b=doc_words, autojunk=False)
 diffs = [op for op in sm.get_opcodes() if op[0] != "equal"]
 for tag, i1, i2, j1, j2 in diffs[:10]:
     print(f"     {tag}: md {' '.join(md_words[max(0, i1 - 3):i2 + 3])!r} | docx {' '.join(doc_words[max(0, j1 - 3):j2 + 3])!r}")
-check(not diffs, f"text: docx words equal article_v8.md words ({len(md_words)} md, {len(doc_words)} docx, {len(diffs)} differences)")
+check(not diffs, f"text: docx words equal {MD.name} words ({len(md_words)} md, {len(doc_words)} docx, {len(diffs)} differences)")
 
 paras = list(body.iter(f"{W}p"))
 d_h = {k: sum(1 for p in paras if style(p) == f"Heading{k}") for k in (1, 2, 3)}
 check(d_h == md_h, f"headings by level: docx {d_h}, md {md_h}")
 d_tables = len(body.findall(f".//{W}tbl"))
-check(d_tables == md_tables, f"tables: docx {d_tables}, md {md_tables}")
+check(d_tables == md_tables == N_TABLES, f"tables: docx {d_tables}, md {md_tables} (want {N_TABLES})")
 for tag in ("[E]", "[I]", "[C]", "[DATE]"):
     check(doc_text.count(tag) == md_text.count(tag), f"{tag}: docx {doc_text.count(tag)}, md {md_text.count(tag)}")
 md_ph = re.findall(r"^\*\[Figure (\d+)\]", md, re.M)
 caps = [ptext(p) for p in paras if style(p) == "ImageCaption"]
-check([c.split(".")[0] for c in caps] == [f"Figure {n}" for n in md_ph] == [f"Figure {n}" for n in range(1, 6)],
+check([c.split(".")[0] for c in caps] == [f"Figure {n}" for n in md_ph] == [f"Figure {n}" for n in range(1, N_FIG + 1)],
       f"figure placeholders: md {md_ph}, docx captions {[c.split('.')[0] for c in caps]}")
 
 # ---------------------------------------------------------------- images
 meta = json.loads((REVIEW / "figures" / "figures.json").read_text(encoding="utf-8"))
 docprs = list(body.iter(f"{WP}docPr"))
 extents = [e for e in body.iter(f"{WP}extent")]
-check(len(docprs) == 5, f"images: {len(docprs)}")
+check(len(docprs) == N_FIG, f"images: {len(docprs)} (want {N_FIG})")
 for dp, ext, m in zip(docprs, extents, meta):
-    check(dp.get("descr") == m["alt"] and len(m["alt"].split(". ")) <= 2,
+    check(dp.get("descr") == m["alt"] and m["alt"].strip() and dp.get("title") == f"Figure {m['number']}",
           f"image {m['number']}: alt text set ({len(m['alt'].split())} words)")
     check(abs(int(ext.get("cx")) - 5943600) < 1000, f"image {m['number']}: width {int(ext.get('cx')) / 914400:.2f} in")
 for i, p in enumerate(paras):
@@ -139,7 +142,9 @@ not_emb = [l.split()[0] for l in fonts if " no " in f" {l} ".replace("  ", " ") 
 check(fonts and not not_emb, f"PDF fonts embedded: {sorted({l.split()[0].split('+')[-1] for l in fonts})}")
 check(not any("Confidential" in p for p in pages), "PDF: no 'Confidential'")
 n_alt = len(re.findall(rb"/Alt\s*[(<]", PDF.read_bytes()))
-check("Tagged:          yes" in info and n_alt == 5, f"PDF: tagged, {n_alt} images with alt text")
+check("Tagged:          yes" in info and n_alt == N_FIG, f"PDF: tagged, {n_alt} images with alt text")
+check(re.search(r"Title:\s+The Missing Total", info) is not None and re.search(r"Author:\s+Eric Boyda", info) is not None,
+      "PDF: title and author metadata set")
 
 
 def key(s):
@@ -190,6 +195,6 @@ for i, el in enumerate(blocks):
             stranded.append(h[:40])
 check(not stranded, f"PDF: no heading stranded at a page foot {stranded or ''}")
 
-print(f"\nv19: {npages} pages")
+print(f"\n{PDF.stem}: {npages} pages")
 print("GATE 5:", "FAIL (%d)" % len(fails) if fails else "PASS")
 sys.exit(1 if fails else 0)
