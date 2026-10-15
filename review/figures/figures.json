@@ -1,37 +1,65 @@
 [
   {
     "number": 1,
-    "stem": "fig1_overlap",
-    "csv": "fig1_overlap.csv",
-    "title": "Provider payment cuts in CMS’s estimates",
-    "alt": "Horizontal bar chart of CMS’s central estimates for 2026–2035: the SDP rule cuts provider payments by $774.8 billion; the provider tax rule measured alone cuts $384.0 billion, of which $241.9 billion is already counted in the SDP rule and $142.1 billion is additional; both rules combined cut $916.9 billion."
+    "stem": "fig1_threshold",
+    "csv": "fig1_threshold.csv",
+    "title": "Provider tax threshold in expansion states",
+    "alt": "Step chart of the threshold in expansion states by federal fiscal year (begins October 1 of the prior year): 2027, The state’s July 4, 2025 level, at most 6.0%; 2028, 5.5%; 2029, 5.0%; 2030, 4.5%; 2031, 4.0%; 2032 and after, 3.5%. The 3.5% floor is marked from 2032. Source: 91 FR 46565, 46576, 46598. The 6 percent cap is CMS’s proposal, with an exception for a tax that met the 75/75 test on July 4, 2025, which CMS expects no state to use (91 FR 46572, 46598). Federal fiscal year: 31 U.S.C. 1102."
   },
   {
     "number": 2,
-    "stem": "fig2_waterfall",
-    "csv": "fig2_waterfall.csv",
-    "title": "The provider tax rule’s net effect on providers",
-    "alt": "Waterfall chart: measured alone, the provider tax rule leaves providers $220.3 billion worse off (CMS Table 12); adding back the $241.9 billion overlap already counted in the SDP rule gives CMS’s +$21.7 billion on top of the SDP rule (Table 14)."
+    "stem": "fig2_overlap",
+    "csv": "fig2_overlap.csv",
+    "title": "Provider payment cuts in CMS’s estimates",
+    "alt": "Horizontal bar chart of CMS’s central estimates, billions of 2026 dollars, 2026–2035: the SDP rule cuts provider payments by $774.8 billion; the provider tax rule measured alone cuts $384.0 billion, of which $241.9 billion is already counted in the SDP rule and $142.1 billion is an additional cut; both rules combined cut $916.9 billion ($774.8 billion plus $142.1 billion)."
   },
   {
     "number": 3,
-    "stem": "fig3_state_map",
-    "csv": "fig3_state_groups.csv",
-    "title": "Parts of the two proposed rules that reach each state",
-    "alt": "Tile map of the 50 states and DC sorted into five groups: 24 states where both rules reach (A), 2 where the cap and a lower threshold on non-hospital taxes reach (B), 3 cap only (C), 8 non-expansion states with SDPs above the caps (D) and 14 with no identified hospital SDPs above the caps (E), five of which the lower threshold reaches; it shows where the rules apply, not where losses are largest."
+    "stem": "fig3_reductions",
+    "csv": "fig3_reductions.csv",
+    "title": "Reductions in Medicaid spending by rule",
+    "alt": "Stacked bar chart, Reduction in Medicaid spending, central estimate, 2026–2035, billions of 2026 dollars, federal and state: SDP rule: federal $510.1B, state $264.7B, total $774.8B; Provider tax rule, measured alone: federal $245.8B, state $138.2B, total $384.0B; Provider tax rule, additional cut after removing the $241.9 billion overlap: federal $90.9B, state $51.2B, total $142.1B; Both rules combined: federal $601.0B, state $315.9B, total $916.9B. The provider tax rule measured alone includes the $241.9 billion overlap and is not added to the combined total. Source: SDP rule, Tables 18–20, 91 FR 30451–30452; provider tax rule, Table 11, 91 FR 46591, and 91 FR 46592. The state figure of $51.2 billion and the combined row are THEIA Services’ arithmetic. All rows score Sections 71116 and 71115 as the rules would implement them."
   },
   {
     "number": 4,
-    "stem": "fig4_pediatric",
-    "csv": "fig4_pediatric.csv",
-    "title": "Change in hospital inpatient units",
-    "alt": "Bar chart from one national study: from 2008 to 2022, pediatric inpatient units fell 29.9 percent and adult inpatient units fell 4.4 percent."
+    "stem": "fig4_steps",
+    "csv": "fig4_steps.csv",
+    "title": "Loss to providers under CMS’s central estimates",
+    "alt": "Waterfall chart, Central estimate, 2026–2035, Loss to providers, billions of 2026 dollars. 1. Medicaid payments providers lose, both rules combined: $774.8 billion (SDP rule) plus $142.1 billion (provider tax rule after the $241.9 billion overlap): 916.9. 2. Subtract the $163.7 billion less that providers pay in provider taxes: 753.2. 3. Subtract the most providers could save by paying less to fund the state share of SDPs, $264.7 billion: 488.5. A bracket marks the range under CMS’s central estimates, about $488 billion to $753 billion. Source: SDP rule, Tables 18 and 20, 91 FR 30451–30452; provider tax rule, 91 FR 46592 and Table 8, 91 FR 46590. Sums are THEIA Services’. Step 1 scores Sections 71116 and 71115 as the rules would implement them; CMS says part of the SDP rule’s cut falls on other entities, such as local governments (sec. 3)."
   },
   {
     "number": 5,
-    "stem": "fig5_psychiatric",
-    "csv": "fig5_psychiatric.csv",
+    "stem": "fig5_waterfall",
+    "csv": "fig5_waterfall.csv",
+    "title": "The provider tax rule’s net effect on providers",
+    "alt": "Waterfall chart, CMS central estimate, billions of 2026 dollars, 2026–2035: measured alone, the provider tax rule leaves providers $220.3 billion worse off (CMS Table 12); adding back the $241.9 billion overlap already counted in the SDP rule gives CMS’s +$21.7 billion on top of the SDP rule (Table 14). The components give +$21.6 billion ($163.7 billion less $142.1 billion); the difference is CMS’s rounding (Appendix E)."
+  },
+  {
+    "number": 6,
+    "stem": "fig6_state_map",
+    "csv": "fig6_state_groups.csv",
+    "title": "Parts of the two proposed rules that reach each state",
+    "alt": "Tile map of the 50 states and DC in five groups, showing where the rules apply, not where losses are largest; dollars are each group’s federal hospital SDP spending above the caps in one year (KFF). A, both rules, 24 states, about $45.4 billion: AZ, CA, IA, IL, KY, LA, MA, MI, MN, MO, NC, NE, NH, NJ, NM, NV, NY, OH, OK, OR, PA, RI, UT, VA. B, cap plus lower threshold on non-hospital taxes, 2, about $2.0 billion: WA, WV. C, cap only, 3, about $0.8 billion: DC, DE, HI. D, non-expansion states with SDPs above the caps, 8, about $11.9 billion: FL, GA, KS, MS, SC, TN, TX, WI. E, no identified hospital SDPs above the caps, 14, $0, excluding Colorado’s SDP: AK, AL, AR, CO, CT, ID, IN, MD, ME, MT, ND, SD, VT, WY; the lower threshold reaches AR, CO, CT, IN and VT. Minnesota and Missouri have no KFF estimate; Colorado has an SDP above the new limits that KFF’s figures leave out."
+  },
+  {
+    "number": 7,
+    "stem": "fig7_pediatric",
+    "csv": "fig7_pediatric.csv",
+    "title": "Change in hospital inpatient units",
+    "alt": "Bar chart from one national study, percent change in the number of units, United States, 2008–2022: pediatric inpatient units fell 29.9 percent and adult inpatient units fell 4.4 percent. Source: Michelson et al., December 2024."
+  },
+  {
+    "number": 8,
+    "stem": "fig8_psychiatric",
+    "csv": "fig8_psychiatric.csv",
     "title": "Psychiatric beds per 100,000 people, by hospital type",
-    "alt": "Slope chart of psychiatric beds per 100,000 people from 2011 to 2023: short-term acute care hospitals fell from 11.3 to 9.06, freestanding psychiatric hospitals rose from 16.8 to 19.5, and the total was about flat at 28.1 and 28.4."
+    "alt": "Slope chart of psychiatric beds per 100,000 people, United States, 2011 and 2023: short-term acute care hospitals fell from 11.3 to 9.06, freestanding psychiatric hospitals rose from 16.8 to 19.5, and the total, both types, was 28.1 and 28.4 (the study’s total; its two parts sum to 28.56). Source: Lindenfeld et al., PLoS Medicine, July 2025."
+  },
+  {
+    "number": 9,
+    "stem": "fig9_range",
+    "csv": "fig9_range.csv",
+    "title": "Loss to providers under CMS’s three estimates",
+    "alt": "Range chart, Loss to providers, billions of 2026 dollars, 2026–2035, one row per estimate. Low-savings estimates: After step 3, best case for providers $122.5B, After step 2 (lower provider taxes subtracted) $258.8B, Step 3 ceiling: the state share of the SDP cut $136.3B; Central estimates: After step 3, best case for providers $488.5B, After step 2 (lower provider taxes subtracted) $753.2B, Step 3 ceiling: the state share of the SDP cut $264.7B; High-savings estimates: After step 3, best case for providers $785.8B, After step 2 (lower provider taxes subtracted) $1,125.8B, Step 3 ceiling: the state share of the SDP cut $340.0B. Source: SDP rule, 91 FR 30451–30454 (low-savings state share $136.3 billion; high-savings state share $340.0 billion, the sum of Table 23’s cells, which CMS’s text gives as $339.6 billion); provider tax rule, Tables 14, 16 and 18, 91 FR 46593–46594. Sums are THEIA Services’."
   }
 ]

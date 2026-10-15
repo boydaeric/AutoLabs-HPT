@@ -1,8 +1,11 @@
 """Gate 3: check the rendered figures.
 
 1. Numbers: each figure's data labels (SVG text in <g id="datalabel">) equal
-   its CSV values; note values appear in the figure's text; Figure 3's
-   tiles carry each state's CSV group and the legend carries the counts.
+   its CSV values. For Figures 1, 3, 4 and 9 (converted v8 tables), every
+   table cell, header and the source note appear verbatim in the chart text.
+   Figure 6's tiles carry each state's CSV group, every tile's text clears
+   4.5:1 contrast on its fill, the five lower-threshold states carry heavy
+   ink outlines, and dark red fills Group A only.
 2. Colours: every colour in every SVG is in the THEIA palette (or white).
 3. Separation: each pair of category colours, in greyscale and under
    protan / deutan / tritan simulation (Machado et al. 2009, severity 1),
@@ -43,45 +46,95 @@ meta = json.loads((FIG / "figures.json").read_text(encoding="utf-8"))
 layout = json.loads((FIG / "layout_report.json").read_text(encoding="utf-8"))
 
 # ---------------------------------------------------------------- 1. numbers
+GROUP_FILL = {"A": "#A10400", "B": "#D9AD2B", "C": "#F0E2B0", "D": "#8A8A8A", "E": "#DCDCD8"}
+NUM = re.compile(r"\d+(?:,\d{3})*(?:\.\d+)?")
+
+
+def lum(hexc):
+    c = [int(hexc[i:i + 2], 16) / 255 for i in (1, 3, 5)]
+    c = [x / 12.92 if x <= 0.04045 else ((x + 0.055) / 1.055) ** 2.4 for x in c]
+    return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2]
+
+
+def contrast(a, b):
+    la, lb = sorted((lum(a), lum(b)), reverse=True)
+    return (la + 0.05) / (lb + 0.05)
+
+
+def groups(svg, gid):
+    """Text of each <g id=gid> group (lines joined), with the first text's fill colour."""
+    out = []
+    for body in re.findall(rf'<g id="{gid}">(.*?)</g>', svg, re.S):
+        parts = re.findall(r"<text([^>]*)>([^<]*)</text>", body)
+        fill = re.search(r"fill: (#[0-9a-fA-F]{6})", parts[0][0]).group(1).upper() if parts else None
+        out.append((" ".join(t for _, t in parts), fill))
+    return out
+
+
+def first_num(t):
+    """The label's value: its first dollar amount if it has one, else its first number."""
+    m = re.search(r"\$(" + NUM.pattern + ")", t) or NUM.search(t)
+    return float(m.group(1 if m.re.groups else 0).replace(",", "")) if m else None
+
+
+squash = lambda t: re.sub(r"\s+", "", t)
+
 for m in meta:
+    n = m["number"]
     svg = (FIG / f"{m['stem']}.svg").read_text(encoding="utf-8")
     texts = re.findall(r"<text[^>]*>([^<]*)</text>", svg)
     alltext = " ".join(texts)
+    flat = squash("".join(texts))
     rows = list(csv.DictReader(open(DATA / m["csv"], encoding="utf-8")))
-    if m["number"] == 3:
-        tiles = re.findall(r'<g id="tile">\s*<text[^>]*>([^<]*)</text>', svg)
-        letters = re.findall(r'<g id="tileletter">\s*<text[^>]*>([^<]*)</text>', svg)
-        check(len(tiles) == len(letters) == 51, f"fig3: 51 tiles with a group letter ({len(tiles)}, {len(letters)})")
-        drawn = {t.rstrip("*"): (g, t.endswith("*")) for t, g in zip(tiles, letters)}
-        bad = [r["abbrev"] for r in rows if drawn.get(r["abbrev"], ("?",))[0] != r["group"]]
-        check(not bad, f"fig3: every tile's letter equals its CSV group {bad or ''}")
-        starred = sorted(a for a, (_, s) in drawn.items() if s)
-        check(starred == ["CO", "MN", "MO"], f"fig3: symbol on {starred}")
-        for g in "ABCDE":
-            n = sum(1 for r in rows if r["group"] == g)
-            check(f"({n})" in alltext and re.search(rf"\b{g}\. [^<]*\({n}\)", alltext) is not None,
-                  f"fig3: legend count for {g} = {n}")
-        legend = re.findall(r'<g id="legend">\s*<text[^>]*>([^<]*)</text>', svg)
-        for g in "ABCDE":
-            v = next(r["group_above_caps_billion"] for r in rows if r["group"] == g)
-            shown = f"${v}B" if g != "E" else "$0"
-            check(any(l.startswith(f"{g}. ") and shown in l for l in legend), f"fig3: legend {g} shows {shown} (CSV {v})")
-        low = sorted(r["abbrev"] for r in rows if "lower threshold" in r["flag"])
-        check("(" + ", ".join(low) + ")" in alltext, f"fig3: outline legend names {low}")
-        n_outline = svg.count("stroke: #a10400")
-        check(n_outline >= len(low), f"fig3: {n_outline} red outlines drawn (>= {len(low)})")
+    labels = [first_num(t) for t, _ in groups(svg, "datalabel")]
+    if "kind" in rows[0]:  # a converted v8 table: every cell, header and the source note, verbatim
+        head0 = next(r["cell_text"] for r in rows if r["kind"] == "header")
+        miss = [r["cell_text"] for r in rows if squash(r["cell_text"]) not in flat]
+        check(not miss, f"fig{n}: all {len(rows)} table cells, headers and the source note appear verbatim" + (f" MISSING {miss}" if miss else ""))
+        nums = {float(x.replace(",", "")) for r in rows for x in r["numbers"].split(";") if x}
+        values = sorted(float(r["cell_text"].replace(",", "").rstrip("%")) for r in rows if r["kind"] == "cell"
+                        and r["column"] != head0 and re.fullmatch(r"[\d.,]+%?", r["cell_text"]))
+        got = sorted(abs(v) for v in labels)
+        check(all(v in got for v in values) and all(v in nums for v in got),
+              f"fig{n}: data labels {got} carry every value cell {values} and only CSV numbers")
         continue
-    labels = [num(t) for t in re.findall(r'<g id="datalabel">\s*<text[^>]*>([^<]*)</text>', svg)]
-    plotted = [float(r["value"]) for r in rows if not r["item"].startswith("Note")]
-    want = sorted(plotted)
-    got = sorted(labels)
-    if m["number"] == 1:  # $142.1B labels both the provider tax bar and the combined bar
-        want = sorted(plotted + [142.1])
-    check(got == want, f"fig{m['number']}: data labels {got} == CSV {want}")
+    if n == 6:
+        tiles = groups(svg, "tile")
+        letters = groups(svg, "tileletter")
+        check(len(tiles) == len(letters) == 51, f"fig6: 51 tiles with a group letter ({len(tiles)}, {len(letters)})")
+        drawn = {t.rstrip("*"): (g, t.endswith("*")) for (t, _), (g, _) in zip(tiles, letters)}
+        bad = [r["abbrev"] for r in rows if drawn.get(r["abbrev"], ("?",))[0] != r["group"]]
+        check(not bad, f"fig6: every tile's letter equals its CSV group {bad or ''}")
+        starred = sorted(a for a, (_, s_) in drawn.items() if s_)
+        check(starred == ["CO", "MN", "MO"], f"fig6: symbol on {starred}")
+        low_c = [(t, g, round(contrast(c, GROUP_FILL[g]), 2)) for (t, c), (g, c2) in zip(tiles, letters)
+                 for c_ in (c, c2) if contrast(c_, GROUP_FILL[g]) < 4.5]
+        worst = min(min(contrast(c, GROUP_FILL[g]), contrast(c2, GROUP_FILL[g])) for (t, c), (g, c2) in zip(tiles, letters))
+        check(not low_c, f"fig6: every tile's abbreviation and letter clear 4.5:1 on its fill (lowest {worst:.2f}:1)" + (f" LOW {low_c}" if low_c else ""))
+        for g in "ABCDE":
+            k = sum(1 for r in rows if r["group"] == g)
+            check(re.search(rf"\b{g}\. [^<]*\({k}\)", alltext) is not None, f"fig6: legend count for {g} = {k}")
+        legend = [t for t, _ in groups(svg, "legend")]
+        for g in "ABCDE":
+            v = next(r["group_total_above_caps_billion"] for r in rows if r["group"] == g)
+            shown = f"${v}B" if g != "E" else "$0"
+            check(any(l.startswith(f"{g}. ") and shown in l for l in legend), f"fig6: legend {g} shows {shown} (CSV {v})")
+        low = sorted(r["abbrev"] for r in rows if "lower threshold" in r["flag"])
+        check("(" + ", ".join(low) + ")" in alltext, f"fig6: outline legend names {low}")
+        heavy = len(re.findall(r"stroke: #1a1a1a; stroke-width: 2\.6", svg))
+        red_strokes = svg.count("stroke: #a10400")
+        red_fills = svg.count("fill: #a10400")
+        check(heavy == len(low) and red_strokes == 0, f"fig6: {heavy} heavy ink outlines (want {len(low)}), {red_strokes} dark-red strokes")
+        check(red_fills == 24 + 1, f"fig6: dark red fills only Group A (24 tiles + legend swatch: {red_fills})")
+        continue
+    plotted = [abs(float(r["value"])) for r in rows if not r["item"].startswith(("Note", "Total: the study"))]
+    want = sorted(plotted + ([142.1] if n == 2 else []))  # $142.1B labels two bars in Figure 2
+    got = sorted(abs(v) for v in labels)
+    check(got == want, f"fig{n}: data labels {got} == CSV {want}")
     for r in rows:
-        if r["item"].startswith("Note"):
+        if r["item"].startswith(("Note", "Total: the study")):
             v = f"{float(r['value']):g}"
-            check(v in alltext, f"fig{m['number']}: note value {v} printed")
+            check(v in alltext, f"fig{n}: value {v} printed ({r['role']})")
 
 # ---------------------------------------------------------------- 2. colours
 for m in meta:
@@ -137,11 +190,15 @@ def de(a, b, mode):
 # categories per figure; `secondary` = every mark of every category also
 # carries a text label naming it, verified below
 CATS = {
-    1: {"colours": {"SDP rule": "#1A1A1A", "additional cut": "#8A8A8A", "overlap": "#F0E2B0"}, "secondary": "row and segment labels"},
-    2: {"colours": {"measured alone": "#8A8A8A", "overlap": "#F0E2B0", "on top of SDP rule": "#1A1A1A"}, "secondary": "axis label under each bar"},
-    3: {"colours": {"A": "#A10400", "B": "#D9AD2B", "C": "#F0E2B0", "D": "#8A8A8A", "E": "#DCDCD8"}, "secondary": "group letter on every tile"},
-    4: {"colours": {"pediatric": "#A10400", "adult": "#8A8A8A"}, "secondary": "row labels"},
-    5: {"colours": {"total": "#A10400", "freestanding": "#1A1A1A", "short-term": "#8A8A8A"}, "secondary": "end labels on every line"},
+    1: {"colours": {"2027 band": "#DCDCD8", "threshold line": "#1A1A1A", "3.5% floor": "#A10400"}, "secondary": "value labels"},
+    2: {"colours": {"SDP rule": "#1A1A1A", "additional cut": "#8A8A8A", "overlap": "#F0E2B0"}, "secondary": "row and segment labels"},
+    3: {"colours": {"federal": "#1A1A1A", "state": "#8A8A8A", "measured alone": "#F0E2B0"}, "secondary": "segment labels"},
+    4: {"colours": {"payments and results": "#1A1A1A", "decreases": "#8A8A8A", "step 3, up to": "#DCDCD8", "range bracket": "#A10400"}, "secondary": "step labels"},
+    5: {"colours": {"measured alone": "#8A8A8A", "overlap": "#F0E2B0", "on top of SDP rule": "#1A1A1A"}, "secondary": "axis label under each bar"},
+    6: {"colours": {"A": "#A10400", "B": "#D9AD2B", "C": "#F0E2B0", "D": "#8A8A8A", "E": "#DCDCD8"}, "secondary": "group letter on every tile"},
+    7: {"colours": {"pediatric": "#A10400", "adult": "#8A8A8A"}, "secondary": "row labels"},
+    8: {"colours": {"total": "#A10400", "freestanding": "#1A1A1A", "short-term": "#8A8A8A"}, "secondary": "end labels on every line"},
+    9: {"colours": {"central": "#A10400", "low- and high-savings": "#8A8A8A"}, "secondary": "row labels"},
 }
 for n, spec in CATS.items():
     for (na, a), (nb, b) in itertools.combinations(spec["colours"].items(), 2):
@@ -149,8 +206,8 @@ for n, spec in CATS.items():
         ok = worst[0] >= 8
         note = "" if ok else f" — below 8, relies on secondary encoding: {spec['secondary']}"
         if not ok:
-            # only Figure 3 declares a checked secondary encoding (part 1: a letter on all 51 tiles)
-            ok = n == 3 and not any("tile's letter" in f for f in fails)
+            # only Figure 6 declares a checked secondary encoding (part 1: a letter on all 51 tiles)
+            ok = n == 6 and not any("tile's letter" in f for f in fails)
         check(ok, f"fig{n}: {na} vs {nb}: worst dE {worst[0]:.1f} ({worst[1]}){note}")
 
 # ---------------------------------------------------------------- 4. legibility

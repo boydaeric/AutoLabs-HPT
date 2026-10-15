@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="468pt" height="248.4pt" viewBox="0 0 468 248.4" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-15T23:15:17.806860</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 248.4 
+L 468 248.4 
+L 468 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 37.44 182.16 
+L 411.84 182.16 
+L 411.84 42.408 
+L 37.44 42.408 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <text style="font-weight: 700; font-size: 8px; font-family: 'Instrument Sans'; text-anchor: middle; fill: #1a1a1a" x="67.283478" y="193.42" transform="rotate(-0 67.283478 193.42)">2027</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2"/>
+     <g id="text_2">
+      <text style="font-weight: 700; font-size: 8px; font-family: 'Instrument Sans'; text-anchor: middle; fill: #1a1a1a" x="121.544348" y="193.42" transform="rotate(-0 121.544348 193.42)">2028</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3"/>
+     <g id="text_3">
+      <text style="font-weight: 700; font-size: 8px; font-family: 'Instrument Sans'; text-anchor: middle; fill: #1a1a1a" x="175.805217" y="193.42" transform="rotate(-0 175.805217 193.42)">2029</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4"/>
+     <g id="text_4">
+      <text style="font-weight: 700; font-size: 8px; font-family: 'Instrument Sans'; text-anchor: middle; fill: #1a1a1a" x="230.066087" y="193.42" transform="rotate(-0 230.066087 193.42)">2030</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5"/>
+     <g id="text_5">
+      <text style="font-weight: 700; font-size: 8px; font-family: 'Instrument Sans'; text-anchor: middle; fill: #1a1a1a" x="284.326957" y="193.42" transform="rotate(-0 284.326957 193.42)">2031</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6"/>
+     <g id="text_6">
+      <text style="font-weight: 700; font-size: 8px; font-family: 'Instrument Sans'; text-anchor: middle; fill: #1a1a1a" x="338.587826" y="193.42" transform="rotate(-0 338.587826 193.42)">2032 and after</text>
+     </g>
+    </g>
+    <g id="text_7">
+     <text style="font-size: 8px; font-family: 'Instrument Sans'; text-anchor: middle; fill: #555555" x="224.64" y="207.18" transform="rotate(-0 224.64 207.18)">Federal fiscal year (begins October 1 of the prior year)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_7">
+      <path d="M 37.44 182.16 
+L 411.84 182.16 
+" clip-path="url(#pf5980649ed)" style="fill: none; stroke: #dcdcd8; stroke-width: 0.75; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8"/>
+     <g id="text_8">
+      <text style="font-size: 7.5px; font-family: 'Instrument Sans'; text-anchor: end; fill: #555555" x="33.94" y="185.7975" transform="rotate(-0 33.94 185.7975)">0%</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_9">
+      <path d="M 37.44 162.195429 
+L 411.84 162.195429 
+" clip-path="url(#pf5980649ed)" style="fill: none; stroke: #dcdcd8; stroke-width: 0.75; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10"/>
+     <g id="text_9">
+      <text style="font-size: 7.5px; font-family: 'Instrument Sans'; text-anchor: end; fill: #555555" x="33.94" y="165.832929" transform="rotate(-0 33.94 165.832929)">1%</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_11">
+      <path d="M 37.44 142.230857 
+L 411.84 142.230857 
+" clip-path="url(#pf5980649ed)" style="fill: none; stroke: #dcdcd8; stroke-width: 0.75; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12"/>
+     <g id="text_10">
+      <text style="font-size: 7.5px; font-family: 'Instrument Sans'; text-anchor: end; fill: #555555" x="33.94" y="145.868357" transform="rotate(-0 33.94 145.868357)">2%</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_13">
+      <path d="M 37.44 122.266286 
+L 411.84 122.266286 
+" clip-path="url(#pf5980649ed)" style="fill: none; stroke: #dcdcd8; stroke-width: 0.75; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14"/>
+     <g id="text_11">
+      <text style="font-size: 7.5px; font-family: 'Instrument Sans'; text-anchor: end; fill: #555555" x="33.94" y="125.903786" transform="rotate(-0 33.94 125.903786)">3%</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_15">
+      <path d="M 37.44 102.301714 
+L 411.84 102.301714 
+" clip-path="url(#pf5980649ed)" style="fill: none; stroke: #dcdcd8; stroke-width: 0.75; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_16"/>
+     <g id="text_12">
+      <text style="font-size: 7.5px; font-family: 'Instrument Sans'; text-anchor: end; fill: #555555" x="33.94" y="105.939214" transform="rotate(-0 33.94 105.939214)">4%</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_17">
+      <path d="M 37.44 82.337143 
+L 411.84 82.337143 
+" clip-path="url(#pf5980649ed)" style="fill: none; stroke: #dcdcd8; stroke-width: 0.75; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_18"/>
+     <g id="text_13">
+      <text style="font-size: 7.5px; font-family: 'Instrument Sans'; text-anchor: end; fill: #555555" x="33.94" y="85.974643" transform="rotate(-0 33.94 85.974643)">5%</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_19">
+      <path d="M 37.44 62.372571 
+L 411.84 62.372571 
+" clip-path="url(#pf5980649ed)" style="fill: none; stroke: #dcdcd8; stroke-width: 0.75; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_20"/>
+     <g id="text_14">
+      <text style="font-size: 7.5px; font-family: 'Instrument Sans'; text-anchor: end; fill: #555555" x="33.94" y="66.010071" transform="rotate(-0 33.94 66.010071)">6%</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_21">
+      <path d="M 37.44 42.408 
+L 411.84 42.408 
+" clip-path="url(#pf5980649ed)" style="fill: none; stroke: #dcdcd8; stroke-width: 0.75; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_22"/>
+     <g id="text_15">
+      <text style="font-size: 7.5px; font-family: 'Instrument Sans'; text-anchor: end; fill: #555555" x="33.94" y="46.0455" transform="rotate(-0 33.94 46.0455)">7%</text>
+     </g>
+    </g>
+    <g id="text_16">
+     <text style="font-size: 8px; font-family: 'Instrument Sans'; text-anchor: middle; fill: #555555" x="17.095469" y="112.284" transform="rotate(-90 17.095469 112.284)">Threshold in expansion states</text>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 44.493913 182.16 
+L 90.073043 182.16 
+L 90.073043 62.372571 
+L 44.493913 62.372571 
+z
+" clip-path="url(#pf5980649ed)" style="fill: #dcdcd8"/>
+   </g>
+   <g id="line2d_23">
+    <path d="M 94.413913 112.284 
+L 379.283478 112.284 
+" clip-path="url(#pf5980649ed)" style="fill: none; stroke: #a10400; stroke-width: 0.9; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_24">
+    <path d="M 44.493913 62.372571 
+L 90.073043 62.372571 
+" clip-path="url(#pf5980649ed)" style="fill: none; stroke-dasharray: 3.6,2.4; stroke-dashoffset: 0; stroke: #1a1a1a; stroke-width: 1.2"/>
+   </g>
+   <g id="qualifier">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Instrument Sans'; text-anchor: middle; fill: #1a1a1a" x="67.283478" y="113.985771" transform="rotate(-0 67.283478 113.985771)">The state’s</text>
+   </g>
+   <g id="qualifier">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Instrument Sans'; text-anchor: middle; fill: #1a1a1a" x="67.283478" y="124.966286" transform="rotate(-0 67.283478 124.966286)">July 4, 2025</text>
+   </g>
+   <g id="qualifier">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Instrument Sans'; text-anchor: middle; fill: #1a1a1a" x="67.283478" y="135.9468" transform="rotate(-0 67.283478 135.9468)">level, at most</text>
+   </g>
+   <g id="qualifier">
+    <text style="font-weight: 700; font-size: 7.5px; font-family: 'Instrument Sans'; text-anchor: middle; fill: #1a1a1a" x="67.283478" y="146.927314" transform="rotate(-0 67.283478 146.927314)">6.0%</text>
+   </g>
+   <g id="datalabel">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Instrument Sans'; text-anchor: middle; fill: #1a1a1a" x="121.544348" y="66.761234" transform="rotate(-0 121.544348 66.761234)">5.5%</text>
+   </g>
+   <g id="datalabel">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Instrument Sans'; text-anchor: middle; fill: #1a1a1a" x="175.805217" y="76.74352" transform="rotate(-0 175.805217 76.74352)">5.0%</text>
+   </g>
+   <g id="datalabel">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Instrument Sans'; text-anchor: middle; fill: #1a1a1a" x="230.066087" y="86.725806" transform="rotate(-0 230.066087 86.725806)">4.5%</text>
+   </g>
+   <g id="datalabel">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Instrument Sans'; text-anchor: middle; fill: #1a1a1a" x="284.326957" y="96.708091" transform="rotate(-0 284.326957 96.708091)">4.0%</text>
+   </g>
+   <g id="datalabel">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Instrument Sans'; text-anchor: middle; fill: #1a1a1a" x="338.587826" y="106.690377" transform="rotate(-0 338.587826 106.690377)">3.5%</text>
+   </g>
+   <g id="text_17">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Instrument Sans'; text-anchor: start; fill: #a10400" x="381.996522" y="115.164" transform="rotate(-0 381.996522 115.164)">3.5% floor</text>
+   </g>
+   <g id="line2d_25">
+    <path d="M 94.413913 72.354857 
+L 148.674783 72.354857 
+L 148.674783 82.337143 
+L 202.935652 82.337143 
+L 202.935652 92.319429 
+L 257.196522 92.319429 
+L 257.196522 102.301714 
+L 311.457391 102.301714 
+L 311.457391 112.284 
+L 379.283478 112.284 
+" clip-path="url(#pf5980649ed)" style="fill: none; stroke: #1a1a1a; stroke-width: 2; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+  </g>
+  <g id="text_18">
+   <text style="font-weight: 700; font-size: 10.5px; font-family: 'Instrument Sans'; text-anchor: start; fill: #1a1a1a" x="0" y="14.505" transform="rotate(-0 0 14.505)">Provider tax threshold in expansion states</text>
+  </g>
+  <g id="text_19">
+   <text style="font-size: 8.5px; font-family: 'Instrument Sans'; text-anchor: start; fill: #555555" x="0" y="29.845" transform="rotate(-0 0 29.845)">Threshold in expansion states, by federal fiscal year (begins October 1 of the prior year)</text>
+  </g>
+  <g id="text_20">
+   <text style="font-size: 7.5px; font-family: 'Instrument Sans'; text-anchor: start; fill: #555555" x="0" y="232.845" transform="rotate(-0 0 232.845)">Source: 91 FR 46565, 46576, 46598. The 6 percent cap is CMS’s proposal, with an exception for a tax that met the 75/75</text>
+  </g>
+  <g id="text_21">
+   <text style="font-size: 7.5px; font-family: 'Instrument Sans'; text-anchor: start; fill: #555555" x="0" y="243.645" transform="rotate(-0 0 243.645)">test on July 4, 2025, which CMS expects no state to use (91 FR 46572, 46598). Federal fiscal year: 31 U.S.C. 1102.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pf5980649ed">
+   <rect x="37.44" y="42.408" width="374.4" height="139.752"/>
+  </clipPath>
+ </defs>
+</svg>
