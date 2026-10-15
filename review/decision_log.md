@@ -653,3 +653,27 @@ Body −20: Y1 −2, Y2 +1, Y3 +4, Y4 −23. The appendix changes a tag only.
 **Other edits found in Eric's copy:** none. The two copies have 330 paragraphs each; only the title and the HFMA paragraph differ, and Eric's copy has no tracked changes or comments.
 
 **Still open:** the [DATE] checks (re-check list item 1) remain to be run on the publication date.
+
+# v9 decisions
+
+*Writer, October 15, 2026. Input: Eric's instruction to convert four tables to charts. Output: `review/article_v9.md`, built from v8 by `review/tools/make_v9.py`. `review/tools/gate1_check_v9.py` finds 37 character-level hunks, each inside one of the 9 listed edits, and no other difference.*
+
+**Word counts** (same method as before, `review/tools/word_count.py`):
+
+| Version | Body | Against the 6,284 cap | Appendix |
+|---|---:|---:|---:|
+| v8 | 6,226 | −58 | 4,531 |
+| v9 | 6,120 | −164 | 4,500 |
+
+Body −106: Z1 −20, Z3 −31, Z4 −55. Appendix −31: Z9. Renumbering changes no words.
+
+| Change | Outcome | Where, and why |
+|---|---|---|
+| Caption rule (Z1, Z3, Z4, Z9) | Applied | Each caption is the replaced table's header cells, verbatim and in order: the first cell, a colon, the other cells separated by semicolons, and a full stop. Bold markers are dropped; no word is added. The table's source note stays word for word as the italic paragraph directly under the placeholder, so the build sets it under the figure caption. Every number and qualifier in the removed tables moves to the figure's data file and chart (`review/figures/data/`). |
+| Z1. Sec. 1 threshold schedule | Converted (Figure 1) | Includes the 2027 qualifier "The state’s July 4, 2025 level, at most 6.0%". |
+| Z3. Sec. 3 reductions | Converted (Figure 3) | Federal, state and total for each of the four rows. |
+| Z4. Sec. 4 steps | Converted (Figure 4) | The step descriptions, with their $774.8, $142.1, $241.9, $163.7 and $264.7 billion components, and the 916.9, 753.2 and 488.5 results. |
+| Z9. App. D range | Converted (Figure 9) | The three rows for the three estimates. |
+| Renumbering (Z2, Z5–Z8) | Applied | New order: 1 threshold schedule, 2 overlap, 3 reductions, 4 steps, 5 waterfall, 6 state map, 7 pediatric, 8 psychiatric, 9 range. A script search for "Figure", "Fig." and "Figs" found no other reference to a figure number. |
+
+**Left unchanged, for Eric.** Three phrases point at the converted tables and still read correctly with a figure in their place: sec. 1 "on the schedule below" (a cell of the kept OBBBA table), sec. 3 "each equal to the state reduction above", and App. D "Cells are CMS’s [E]; sums are THEIA Services’ [I]." The last now refers to the values in Figure 9. A future text round could say "Values" instead of "Cells".

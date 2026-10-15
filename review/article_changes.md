@@ -515,3 +515,21 @@ No other change. Section numbers and figure placeholders are unchanged. "[DATE]"
 | Y9 | App. I, "Comment counts", sentence 1 | Tag [E] → [I]; no words changed | TAG |
 
 No other change. The text has no cross-reference to a figure number outside the placeholders; "Figure 1 note" in App. H cites KFF's own figure and is unchanged. "[DATE]" still occurs 6 times; "[DATE SENT]" no longer occurs. Section numbers and headings are unchanged.
+
+# v8 → v9
+
+*Writer's file, October 15, 2026. Maps every change in `review/article_v9.md` against `review/article_v8.md`. Source: Eric's follow-up instruction to convert four tables to charts. Edits applied by `review/tools/make_v9.py`; checked by `review/tools/gate1_check_v9.py`. Body 6,226 → 6,120 words; appendix 4,531 → 4,500.*
+
+| # | v9 location | Change | Source |
+|---|---|---|---|
+| Z1 | Sec. 1, after the provider tax rule table | Threshold schedule table (federal fiscal year 2027 to 2032 and after) → placeholder "*[Figure 1] Federal fiscal year (begins October 1 of the prior year): Threshold in expansion states.*" Source note unchanged, directly below | Instruction a |
+| Z2 | Sec. 2 | [Figure 1] → [Figure 2]; caption unchanged | Renumbering |
+| Z3 | Sec. 3 | Central-estimate reduction table → placeholder "*[Figure 3] Reduction in Medicaid spending, central estimate, 2026–2035, billions of 2026 dollars: Federal; State; Total.*" Source note unchanged | Instruction b |
+| Z4 | Sec. 4 | Three-step loss table → placeholder "*[Figure 4] Central estimate, 2026–2035: Loss to providers, billions of 2026 dollars.*" Source note unchanged | Instruction c |
+| Z5 | Sec. 5 | [Figure 2] → [Figure 5]; caption unchanged | Renumbering |
+| Z6 | Sec. 6 | [Figure 3] → [Figure 6]; caption unchanged | Renumbering |
+| Z7 | Sec. 8, pediatrics | [Figure 4] → [Figure 7]; caption unchanged | Renumbering |
+| Z8 | Sec. 8, psychiatry | [Figure 5] → [Figure 8]; caption unchanged | Renumbering |
+| Z9 | App. D, "The range under the other estimates" | Loss-to-providers table → placeholder "*[Figure 9] Loss to providers, billions of 2026 dollars, 2026–2035: Low-savings estimates; Central estimates; High-savings estimates.*" Source note unchanged | Instruction d |
+
+No other change. The five other tables are unchanged. No text refers to a figure number outside the placeholders; App. H's "Figure 1 note" is KFF's figure. Tags and "[DATE]" counts are unchanged.
